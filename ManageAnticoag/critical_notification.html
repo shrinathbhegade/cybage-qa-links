@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PPX2G3V');
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>ManageAnticoag</title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/styledown.css">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="assets/css/foundation-sites.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/mr.css">
+    <link rel="stylesheet" href="assets/css/logo-headers.css">
+    <link rel="stylesheet" href="assets/css/hamburger-menu.css"> </head>
+
+<body class="page paper-page">
+    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX2G3V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="row">
+        <header class="header page text-center">
+                            <ul class="nav tabs tabs-primary float-left" style=" visibility: visible;flex-wrap: nowrap;">
+                                    <li class="mobile-acc-logo">
+                                        <a href="javascript:void(0)" class="no-hover">
+                                            <span class=""><img src="../assets/img/headerlogo.svg" style="border-right: 1px solid #ccc;" alt="ACC BridgeAnticoag"></span>
+                                            <span class=""><img src="../assets/img/manageanticoag-mobile.svg" alt="ManageAnticoag"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a class="logo" href="javascript:void(0)" class="no-hover"> <span class="acc-logo">
+										<img src="assets/img/headerlogo.svg" alt="ManageAnticoag">
+									</span> <span class="bridge-anticoag-logo">
+										<img src="../assets/img/manageanticoag-web.svg" alt="ManageAnticoag">
+									</span> 
+                                </a>
+                        </header>
+    </div>
+    <div class="page-wrapper fullscreen-spacer">
+        <div class="page section group-section no-box-shadow" style="padding:0px; word-wrap: break-word;">
+            <div class="row collapse" data-bind="foreach: criticalNotification()">
+                <div class="columns large-12 medium-12 small-12 text-center medium-text-left large-text-left">
+                    <h2 class="highlighted colored-paper" style="color:white;margin:0;">
+                              <i class="fa fa-lock fa-2" aria-hidden="true"></i> Locked
+                            </h2> </div>
+                <div class="columns large-12 medium-12 small-12" style="padding:15px;">
+                    <h4 data-bind="text: Title">The system has been locked</h4>
+                    <p data-bind="text: Text">This version of the application has been locked because of need to upgrade the science. Please go to the store to upgrade this application.</p>
+                    <br/> <a class="button" data-bind="visible: $root.isAppStoreUrlButtonVisible, attr: { href: $root.appStoreUrl}">Go to store</a> </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var isNativeApplication = (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1);
+        if (isNativeApplication) {
+            //if mobile device detected
+            //Load mobile-app.js dynamically
+            var mobileScript = document.createElement('script');
+            mobileScript.setAttribute('src', 'assets/js/mobile-app.js');
+            document.body.appendChild(mobileScript);
+            var cordovaScript = document.createElement('script');
+            cordovaScript.setAttribute('src', 'cordova.js');
+            document.head.appendChild(cordovaScript);
+            document.getElementsByTagName("body").className = "noselect";
+        }
+    </script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/knockout-3.5.1.js"></script>
+    <script src="assets/js/pager.min.js"></script>
+    <script src="assets/js/foundation-6.6.3.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/notification.js"></script>
+    <script>
+                
+        function viewModel(){
+            var self = this;
+            self.notificationData = ko.observableArray([]);
+            self.criticalNotification = ko.observableArray([]);
+            self.isMobile = ko.observable(isNativeApplication);
+            self.isAppStoreUrlButtonVisible = ko.pureComputed(function() {
+                var appStoreUrlAvailable = (self.criticalNotification().length > 0) ? self.criticalNotification()[0].DisplayAppStoreUrl : false;
+                return self.isMobile() && appStoreUrlAvailable;
+            });
+            self.appStoreUrl = ko.pureComputed(function() {
+                if(self.criticalNotification().length > 0)
+                    return notification.getStoreUrl();
+            })
+        }
+        var appmodel = new viewModel();        
+        // apply your bindings
+        ko.applyBindings(appmodel);
+        
+        //simulateDevice(notification.osTypes.Android, '2.0'); 
+        
+        if(!isNativeApplication)        
+            notification.callWebApi('get', notification.criticalNotificationInputURL(), null, notification.notificationType.critical);
+        
+        function checkNotification(){}
+        function simulateDevice(deviceType, version) {
+                    notification.osType = deviceType;
+                    notification.appVersion = version;
+                    self.isMobile(true);
+                }
+          
+    </script>
+</body>
+
+</html>

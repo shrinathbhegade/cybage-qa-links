@@ -1,0 +1,74 @@
+
+<div class="data-display">
+    <header class="header page">
+        <a class="logo">
+            <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+            <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+        </a>
+        <ul class="nav tabs tabs-primary condensable condensable-word small">
+            <li id="calculator-Tab" class="selected">
+                <a data-bind="click: appViewModel.goToPatientPageFromFooter">Evaluate
+                </a>
+            </li>
+        <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.newsAdviceActiveTab() == false">
+            <a aria-controls="advice" class="disabled" >Advice
+            </a>
+         </li>
+         <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.newsAdviceActiveTab() == true,click:appViewModel.getAdviceFromFooter">
+            <a class="adviceActiveTab" >Advice
+            </a>
+        </li>
+        </ul>
+    </header>
+ 
+    <div class="page with-group-sections locked">
+        <div class="page-wrapper">
+            <h1 class="clearfix">News
+            </h1>
+            <div data-bind="foreach:appViewModel.newsFeeds">
+                <section class="section group-section clearfix">
+                    <h2 class="with-underline black" data-bind="text: notificationTitle()"></h2>
+                    <p data-bind="text: notificationText()"></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+        <footer class="page footer">
+            <div class="row">
+                <a href="javascript:void(0)" class="logo text-center">
+						<img src="assets/img/footerlogo.svg" alt="ACC">
+						<img src="assets/img/bridge_anticog.svg" alt="BAC">
+					   </a>
+                <ul class="nav tabs tabs-primary reverse swappable small row">
+                    
+                    <li id="guideline-Tab" class="small-3 columns">
+                        <a class="btn-ga4" data-bind="click: appViewModel.goToResourcePage">
+                            <span class="short-text btn-ga4">Resources</span>
+                            <span class="long-text btn-ga4">Resources</span>
+                        </a>
+                    </li>
+                    <li id="legal-Tab" class="small-3 columns">
+                        <a class="btn-ga4" data-bind="click: appViewModel.goToDisclaimerPage">
+                            <span class="short-text btn-ga4">Terms</span>
+                            <span class="long-text btn-ga4">Terms</span>
+                        </a>
+                    </li>
+                    <li id="legal-Tab" class="small-3 columns">
+                        <a class="btn-ga4" data-bind="click: appViewModel.goToAboutTheAppPage">
+                            <span class="short-text btn-ga4">About</span>
+                            <span class="long-text btn-ga4">About App</span>
+                        </a>
+                    </li>
+
+                    <li id="about-Tab" class="selected small-3 columns">
+                        <a class="btn-ga4" data-bind="click: appViewModel.goToNewsPage">
+                            <span class="short-text btn-ga4">News</span>
+                            <span class="long-text btn-ga4">News</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>

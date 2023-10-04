@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PPX2G3V');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,600,400,300|Roboto+Slab:400,700|Raleway:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/foundation-sites.css">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/css/style-pmac.css">
+    <link rel="stylesheet" href="../assets/css/hamburger-menu.css">
+    <link rel="stylesheet" href="../assets/css/session-prompt.css">
+    <link rel="stylesheet" href="../assets/css/logo-headers.css">
+    <script src="../assets/js/cookie-util.js"></script>
+    <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/lib/foundation.js"></script>
+    <script src="assets/js/models/customAnalytics.js"></script>
+    <script src="config.js"></script>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <title>ManageAnticoag</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX2G3V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="off-canvas-wrapper">
+        <div class="overlay"></div>
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="offCanvas" data-off-canvas style="height:100%">
+                <!-- Close button -->
+                <button class="close-button" aria-label="Close menu" type="button" data-close></button>
+                <!-- Menu -->
+                <div class="row" id="test-eq">
+                    <nav class="nav-list small hamburger-menu">
+                        <ul>
+                                <li id="home">
+                                    <div class="row collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="../index.html" data-bind="click: appViewModel.goToHomePage"><i class="fa fa-home"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="../index.html" data-bind="click: appViewModel.goToHomePage" style="padding-top: 0.295em;">
+                                                <h6 class="text-left btn-ga4">Home</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="selected">
+                                    <div class="row collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="javascript:void(0)" style="padding-top: 0.825em;"><i class="fa fa-random"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="javascript:void(0)" >
+                                                <h6 class="text-left btn-ga4">Plan Periprocedural Interruption and Bridging</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="../AddressAcuteBleed/index.html#!/content/calculator/" data-bind="click: appViewModel.goToManageBleed" style="padding-top: 0.355em;"><i class="fa fa-tint"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="../AddressAcuteBleed/index.html#!/content/calculator/" data-bind="click: appViewModel.goToManageBleed">
+                                                <h6 class="text-left btn-ga4">Address an Acute Bleed</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="../DetermineAnticoagRestart/index.html#!/content/calculator/" data-bind="click:appViewModel.goToOACRestartFromHamburger" style="padding-top: 0.295em;"><i class="fa fa-exchange"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="../DetermineAnticoagRestart/index.html#!/content/calculator/" data-bind="click:appViewModel.goToOACRestartFromHamburger">
+                                                <h6 class="text-left btn-ga4">Determine Anticoag Restart</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="quickreference">
+                                    <div class="row collapse">
+                                        <div class="column small-4 text-center">
+                                            <a class="btn-ga4" href="../index.html#!/content/quick-reference/" data-bind="click:appViewModel.goToQuickReferencePage"><i class="fa fa-medkit"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="../index.html#!/content/quick-reference/" data-bind="click:appViewModel.goToQuickReferencePage" style="padding-top: 0.295em;">
+                                                <h6 class="text-left btn-ga4">Quick Reference</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        <!--<ul>
+                            <li><a class="expanded" href="../index.html" data-bind="click: appViewModel.goToHomePage"><i class="fa fa-home"></i><span class="text">Home</span></a></li>
+                            <li class="selected">
+                                <a class="expanded" href="javascript:void(0)"> <i class="fa fa-random"></i> <span class="text text-left">
+                                        Plan Periprocedural Interruption and Bridging
+                                    </span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded" href="../AddressAcuteBleed/index.html#!/content/calculator/" data-bind="click: appViewModel.goToManageBleed"> <i class="fa fa-tint"></i> <span class="text text-left">
+                                        Address an Acute Bleed
+                                    </span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded" href="../DetermineAnticoagRestart/index.html#!/content/calculator/" data-bind="click:appViewModel.goToOACRestartFromHamburger"> <i class="fa fa-exchange"></i> <span class="text text-left">
+                                        Determine Anticoag Restart
+                                    </span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded" href="../index.html#!/content/quick-reference/" data-bind="click:appViewModel.goToQuickReferencePage"> <i class="fa fa-medkit"></i> <span class="text text-left">
+                                        Quick Reference
+                                    </span> </a>
+                            </li>
+                        </ul>-->
+                    </nav>
+                </div>
+            </div>
+            <div class="off-canvas-content" data-off-canvas-content style="overflow: hidden;">
+                <header class="header page">
+                    <ul class="nav tabs tabs-primary float-left" style="visibility: visible;flex-wrap: nowrap;">
+                              <li class="icon"  style="height: 100%;">
+                                  <a class="home fix-bounce" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+                                      <i class="fa fa-bars"></i>
+                                  </a>
+                              </li>
+                        <li class="mobile-acc-logo">
+                                <a class="fix-bounce" data-bind="click: appViewModel.goToHomePage">
+                                    <span class=""><img src="../assets/img/headerlogo.svg" style="border-right: 1px solid #ccc;" alt="ManageAnticoag"></span>
+                                    <span class=""><img src="../assets/img/manageanticoag-mobile.svg" alt="ManageAnticoag"></span>
+                                </a>
+                        </li>
+                    </ul>
+                    <a class="logo mobile-logo" data-bind="click: appViewModel.goToHomePage">
+                        <span class="acc-logo"><img src="../assets/img/headerlogo.svg" alt="ManageAnticoag"></span>
+                        <span class="bridge-anticoag-logo"><img src="../assets/img/manageanticoag-web.svg" alt="ManageAnticoag"></span>
+                    </a>
+
+                </header>
+                <div id="one" data-bind="page: {id: 'patientPage', afterShow:checkCriticalNotification, titles: 'Patient Details', scrollToTop: true, sourceOnShow: 'assets/view/patientView.html', sourceCache: false, role: 'start'}"></div>
+                <div id="two" data-bind="page: {id: 'interruptPage', afterShow:checkCriticalNotification, titles: 'Interrupt', scrollToTop: true, sourceOnShow: 'assets/view/interruptView.html', sourceCache: true}"></div>
+                <div id="three" data-bind="page: {id: 'proceduralBleedRiskPage', afterShow:checkCriticalNotification, titlse: 'Procedural Bleed Risk', scrollToTop: true, sourceOnShow: 'assets/view/proceduralBleedRiskView.html', sourceCache: true}"></div>
+                <div id="four" data-bind="page: {id: 'crclPage', afterShow:checkCriticalNotification, titles: 'CrCl (Cockcroft-Gault Equation)', scrollToTop: true, sourceOnShow: 'assets/view/CRCLView.html', sourceCache: true}"></div>
+                <div id="five" data-bind="page: {id: 'resourceViewPage', afterShow:checkCriticalNotification, titles: 'Resources', scrollToTop: true, sourceOnShow: 'assets/view/resource.html', sourceCache: true}"></div>
+                <div id="six" data-bind="page: {id: 'aboutViewPage', afterShow:checkCriticalNotification, titles: 'About', scrollToTop: true, sourceOnShow: 'assets/view/about.html', sourceCache: true}"></div>
+                <div id="seven" data-bind="page: {id: 'newsViewPage', afterShow:checkCriticalNotification, titles: 'News', scrollToTop: true, sourceOnShow: 'assets/view/news.html', sourceCache: true}"></div>
+                <div id="eight" data-bind="page: {id: 'disclaimerViewPage', afterShow:checkCriticalNotification, titles: 'Disclaimer', scrollToTop: true, sourceOnShow: 'assets/view/disclaimer.html', sourceCache: true}"></div>
+                <div id="nine" data-bind="page: {id: 'bridgePage', afterShow:checkCriticalNotification, titles: 'Bridging', scrollToTop: true, sourceOnShow: 'assets/view/bridgeView.html', sourceCache: false}"></div>
+                <div id="ten" data-bind="page: {id: 'CHADsVAScWizard', afterShow:checkCriticalNotification, titles: 'CHA2DS2-VASc', scrollToTop: true, sourceOnShow: 'assets/view/CHADsVAScWizard.html', sourceCache: true}"></div>
+                <div id="eleven" data-bind="page: {id: 'crclBridgeViewPage', afterShow:checkCriticalNotification, titles: 'CrCl (Cockcroft-Gault Equation)', scrollToTop: true, sourceOnShow: 'assets/view/CRCLBridgeView.html', sourceCache: true}"></div>
+                <div id="twelve" data-bind="page: {id: 'restartPageWarfarin', afterShow:checkCriticalNotification, titles: 'Restarting Anticoagulant', scrollToTop: true, sourceOnShow: 'assets/view/restartViewWarfarin.html', sourceCache: true}"></div>
+                <div id="thirteen" data-bind="page: {id: 'restartPage', afterShow:checkCriticalNotification, titles: 'Restarting Anticoagulant', scrollToTop: true, sourceOnShow: 'assets/view/restartView.html', sourceCache: true}"></div>
+                <div id="fourteen" data-bind="page: {id: 'adviceViewPage', afterShow:checkCriticalNotification, titles: 'Advice', scrollToTop: true, sourceOnShow: 'assets/view/advice.html', sourceCache: true}"></div>
+                <div id="fifteen" data-bind="page: {id: 'staticAdviceViewPage', afterShow:checkCriticalNotification, titles: 'Static Advice', scrollToTop: true, sourceOnShow: 'assets/view/staticAdvice.html', sourceCache: true}"></div>
+                <div id="sixteenth" data-bind="page: {id: 'criticalNotificationViewPage', titles: 'Critical Notification', scrollToTop: true, sourceOnShow: 'assets/view/criticalNotification.html', sourceCache: true}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="session-overlay">
+        <div class="session-prompt small">
+            <h4>This tool already has data entered. How would you like to proceed?</h4>
+            <div class="row">
+                <div class="stacked-for-small button-group"> <a class="button small btn-ga4" onclick="continueWithSamePatient();">Continue with this patient</a> <a class="button small end btn-ga4" onclick="startWithNewPatient();">Start with new patient</a> </div>
+            </div>
+            <!--<span class="close">x</span>--></div>
+    </div>
+    <!--- cordova.js will be included for ios and android only. --->
+    <script type="text/javascript">
+        if (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1) {
+            var cordovaScript = document.createElement('script');
+            cordovaScript.setAttribute('src', '../cordova.js');
+            document.head.appendChild(cordovaScript);
+        }
+    </script>
+    <script data-main="assets/js/main.js" type="text/javascript" src="assets/js/lib/require.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/notification.js"></script>
+    <script type="text/javascript">getCookieBanner('https://www.acc.org');</script>
+</body>
+
+</html>

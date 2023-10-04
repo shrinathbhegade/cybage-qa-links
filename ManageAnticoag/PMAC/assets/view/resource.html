@@ -1,0 +1,246 @@
+
+<div class="data-display">
+<header class="header page">
+    <a class="logo">
+        <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+        <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+    </a>
+    <ul class="nav tabs tabs-primary condensable condensable-word small">
+        <li id="calculator-Tab" class="selected">
+            <a data-bind="click: appViewModel.goToPatientPageFromFooter">Evaluate
+            </a>
+        </li>
+        <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.resourceAdviceActiveTab() == false">
+            <a aria-controls="advice" class="disabled" >Advice
+            </a>
+         </li>
+         <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.resourceAdviceActiveTab() == true,click:appViewModel.getAdviceFromFooter">
+            <a class="adviceActiveTab" >Advice
+            </a>
+        </li>
+    </ul>
+</header>
+
+<div class="page with-group-sections">
+    <div class="page-wrapper">
+        <h1 class="clearfix">Resources
+        </h1>
+        <section class="section group-section clearfix">
+            <div class="row nopadding">
+				<div class="small-12 columns">
+					<h3>Patient Resources</h3>
+                    <ul>
+                        <li><u><a data-bind="click: appViewModel.goToTopicCollection">AFib topic collection</a></u></li>
+                        <li><u><a data-bind="click: appViewModel.goToSafeUseFact">“Warfarin: Safe Use” fact sheet</a></u></li>
+                        <li><u><a data-bind="click: appViewModel.goToBloodFactSheet">“Taking Blood Thinners Safely” fact sheet</a></u></li>
+                    </ul>
+				</div>
+				<div class="small-12 columns">
+					<h3>Other Mobile Tools</h3>
+					<ul>
+						<li><u><a data-bind="click: appViewModel.goToClinicalAppCollection">ACC’s Clinical App Collection</a></u></li>
+					</ul>
+				</div>
+				<div class="small-12 columns">
+					<h3>In-App Resources</h3>
+				</div>
+                <div class="small-12 columns">
+                    <p>Table: Recommended Durations for Withholding DOACs 
+                    <div class="table-container doac-table"> 
+
+                        <table class="table">
+                            
+                            <thead>
+                                <tr>
+                                    <th colspan="7"><center>Apixaban (A), Edoxaban (E), or Rivaroxaban (R)<br> Dabigatran (D)</center></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr>
+                                <td colspan="2"><small>CrCl (mL/min)</small></td>
+                                <td><small>&gt;= 80</small></td>
+                                <td><small>50-79</small></td>
+                                <td><small>30-49</small></td>
+                                <td><small>15-29</small></td>
+                                <td><small>&lt;15 (off dialysis)</small></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" rowspan="2"><small>Estimated drug half-life</small></td>
+                                <td colspan="3"><small><center>A,E,R:<br>6-15 hrs</center></small></td>
+                                <td><small>A:17 hrs <br> E:9 hrs <br> R:9 hrs</small></td>
+                                <td><small>A:17 hrs <br>E:10-17 hrs <br> R:13 hrs</small></td>
+                              </tr>
+                              <tr>
+                                <td><small>D:13 hrs</small></td>
+                                <td><small>D:15 hrs</small></td>
+                                <td><small>D:18 hrs</small></td>
+                                <td><small>D:27 hrs</small></td>
+                                <td><small>D:30 hrs</small></td>
+                              </tr>
+                              <tr>
+                                <td rowspan="6"><small>Procedural Bleed Risk</small></td>
+                                <td colspan="6"><small>Low</small></td>
+                              </tr>
+                              <tr>
+                                <td><small>A,E,R</small></td>
+                                <td colspan="3"><small>&gt;= 24 hrs</small></td>
+                                <td><small>&gt;= 36 hrs</small></td>
+                                <td><small>No data. Consider measuring agent-specific anti Xa level and/or withholding &gt;= 48 hours</small></td>
+                              </tr>
+                              <tr>
+                                <td><small>D</td>
+                                <td><small>&gt;= 24 hrs</small></td>
+                                <td><small>&gt;= 36 hrs</small></td>
+                                <td><small>&gt;= 48 hrs</small></td>
+                                <td><small>&gt;= 72 hrs</small></td>
+                                <td><small>No data. Consider measuring dTT and/or withholding &gt;= 96 hours</small></td>
+                              </tr>
+                              <tr>
+                                <td colspan="6"><small>Uncertain, Intermediate, or High</small></td>
+                              </tr>
+                              <tr>
+                                <td><small>A,E,R</small></td>
+                                <td colspan="3"><small>&gt;= 48 hrs</small></td>
+                                <td colspan="2"><small>No data. Consider measuring agent-specific anti Xa level and/or withholding &gt;= 72 hours</small></td>
+                              </tr>
+                              <tr>
+                                <td><small>D</td>
+                                <td><small>&gt;= 48 hrs</small></td>
+                                <td><small>&gt;= 72 hrs</small></td>
+                                <td><small>&gt;= 96 hrs</small></td>
+                                <td><small>&gt;= 120 hrs</small></td>
+                                <td><small>No data. Consider measuring dTT</small></td>
+                              </tr>
+                            </tbody>
+                        </table>
+    
+                    </div>
+                </div>
+				<div class="small-12 columns">
+					<p>Table: Additional Procedural Bleed Risk Considerations as indicated by specialty societies</p>
+                    <div class="table-container"> 
+                        <table class="table">
+                            
+                            <thead>
+                                <tr>
+                                    <th>Society</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                     <td>
+                                        <small>American Society for Gastrointestinal Endoscopy’s Standards of Practice Committee</small>
+                                    </td>
+                                    <td>
+                                        <small>
+                                          <ul>
+                                            <li type="square">
+                                              Percutaneous endoscopic gastrostomy placement - PEG on aspirin or clopidogrel therapy is low risk. Does not apply to DAPT (dual antiplatelet therapy)</li>
+                                            <li type="square">EUS (endoscopic ultrasound) w/ FNA (fine needle aspiration) - EUS-FNA of solid masses on aspirin/NSAIDs is low risk</li>
+                                          </ul>
+                                        </small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>American Society of Nephrology</small>
+                                    </td>
+                                    <td>
+                                        <small>
+                                          <p>The risk stratification for the nephrology procedures was assigned based on the publications cited below and the following explanatory points:</p>
+                                          <ul>
+                                            <li type="square">
+                                              Patients with advanced chronic kidney disease are considered to have disordered platelet aggregation leading to a higher bleeding risk.</li>
+                                            <li type="square">The interventional nephrology procedures (angioplasty and thrombectomy) are performed on “arterialized” veins with high flows (>600 ml/min) and therefore, the bleeding risk is commensurate with the arterial procedures</li>
+                                            <li type="square">As with any other invasive procedures the complication risk varies widely based on patient and operator factors.</li>
+                                          </ul>
+                                          <p>References:</p>
+                                          <ol>
+                                            <li>Beathard GA, Litchfield T, Physician Operators Forum of RMS Lifeline, Inc. Effectiveness and safety of dialysis vascular access procedures performed by interventional nephrologists. Kidney Int. 2004 Oct;66(4):1622-32</li>
+                                            <li>
+                                                Vesely TM, Beathard G, Ash S, Hoggard J, Schon D; ASDIN Clinical Practice Committee. Classification of complications associated with hemodialysis vascular access procedures. A position statement from the American Society of Diagnostic
+                                            </li>
+                                          </ol>
+                                        </small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>American Society of Regional Anesthesia and Pain Medicine</small>
+                                    </td>
+                                    <td>
+                                        <small>
+                                          <ul>
+                                            <li type="square">
+                                              Bleeding risk of other regional nerve blocks is based on compressibility, patient body habitus, co-morbidities and the degree and duration of anticoagulation.</li>                              
+                                          </ul>
+                                        </small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>Interventional Section Leadership Council of the ACC</small>
+                                    </td>
+                                    <td>
+                                        <small>
+                                          <ul>
+                                            <li type="square">
+                                              Transfemoral coronary angiography - The consensus of the group was that this was a low intermediate risk. It was not as low as radial but certainly not in the same category as other intermediate procedures such as a pericardiocentesis. It would also depend on the sheath size and the patient’s body habitus.</li>                              
+                                          </ul>
+                                        </small>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+			     </div>
+                 <div class="small-12 columns">
+                    <h3>References</h3>
+                    <ol>
+                        <li><u ><a data-bind="click: appViewModel.expertConsensus">2016 Expert Consensus Pathway on Periprocedural Management of Anticoag:</a></u> Doherty JU, Gluckman TJ, Hucker WJ, et al. 2016 ACC Expert Consensus Decision Pathway for Periprocedural Management of Anticoagulation in Patients with Non-valvular Atrial Fibrillation </li>
+                        <li><u><a data-bind="click: appViewModel.goToFibrillationGuideline">2014 ACC/AHA/HRS Atrial Fibrillation Guideline:</a></u> January C.T., Wann L.S., Alpert J.S., et al; 2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines and the Heart Rhythm Society. Developed in Collaboration With the Society of Thoracic Surgeons. J Am Coll Cardiol. 2014;64:e1-76 </li>                        
+                    </ol>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+    <footer class="page footer">
+        <div class="row">
+            <a href="javascript:void(0)" class="logo text-center">
+						<img src="assets/img/footerlogo.svg" alt="ACC">
+						<img src="assets/img/bridge_anticog.svg" alt="BAC">
+					   </a>
+            <ul class="nav tabs tabs-primary reverse swappable small row">
+               
+                <li id="guideline-Tab" class="selected small-3 columns">
+                    <a class="btn-ga4" data-bind="click: appViewModel.goToResourcePage">
+                        <span class="short-text btn-ga4">Resources</span>
+                        <span class="long-text btn-ga4">Resources</span>
+                    </a>
+                </li>
+                <li id="legal-Tab" class="small-3 columns">
+                    <a class="btn-ga4" data-bind="click: appViewModel.goToDisclaimerPage">
+                        <span class="short-text btn-ga4">Terms</span>
+                        <span class="long-text btn-ga4">Terms</span>
+                    </a>
+                </li>
+                 <li id="legal-Tab" class="small-3 columns">
+                    <a class="btn-ga4" data-bind="click: appViewModel.goToAboutTheAppPage">
+                        <span class="short-text btn-ga4">About</span>
+                        <span class="long-text btn-ga4">About App</span>
+                    </a>
+                </li>
+
+                <li id="about-Tab" class="small-3 columns">
+                    <a class="btn-ga4" data-bind="click: appViewModel.goToNewsPage">
+                        <span class="short-text btn-ga4">News</span>
+                        <span class="long-text btn-ga4">News</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<div class="shrink-waypoint"></div>

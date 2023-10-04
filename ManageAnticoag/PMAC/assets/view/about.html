@@ -1,0 +1,118 @@
+
+<div class="data-display">
+<header class="header page">
+    <a class="logo">
+        <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+        <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+    </a>
+    <ul class="nav tabs tabs-primary condensable condensable-word small">
+        <li id="calculator-Tab" class="selected">
+            <a data-bind="click: appViewModel.goToPatientPageFromFooter">Evaluate
+            </a>
+        </li>
+        
+        
+        <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.aboutAdviceActiveTab() == false">
+            <a aria-controls="advice" class="disabled" >Advice
+            </a>
+         </li>
+         <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.aboutAdviceActiveTab() == true,click:appViewModel.getAdviceFromFooter">
+            <a class="adviceActiveTab" >Advice
+            </a>
+        </li>
+        
+        
+    </ul>
+</header>
+
+<div class="page with-group-sections">
+    <div class="page-wrapper">
+        <h1 class="clearfix">About
+        </h1>
+        <section class="section group-section clearfix">
+			<div class="row nopadding">
+			<div class="small-12 columns">
+                <h3>When was this App last updated?</h3>
+            </div>
+            <div class="small-12 columns">
+                <p>January 2017</p>
+            </div>
+			<div class="small-12 columns">
+                <h3>How can I provide feedback?</h3>
+            </div>
+            <div class="small-12 columns">
+                <p><a data-bind="click: appViewModel.goToFillFeedback">Click here to fill out our feedback survey</a></p>
+				<ul>
+                    <li>For Support </li>
+                    <li>Call: (202) 375-6000, ext. 5603 or (800) 253-4636 </li>
+                    <li>Fax: (202) 375-7000 </li>
+                    <li>Email: <a href="mailto:resource@acc.org">resource@acc.org</a></li>
+                </ul>
+            </div>
+			<div class="small-12 columns">
+                <h3>What is the target patient population for this app?</h3>
+            </div>
+			<div class="small-12 columns">
+                <p>The ACC BridgeAnticoag app is meant to be used in relation to non-valvular AF patients, currently taking warfarin or any of the direct oral anticoagulants, and scheduled to undergo a procedure or surgery (cardiac or otherwise).</p>
+            </div>
+			<div class="small-12 columns">
+                <h3>How is this App intended to be used?</h3>
+            </div>
+			<div class="small-12 columns">
+                <p>The ACC BridgeAnticoag App helps clinicians manage the anticoagulation of non-valvular AF patients when undergoing a procedure. Clinicians should use the app to assess:</p>
+				<ul>
+                    <li> Whether and when anticoagulation should be interrupted prior to the procedure</li>
+					<li> Whether and how a bridging agent should be used</li>
+					<li> When anticoagulation should be restarted after a procedure</li>
+				</ul>
+				<p>Clinicians can also email themselves the results of the app evaluation to include as part of a periprocedural management plan. </p>
+				<p>Advice from the app is derived from the 2016 ACC Expert Consensus Decision Pathway for Periprocedural Management of Anticoagulation in Patients with Non-Valvular Atrial Fibrillation. The information and recommendations in this App are meant to support clinical decision making. They are not meant to represent the only or best course of care, or replace clinical judgment. Therapeutic options should be determined after discussion between the patient and their care provider.</p>
+            </div>
+			<div class="small-12 columns">
+                <h3>How was this App developed?</h3>
+            </div>
+			<div class="small-12 columns">
+                <p>The App was designed and vetted through collaboration with the 2 Periprocedural Management of Anticoagulation Pathway writing group. It was further refined via user testing with physicians, nurse practitioners, and cardiac and non-cardiac specialists.</p>
+            </div>
+            </div>
+        </section>
+        </div>
+    </div>
+    <footer class="page footer">
+        <div class="row">
+            <a href="javascript:void(0)" class="logo text-center">
+                <img src="assets/img/footerlogo.svg" alt="ACC">
+                <img src="assets/img/bridge_anticog.svg" alt="BAC">
+            </a>
+            <ul class="nav tabs tabs-primary reverse swappable small row">
+                           
+                                        <li id="guideline-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/resources/" ddata-bind="click: appViewModel.goToResourcePage">
+                                                <span class="short-text btn-ga4">Resources</span>
+                                                <span class="long-text btn-ga4">Resources</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/disclaimer/" ddata-bind="click: appViewModel.goToDisclaimerPage">
+                                                <span class="short-text btn-ga4">Terms</span>
+                                                <span class="long-text btn-ga4">Terms</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns selected">
+                                            <a class="btn-ga4" href="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                                                <span class="short-text btn-ga4">About</span>
+                                                <span class="long-text btn-ga4">About App</span>
+                                            </a>
+                                        </li>
+
+                                        <li id="about-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/news/" ddata-bind="click: appViewModel.goToNewsPage">
+                                                <span class="short-text btn-ga4">News</span>
+                                                <span class="long-text btn-ga4">News</span>
+                                            </a>
+                                        </li>
+                        </ul>
+        </div>
+    </footer>
+</div>
+<div class="shrink-waypoint"></div>

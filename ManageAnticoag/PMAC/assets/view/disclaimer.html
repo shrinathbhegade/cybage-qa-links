@@ -1,0 +1,77 @@
+
+<div class="data-display">
+    <header class="header page">
+        <a class="logo">
+            <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+            <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+        </a>
+        <ul class="nav tabs tabs-primary condensable condensable-word small">
+            <li id="calculator-Tab" class="selected">
+                <a data-bind="click: appViewModel.goToPatientPageFromFooter">Evaluate
+                </a>
+            </li>
+        <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.disclaimerAdviceActiveTab() == false">
+            <a aria-controls="advice" class="disabled" >Advice
+            </a>
+         </li>
+         <li id="recommendation-Tab" class="" data-bind="visible: appViewModel.disclaimerAdviceActiveTab() == true,click:appViewModel.getAdviceFromFooter">
+            <a class="adviceActiveTab" >Advice
+            </a>
+        </li>
+        </ul>
+    </header>
+
+    <div class="page with-group-sections">
+        <div class="page-wrapper">
+				<h1 class="clearfix">Terms of Service
+				</h1>
+				<section class="section group-section clearfix">
+					
+					<div class="small-12 columns">
+						<p>By using this application and its content, you accept and agree to be bound by the following terms and conditions. </p>
+						<p>This Application was produced after careful consideration of the scientific and medical knowledge and the evidence available at the time of publication. The results and recommendations provided by this application are not intended to, and should not, replace clinical judgment of the care provider. Further, the material is not intended to present the only, or necessarily the best, methods of procedures for the medical situation, but rather is intended to represent an approach, view, statement, or opinion. The content in this product is presented as an educational service intended for licensed healthcare professionals. Therapeutic options should be determined after discussion between the patient and their care provider. </p>
+						<p>You hereby agree to indemnify, defend, and hold ACCF, its directors, officers, shareholders, parents, subsidiaries, affiliates, agents, and licensors harmless from and against any and all liability, losses, damages, and costs, including, without limitation, reasonable attorney’s fees and costs, incurred in connection with any claim arising from your use of this application or its content. </p>
+						<p>©The American College of Cardiology Foundation 2017 </p>
+						<p>All Rights Reserved. The content of this app has been published for personal and educational use only. No commercial use is authorized. </p>
+					</div>
+				</section>
+            </div>
+        </div>
+        <footer class="page footer">
+            <div class="row">
+                <a href="javascript:void(0)" class="logo text-center">
+						<img src="assets/img/footerlogo.svg" alt="ACC">
+						<img src="assets/img/bridge_anticog.svg" alt="BAC">
+					   </a>
+                <ul class="nav tabs tabs-primary reverse swappable small row">
+                   
+                    <li id="guideline-Tab" class="columns small-3">
+                        <a class="btn-ga4" ahref="../index.html#!/content/resources/" data-bind="click: appViewModel.goToResourcePage">
+                            <span class="short-text btn-ga4">Resources</span>
+                            <span class="long-text btn-ga4">Resources</span>
+                        </a>
+                    </li>
+                    <li id="legal-Tab"  class="selected columns small-3">
+                        <a class="btn-ga4" ahref="../index.html#!/content/disclaimer/" data-bind="click: appViewModel.goToDisclaimerPage">
+                            <span class="short-text btn-ga4">Terms</span>
+                            <span class="long-text btn-ga4">Terms</span>
+                        </a>
+                    </li>
+                     <li id="legal-Tab" class="columns small-3">
+                        <a class="btn-ga4" ahref="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                            <span class="short-text btn-ga4">About</span>
+                            <span class="long-text btn-ga4">About App</span>
+                        </a>
+                    </li>
+
+                    <li id="about-Tab" class="columns small-3">
+                        <a class="btn-ga4" ahref="../index.html#!/content/news/" data-bind="click: appViewModel.goToNewsPage">
+                            <span class="short-text btn-ga4">News</span>
+                            <span class="long-text btn-ga4">News</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div class="shrink-waypoint"></div>

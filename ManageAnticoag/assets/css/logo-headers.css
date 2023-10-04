@@ -1,0 +1,39 @@
+/* IE10+ specific styles go here */
+@media all and (-ms-high-contrast: none) {
+     *::-ms-backdrop, .header .logo img {
+         width: 100%;
+    }
+}
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+     .page.header .logo img {
+        height: auto !important;
+    }
+}
+ @media only screen and (-ms-high-contrast: active) and (min-width: 1024px), only screen and (-ms-high-contrast: none) and (min-width: 1024px) {
+     .page.header .logo img {
+         height: auto !important;
+         margin: 0 !important;
+    }
+}
+ @media only screen and (-ms-high-contrast: active) and (min-width: 1200px), only screen and (-ms-high-contrast: none) and (min-width: 1200px) {
+     .page.header .logo img {
+         height: auto !important;
+         margin: 0 !important;
+    }
+}
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+     .acc-logo {
+         margin: 20px 0 !important;
+         padding-left: 2em;
+    }
+}
+ @media only screen and (-ms-high-contrast: active) and (min-width: 768px), only screen and (-ms-high-contrast: none) and (min-width: 768px) {
+     .tabs.tabs-primary li a.fix-bounce {
+         padding: 2.2em .75em;
+    }
+}
+
+
+ .tabs-primary.tabs li {
+     margin-bottom: 0;
+}

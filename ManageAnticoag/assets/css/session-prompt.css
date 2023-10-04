@@ -1,0 +1,62 @@
+.session-prompt {
+                z-index: 1006;
+                border-top: 6px solid #005B37;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                padding: 1rem;
+                border-radius: 0;
+                background-color: #fefefe;
+                position: relative;
+                top: 0;
+                margin-right: auto;
+                margin-left: auto;
+                overflow-y: auto;
+            }
+.session-prompt h4 {
+    color: #5c5c5c;
+}
+            .session-prompt .close {
+                position: absolute;
+                color: white;
+                padding: .25em .5em .5em .5em;
+                top: 0;
+                right: 0;
+                background-color: #005B37;
+            }
+.session-prompt .button-group .button {
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+            .session-prompt .close:hover {
+                cursor:pointer;
+            }
+            .session-prompt.tiny, .session-prompt.small, .session-prompt.large, .session-prompt.full {
+                width: 100%;
+            }
+            
+            .session-overlay {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1005;
+                display: none;
+                background-color: rgba(10, 10, 10, 0.45);
+                overflow-y: hidden;
+            }
+            
+            @media only screen and (min-width: 768px) {
+                .session-prompt.tiny {
+                width: 30%;
+                }
+                .session-prompt.small {
+                    width: 60%;
+                }
+                .session-prompt.large {
+                    width: 90%;
+                }
+                .session-prompt.full {
+                    width: 100%;
+                }
+            }

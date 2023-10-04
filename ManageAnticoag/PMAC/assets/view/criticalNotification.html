@@ -1,0 +1,27 @@
+
+<div class="data-display">
+    <header class="header page">
+        <a class="logo">
+            <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+            <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+        </a>
+    </header>
+    
+    <div class="page with-group-sections locked">
+        <div class="page-wrapper">
+            <section class="section group-section clearfix">
+                <div class="row nopadding">
+                <h2 class="with-underline black"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Locked</h2>
+                <h4 data-bind="text:appViewModel.critialNotifiationTitle">The system has been locked.</h4>
+                <p data-bind="text:appViewModel.critialNotifiationText">The version of the application has been locked because of need to upgrade the science.Please go to the store to upgrade the application.</p>
+                </div>
+            </section>
+            <div class="row button-section nopadding" data-bind="visible:appViewModel.showCritialNotifiationLink">
+                <div class="columns small-8 large-12 end text-right float-right nopadding">
+                    <button type="button" name="button" class="button reset" data-bind="click:appViewModel.goToStore">
+                    Go to Store <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

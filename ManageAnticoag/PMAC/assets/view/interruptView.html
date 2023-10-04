@@ -1,0 +1,315 @@
+
+        <div class="data-display">
+</div>
+
+            <div class="page paper-page with-group-sections" id="interruptpage">
+                <div class="page-wrapper">
+                        <div class="row collapse nopadding" style="margin-bottom: 0.36981em;">
+                            <h3>Plan Periprocedural Interruption and Bridging</h3>
+                            <ul class="breadcrumbs small-12 medium-8 columns">
+                                <li><a class="btn-ga4" href="" data-bind="click:appViewModel.interruptGoToPatientPage">Patient Details</a></li>
+                                <li><a class="active btn-ga4" onclick="return false;">Assess Interruption</a></li>
+                            </ul>
+                            <div class="small-12 medium-4 columns text-right float-right nopadding"><button type="button" name="button" class="button clear-grey-btn disabled cp-width" data-bind="visible: appViewModel.interruptActiveClearBtn() == false">
+									Clear Page</button>
+								 <button type="button" name="button" class="button grey-btn cp-width" data-bind="visible: appViewModel.interruptActiveClearBtn() == true,click:appViewModel.interruptClearData">
+									Clear Page</button>
+								 
+							</div>
+                        </div> 
+						<!--<h1 class="clearfix">Interrupt
+							<div class="small-12 medium-3 columns text-right float-right nopadding"><button type="button" name="button" class="button clear-grey-btn disabled cp-width" data-bind="visible: appViewModel.interruptActiveClearBtn() == false">
+									Clear Page</button>
+								 <button type="button" name="button" class="button grey-btn cp-width" data-bind="visible: appViewModel.interruptActiveClearBtn() == true,click:appViewModel.interruptClearData">
+									Clear Page</button>
+								 
+							</div>
+						</h1>-->
+                        
+                            <div class="callout warning" data-bind="visible:appViewModel.interruptLockedSection">
+                                <div class="row collapse">
+                                    <div class="small-2 medium-1 columns">
+                                        <h5 class="center">
+                                            <span class="fa-stack fa-lg">
+                                            <i class="fa fa-square-o fa-stack-2x grey"></i>
+                                            <i class="fa fa-lock fa-stack-1x grey"></i>
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div class="small-10 medium-9 columns nopadding">
+                                        <div class="msg-block">
+                                            <h5 class="msg-header no-margin-vertical">This section is locked to prevent conflicting inputs</h5>
+                                            <p class="msg">Unlocking this page will allow input on this screen but reset all following pages</p>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-2 columns text-right msg-btn">
+                                        <a class="button secondary small expanded" data-bind="click:appViewModel.interruptUnlockSection">Unlock</a>
+                                    </div>
+                                </div>
+        </div>
+
+                            <!--<div class="tag locked clearfix" data-bind="visible:appViewModel.interruptLockedSection">
+                                <div class="row">
+                                    <div class="small-2 medium-1 columns">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="small-10 medium-9 columns nopadding">
+                                        <div class="msg-block">
+                                            <span class="msg-header">This section is locked to prevent conflicting inputs</span>
+                                            <span class="msg">Unlocking this page will allow input on this screen but reset all following pages</span>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-2 columns text-right">
+                                        <a class="button clear-grey-btn" data-bind="click:appViewModel.interruptUnlockSection">Unlock</a>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <section class="section group-section clearfix">
+                                <div class="row columns nopadding">
+                                    <div class="small-12 columns nopadding">
+                                        <div class="small-12 large-7 columns nopadding">
+
+                                            <div class="question required">
+                                                <div class="label-holder">
+                                                    <label for="">
+                                                        <span class="text">Indicate procedural bleed risk:</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-holder">
+                                                    <div class="input-space column small-12 medium-5 large-5">
+                                                        <a class="button compute proc sg btn-ga4" href="#" data-bind="click:appViewModel.interruptNavigateToProceduralWizard,attr: { disabled: appViewModel.interruptdisableValue }">
+                                                            Select Procedure from List
+                                                        </a>
+                                                        <div class="callout pb-name" data-bind="visible:appViewModel.interruptShowProcedureName">
+                                                            <p>Selected Procedure:</p>
+                                                            <p><i data-bind="text:appViewModel.interruptSelectedProcedureName">TAVR (transaartic valve replacement)</i><span><a class="close" data-bind="click:appViewModel.interruptHideProcedureName">x</a></span></p>
+                                                        </div>
+                                                    </div>
+             <div class="input-space column small-12 medium-1"><span class="cond text-center">OR</span></div>
+                                                    <div class="input-space column small-12 medium-5 large-6">
+                                                        <select id="chosenSingle" class="chosen-select" tabindex="3" data-bind="options: appViewModel.interruptAvailableItem, value: appViewModel.interruptSelectedItem, optionsCaption: 'Enter a procedural bleed risk',multiple:'true',event: { change: appViewModel.interruptActiveWhetherToInterrpt },attr: { disabled: appViewModel.interruptdisableValue }">
+                                                     </select>
+                                                    </div>
+                                                    <div class="column medium-4 show-for-medium-only"></div>
+                                                </div>
+                                                <div class="message-holder">
+                                                    <small class="error">
+                                                    <i class="fa fa-holder"></i>Error message</small>
+                                                    <small class="warning">
+                                                    <i class="fa fa-holder"></i>Warning message</small>
+                                                    <small class="data">
+                                                    <i class="fa fa-holder"></i>Data message</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="small-12" >&nbsp;</div>
+                                    <div class="small-12 large-6 end columns nopadding" data-bind="visible:appViewModel.interruptVisibleCrcl">
+                                        <div class="question wildcard small-12 large-9 columns end nopadding right-labeled" data-bind="css: appViewModel.crclVMCrclVMInterruptValue() == true ? 'warning' : ''">
+                                      <div class="label-holder">
+                                        <label for="">
+                                          <span class="text">CrCl (Cockcroft-Gault):</span>
+                                          <span class="required-holder">
+                                            <i class="fa fa-holder-dynamic"></i>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <div class="input-holder">
+
+                                        <div class="input-space column small-6 large-9">
+                                            <input type="text" data-bind="textInput:appViewModel.interruptCrclInputValue,enable:appViewModel.interruptEnableCrclInput,valueUpdate: 'afterkeydown', event: { change: appViewModel.interruptCrclInputChangeOnKeyChange , keyup:appViewModel.interruptCrclInputChangeOnKeyUP},attr: { disabled: appViewModel.interruptCrclManualValue }"/>
+                                        </div>
+
+                                        <div class="value extra">
+                                          mL/min
+                                        </div>
+                                      </div>
+                                      <div class="message-holder">
+                                        <small class="error">
+                                          <i class="fa fa-holder"></i>Error message</small>
+                                        <small class="warning" data-bind="visible:appViewModel.crclVMCrclVMInterruptValue">
+                                          <i class="fa fa-holder"></i><span data-bind="text:appViewModel.crclVMInterruptValue"/></small>
+
+                                        <small class="info">
+                                          <i class="fa fa-holder"></i>Data message</small>
+                                      </div>
+
+                                    </div>
+
+                                      <div class="input-space column small-12">
+                                        <a class="calc-crcl sg btn-ga4" data-bind="click:appViewModel.interruptNavigateToCRCLWizard,attr: { disabled: appViewModel.interruptdisableValue },visible:appViewModel.interruptLockedCrclSection() ==  false">
+                                            Calculate CrCl
+                                        </a>
+                                        <a class="calc-crcl sg btn-ga4" data-bind="visible: appViewModel.interruptLockedCrclSection() == true">
+                                            Calculate CrCl
+                                        </a>
+                                      </div>
+                                        <div class="small-12 lock-notif clearfix" data-bind="visible:appViewModel.interruptInputLockCrcl() == true && appViewModel.interruptLockedSection() == false">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                            Input is locked because it is computed.
+                                            <a data-bind="click: appViewModel.clearCrcl" class="float-right">Clear CrCl</a>
+                                        </div>
+                                        <div class="small-12 lock-notif clearfix" data-bind="visible:appViewModel.interruptInputLockCrcl() == true && appViewModel.interruptLockedSection() == true">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                            Input is locked because it is computed.
+                                            <a  class="float-right">Clear CrCl</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 columns nopadding" data-bind="visible:appViewModel.interruptTherapyDOACSelected">
+                                        <br/>
+                                        <label>
+                                            INR measurement 5-7 days prior to procedure:&nbsp; <i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true" title="INR must be measured within 5-7 days prior to procedure for accurate assessment and advice."></i>	
+
+                                        </label>
+
+                                        <div class="switch-input-space">
+                                            <div class="switch radio" data-bind="click:appViewModel.supratherapeuticChecked">
+                                                <input class="switch-input" value="Supratherapeutic" data-bind="checked: appViewModel.interruptINRchecked,attr: { disabled: appViewModel.interruptdisableValue}" id="yes-no-radio-static1" type="radio" name="radio-switch1">
+                                                <label class="switch-paddle" for="yes-no-radio-static1">
+                                                    <span class="show-for-sr">Do you like me?</span>
+                                                    <span class="switch-active" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>
+                                                    <span class="switch-inactive" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>  
+                                                </label>
+                                            </div>
+                                            <label class="switch-value" for="yes-no-radio-static1">Supratherapeutic</label>
+                                        </div>      
+
+                                        <div class="switch-input-space">
+                                            <div class="switch radio" data-bind="click:appViewModel.goalLavelChecked">
+                                                <input class="switch-input" data-bind="checked:appViewModel.interruptINRchecked,attr: { disabled: appViewModel.interruptdisableValue }" id="yes-no-radio-static2" type="radio" name="radio-switch1">
+                                                <label class="switch-paddle" for="yes-no-radio-static2">
+                                                    <span class="show-for-sr">Do you like me?</span>
+                                                    <span class="switch-active" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>
+                                                    <span class="switch-inactive" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <label class="switch-value" for="yes-no-radio-static3">Goal Level (2.0 to 2.5 -or- 2.0 to 3.0)</label>
+                                        </div>
+
+                                        <div class="switch-input-space">
+                                            <div class="switch radio" data-bind="click:appViewModel.subtherpeuticChecked">
+                                                <input class="switch-input" value="Subtherapeutic" data-bind="checked: appViewModel.interruptINRchecked,attr: { disabled: appViewModel.interruptdisableValue }" id="yes-no-radio-static3" type="radio" name="radio-switch1">
+                                                <label class="switch-paddle" for="yes-no-radio-static3">
+                                                    <span class="show-for-sr">Do you like me?</span>
+                                                    <span class="switch-active" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>
+                                                    <span class="switch-inactive" aria-hidden="true">
+                                                        <i class="fa fa-holder"></i>
+                                                    </span>
+                                                </label>
+
+                                            </div>
+                                            <label class="switch-value" for="yes-no-radio-static3">Subtherapeutic</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                                <div class="row columns nopadding">
+                                    <div class="message-group small-12">
+
+                                        <h5 class="text-left">Advice: Whether to Interrupt</h5>
+
+                                        <div class="colored-paper callout main-msg text-center" data-bind="css: appViewModel.interruptAdviceBoxColor,html:appViewModel.interruptWhetherToIntrruptAdvice">
+                                              Answer questions above to generate advice.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="msg-forward-btn text-center"  >
+                                    <a href="#" data-bind="click:appViewModel.interruptAnyway,visible:appViewModel.interruptVisibleInterruptBtn,attr: { disabled: appViewModel.interruptdisableValue }" class="button secondary">I want to interrupt.<br>Show me how.</a>
+                                </div>
+
+                                <div class="row columns nopadding">
+                                    <div class="message-group small-12">
+                                        <h5 class="text-left">Advice: When to Interrupt</h5>
+                                        <div class="colored-paper callout warning main-msg text-center" data-bind="text:appViewModel.interruptWhenToInterruptAdviceSubbox,visible:appViewModel.interruptWhenToInterruptAdviceSubboxVisible">
+                                            Answer questions above to generate advice.
+
+                                        </div>
+                                        <div class="colored-paper callout main-msg text-center" data-bind="text:appViewModel.interruptWhenToInterruptAdvice, css: appViewModel.interruptAdviceBoxColorForWhenToInerrupt">
+                                            Answer questions above to generate advice.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="panel clearfix btn-prev-next condensable small">
+                                <a  class="button blue-btn small-5 medium-3 large-3 float-left btn-ga4" data-bind="click:appViewModel.interruptGoToPatientPage">
+                                    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                                    Return to Patient
+                                </a>
+
+                                <a href="#" data-bind="visible: appViewModel.interruptLockedSection() == false && appViewModel.interruptActiveInterrupt() == false" class="button small-5 medium-3 large-3 blue-btn disabled float-right btn-ga4">
+                                    Assess Bridging
+                                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                </a>
+                                 <a data-bind="click:appViewModel.interruptGoToBridgePage,visible: appViewModel.interruptLockedSection() == true || appViewModel.interruptActiveInterrupt() == true" class="button blue-btn small-5 medium-3 large-3 float-right btn-ga4">
+                                    Assess Bridging
+                                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="panel clearfix btn-prev-next" id="ButtonGroup">
+                                <a class="button blue-btn disabled expanded ce-pmac-view-advice-summary" data-bind="visible: appViewModel.interruptAdviceActiveTab() == false">
+                                    <span class="text ce-pmac-view-advice-summary">View Input and Advice Summary</span>
+                                </a>
+                                <a class="button blue-btn expanded ce-pmac-view-advice-summary"  data-bind="visible: appViewModel.interruptAdviceActiveTab() == true,click:appViewModel.interruptGetAdvice">
+                                    <span class="text ce-pmac-view-advice-summary">View Input and Advice Summary</span>
+                                </a>
+                                
+                            </div>
+                            <div class="panel clearfix btn-prev-next">
+                                <a class="button blue-btn expanded btn-ga4" href="../index.html" data-bind="click: appViewModel.goToHomePage" ddata-bind="click:appViewModel.ToStartNewPatient">
+                                    <span class="text btn-ga4"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                                </a>
+                            </div>
+                        
+                </div>
+                <footer class="page footer" id="interruptfooter">
+                    <div class="row">
+                        <!--<a href="javascript:void(0)" class="logo text-center">
+						<img src="assets/img/footerlogo.svg" alt="ACC">
+						<img src="assets/img/bridge_anticog.svg" alt="BAC">
+					   </a>-->
+                        <ul class="nav tabs tabs-primary reverse swappable small row" style="visibility: visible;flex-wrap: initial;">
+							
+                            <li id="guideline-Tab" class="small-3 columns">
+                                <a class="btn-ga4" href="../index.html#!/content/resources/" data-bind="click: appViewModel.goToResourcePage">
+                                    <span class="short-text btn-ga4">Resources</span>
+                                    <span class="long-text btn-ga4">Resources</span>
+                                </a>
+                            </li>
+							<li id="legal-Tab" class="small-3 columns">
+                                <a class="btn-ga4" href="../index.html#!/content/terms/" data-bind="click: appViewModel.goToDisclaimerPage">
+                                    <span class="short-text btn-ga4">Terms</span>
+                                    <span class="long-text btn-ga4">Terms</span>
+                                </a>
+                            </li>
+                            <li id="legal-Tab" class="small-3 columns">
+                                <a class="btn-ga4" href="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                                    <span class="short-text btn-ga4">About</span>
+                                    <span class="long-text btn-ga4">About App</span>
+                                </a>
+                            </li>
+                            
+                            <li id="about-Tab" class="small-3 columns">
+                                <a class="btn-ga4" href="../index.html#!/content/news/" data-bind="click: appViewModel.goToNewsPage">
+                                    <span class="short-text btn-ga4">News</span>
+                                    <span class="long-text btn-ga4">News</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+   <script>setTimeout(function(){$(document).foundation();}, 2000);</script>
+            

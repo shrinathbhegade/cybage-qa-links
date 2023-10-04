@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PPX2G3V');
+        </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline';
+         script-src 'self' https://www.google-analytics.com/analytics.js https://apis.google.com https://google.com 'unsafe-inline' 'unsafe-eval'" />-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <title>ManageAnticoag</title>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/foundation-sites.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/mr.css">
+    <link rel="stylesheet" href="../assets/css/hamburger-menu.css">
+    <link rel="stylesheet" href="../assets/css/session-prompt.css">
+    <link rel="stylesheet" href="../assets/css/logo-headers.css">
+    <script src="../assets/js/modernizr.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <!-- [if lte IE 9]><link rel="stylesheet" href="https://tools.stage.acc.org/ManageAnticoag/Assets/css/tabs-primary_Fallback-IE9.css"><! [endif] -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX2G3V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="off-canvas-wrapper" style="overflow: hidden;">
+        <div class="overlay"></div>
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="offCanvas" data-off-canvas style="height:100%">
+                <!-- Close button -->
+                <button class="close-button" aria-label="Close menu" type="button" data-close></button>
+                <!-- Menu -->
+                <div class="row" id="test-eq">
+                    <nav class="nav-list small hamburger-menu">
+                        <ul>
+                            <li>
+                                <a class="expanded btn-ga4" href="../index.html"> <i class="fa fa-home"></i><span class="text btn-ga4">Home</span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded btn-ga4" href="../PMAC/index.html"> <i class="fa fa-random"></i> <span class="text btn-ga4">                                        
+                                        Plan Periprocedural Interruption and Bridging
+                                    </span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded btn-ga4" href="../AddressAcuteBleed/index.html"> <i class="fa fa-tint"></i> <span class="text text-left btn-ga4">
+                                        Address an Acute Bleed
+                                    </span> </a>
+                            </li>
+                            <li class="selected">
+                                <a class="expanded btn-ga4" href="javascript:void(0)"> <i class="fa fa-exchange"></i> <span class="text text-left btn-ga4">
+                                        Determine Anticoag Restart
+                                    </span> </a>
+                            </li>
+                            <li>
+                                <a class="expanded btn-ga4" href="../index.html#!/content/quick-reference/"> <i class="fa fa-medkit"></i> <span class="text text-left btn-ga4">
+                                        Quick Reference
+                                    </span> </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="off-canvas-content" data-off-canvas-content>
+                <!--APP GOES HERE-->
+                <div data-bind="page: {id:'content', role: 'start'}" class="page with-group-sections">
+                    <div class="data-display">
+                        <header class="header page text-center">
+                            <ul class="nav tabs tabs-primary float-left" style=" visibility: visible;flex-wrap: nowrap;">
+                                    <li class="mobile-acc-logo">
+                                        <a href="javascript:void(0)" class="no-hover">
+                                            <span class=""><img src="../assets/img/headerlogo.svg" style="border-right: 1px solid #ccc;" alt="ManageAnticoag"></span>
+                                            <span class=""><img src="../assets/img/manageanticoag-mobile.svg" alt="ManageAnticoag"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a class="logo no-hover" href="javascript:void(0)" class="no-hover"> <span class="acc-logo">
+										<img src="assets/img/headerlogo.svg" alt="ManageAnticoag">
+									</span> <span class="bridge-anticoag-logo">
+										<img src="../assets/img/manageanticoag-web.svg" alt="ManageAnticoag">
+									</span> 
+                                </a>
+                        </header>
+                    </div>
+                    <!-- Start for AUC question section -->
+                    <div data-bind="page: {id: 'calculator', name: 'calculator', afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding invisible">
+                        <div class="row collapse">
+                            <h3>Determine Anticoag Restart</h3>
+                            <ul class="small-8 columns breadcrumbs">
+                                <li><a class="active btn-ga4" href="" onclick="return false;">Evaluate</a></li>
+                            </ul>
+                            <div class="small-4 columns">
+                                <a id="resetAll" class="right bold" onclick="resetAll();"> <i class="fa fa-repeat"></i> &nbsp;Reset All </a>
+                            </div>
+                        </div>
+                        <div id="questionset"></div>
+                        <div class="row" data-bind="visible:!$root.Form().hasNoAdvice() && !$root.Form().hasAdvice()">
+                            <div class="large-12 medium-12 small-12">
+                                <div data-alert="" data-bind="visible:!$root.Form().hasNoAdvice() && !$root.Form().hasAdvice()" class="alert-box callout warning"> <i class="fa fa-exclamation-triangle"></i> &nbsp; <span id="noAucAlert"></span> </div>
+                            </div>
+                        </div>
+                        <div class="row" data-bind="visible:!$root.Form().hasAdvice()">
+                            <div class="medium-12"> <a data-bind="click:newEvaluation, visible:!$root.Form().hasNoAdvice()" class="button left">New Evaluation</a> <a id="advice_btn" href="#!/content/advice" class="button right blue-btn ce-anticoag-restart-view-advice">View Advice&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a> </div>
+                        </div>
+                    </div>
+                    
+                    <div id="template" class="hide">
+                        <div class='page-wrapper' id='e5c893fa-2093-4398-84cc-49c0693bd802' data-label='Reason for OAC interruption:'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Why was oral anticoagulant (OAC) interrupted?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="e2a89efc-4a2e-418a-a842-84e94c86f227" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small ">
+                                            <input autocomplete="off" class="switch-input" type="radio" id="13a" data-guid="e2a89efc-4a2e-418a-a842-84e94c86f227" data-questionguid="e5c893fa-2093-4398-84cc-49c0693bd802" data-label="13a. Acute bleed" data-disclaimer="" name="13" data-ga="" onclick="evaluateNextQuestion('e5c893fa-2093-4398-84cc-49c0693bd802','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="13a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=13a>Acute bleed                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="c8438aff-b77e-4dec-ba70-846c881fc590" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small ">
+                                            <input autocomplete="off" class="switch-input" type="radio" id="13b" data-guid="c8438aff-b77e-4dec-ba70-846c881fc590" data-questionguid="e5c893fa-2093-4398-84cc-49c0693bd802" data-label="13b. Invasive Procedure" data-disclaimer="" name="13" data-ga="" onclick="evaluateNextQuestion('e5c893fa-2093-4398-84cc-49c0693bd802','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="13b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=13b>The interruption was/is planned as part of an invasive procedure                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f4b95085-b147-4c92-b2af-a0a26ccf7504' data-label='Hemostasis without bleeding complications?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Was complete hemostasis achieved with no bleeding complications?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="ff7726b3-f559-4485-90e8-e69558d3d957" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="14a" data-guid="ff7726b3-f559-4485-90e8-e69558d3d957" data-questionguid="f4b95085-b147-4c92-b2af-a0a26ccf7504" data-label="14a. Yes" data-disclaimer="" name="14" data-ga="" onclick="evaluateNextQuestion('f4b95085-b147-4c92-b2af-a0a26ccf7504','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="14a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=14a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="5e8421d3-66ba-4ab0-9767-0a3e7e52711e" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="14b" data-guid="5e8421d3-66ba-4ab0-9767-0a3e7e52711e" data-questionguid="f4b95085-b147-4c92-b2af-a0a26ccf7504" data-label="14b. No" data-disclaimer="" name="14" data-ga="" onclick="evaluateNextQuestion('f4b95085-b147-4c92-b2af-a0a26ccf7504','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="14b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=14b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f0f7fa71-325f-49b9-b674-2761c1aa4ac0' data-label='Additional indications:'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Do any of these clinical indications apply?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="b7479ad5-e202-4b05-b065-45bfa2092ac9" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15a" data-guid="b7479ad5-e202-4b05-b065-45bfa2092ac9" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15a. AF with&#160;CHA2DS2-VASc score" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15a>Nonvalvular AF with CHA<SUB>2</SUB>DS<SUB>2</SUB>-VASc score < 2 in men and < 3 in women                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="9e9e3705-afbc-4df7-8240-86f8109729d1" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15b" data-guid="9e9e3705-afbc-4df7-8240-86f8109729d1" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15b. Temporary indication of OAC" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15b>Temporary indication of OAC                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="e.g., postsurgical prophylaxis, OAC after an anterior myocardial infarction without left ventricular thrombus, post-LAA closure device placement" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                                            <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                
+                                <div data-guid="2a008808-6426-4d18-a971-631018104707" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15d" data-guid="2a008808-6426-4d18-a971-631018104707" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15d. Recovered acute stress cardiomyopathy" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15d">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15d>Recovered acute stress cardiomyopathy                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="e.g., Takotsubo cardiomyopathy" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                                            <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="4364c3ec-6eb7-483b-a64e-dcbe08781c2d" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15e" data-guid="4364c3ec-6eb7-483b-a64e-dcbe08781c2d" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15e. First-time provoked VTE &gt;3 months ago" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15e">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15e>First-time provoked VTE >3 months ago                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="ea788898-5dd9-441f-9c60-3c14ede9e2d1" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15f" data-guid="ea788898-5dd9-441f-9c60-3c14ede9e2d1" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15f. Bioprosthetic valve placement in the absence of AF &gt;3 months ago" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15f">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15f>Bioprosthetic valve placement in the absence of AF >3 months ago                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="26fc9b46-1abf-46d8-b975-155bf666a5be" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="15c" data-guid="26fc9b46-1abf-46d8-b975-155bf666a5be" data-questionguid="f0f7fa71-325f-49b9-b674-2761c1aa4ac0" data-label="15c. None of these" data-disclaimer="" name="15" data-ga="" onclick="evaluateNextQuestion('f0f7fa71-325f-49b9-b674-2761c1aa4ac0','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="15c">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=15c>None of these                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='80ad62a3-71bc-42be-acdd-c7994ea59fb5' data-label='Waited sufficient period before restart?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Based on the bleed type and clinical judgement (see info button for more), has sufficient time passed to consider restarting anticoagulation?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Resumption of anticoagulation should be delayed for at least 4 weeks unless the patient is judged to be at very high thrombotic risk. A multi-disciplinary approach should be taken, particularly for patients judged to be at very high risk of both thrombosis and bleeding."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="995c24b8-2f40-4708-8f45-e0dab723697d" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="16a" data-guid="995c24b8-2f40-4708-8f45-e0dab723697d" data-questionguid="80ad62a3-71bc-42be-acdd-c7994ea59fb5" data-label="16a. Yes" data-disclaimer="" name="16" data-ga="" onclick="evaluateNextQuestion('80ad62a3-71bc-42be-acdd-c7994ea59fb5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="16a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=16a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="4be7106f-2e10-417a-973a-57e79612632f" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="16b" data-guid="4be7106f-2e10-417a-973a-57e79612632f" data-questionguid="80ad62a3-71bc-42be-acdd-c7994ea59fb5" data-label="16b. No" data-disclaimer="" name="16" data-ga="" onclick="evaluateNextQuestion('80ad62a3-71bc-42be-acdd-c7994ea59fb5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="16b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=16b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='82891d4a-275d-4ba8-a3b6-04e52110a3bf' data-label='Waited sufficient period before restart?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Based on the bleed type and clinical judgement (see info button for more), has sufficient time passed to consider restarting anticoagulation?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Resumption of anticoagulation will depend on the management of bleeding. Several factors should be considered in determining when to restart anticoagulation including the patient’s underlying thrombotic risk, the patient’s underlying bleeding risk, and whether the source of the bleed was definitively addressed."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="b6a75ae9-3199-4ebd-b5c8-0a505793b8a3" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="17a" data-guid="b6a75ae9-3199-4ebd-b5c8-0a505793b8a3" data-questionguid="82891d4a-275d-4ba8-a3b6-04e52110a3bf" data-label="17a. Yes" data-disclaimer="" name="17" data-ga="" onclick="evaluateNextQuestion('82891d4a-275d-4ba8-a3b6-04e52110a3bf','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="17a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=17a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="0267e988-9393-4a3c-b6a7-834cfd0d4437" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="17b" data-guid="0267e988-9393-4a3c-b6a7-834cfd0d4437" data-questionguid="82891d4a-275d-4ba8-a3b6-04e52110a3bf" data-label="17b. No" data-disclaimer="" name="17" data-ga="" onclick="evaluateNextQuestion('82891d4a-275d-4ba8-a3b6-04e52110a3bf','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="17b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=17b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f5a5d653-8d20-4392-ab64-aa8c1bff33d2' data-label='Urgent surgical/ invasive procedure planned?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Is an urgent surgical/ invasive procedure planned?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="3d2fe031-a232-46ca-bb67-ea2cc9af4603" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="18a" data-guid="3d2fe031-a232-46ca-bb67-ea2cc9af4603" data-questionguid="f5a5d653-8d20-4392-ab64-aa8c1bff33d2" data-label="18a. Yes" data-disclaimer="" name="18" data-ga="" onclick="evaluateNextQuestion('f5a5d653-8d20-4392-ab64-aa8c1bff33d2','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="18a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=18a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="a1649df2-2dc8-4110-9083-26cd8fe401c9" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="18b" data-guid="a1649df2-2dc8-4110-9083-26cd8fe401c9" data-questionguid="f5a5d653-8d20-4392-ab64-aa8c1bff33d2" data-label="18b. No" data-disclaimer="" name="18" data-ga="" onclick="evaluateNextQuestion('f5a5d653-8d20-4392-ab64-aa8c1bff33d2','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="18b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=18b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f8b794c0-ff24-469a-be93-3d186be3e627' data-label='Critical site bleed?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Did bleeding occur at a critical site?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Bleeds that compromise an organ’s function (e.g. ICH, intra-ocular, spinal, thoracic, intraabdominal, retroperitoneal, intra-articular and intra-muscular)"></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="2a962fd2-e36f-4856-ae46-329b0061785f" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="19a" data-guid="2a962fd2-e36f-4856-ae46-329b0061785f" data-questionguid="f8b794c0-ff24-469a-be93-3d186be3e627" data-label="19a. Yes" data-disclaimer="" name="19" data-ga="" onclick="evaluateNextQuestion('f8b794c0-ff24-469a-be93-3d186be3e627','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="19a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=19a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="2c656655-e6de-4855-9dbe-3c14844113bf" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="19b" data-guid="2c656655-e6de-4855-9dbe-3c14844113bf" data-questionguid="f8b794c0-ff24-469a-be93-3d186be3e627" data-label="19b. No" data-disclaimer="" name="19" data-ga="" onclick="evaluateNextQuestion('f8b794c0-ff24-469a-be93-3d186be3e627','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="19b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=19b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='a4e64bd5-bc54-4450-a6ee-a3dd110e7ca6' data-label='High rebleed risk?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Is the patient at high risk of rebleeding?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Discuss risk of rebleeding and thrombosis with specialists involved in patient’s care."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="ce094eed-e6ab-4984-9032-b71b56aadfdc" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="20a" data-guid="ce094eed-e6ab-4984-9032-b71b56aadfdc" data-questionguid="a4e64bd5-bc54-4450-a6ee-a3dd110e7ca6" data-label="20a. Yes" data-disclaimer="" name="20" data-ga="" onclick="evaluateNextQuestion('a4e64bd5-bc54-4450-a6ee-a3dd110e7ca6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="20a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=20a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="8f4ea55d-e20d-4ece-be0f-0ae480c5549a" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="20b" data-guid="8f4ea55d-e20d-4ece-be0f-0ae480c5549a" data-questionguid="a4e64bd5-bc54-4450-a6ee-a3dd110e7ca6" data-label="20b. No" data-disclaimer="" name="20" data-ga="" onclick="evaluateNextQuestion('a4e64bd5-bc54-4450-a6ee-a3dd110e7ca6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="20b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=20b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='66171099-9442-44c3-ac47-4f8e45f79333' data-label='Indication for parenteral AC?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does the patient fall into 1 of the following groups?<br>• Nil Per Os (nothing by mouth)<br>• Pregnancy<br>• High risk of rebleeding<br>• Patient being bridged back to VKA with high thrombotic risk</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="c47a6e86-d30e-4362-b720-d78cafbcccf1" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="21a" data-guid="c47a6e86-d30e-4362-b720-d78cafbcccf1" data-questionguid="66171099-9442-44c3-ac47-4f8e45f79333" data-label="21a. Yes" data-disclaimer="" name="21" data-ga="" onclick="evaluateNextQuestion('66171099-9442-44c3-ac47-4f8e45f79333','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="21a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=21a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="de1dc32a-c91c-492a-be8f-5bc7a3cb5f4f" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="21b" data-guid="de1dc32a-c91c-492a-be8f-5bc7a3cb5f4f" data-questionguid="66171099-9442-44c3-ac47-4f8e45f79333" data-label="21b. No" data-disclaimer="" name="21" data-ga="" onclick="evaluateNextQuestion('66171099-9442-44c3-ac47-4f8e45f79333','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="21b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=21b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='6f60523c-4c18-431e-9056-0df3c0857971' data-label='High thrombotic risk?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does the patient have high thrombotic risk?</span>
+                                    <span>
+                                                    <a onclick="openModal('Indications for anticoagulation with high thrombotic risk', 'Assets\\img\\30e058bd-6254-4785-ae05-efe717d53dff_1119547387_62642.jpg','')" class="link sub-line right"><i class="fa fa-film"></i> View Image</a>
+                                                    <div class='image-container invisible hide'>
+                                                        <img src='Assets\img\30e058bd-6254-4785-ae05-efe717d53dff_1119547387_62642.jpg' />
+                                                    </div>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="f1997473-7f6d-480e-b9d5-37c92c0544af" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="22a" data-guid="f1997473-7f6d-480e-b9d5-37c92c0544af" data-questionguid="6f60523c-4c18-431e-9056-0df3c0857971" data-label="22a. Yes" data-disclaimer="" name="22" data-ga="" onclick="evaluateNextQuestion('6f60523c-4c18-431e-9056-0df3c0857971','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="22a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=22a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="ace87a2c-c642-4b56-8657-eba52fd5b4a4" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="22b" data-guid="ace87a2c-c642-4b56-8657-eba52fd5b4a4" data-questionguid="6f60523c-4c18-431e-9056-0df3c0857971" data-label="22b. No" data-disclaimer="" name="22" data-ga="" onclick="evaluateNextQuestion('6f60523c-4c18-431e-9056-0df3c0857971','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="22b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=22b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='05d8d9a3-1440-493b-88f3-a27280385104' data-label='Concomitant antiplatlet therapy?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Is the patient on concomitant antiplatelet therapy?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="452b263d-40d2-4355-a51b-7520431b6d70" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="23a" data-guid="452b263d-40d2-4355-a51b-7520431b6d70" data-questionguid="05d8d9a3-1440-493b-88f3-a27280385104" data-label="23a. Yes" data-disclaimer="" name="23" data-ga="" onclick="evaluateNextQuestion('05d8d9a3-1440-493b-88f3-a27280385104','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="23a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=23a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="37d8d713-32ca-4342-917f-ad43a6c95054" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="23b" data-guid="37d8d713-32ca-4342-917f-ad43a6c95054" data-questionguid="05d8d9a3-1440-493b-88f3-a27280385104" data-label="23b. No" data-disclaimer="" name="23" data-ga="" onclick="evaluateNextQuestion('05d8d9a3-1440-493b-88f3-a27280385104','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="23b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=23b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f75dbb42-22f4-4012-b02d-4d2bd2dadbb6' data-label='Concurrent meds w/OAC interactions?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Is the patient taking concurrent medications that interact with OAC levels?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="e.g., antiretroviral, antifungal, antibiotics, antiarrhythmics"></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="9f3e8086-f887-429d-8bdb-8143d1ac76aa" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="24a" data-guid="9f3e8086-f887-429d-8bdb-8143d1ac76aa" data-questionguid="f75dbb42-22f4-4012-b02d-4d2bd2dadbb6" data-label="24a. Yes" data-disclaimer="" name="24" data-ga="" onclick="evaluateNextQuestion('f75dbb42-22f4-4012-b02d-4d2bd2dadbb6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="24a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=24a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="7dc835e1-1245-4688-8a82-ae472a616d0c" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="24b" data-guid="7dc835e1-1245-4688-8a82-ae472a616d0c" data-questionguid="f75dbb42-22f4-4012-b02d-4d2bd2dadbb6" data-label="24b. No" data-disclaimer="" name="24" data-ga="" onclick="evaluateNextQuestion('f75dbb42-22f4-4012-b02d-4d2bd2dadbb6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="24b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=24b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='f2492d26-9f2d-498c-a9bd-9ab7566ca7f9' data-label='Nonvalvular AF?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does patient have nonvalvular AF?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Nonvalvular atrial fibrillation (NVAF) refers to AF in the absence of rheumatic mitral stenosis, a mechanical or bioprosthetic heart valve, or mitral valve repair. NVAF does not imply the absence of valvular heart disease."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="a1f694f4-3699-4431-b7cc-374d85be091f" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="25a" data-guid="a1f694f4-3699-4431-b7cc-374d85be091f" data-questionguid="f2492d26-9f2d-498c-a9bd-9ab7566ca7f9" data-label="25a. Yes" data-disclaimer="" name="25" data-ga="" onclick="evaluateNextQuestion('f2492d26-9f2d-498c-a9bd-9ab7566ca7f9','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="25a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=25a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="dc771388-4244-4614-bea4-791c79631ed7" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="25b" data-guid="dc771388-4244-4614-bea4-791c79631ed7" data-questionguid="f2492d26-9f2d-498c-a9bd-9ab7566ca7f9" data-label="25b. No" data-disclaimer="" name="25" data-ga="" onclick="evaluateNextQuestion('f2492d26-9f2d-498c-a9bd-9ab7566ca7f9','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="25b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=25b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='114b8bf7-6358-4d63-bac8-137078d7690c' data-label='Features that increase procedural risk?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does <U>></U> 1 of the following apply?<br>• High risk features of the patient<br>• Procedure done in a location associated with potentially catastrophic bleed</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Sites where bleeding carries a high risk of morbidity or mortality e.g. intracranial, intraspinal"></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="369bd1e8-5c71-4a69-91a5-621853247c4b" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="26a" data-guid="369bd1e8-5c71-4a69-91a5-621853247c4b" data-questionguid="114b8bf7-6358-4d63-bac8-137078d7690c" data-label="26a. Yes" data-disclaimer="" name="26" data-ga="" onclick="evaluateNextQuestion('114b8bf7-6358-4d63-bac8-137078d7690c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="26a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=26a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="2f2c1b2a-501c-4902-8524-70f08e730ada" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="26b" data-guid="2f2c1b2a-501c-4902-8524-70f08e730ada" data-questionguid="114b8bf7-6358-4d63-bac8-137078d7690c" data-label="26b. No" data-disclaimer="" name="26" data-ga="" onclick="evaluateNextQuestion('114b8bf7-6358-4d63-bac8-137078d7690c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="26b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=26b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='76a98129-77ab-4f5d-9dad-5c3790803c18' data-label='Cardiac valve surgery?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Did the patient have cardiac valve surgery?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="b6c5506e-9acd-4f3d-84ec-db222dd2f5e7" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="27a" data-guid="b6c5506e-9acd-4f3d-84ec-db222dd2f5e7" data-questionguid="76a98129-77ab-4f5d-9dad-5c3790803c18" data-label="27a. Yes" data-disclaimer="" name="27" data-ga="" onclick="evaluateNextQuestion('76a98129-77ab-4f5d-9dad-5c3790803c18','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="27a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=27a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="f655b2e2-c52f-42e4-bc78-9a1f5303e2ed" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="27b" data-guid="f655b2e2-c52f-42e4-bc78-9a1f5303e2ed" data-questionguid="76a98129-77ab-4f5d-9dad-5c3790803c18" data-label="27b. No" data-disclaimer="" name="27" data-ga="" onclick="evaluateNextQuestion('76a98129-77ab-4f5d-9dad-5c3790803c18','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="27b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=27b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='fd85e085-f69a-4a8f-bcbf-4f7c41627c02' data-label='Oral medication tolerance?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Can patient tolerate oral medications?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="837c92d3-365b-4916-baeb-768a9f113518" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="28a" data-guid="837c92d3-365b-4916-baeb-768a9f113518" data-questionguid="fd85e085-f69a-4a8f-bcbf-4f7c41627c02" data-label="28a. Yes" data-disclaimer="" name="28" data-ga="" onclick="evaluateNextQuestion('fd85e085-f69a-4a8f-bcbf-4f7c41627c02','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="28a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=28a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="7c6ce42b-0381-4b11-81b9-db4dc8f5f17f" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="28b" data-guid="7c6ce42b-0381-4b11-81b9-db4dc8f5f17f" data-questionguid="fd85e085-f69a-4a8f-bcbf-4f7c41627c02" data-label="28b. No" data-disclaimer="" name="28" data-ga="" onclick="evaluateNextQuestion('fd85e085-f69a-4a8f-bcbf-4f7c41627c02','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="28b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=28b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='ffb14c23-7bdc-4183-a331-c6c052d01ae5' data-label='<P>Post-procedural bleed risk:</P>'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>What is the post-procedural bleed risk?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="A procedure&#39;s post-procedural bleed risk will often reflect pre-procedural risk; however, details of the procedure may cause it to shift. Post-procedural bleed risk is dependent on 1) the timing of anticoagulation reinitiation, 2) the type of procedure performed, 3) intra-procedural findings, changes to the planned procedure, or complications, and 4) the anticoagulant used."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="aba1f3ad-8601-49d2-a174-d7497d5284d8" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="29b" data-guid="aba1f3ad-8601-49d2-a174-d7497d5284d8" data-questionguid="ffb14c23-7bdc-4183-a331-c6c052d01ae5" data-label="29b. Low" data-disclaimer="" name="29" data-ga="" onclick="evaluateNextQuestion('ffb14c23-7bdc-4183-a331-c6c052d01ae5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="29b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=29b>Low                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="832770b6-01cb-42a5-98a5-e8a5ac1652f7" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="29d" data-guid="832770b6-01cb-42a5-98a5-e8a5ac1652f7" data-questionguid="ffb14c23-7bdc-4183-a331-c6c052d01ae5" data-label="29d. High" data-disclaimer="" name="29" data-ga="" onclick="evaluateNextQuestion('ffb14c23-7bdc-4183-a331-c6c052d01ae5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="29d">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=29d>High                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='2bfe138a-6c75-42b2-946f-93167f2208a7' data-label='<P>Plan to administer post-procedure parenteral agent?</P>'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Is there a plan or indication to administer parenteral agent after procedure?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="70d48381-0fdd-415c-8b84-5b65b7e91f55" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="30a" data-guid="70d48381-0fdd-415c-8b84-5b65b7e91f55" data-questionguid="2bfe138a-6c75-42b2-946f-93167f2208a7" data-label="30a. Yes" data-disclaimer="" name="30" data-ga="" onclick="evaluateNextQuestion('2bfe138a-6c75-42b2-946f-93167f2208a7','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="30a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=30a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="0172977b-4ac9-40e4-8e34-9178d2314be4" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="30b" data-guid="0172977b-4ac9-40e4-8e34-9178d2314be4" data-questionguid="2bfe138a-6c75-42b2-946f-93167f2208a7" data-label="30b. No" data-disclaimer="" name="30" data-ga="" onclick="evaluateNextQuestion('2bfe138a-6c75-42b2-946f-93167f2208a7','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="30b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=30b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='7f1d26d0-a70e-43b2-ad77-8dd908e82485' data-label='Indication for parenteral AC?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does the patient fall into 1 of the following groups?<br>• Nil Per Os (nothing by mouth)<br>• High Risk of Rebleeding<br>• Pregnancy</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="a2d7440c-8eda-42d9-b70b-efe6d4c9ccc9" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="31a" data-guid="a2d7440c-8eda-42d9-b70b-efe6d4c9ccc9" data-questionguid="7f1d26d0-a70e-43b2-ad77-8dd908e82485" data-label="31a. Yes" data-disclaimer="" name="31" data-ga="" onclick="evaluateNextQuestion('7f1d26d0-a70e-43b2-ad77-8dd908e82485','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="31a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=31a>Yes                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Nothing by mouth" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                                            <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="fd8999e9-24d2-4ad2-806a-08312ca3c541" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="31b" data-guid="fd8999e9-24d2-4ad2-806a-08312ca3c541" data-questionguid="7f1d26d0-a70e-43b2-ad77-8dd908e82485" data-label="31b. No" data-disclaimer="" name="31" data-ga="" onclick="evaluateNextQuestion('7f1d26d0-a70e-43b2-ad77-8dd908e82485','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="31b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=31b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='c8db3a4a-0e73-4165-a662-88f38937d133' data-label='Original anticoagulant:'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>What was the original anticoagulant?</span>
+                        &nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Note: Betrixaban does not appear here as it has not been addressed for restarting OAC in ACC clinical policy as of the time of this app publication."></i>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="abab134e-6826-467c-b4eb-0d3acc56c977" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32" data-guid="abab134e-6826-467c-b4eb-0d3acc56c977" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32b. Dabigatran" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32>Dabigatran                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="9abbd377-17e5-428b-bd7e-0ee0f1cb7467" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32a" data-guid="9abbd377-17e5-428b-bd7e-0ee0f1cb7467" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32a. Apixaban" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32a>Apixaban                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="72a77dd4-e0ce-463f-adf7-faa8cde0add3" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32c" data-guid="72a77dd4-e0ce-463f-adf7-faa8cde0add3" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32c. Edoxaban" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32c">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32c>Edoxaban                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="15b6ec07-2c92-4cd3-b3d1-7365106a69d6" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32d" data-guid="15b6ec07-2c92-4cd3-b3d1-7365106a69d6" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32d. Rivaroxaban" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32d">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32d>Rivaroxaban                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="04ea9fc1-1ab7-4769-9a08-00927ce60aca" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32e" data-guid="04ea9fc1-1ab7-4769-9a08-00927ce60aca" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32e. VKA" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32e">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32e>VKA                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Vitamin K Antagonist e.g. warfarin and other coumarins" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                                            <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="c92b26de-5b6e-4461-9ce0-b25d9413d469" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="32f" data-guid="c92b26de-5b6e-4461-9ce0-b25d9413d469" data-questionguid="c8db3a4a-0e73-4165-a662-88f38937d133" data-label="32f. Betrixaban" data-disclaimer="" name="32" data-ga="" onclick="evaluateNextQuestion('c8db3a4a-0e73-4165-a662-88f38937d133','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="32f">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=32f>Betrixaban                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div><div class='page-wrapper' id='945e9ea3-3b8e-4598-97a0-19f12cf500d3' data-label='CNS hemorrhage?'><section class='row group-section'>    <div class="column">
+                                <h4 class="with-underline highlighted standard-question">
+                                    <span class="order-marker hollow question-index hide"></span>
+                        
+                                    <span>Does patient have a CNS hemorrhage (e.g. ICH, spinal, ocular bleeding)?</span>
+                                    <span>
+                                    </span>
+                                </h4>
+                                
+                            </div>
+                        <div class='flex-container'>        <div data-guid="d84905ab-7fb7-4199-ad2f-fa076b7058d4" class="question column large-4 medium-6 small-12  ">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="33a" data-guid="d84905ab-7fb7-4199-ad2f-fa076b7058d4" data-questionguid="945e9ea3-3b8e-4598-97a0-19f12cf500d3" data-label="33a. Yes" data-disclaimer="" name="33" data-ga="" onclick="evaluateNextQuestion('945e9ea3-3b8e-4598-97a0-19f12cf500d3','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="33a">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=33a>Yes                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                                <div data-guid="df290017-2246-47f2-b5e1-76be649449fe" class="question column large-4 medium-6 small-12  end">
+                                    <div class="switch-input-space">
+                                        <div class="switch radio small " >
+                                            <input autocomplete="off" class="switch-input" type="radio" id="33b" data-guid="df290017-2246-47f2-b5e1-76be649449fe" data-questionguid="945e9ea3-3b8e-4598-97a0-19f12cf500d3" data-label="33b. No" data-disclaimer="" name="33" data-ga="" onclick="evaluateNextQuestion('945e9ea3-3b8e-4598-97a0-19f12cf500d3','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                                            <label class="switch-paddle" for="33b">
+                                                <span class="switch-active" aria-hidden="true">
+                                                </span>
+                                                <span class="switch-inactive" aria-hidden="true">
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                        <label class='switch-value standard-answer' for=33b>No                    <span class="required-holder">
+                                                <i class="fa fa-holder-dynamic"></i>
+                                            </span>
+                        </label>
+                                                    </div>
+                                </div>
+                        </div></section></div>
+                        
+                            
+                        
+                                <div class="page-message callout info" data-id="400" id="e82af2a2-1313-44e9-b5eb-b1b5f233f7a6">
+                                    
+                                    <div class="message-container">
+                                        <div class="icon-holder">
+                                            <span class="fa-stack fa-lg">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="message-holder">
+                        
+                                            Patients who are at high thrombotic risk will likely benefit from restarting anticoagulation, even if the risk of rebleeding is high. If there is an ongoing indication of OAC in an interrupted patient, clinicians must evaluate whether the risk of bleeding temporarily or permanently outweighs the benefit of treatment or thromboprophylaxis with OAC. The following questions help assess bleed characteristics that contribute to the risk of restarting, reversible factors that may have contributed to the bleed, indications against restarting, and indications for anticoagulation. 
+                        
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                        
+                        </div>
+
+
+                    <div id="emailresult" class="page-wrapper fullscreen-spacer content-padding emailresult-page"></div>
+                    
+                    <div data-bind="page: {id: 'advice', name: 'advice', afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding advice-page invisible">
+                        
+                        <div class="row">
+                            <div class="medium-12">
+        <h1>Advice</h1>
+    </div></div>
+                        <div id="divAdvice" class="row">
+                            <section>
+                                <!-- ko foreach: $root.Form().recommendationMessage -->
+                                <div class="page with-group-sections">
+                                    <div class="page-wrapper" data-bind="attr: { 'data-advice-id': $data.externalIdentifier}">
+                                        <div class="medium-12">
+                                            <div class="card panelAdviceContainer">
+                                                <div class="colored-paper">
+                                                    <h2 data-bind="html: $data.highLiteracyRecommendation">Severity</h2> </div>
+                                                <div id="panelAdvice" class="section-padding panelAdvice" style="border-bottom: 1px solid rgb(179, 179, 179); position:relative">
+                                                    <h5 data-bind="html: $data.averageLiteracyRecommendation">CC. MR is likely severe.</h5>
+                                                    <!-- ko if: ($data.RecommendationMedia !== null && $data.inlineImagePresent==undefined) -->
+                                                    <div class="viewMedia" style="position:absolute;right:0;bottom: 5px"> <a class="link right" style="text-decoration: none;" data-bind="click: viewMedia.bind('event', $data.RecommendationMedia.mediaGuId)">View Table&nbsp;<i class="fa fa-table fa-6"></i></a> </div>
+                                                    <!-- /ko -->
+                                                </div>
+                                                <div class="row flip column" style="height:25px;padding-top:10px;"> <span class="viewLess">
+                                <a class="link left" onclick="advicePanelHide.bind(this)()">Hide Details&nbsp;<i class="fa fa-arrow-up fa-6"></i></a>
+                            </span> <span class="viewMore" style="display: none;">
+                                <a onclick="advicePanelHide.bind(this)()" class="link left">View Details&nbsp;<i class="fa fa-arrow-down fa-6"></i></a>
+                            </span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /ko -->
+                                <!-- ***End of Advice*** -->
+                            </section>
+                        </div>
+                    </div>
+                    
+                    <div class="page modal-window" style="padding:0;">
+                        <div class="row collapse large-12 medium-12 small-12 content-padding">
+                            <div class="reveal modal large" id="appModalWindow" data-v-offset="33"  data-close-on-click='false' data-close-on-esc='false' data-reveal>
+                                <h4></h4> <img src="" alt="">
+                                <button class="close-button" data-close aria-label="Close modal" type="button"> <span aria-hidden="true">&times;</span> </button>
+                            </div>
+                            <div class="text-center reveal modal modal-width" id="appRecommendationModalWindow" data-v-offset="33" data-close-on-click='false' data-close-on-esc='false' data-reveal style="top:0!important"> <img src="" alt="">
+                                <button class="close-button" data-close aria-label="Close modal" type="button"> <span aria-hidden="true">&times;</span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- APP LIES ABOVE-->
+            </div>
+        </div>
+    </div>
+    <div class="session-overlay">
+                        <div class="session-prompt small">
+                            <h4>This tool already has data entered. How would you like to proceed?</h4>
+                            <div class="row">
+                                <div class="stacked-for-small button-group">
+                                  <a class="button small btn-ga4" onclick="continueWithSamePatient();">Continue with this patient</a>
+                                  <a class="button small end btn-ga4" onclick="startWithNewPatient();">Start with new patient</a>
+                                </div>
+                            </div>
+                            <!--<span class="close">x</span>-->
+                        </div>
+                    </div>
+    <!--<div class="reveal modal" id="sessionOverlay" data-v-offset="33"  data-close-on-click='false' data-close-on-esc='false' data-reveal>
+            <h4>This tool already has values entered for previous patient</h4>
+            <div class="row">
+                <div class="stacked-for-small button-group"> <a class="button small" onclick="continueWithSamePatient()" data-close>Continue with existing patient</a> <a class="button small end" onclick="startWithNewPatient()" data-close>Start with new patient</a> </div>
+            </div>
+    </div>-->
+    <!--    Loading cordova.js dynamically if mobile device is detected-->
+    <script type="text/javascript">
+        if (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1) {
+            //if mobile device detected
+            //Load mobile-app.js dynamically
+            var mobileScript = document.createElement('script');
+            mobileScript.setAttribute('src', '../assets/js/mobile-app.js');
+            document.body.appendChild(mobileScript);
+            var cordovaScript = document.createElement('script');
+            cordovaScript.setAttribute('src', '../cordova.js');
+            document.head.appendChild(cordovaScript);
+            document.getElementsByTagName("body").className = "noselect";
+        }
+    </script>
+    <script src="assets/js/ap.js" type="text/javascript"></script>
+    <!--<script src="assets/js/client.js"></script>-->
+    <script src="../assets/js/appGenerator.js"></script>
+    <script src="assets/js/foundation-6.6.3.min.js"></script>
+    <script src="../assets/js/knockout-3.5.1.js"></script>
+    <script src="../assets/js/pager.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/notification.js"></script>
+    <script src="assets/js/formdata.js"></script>
+    <script src="assets/js/appviewmodel.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script>
+        window.onload = googleLoad;
+        //CODE FOR PREVIOUS NAVIGATION
+        /*sessionStorage.setItem("CURRENT_NAVIGATION_PAGE", "T3");
+        var navigation = new Navigation();
+        navigation.resetValues = resetAll;*/
+        var continueWithSamePatient = function () {
+            $('.session-overlay').css('display', 'none');
+            $('body').css('overflow', 'visible');
+        }
+        var startWithNewPatient = function () {
+            resetAll();
+            window.location.href = window.location.href.replace("advice", "calculator");
+            $('.session-overlay').css('display', 'none');
+            $('body').css('overflow', 'visible');
+        }
+    </script>
+</body>
+
+</html>

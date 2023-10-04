@@ -1,0 +1,1764 @@
+    <!doctype html>
+    <html class="no-js" lang="en">
+
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PPX2G3V');</script>
+        <!-- End Google Tag Manager -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" />
+        <title>ManageAnticoag</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/styledown.css">
+        <link rel="stylesheet" href="assets/css/normalize.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="assets/css/foundation-sites.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/mr.css">
+        <link rel="stylesheet" href="assets/css/hamburger-menu.css">
+        <link rel="stylesheet" href="assets/css/logo-headers.css">
+    </head>
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX2G3V"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="off-canvas-wrapper" style="overflow: hidden;">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                <div class="off-canvas position-left" id="offCanvas" data-off-canvas style="height:100%">
+                    <!-- Close button -->
+                    <button class="close-button" aria-label="Close menu" type="button" data-close></button>
+                    <div class="row" id="test-eq">
+                        <nav class="nav-list small hamburger-menu">
+                            <ul>
+                                <li id="home" class="selected">
+                                    <div class="row group-section collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="#!/content/manager/" data-toggle="offCanvas"><i class="fa fa-home"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="#!/content/manager/" data-toggle="offCanvas" style="padding-top: 0.295em;">
+                                                <h6 class="text-left btn-ga4">Home</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row group-section collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="PMAC/index.html" style="padding-top: 0.825em;"><i class="fa fa-random"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="PMAC/index.html">
+                                                <h6 class="text-left btn-ga4">Plan Periprocedural Interruption and Bridging</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row group-section collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="AddressAcuteBleed/index.html#!/content/calculator/" style="padding-top: 0.355em;"><i class="fa fa-tint"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="AddressAcuteBleed/index.html#!/content/calculator/">
+                                                <h6 class="text-left btn-ga4">Address an Acute Bleed</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row group-section collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="DetermineAnticoagRestart/index.html#!/content/calculator/" style="padding-top: 0.295em;"><i class="fa fa-exchange"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="DetermineAnticoagRestart/index.html#!/content/calculator/">
+                                                <h6 class="text-left btn-ga4">Determine Anticoag Restart</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="quickreference">
+                                    <div class="row group-section collapse">
+                                        <div class="column small-4 text-center">
+                                            <a href="#!/content/quick-reference/" data-toggle="offCanvas"><i class="fa fa-medkit"></i></a>
+                                        </div>
+                                        <div class="column small-8">
+                                            <a class="btn-ga4" href="#!/content/quick-reference/" data-toggle="offCanvas" style="padding-top: 0.295em;">
+                                                <h6 class="text-left btn-ga4">Quick Reference</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="off-canvas-content" data-off-canvas-content>
+                    <div data-bind="page: {id:'content', role: 'start'}" class="page with-group-sections">
+                        <div class="data-display">
+                            <header class="header page text-center">
+                                <ul class="nav tabs tabs-primary float-left" style=" visibility: visible;flex-wrap: nowrap;">
+                                    <li class="icon">
+                                        <a class="home fix-bounce" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas"> <i class="fa fa-bars"></i> </a>
+                                    </li>
+                                    <li class="mobile-acc-logo">
+                                        <a class="fix-bounce" href="index.html#!/content/manager/">
+                                            <img src="assets/img/headerlogo.svg" style="border-right: 1px solid #ccc;" alt="ManageAnticoag">
+                                            <img src="assets/img/manageanticoag-mobile.svg" alt="ManageAnticoag">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a class="logo" href="index.html"> <span class="acc-logo">
+										<img src="assets/img/headerlogo.svg" alt="ManageAnticoag">
+									</span> <span class="bridge-anticoag-logo">
+										<img src="assets/img/manageanticoag-web.svg" alt="ManageAnticoag">
+									</span> 
+                                </a>
+                            </header>
+                        </div>
+                        <div class="page with-group-sections invisible">
+                            <div data-bind="page: {id: 'manager', name: 'manager', frame: 'iframe', afterShow:footerChange, beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer">
+                                <div class="">
+                                    <div class="medium-12 small-12 columns">
+                                        <!-- <h1>
+                                                Choose a step:
+                                                <span class="sub-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                                            </h1>-->
+                                        <div id="estimate-callout" data-closable class="callout warning alert-box caution-box-style" data-bind="visible: $root.doNotShowAgainVisible"> 
+                                            <br>
+                                            <b>Welcome to the ManageAnticoag</b>
+                                            <p class="swappable medium">See the<span class="short-text"> “About”</span><span class="long-text"> "About App"</span> section for more information about use of the app.</p>
+                                            <br> <b>Terms of Service</b>
+                                            <br>
+                                            <p> Click the Terms tab at the bottom of the app before using the ManageAnticoag (“the Product”) to read the full Terms of Service and License Agreement (the “Agreement”) which governs the use of the Product. The Agreement includes, among other detailed terms and conditions, certain disclaimers of warranties by the American College of Cardiology Foundation (“ACCF”) and requires the user to agree to release ACCF from any and all liability arising in connection with your use of the Product. By using the Product, you accept and agree to be bound by all of the terms and conditions set forth in the Agreement, including such disclaimers and releases. If you do not accept the terms and conditions of the Agreement, you may not proceed to use the Product. The Agreement is subject to change from time to time, and your continued use of the Product constitutes your acceptance of and agreement to be bound by any revised terms of the Agreement. </p>
+                                            <b><a class="close" id="appNotificationClose" data-close onclick="closeWelcomeBox();">x</a></b>
+                                            <p class="text-right bold" style="position: absolute; left: .88571rem;top:0rem;"> <a class="link not-show-again" onclick="notShowAgain()">Do not show me this again</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child-apps" ddata-equalizer="tool">
+                                    <div class="columns large-4 medium-4 small-12">
+                                        <div class="section card callout panel panelDetailsContainer" ddata-equalizer-watch="">
+                                            <p class="btn-ga4"> <a class="button expanded button-box pmac-btn btn-ga4" href="PMAC/index.html">Plan Periprocedural Interruption and Bridging</a>
+                                                <div class="panelDetails">Assess whether and how anticoagulation should be interrupted and bridged as part of periprocedural planning</div>
+                                                <div class="row flip column"> <span class="viewLess">
+                                                                <a class="link right" onclick="detailsPanelHide.bind(this)()">Hide Details</a>
+                                                            </span> <span class="viewMore" style="display: none;">
+                                                                <a onclick="detailsPanelHide.bind(this)()" class="link right">View Details</a>
+                                                            </span> </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-4 medium-4 small-12">
+                                        <div class="section card callout panel panelDetailsContainer" ddata-equalizer-watch="">
+                                            <p class="btn-ga4"> <a class="button expanded button-box manage-bleed-btn btn-ga4" href="AddressAcuteBleed/index.html#!/content/calculator/">Address an Acute Bleed</a>
+                                                <div class="panelDetails">Review steps for managing major and non-major bleeds in anticoagulated patients, including the use of reversal agents</div>
+                                                <div class="row flip column"> <span class="viewLess">
+                                                                <a class="link right" onclick="detailsPanelHide.bind(this)()">Hide Details</a>
+                                                            </span> <span class="viewMore" style="display: none;">
+                                                                <a onclick="detailsPanelHide.bind(this)()" class="link right">View Details</a>
+                                                            </span> </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-4 medium-4 small-12 end">
+                                        <div class="section card callout panel panelDetailsContainer" ddata-equalizer-watch="">
+                                            <p class="btn-ga4"> <a class="button expanded button-box oac-restart-btn btn-ga4" href="DetermineAnticoagRestart/index.html#!/content/calculator/">Determine Anticoag Restart</a>
+                                                <div class="panelDetails">Determine a restart approach for patients in whom anticoagulation is planned to be, or has already been, interrupted</div>
+                                                <div class="row flip column"> <span class="viewLess">
+                                                                <a class="link right" onclick="detailsPanelHide.bind(this)()">Hide Details</a>
+                                                            </span> <span class="viewMore" style="display: none;">
+                                                                <a onclick="detailsPanelHide.bind(this)()" class="link right">View Details</a>
+                                                            </span> </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-12 medium-12 small-12">
+                                        <div class="section card callout panel">
+                                            <p>Reference key concepts from the tools above</p> <a class="button expanded btn-ga4" style="background-color: #198dae !important;" href="#!/content/quick-reference/">Quick Reference</a> </div>
+                                    </div>
+                        <div class="columns large-12 medium-12 small-12">
+                            <p>The information in this app is based on content in the ACC’s Expert Consensus Decision Pathways.  Refer to the Resources section for full references.</p>
+                        </div>
+                                </div>
+                                <div class="row"> </div>
+                            </div>
+                            <div data-bind="page: {id: 'resources', name: 'resources', afterShow:footerChange, beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding" style="display:none;">
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <h1>General Resources</h1> </div>
+                                </div>
+                                <section class="group-section no-box-shadow">
+                                    <div class="row collapse">
+                                        <div class="small-12 columns">
+                                            <h3 class="highlighted">Patient Resources</h3>
+                                            <p> CardioSmart <a class="link" target="_blank" href="https://www.cardiosmart.org/Heart-Conditions/Atrial-Fibrillation">Atrial Fibrillation</a> </u> Home Page </p>
+                                            <p> <a class="link" target="_blank" href="https://www.cardiosmart.org">CardioSmart</a> Home Page </p>
+                                        </div>
+                                        <div class="small-12 columns">
+                                            <h3 class="highlighted">Clinician Resources</h3>
+                                            <p><a class="link" target="_blank" href="http://www.acc.org/clinical-topics/anticoagulation-management#sort=%40fwhatstrendingscore86069%20descending">Anticoagulation Management</a> Clinical Topic Collection</p>
+                                            <p><a class="link" target="_blank" href="http://www.acc.org/tools-and-practice-support/quality-programs/anticoagulation-initiative">Anticoagulation Initiative</a></p>
+                                            <br><br>
+                                            <div class="row columns">
+                                                <b class="">Additional Procedural Bleed Risk Considerations as Indicated by Specialty Societies</b><br><br>
+                                                <table class="table">
+
+                                                    <thead>
+                                                        <tr><th>American Society for Gastrointestinal Endoscopy’s Standards of Practice Committee</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <ul>
+                                                                    <li>Percutaneous endoscopic gastrostomy placement - PEG on aspirin or clopidogrel therapy is low risk. Does not apply to DAPT (dual antiplatelet therapy).</li>
+                                                                    <li>EUS (endoscopic ultrasound) w/ FNA (fine needle aspiration) - EUS-FNA of solid masses on aspirin/NSAIDs is low risk.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <thead>
+                                                        <tr><th>American Society of Nephrology</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                The risk stratification for the nephrology procedures was assigned based on the publications cited below and the following explanatory points:
+                                                                <ul>
+                                                                    <li>Patients with advanced chronic kidney disease are considered to have disordered platelet aggregation leading to a higher bleeding risk.</li>
+                                                                    <li>The interventional nephrology procedures (angioplasty and thrombectomy) are performed on “arterialized” veins with high flows (>600 ml/min) and therefore, the bleeding risk is commensurate with the arterial procedures.</li>
+                                                                    <li>As with any other invasive procedures the complication risk varies widely based on patient and operator factors.
+                                                                    </li>
+                                                                </ul>
+                                                                References:
+                                                                <ol>
+                                                                    <li>Beathard GA, Litchfield T, Physician Operators Forum of RMS Lifeline, Inc. Effectiveness and safety of dialysis vascular access procedures performed by interventional nephrologists. Kidney Int. 2004 Oct;66(4):1622-32</li>
+                                                                    <li>Vesely TM, Beathard G, Ash S, Hoggard J, Schon D; ASDIN Clinical Practice Committee. Classification of complications associated with hemodialysis vascular access procedures. A position statement from the American Society of Diagnostic </li>
+                                                                </ol>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <thead>
+                                                        <tr><th>American Society of Regional Anesthesia and Pain Medicine</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <ul>
+                                                                    <li>Bleeding risk of other regional nerve blocks is based on compressibility, patient body habitus, co-morbidities and the degree and duration of anticoagulation.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <thead>
+                                                        <tr><th>Interventional Section Leadership Council of the ACC</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <ul>
+                                                                    <li>Transfemoral coronary angiography - The consensus of the group was that this was a low intermediate risk. It was not as low as radial but certainly not in the same category as other intermediate procedures such as a pericardiocentesis. It would also depend on the sheath size and the patient’s body habitus.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 columns">
+                                            <h3 class="highlighted">Other Mobile Tools</h3>
+                                            <p><a class="link" target="_blank" href="http://www.acc.org/tools-and-practice-support/mobile-resources/features/anticoag-evaluator">ACC AnticoagEvaluator App</a></p>
+                                            <p><a class="link" target="_blank" href="http://www.acc.org/tools-and-practice-support/mobile-resources">ACC Clinical App Collection</a></p>
+                                        </div>
+                                    </div>
+
+                                </section>
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <h1>References</h1> </div>
+                                </div>
+                                <section class="group-section no-box-shadow">
+                                    <div class="row collapse">
+                                        <div class="small-12 columns">
+                                            <p>Tomaselli GF, Mahaffey KW, Cuker A, Dobesh PP, Doherty JU, Eikelboom JW, Florido R, Gluckman TJ, Hucker W, Mehran R, Messé SR, Perino AC, Rodriguez F, Sarode R, Siegal D, Wiggins BS. <u><a class="link" target="_blank" href="https://www.jacc.org/doi/abs/10.1016/j.jacc.2020.04.053">2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants: a Report of the American College of Cardiology Solution Set Oversight Committee</a></u>. J Am Coll Cardiol 2020; Aug 76(5)594-622. DOI: 10.1016/j.jacc.2020.04.053</p>
+                                            <p>Doherty JU, Gluckman TJ, Hucker WJ, Januzzi Jr. JL, Ortel TL, Saxonhouse SJ, Spinler SA. <u><a target="_blank"  class="link" href="https://www.jacc.org/doi/abs/10.1016/j.jacc.2016.11.024"> 2017 ACC Expert Consensus Decision Pathway for Periprocedural Management of Anticoagulation in Patients with Nonvalvular Atrial Fibrillation: A Report of the American College of Cardiology Expert Consensus Document Task Force</a></u>. J Am Coll Cardiol 2017:69:871-898. DOI: 10.1016/j.jacc.2016.11.024</p>  
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div data-bind="page: {id: 'terms', name: 'terms', afterShow:footerChange, beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding" style="display:none;">
+                                <div class="page-wrapper row">
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <h1>Terms of Service</h1> </div>
+                                    </div>
+                                    <section class="section group-section clearfix no-box-shadow">
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">ManageAnticoag Terms of Service and License Agreement</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>This Terms of Service and License Agreement constitutes a legal agreement (collectively, the "Agreement") between the American College of Cardiology Foundation ("ACCF") and You and your agents ("You") for the use of the ManageAnticoag (the "Product"), whether You use the mobile application version of the Product or the web version of the Product. The Product allows You to access certain content included in the Product ("Content") relating to management of anticoagulation for patients with atrial fibrillation.</p>
+                                                <p>By using the Product, You accept and agree to be bound by all of the terms and conditions set forth in this Agreement. If You do not wish to accept the terms and conditions of this Agreement, You may not proceed to use the Product.</p>
+                                                <p>ACCF may change the terms of this Agreement from time to time without further notice directly to You. When the terms are changed, ACCF will post a general conspicuous notice. If You do not agree with the revised terms, please discontinue use of the Product immediately. Your continued use of the Product following such notice constitutes your acceptance of and agreement to be bound by any revised terms of the Agreement. This Agreement expressly incorporates by reference and includes rules or disclaimers that may be posted and updated within the Product or communicated to You from time to time.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Term and Termination</h3></div>
+                                            <div class="small-12 columns">
+                                                <p>ACCF may terminate your access and/or the Product at any time. You agree that any termination of your access to the Product shall not result in any liability or other obligation of ACCF to You, or any third party in connection with such termination.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Intellectual Property Rights</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>This Product, including the information, text, graphics, images, audio and video files, trademarks and other materials that may be contained therein (collectively "Content"), is owned by ACCF and/or its suppliers and is protected by patents, copyrights, trademarks, and other proprietary rights. Except as specifically provided in this Agreement, your use of the Product shall be governed and constrained by applicable patent, copyright, trademark and other intellectual property laws. </p><p>ACCF grants You a limited, nonexclusive, nontransferable, revocable license to utilize and access the Product for your noncommercial, personal use according to the terms and conditions in this Agreement. You may not modify, publish, transmit, participate in the transfer or sale of, reproduce, create derivative works from, distribute, perform, display, incorporate into another website, or in any other way exploit the Service and/or any of the Content, in whole or in part. Except as expressly granted by this Agreement, You acquire no right, title or interest in the Product or the Content or other data or materials incorporated in the Product. ACCF, ACC or affiliates or licensors thereof shall retain all right, title and interest in the Product and Content. </p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Limitation of Liability</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW, ACCF HEREBY DISCLAIMS, AND IN NO EVENT SHALL ACCF OR ANY PARTY INVOLVED IN CREATING OR PRODUCING THE PRODUCT BE LIABLE FOR, ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA LOSS, OR OTHER LOSSES, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, EVEN IF ACCF HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, RESULTING FROM: (i) THE USE OR INABILITY TO USE THE PRODUCT, (ii) THE COST OF ANY SUBSTITUTE PRODUCTS AND/OR SERVICES RESULTING FROM ANY PRODUCTS, DATA, INFORMATION OR SERVICES OBTAINED OR WHICH YOU WERE UNABLE TO OBTAIN OR TRANSACTIONS EFFECTED OR FAILED TO BE EFFECTED, (iii) THE USE OR INABILITY TO USE ANY THIRD PARTY APPLICATIONS CONTAINED WITHIN THE PRODUCT, OR (iv) ANY MATTER OTHERWISE RELATED TO YOUR USE OF THE PRODUCT.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Release of Liability</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>You assume all risks associated with use of the Product including, but not limited to any harm, injury or damages resulting directly or indirectly from the use of the Product, all such risks being known and understood by You. In consideration of your use of the Product, You, for yourself and anyone entitled to act on your behalf, waive and forever release ACCF, its officers, trustees, employees, representatives and successors from all claims and liabilities of any kind arising out of your use or misuse of the Product.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Indemnification</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>You hereby agree to indemnify, save and hold ACCF, its directors, officers, shareholders, parents, subsidiaries, affiliates, agents and licensors harmless from and against any and all claims, liability, losses, damages and costs, including, without limitation, reasonable attorneys' fees and costs, arising out of your use or misuse of the Product or Content, or any violation of this Agreement. ACCF assumes the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify ACCF, and you agree to cooperate with ACCF’s defense of these claims. ACCF will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Disclaimer of Warranties</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>THE PRODUCT AND CONTENT ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. ACCF AND ITS SUPPLIERS EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND WITH RESPECT TO THE PRODUCT OR CONTENT, WHETHER EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. ACCF MAKES NO WARRANTY THAT THE PRODUCT AND/OR ANY CONTENT THEREIN WILL MEET YOUR REQUIREMENTS, OR WILL BE UNINTERRUPTED, TIMELY, SECURE, CURRENT, ACCURATE, COMPLETE OR ERROR-FREE OR THE RESULTS THAT MAY BE OBTAINED BY USE OF THE PRODUCT OR ANY CONTENT THEREIN WILL BE ACCURATE OR RELIABLE. YOU UNDERSTAND AND ACKNOWLEDGE THAT YOUR SOLE AND EXCLUSIVE REMEDY WITH RESPECT TO ANY DEFECT IN OR DISSATISFACTION WITH THE PRODUCT IS TO CEASE ITS USE.</p>
+                                                <p>The Content on the Product is presented as an educational service intended for licensed healthcare professionals. While the Content in the Product is about specific medical and healthcare issues, the Content is not a substitute for or replacement of personalized medical advice and is not intended to be used as the sole basis for making individualized medical or health-related decisions.</p>
+                                                <p>The views and opinions expressed are those of the contributing authors and editors and do not necessarily represent the views of the ACCF. The material is not intended to present the only, or necessarily best, methods or procedures for the medical situations addressed, but rather is intended to represent an approach, view, statement or opinion.</p>
+                                                <p>Any reference to a specific therapy or commercial product in this Product does not constitute a guarantee or endorsement by ACCF of the quality or value of such therapy or product or any claims made by the manufacturer of such therapy or commercial product.</p>
+                                                <p>In addition, any statements about such therapy or commercial products are solely based on published clinical prediction rules and estimates of drug treatment effects from published clinical studies and do not represent an ACCF endorsement or evaluation of these products.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Force Majeure</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>ACCF will be excused from performance under this Agreement and will not be liable or considered in default under this Agreement in the event that the Product is unavailable for any period of time, or if ACCF is otherwise unable to perform its obligations hereunder, in whole or in part, as a result of a Force Majeure Event. For purposes of this Section, "Force Majeure Event" means an event or series of events caused by or resulting from any of the following: (1) weather conditions or other elements of nature or acts of God; (2) government regulation; (3) quarantines or embargoes; (4) telecommunications, network, computer, server or Internet downtime; (5) unauthorized access to ACCF's information technology systems by third parties; or (6) any other causes beyond the reasonable control of ACCF.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">No Assignment</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>This Agreement is personal to You, and You may not assign your rights or obligations to anyone. </p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">No Waiver</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>Neither failure nor delay on the part of any party to exercise any right, remedy, power or privilege hereunder nor course of dealing between the parties shall operate as a waiver thereof, or of the exercise of any other right, remedy, power or privilege. No term of this Agreement shall be deemed waived, and no breach consented to, unless such waiver or consent shall be in writing and signed by the party claimed to have waived or consented. No waiver of any rights or consent to any breaches shall constitute a waiver of any other rights or consent to any other breach.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Severability</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>If any provision in this Agreement is held invalid or unenforceable under applicable law, the remaining provisions shall continue in full force and effect.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Governing Law</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>This Agreement will be governed by and construed exclusively in accordance with the laws of the District of Columbia, USA, without regard to its conflicts of law principles and, to the extent applicable, the federal laws of the United States. If a dispute arises between ACCF and You, You hereby agree to submit such dispute to non-binding mediation, followed by binding arbitration, if necessary. Both the mediation and arbitration will be conducted by JAMS applying the laws of the District of Columbia without regard to its conflicts of laws principles and in the District of Columbia as venue.</p>
+                                            </div>
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Certification</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>I hereby certify that I understand and agree to the terms stated in this Agreement and that this Agreement applies to my initial use of the Product and all other subsequent uses of the Product. BY USING THIS PRODUCT, I HEREBY AFFIRM THAT I HAVE READ, FULLY UNDERSTAND, AND AGREE TO THE ABOVE STATEMENTS. </p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div data-bind="page: {id: 'about', name: 'about', afterShow:footerChange, beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding" style="display:none;">
+                                <div class="page-wrapper row">
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <h1>About App</h1> </div>
+                                    </div>
+                                    <section class="section group-section clearfix no-box-shadow">
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">When was this app last updated?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>October 2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">How can I provide feedback?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p><a class="link" href="https://www.surveymonkey.com/r/OACcomboApp" target="_blank">Click here to fill out our feedback survey</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">What is the target patient population for this app?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>The app is meant for use by clinicians in relation to patients who are currently taking oral anticoagulants. Some parts of the app only apply to patients with nonvalvular AF, and this will be specified in those areas. The app applies to patients in the following situations: </p>
+                                                <ul>
+                                                    <li>Patients who have a planned procedure or surgery (cardiac or otherwise)</li>
+                                                    <li>Patients who have had an acute major or non-major bleed</li>
+                                                    <li>Patients who have had an interruption in anticoagulation therapy</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">How is the app meant to be used?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>The app is intended for use by clinicians to help navigate periprocedural planning and bleed management scenarios for patients on oral anticoagulants (OAC).  The app is comprised of three tools to support the following clinical decisions:</p>
+                                                <ul>
+                                                    <li><b>Planning Periprocedural Interruption and Bridging</b>&nbsp;-&nbsp;evaluates whether and how to interrupt and bridge anticoagulation as part of periprocedural planning for patients with nonvalvular AFib </li>
+                                                    <li><b>Addressing an Acute Bleed</b>&nbsp;-&nbsp;manages acute major and non-major bleeds, including the suggested use of reversal/hemostatic agents</li>
+                                                    <li><b>Determining Anticoagulation Restart</b>&nbsp;-&nbsp;determines whether and how anticoagulation should be restarted for patients in whom anticoagulation has been interrupted  </li>
+                                                </ul>
+                                                <p>To use the app:</p>
+                                                <ul>
+                                                    <li>Select which tool best applies to your patient scenario: Plan Periprocedural Interruption and Bridging, Address an Acute Bleed, or Determine Anticoag Restart.
+                                                        <ul style="list-style-type:circle">
+                                                            <li>Enter patient details as prompted in the selected tool</li>
+                                                            <li>View individualized guidance on the Advice screen</li>
+                                                            <li>Email a summary of the advice</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Use the Quick Reference section to access supporting information and details such as ‘Guidance for Administering Reversal/Hemostatic Agents’, and ‘Components of the Clinician-Patient Discussion.’ </li>
+                                                </ul>
+                                                <p>The information and recommendations in this app are intended to support clinical decision making. They are not intended to represent the only or best course of care, or to replace clinical judgment. Therapeutic options should be determined after discussion between the patient and their care provider. While bleeding protocols at individual institutions may vary from the advice in this app, content in the app is derived from the referenced documents and is meant to represent ACC’s expert clinical opinion. </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">How was this app developed?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p>The information in this app was derived from the <a class="link" target="_blank" href="https://www.jacc.org/doi/abs/10.1016/j.jacc.2020.04.053">2020 Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants</a> and the <a target="_blank" class="link" href="https://www.jacc.org/doi/abs/10.1016/j.jacc.2016.11.024">2017 Expert Consensus Decision Pathway on Periprocedural Management of Anticoagulation in Patients with Nonvalvular Atrial Fibrillation</a>. App content and design was refined and vetted by ACC member clinicians, and through user testing with clinicians practicing in relevant specialties. The app was developed as part of a continuing initiative to enable clinicians to access and implement ACC clinical policy at the point of care to improve quality, efficiency, and patient outcomes. The app is also part of ACC’s Anticoagulation Initiative, a comprehensive quality effort to improve care for patients on anticoagulation therapy.</p>
+                                                <p>Support for the app was provided by Boehringer Ingelheim, Daiichi Sankyo, Inc. and Janssen Pharmaceuticals, Inc.  All content was independently developed with no sponsor involvement.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="small-12 columns">
+                                                <h3 class="highlighted">Where can I go if I have questions?</h3> </div>
+                                            <div class="small-12 columns">
+                                                <p><b>For Support</b>
+                                                    <br/><b>Call</b>: (202) 375-6000, ext. 5603 or (800) 253-4636, ext. 5603
+                                                    <br/><b>Email</b>: <a class="link" href="mailto:membercare@acc.org">membercare@acc.org</a> </p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div data-bind="page: {id: 'news', name: 'news', afterShow:footerChange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding">
+                                <div class="page-wrapper">
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                            <h1>News</h1> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div data-bind="foreach: notificationData()">
+                                            <div class="row collapse group-section no-box-shadow" style="margin-bottom: 1.5em;">
+                                                <div class="columns small-12">
+                                                    <h4 class="with-underline" style="word-wrap: break-word;" data-bind="text: Title">New ACC/AHA High Blood Pressure Guideline</h4> </div>
+                                                <div class="columns small-12">
+                                                    <p data-bind="text: Text" style="word-wrap: break-word;" id="notification-text">The ACC and AHA released a new guideline on the treatment and management of high blood pressure, which can be found at http://www.acc.org/guidelines/hubs/high-blood-pressure. The ASCVD Risk Estimator Plus now contains summary content from this guideline. Stayed tuned for more updates as ACC continues to integrate content from this new guideline in this and other related tools.</p>
+                                                </div>
+                                                <div class="columns small-12">
+                                                    <!--<p data-bind="text: EffectiveDate" id="notification-text">-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-bind="page: {id: 'quick-reference', name: 'quick-reference', afterShow:footerChange, beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding" style="display:none;">
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <h1>Quick Reference</h1> </div>
+
+                                    <div class='small-12 columns' style="display: none;">
+                                            <p class='bold'>Indications for anticoagulation with high thrombotic risk </p>
+                                            <small style="font-size: 14px;">CHF: Congestive Heart Failure;TIA: Transient ischemic attack</small>
+                                        </div>
+                                <div class='small-12 columns' style="display: none;">
+                                            <table class='table' style="width: 90%;">
+                                                <thead style="font-size: 1.3em;">
+                                                    <tr >
+                                                        <th style="width: 38%;">Indication</th>
+                                                        <th style="width: 50%;">Patient characteristics </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="font-size: 1.2em;">
+                                                    <tr>
+                                                        <td>Mechanical valve prosthesis</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Mechanical aortic valve + additional thrombotic considerations: AF, CHF, prior stroke/TIA</li>
+                                                                <li>Caged-ball or tilting disc aortic valve prosthesis</li>
+                                                                <li>Stroke/TIA within 6 months</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Atrial fibrillation (AF)</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>AF with CHADS<sub>2</sub> score of &ge; 4 (or CHA<sub>2</sub>DS<sub>2</sub>-VASc score of &ge; 6) (84) </li>
+                                                                <li>Stroke/ TIA within 3 months</li>
+                                                                <li>Stroke risk &ge; 10% per year </li>
+                                                                <li>Rheumatic valve disease or mitral stenosis</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Venous thromboembolism (VTE)</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>VTE within 3 months</li>
+                                                                <li>History of unprovoked or recurrent VTE</li>
+                                                                <li>Active cancer and history of cancer-associated VTE</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prior thromboembolism with interruption of anticoagulation</td>
+                                                        <td>Any</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Left ventricular or left atrial thrombus</td>
+                                                        <td>Any</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Left ventricular assist device (LVAD)</td>
+                                                        <td>Any</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </div>
+
+
+                                <section class="section group-section no-box-shadow">
+                                    <div class="row">
+                                        <div class="column small-12">
+                                            <nav class="nav-list small quick-reference-list">
+                                                <ul>
+                                                    <li style="border-top: 0;">
+                                                        <a href="#!/content/clinician-split-layout/guidance_administering_reversal_agents"> <span class="text">
+                                                            Guidance for Administering Reversal/Hemostatic Agents
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/suggestions_laboratory_measurement_doacs_specialized_assays_available"> <span class="text">
+                                                            Assays Suitable for Quantitation of DOACs
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/suggestions_laboratory_measurement_doacs_specialized_assays_not_available"> <span class="text">
+                                                            Suggestions for Qualitative Assessment of DOACs When Assays Suitable for Quantitation are Not Available
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/recommended_durations_withholding_doacs_based_procedural_risks"> <span class="text">
+                                                            Estimated Drug Half-Life Based on CrCl and Suggested Duration for Withholding DOAC Based on Bleed Risk
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/critical_site_bleeds"> <span class="text">
+                                                        Critical Site Bleeds
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/considerations_restarting_anticoagulation"> <span class="text">
+                                                        Considerations for Restarting Anticoagulation
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/indications_restarting_anticoagulation_high_thrombotic_risk"> <span class="text">
+                                                            Original Indications for Anticoagulation with High Thrombotic Risk
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/patient_thrombotic_risk_definition"> <span class="text">
+                                                        Patient Thrombotic Risk Definitions
+                                                    </span> <i class="fa fa-holder-dynamic">
+                                                    </i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#!/content/clinician-split-layout/components_clinician_patient_discussion"> 
+                                                            <span class="text">
+                                                                Components of the Clinician-Patient Discussion
+                                                            </span> 
+                                                            <i class="fa fa-holder-dynamic"> </i> 
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/prescribing_information_drugs"> 
+                                                                            <span class="text">
+                                                                                Prescribing Information for Drugs
+                                                                            </span> 
+                                                                            <i class="fa fa-holder-dynamic"> </i> 
+                                                                        </a>
+                                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div data-bind="page: {id: 'notification', name: 'notification', afterShow:footerChange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding" style="display: none; min-height: 500px;">
+                                <div class="page-wrapper fullscreen-spacer" style="min-height: 500px;">
+                                    <div class="page section group-section no-box-shadow" style="padding:0px;">
+                                        <!-- ko if: (criticalNotification().length > 0)-->
+                                        <div class="row collapse" data-bind="foreach: criticalNotification()">
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-bind="page: {id:'clinician-split-layout', afterShow:footerChange}" style="display: none;">
+                                <div class="medium split-layout fill-page-height">
+                                    <div class="split-sidebar">
+                                        <div class="content-padding" style="padding-top: 1em;">
+                                                                <h4 class="">
+                                                                    Quick Reference
+                                                                </h4> 
+                                                            </div>
+                                                            <nav class="nav-list small">
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/guidance_administering_reversal_agents"> <span class="text">
+                                                                        Guidance for Administering Reversal/Hemostatic Agents
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/suggestions_laboratory_measurement_doacs_specialized_assays_available"> <span class="text">
+                                                                            Assays Suitable for Quantitation of DOACs
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/suggestions_laboratory_measurement_doacs_specialized_assays_not_available"> <span class="text">
+                                                                            Suggestions for Qualitative Assessment of DOACs When Assays Suitable for Quantitation are Not Available
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/recommended_durations_withholding_doacs_based_procedural_risks"> <span class="text">
+                                                                            Estimated Drug Half-Life Based on CrCl and Suggested Duration for Withholding DOAC Based on Bleed Risk
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/critical_site_bleeds"> <span class="text">
+                                                                        Critical Site Bleeds
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/considerations_restarting_anticoagulation"> <span class="text">
+                                                                        Considerations for Restarting Anticoagulation
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/indications_restarting_anticoagulation_high_thrombotic_risk"> <span class="text">
+                                                                            Original Indications for Anticoagulation with High Thrombotic Risk
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/patient_thrombotic_risk_definition"> <span class="text">
+                                                                        Patient Thrombotic Risk Definitions
+                                                                    </span> <i class="fa fa-holder-dynamic">
+                                                                    </i> </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/components_clinician_patient_discussion"> 
+                                                                            <span class="text">
+                                                                                Components of the Clinician-Patient Discussion
+                                                                            </span> 
+                                                                            <i class="fa fa-holder-dynamic"> </i> 
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#!/content/clinician-split-layout/prescribing_information_drugs"> 
+                                                                            <span class="text">
+                                                                                Prescribing Information for Drugs
+                                                                            </span> 
+                                                                            <i class="fa fa-holder-dynamic"> </i> 
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </nav>
+
+                                    </div>
+                                    <div class="split-content page with-group-sections page-wrapper">
+                                        <div class="section-nav back hide-for-medium">
+                                            <a href="#!/content/quick-reference/">
+                                                <div class="circle"> <i class="fa fa-holder-dynamic">
+                                            </i> </div>
+                                                <div class="text"> Back to Quick Reference </div>
+                                            </a>
+                                        </div>
+                                        <div class="page-wrapper">
+                                            <div data-bind="template: {name: 'clinician_resources_expand'}"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="page footer">
+                            <div class="row">
+                                <!--<a href="javascript:void(0);" class="logo text-center">
+                                <img src="assets/img/footerlogo.svg" alt="ACC">
+                                <img src="assets/img/bridge_anticog.svg" alt="BAC">
+                            </a>-->
+                                <ul class="nav tabs tabs-primary reverse swappable small" style=" visibility: visible;flex-wrap: initial;">
+                                    <li id="guideline-Tab" class="">
+                                        <a class="btn-ga4" href="#!/content/resources/"> <span class="short-text btn-ga4">Resources</span> <span class="long-text btn-ga4">Resources</span> </a>
+                                    </li>
+                                    <li id="legal-Tab" class="">
+                                        <a class="btn-ga4" href="#!/content/terms/"> <span class="short-text btn-ga4">Terms</span> <span class="long-text btn-ga4">Terms</span> </a>
+                                    </li>
+                                    <li id="about-Tab" class="">
+                                        <a class="btn-ga4" href="#!/content/about/"> <span class="short-text btn-ga4">About</span> <span class="long-text btn-ga4">About App</span> </a>
+                                    </li>
+                                    <li id="about-Tab" class="">
+                                        <a class="btn-ga4" href="#!/content/news/"> <span class="short-text btn-ga4">News</span> <span class="long-text btn-ga4">News</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <!--    Loading cordova.js dynamically if mobile device is detected-->
+                <script type="text/javascript">
+                    if (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1) {
+                        //if mobile device detected
+                        //Load mobile-app.js dynamically
+                        var mobileScript = document.createElement('script');
+                        mobileScript.setAttribute('src', 'assets/js/mobile-app.js');
+                        document.body.appendChild(mobileScript);
+                        var cordovaScript = document.createElement('script');
+                        cordovaScript.setAttribute('src', 'cordova.js');
+                        document.head.appendChild(cordovaScript);
+                        document.getElementsByTagName("body").className = "noselect";
+                    }
+                </script>
+                <script src="assets/js/styledown.js"></script>
+
+        <script type="text/html" id="clinician_resources_expand">
+            <div data-bind="page: {id:'guidance_administering_reversal_agents',afterShow: listchange}" class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Guidance for Administering Reversal/Hemostatic Agents</h1>
+                    <div class="row">
+                    <div class="small-12 columns text-right"> <a id="guidance_reversal_agents_action" data-action="expand" onclick="OptimizeToggle(this)" data-accr="guidance_reversal_agents" class="underline">Expand All</a> 
+                    </div>
+                    <p class="small-12 columns">In a life-threatening or critical site bleed, or in situations in which bleeding cannot be controlled with other measures, reversal of OACs may be required. This section provides guidance for administering reversal/hemostatic agents.</p>
+                                                        <br>
+                    <div class="small-12 columns" id="guidance_reversal_agents">
+                        <div class="nested-accordion" data-bind="">
+                            <div class="vka nested-selected">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.vka')">
+                                            <i class="fa fa-holder"></i><span class="text"> VKA (warfarin)</span>
+                                        </h4>
+                                <div class="nested-collapsable-panel">
+                                    <table class="table" border="1">
+                                        <thead>
+                                            <tr class="gray-bg">
+                                                <td colspan="3">
+                                                    <center><b>Vitamin K Antagonists (warfarin)</b></center>
+                                                </td>
+                                            </tr>
+                                            <tr class="gray-bg">
+                                                <td><b>Reversal Stratergy</b></td>
+                                                <td colspan="2"><b>Dosage</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 33%;">4F-PCC<sup>†</sup></td>
+                                                <td style="width: 33%;">&nbsp;</td>
+                                                <td rowspan="6" style="width: 33%;" class="white-bg"> <b>Note regarding vitamin K:</b><br> When PCCs are
+                                                    used to reverse VKAs, vitamin K should always be given.<br><br> If bleed is considered <b>major:</b>
+                                                    Administer 5-10 mg IV vitamin K<br><br> If bleed is considered <b>nonmajor:</b> Administer 2-5 mg PO/IV
+                                                    vitamin K</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&bull; INR 2 to &lt; 4</td>
+                                                <td>25 units/kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&bull; INR 4-6</td>
+                                                <td>35 units/kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&bull; INR &gt;6</td>
+                                                <td>50 units/kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">4F-PCC low fixed-dose option</td>
+                                                <td>1000 units for any non-intractional major bleed</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1500 units for intrational hemorrhage</td>
+                                            </tr>
+                                            <tr>
+                                                <td>If 4F-PCC not available, administer plasma</td>
+                                                <td colspan="2">10-15 mL/kg (1)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="dti">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.dti')">
+                                            <i class="fa fa-holder"></i><span class="text">DTI (dabigatran)</span>
+                                        </h4>
+                                <div class="nested-collapsable-panel" style="display:none;"> 
+                                    <span>
+                                        Note: While idarucizumab is FDA approved in the U.S., it may not be available at every institution.  Please refer to the product locator on the manufacturer’s website to determine availability:&nbsp;<a href="https://www.praxbind.com/" class="link" target="_blank">https://www.praxbind.com/</a> 
+                                 </span><br><br>
+                                     <table class="table" border="1">
+                                        <thead>
+                                            <tr class="gray-bg">
+                                                <td colspan="2">
+                                                    <center><b>Direct Thrombin Inhibitor (dabigatran)</b></center>
+                                                </td>
+                                            </tr>
+                                            <tr class="gray-bg">
+                                                <td><b>Reversal Stratergy</b></td>
+                                                <td><b>Dosage</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Idarucizumab</td>
+                                                <td>5g idarucizumab IV <sup>‡</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td>If idarucizumab is not available, administer either PCC or aPCC</td>
+                                                <td>50 units/kg IV <sup>§</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Consider activated charcoal for known recent ingestion (within 2-4 h)</td>
+                                                <td>(n/a)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="fxa">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.fxa')">
+                                            <i class="fa fa-holder"></i><span class="text">FXa Inhibitor (apixaban, betrixaban, edoxaban, rivaroxaban)</span>
+                                        </h4>
+                                <div class="nested-collapsable-panel" style="display:none;">
+                                    <span>
+                                        Note: While andexanet alfa is FDA approved in the U.S., it may not be available at every institution.  Please refer to the product locator on the manufacturer’s website to determine availability:&nbsp;<a href="https://www.andexxa.com/" class="link" target="_blank">https://www.andexxa.com/</a> 
+                                  </span><br/></br>
+                                  <h5><small class="sm-font-color"><b>EDOXABAN and BETRIXABAN</b></small></h5></br>
+                                  <table class="table" border="1">
+                                    <thead>
+                                        <tr class="gray-bg">
+                                            <td colspan="2">
+                                                <center><b>Factor Xa Inhibitor (edoxaban and betrixaban)</b></center>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-bg">
+                                            <td><b>Reversal Stratergy</b></td>
+                                            <td><b>Dosage</b></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Off-label treatment with andexanet alfa II ¶</td>
+                                            <td>Initial IV Bolus 800 mg at a target rate of 30 mg/min, follow-up IV infusion 8 mg/min for up to 120 minutes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>If andexanet alfa is not available, administer PCC or aPCC</td>
+                                            <td>50 units/kg IV §</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consider activated charcoal for known recent ingestion (within 2-4 h)</td>
+                                            <td>(n/a)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                    <h5><small class="sm-font-color"><b>APIXABAN</b></small></h5><br/>
+                                    <div class="table-wrapper">
+                                        <table class="table table-scroll" style="font-size: 1em" border="1">
+                                            <thead>
+                                                <tr class="gray-bg">
+                                                    <td colspan="6">
+                                                        <center><b>Factor Xa Inhibitator (apixaban)</b></center>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gray-bg">
+                                                    <td style="width: 40%;" colspan="3"><b>Reversal Stratergy</b></td>
+                                                    <td colspan="3" style="width: 60%;"><b>Dosage</b></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="5" class="gray-bg text-mid" style="width: 10%;" valign="middle">Andexanet alfa<sup>"¶</sup></td>
+                                                    <td class="gray-bg text-mid" style="width: 10%;">Last dose of apixaban</td>
+                                                    <td class="gray-bg text-mid" style="width: 20%;">Timing of last dose</td>
+                                                    <td class="gray-bg text-mid" style="width: 10%;">Low/High</td>
+                                                    <td class="gray-bg text-mid" style="width: 25%;">Initial IV Bolus</td>
+                                                    <td class="gray-bg text-mid" style="width: 25%;">Follow-On IV Infusion</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td rowspan="2" valign="middle" class="text-mid">≤ 5 mg</td>
+                                                    <td>&lt; 8 hours or unknown</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td>≥ 8 hours or unknown</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td rowspan="2" valign="middle" class="text-mid">&gt; 5 mg or unknown</td>
+                                                    <td>&lt; 8 hours or unknown</td>
+                                                    <td>High dose</td>
+                                                    <td>800 mg at a target rate of 30 mg/min</td>
+                                                    <td>8 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td>≥ 8 hours</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">If andexanet alfa is not available, administer PCC or aPCC</td>
+                                                    <td colspan="3" class="text-mid">50 units/kg IV<sup>§</sup></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Consider activated charcoal for known recent ingestion (within 2-4 h)</td>
+                                                    <td colspan="3" class="text-mid">n/a</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <h5><small style="color: #262626"><b></b>RIVAROXABAN</b></small></h5></br>
+                                    <div class="table-wrapper">
+                                        <table class="table table-scroll" style="font-size: 1em" border="1">
+                                            <thead>
+                                                <tr class="gray-bg">
+                                                    <td colspan="6">
+                                                        <center><b>Factor Xa Inhibitator (rivaroxaban)</b></center>
+                                                    </td>
+                                                </tr>
+                                                <tr class="gray-bg">
+                                                    <td style="width: 40%;" colspan="3"><b>Reversal Stratergy</b></td>
+                                                    <td colspan="3" style="width: 60%;"><b>Dosage</b></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="5" class="gray-bg text-mid" style="width: 10%;" valign="middle">Andexanet alfa<sup>"¶</sup></td>
+                                                    <td class="gray-bg text-mid" style="width: 10%;">Last dose of rivaroxaban</td>
+                                                    <td class="gray-bg text-mid" style="width: 20%;">Timing of last dose</td>
+                                                    <td class="gray-bg text-mid" style="width: 10%;">Low/High</td>
+                                                    <td class="gray-bg text-mid" style="width: 25%;">Initial IV Bolus</td>
+                                                    <td class="gray-bg text-mid" style="width: 25%;">Follow-On IV Infusion</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td rowspan="2" valign="middle" class="text-mid">≤ 10 mg</td>
+                                                    <td>&lt; 8 hours or unknown</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td>≥ 8 hours or unknown</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td rowspan="2" valign="middle" class="text-mid">&gt; 10 mg or unknown</td>
+                                                    <td>&lt; 8 hours or unknown</td>
+                                                    <td>High dose</td>
+                                                    <td>800 mg at a target rate of 30 mg/min</td>
+                                                    <td>8 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr class="white-bg">
+                                                    <td>≥ 8 hours</td>
+                                                    <td>Low dose</td>
+                                                    <td>400 mg at a target rate of 30 mg/min</td>
+                                                    <td>4 mg/min for up to 120 minutes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">If andexanet alfa is not available, administer PCC or aPCC</td>
+                                                    <td colspan="3" class="text-mid">50 units/kg IV<sup>§</sup></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Consider activated charcoal for known recent ingestion (within 2-4 h)</td>
+                                                    <td colspan="3" class="text-mid">n/a</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="small-12">4F-PCC = four-factor prothrombin complex concentrate; aPCC = activated prothrombin complex concentrate; h = hours; IV = intravenous; PCC = prothrombin complex concentrate; INR = international normalized ratio</p>
+
+                        <p class="small-12">*Reversal/hemostatic agents include repletion strategies such as PCCs, plasma, vitamin K, and specific reversal agents for DOACs (e.g., idarucizumab for dabigatran; andexanet alfa for apixaban or rivaroxaban).</p>
+
+                        <p class="small-12">† When PCCs are used to reverse vitamin K antagonists, vitamin K should also always be given.</p>
+
+                        <p class="small-12">‡ If bleeding persists after reversal and there is laboratory evidence of a persistent dabigatran effect, or if there is concern for a persistent anticoagulant effect before a second invasive procedure, a second dose of idarucizumab may be reasonable.</p>
+
+                        <p class="small-12">§ Refer to prescribing information for max units. To control bleeding in hemophilia patients with inhibitors, aPCC is typically administered intravenously in doses ranging from 50 U/kg to 100 U/kg, with a daily maximum of 200 U/kg. There are no randomized data regarding dosing in patients with factor Xa inhibitor–related major bleeding. Based on preclinical evidence, case reports, and case series data, an initial intravenous dose of 50 U/kg is suggested for patients with FXa inhibitor major bleeding and who are known or likely to have clinically significant anticoagulant levels.</p>
+
+                        <p class="small-12">II ANNEXA-4 full report excluded patients with DOAC levels &lt;75 ng/ml because those patients were considered to have clinically insufficient levels for reversal agent. If drug effect/level can be assessed without compromising urgent clinical care decisions, then assessment should be performed before andexanet alfa is administered.</p>
+
+                        <p class="small-12">¶ Andexanet alfa is not currently available at every institution; please refer to product locator on manufacturer’s website.</p>
+
+                        <p class="small-12">(1) Sarode R, Milling TJ, Jr., Refaai MA, et al. Efficacy and safety of a 4-factor prothrombin complex concentrate in patients on vitamin K antagonists presenting with major bleeding: a randomized, plasma controlled, phase IIIb study. Circulation. 2013; 128:1234-43.</p>
+         </div>
+                                                </div>
+            </div>
+            <div data-bind="page: {id:'suggestions_laboratory_measurement_doacs_specialized_assays_available',afterShow: listchange}"
+                class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Assays Suitable for Quantitation of DOACs
+                </h1>
+                <div class="row">
+                    <div id="suggestions_lab_measurement_doacs" class="small-12 columns">
+                        <table class="table">
+                            <thead>
+                                <tr class="gray-bg">
+                                    <td width="30%">
+                                        Drug
+                                    </td>
+                                    <td width="70%">
+                                        Suggested Test
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="gray-bg">Dabigatran</td>
+                                <td>
+                                    &bull; Liquid chromatography-tandem mass spectrometry <br/>
+                                    &bull; Dilute thrombin time <br/>
+                                    &bull; Ecarin clotting time <br/>
+                                    &bull; Ecarin chromogenic assay 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="gray-bg">
+                                    Apixaban, betrixaban, edoxaban, or rivaroxaban
+                                </td>
+                                <td>
+                                    &bull; Liquid chromatography-tandem mass spectrometry 
+                                    &bull; Anti–FXa *
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="small-12 columns">*Useful for quantitation of plasma drug levels only when calibrated with the drug of interest 
+                        DOAC = direct-acting oral anticoagulant; FXa = factor-Xa
+                    </p>
+                </div>
+            </div>
+            <div data-bind="page: {id:'suggestions_laboratory_measurement_doacs_specialized_assays_not_available',afterShow: listchange}"
+                class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Suggestions for Qualitative Assessment of DOACs When Assays Suitable for Quantitation are Not Available
+                </h1>
+                <div class="row">
+                    <div class="small-12 columns text-right"> <a id="suggestions_lab_measurement_doac_assays_not_available_action"
+                            data-action="expand" onclick="OptimizeToggle(this)"
+                            data-accr="suggestions_lab_measurement_doac_assays_not_available" class="underline">Expand All</a>
+                    </div>
+                    <div id="suggestions_lab_measurement_doac_assays_not_available" class="small-12 columns">
+                        <div class="nested-accordion" data-bind="">
+                            <div class="dabigatran-NA nested-selected">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.dabigatran-NA')">
+                                    <i class="fa fa-holder"></i><span class="text"> Dabigatran</span>
+                                </h4>
+                                <div class="nested-collapsable-panel">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Exclude Clinically Relevant* Drug Levels</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Suggested Test:</b>
+                                                    <ul>
+                                                        <li>TT, aPTT</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Normal TT </b>excludes clinically relevant<sup>*</sup> levels.</li>
+                                                        <li><b>Prolonged TT </b>does not discriminate between clinically important
+                                                            and insignificant levels.</li>
+                                                        <li><b>Normal aPTT </b>usually excludes clinically relevant<sup>*</sup> levels, if a
+                                                            sensitive reagent is used.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Determine Whether On-Therapy or Above On-Therapy Levels are Present</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Suggested Test:</b>
+                                                    <ul>
+                                                        <li>aPTT</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Prolonged aPTT </b>suggests that on-therapy or above on-therapy
+                                                            levels are present.</li>
+                                                        <li><b>Normal aPTT </b>may not exclude on-therapy levels, particularly if a
+                                                            relatively insensitive aPTT reagent is used. </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="apixaban-NA">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.apixaban-NA')">
+                                    <i class="fa fa-holder"></i><span class="text"> Apixaban </span>
+                                </h4>
+                                <div class="nested-collapsable-panel" style="display:none;">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Exclude Clinically Relevant* Drug Levels</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Suggested Tests:</b>
+                                                    <ul>
+                                                        <li>UFH or LMWH anti-FXa</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Normal PT and aPTT </b>do not exclude clinically relevant<sup>*</sup> levels.
+                                                        </li>
+                                                        <li>UFH or LMWH anti-FXa below the lower limit of quantitation probably excludes clinically relevant* levels.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Determine Whether On-Therapy or Above On-Therapy Levels are Present.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Suggested Test:</b>
+                                                    <ul>
+                                                        <li>PT</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Prolonged PT </b>suggests that on-therapy or above on-therapy levels
+                                                            are present.</li>
+                                                        <li><b>Normal PT </b>may not exclude on-therapy or above on-therapy levels,
+                                                            particularly if a relatively insensitive PT reagent is used. </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="edoxaban-NA">
+                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.edoxaban-NA')">
+                                    <i class="fa fa-holder"></i><span class="text">Betrixaban, edoxaban, or rivaroxaban</span>
+                                </h4>
+                                <div class="nested-collapsable-panel" style="display:none;">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Exclude Clinically Relevant* Drug Levels</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <b>Suggested Test:</b>
+                                                    <ul>
+                                                        <li>UFH or LMWH anti-FXa</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Normal PT and aPTT </b>do not exclude clinically relevant levels.
+                                                        </li>
+                                                        <li>UFH or LMWH anti-FXa below the lower limit of quantitation probably excludes clinically relevant* levels.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Determine Whether On-Therapy or Above On-Therapy Levels are Present</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Suggested Test:</b>
+                                                    <ul>
+                                                        <li>PT</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Interpretation:</b>
+                                                    <ul>
+                                                        <li><b>Prolonged PT </b>suggests that on-therapy or above on-therapy levels
+                                                            are present.</li>
+                                                        <li><b>Normal PT </b>PT may not exclude on-therapy levels, particularly if a
+                                                            relatively insensitive PT reagent is used. </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="small-12 columns">*The term “clinically relevant” refers to DOAC levels that may contribute to
+                        bleeding or surgical bleeding risk. The minimum DOAC level that may contribute to bleeding or surgical
+                        bleeding risk is unknown. The International Society on Thrombosis and Hemostasis recommends consideration of
+                        anticoagulant reversal for patients with serious bleeding and a DOAC level &gt;50 ng/mL, and for patients
+                        requiring an invasive procedure with high bleeding risk and a DOAC level &gt;30 ng/mL. </p>
+                    <p class="small-12 columns">aPTT = activated partial thromboplastin time; DOAC = direct-acting oral anticoagulant; FXa = factor Xa; LMWH = low-molecular-weight heparin; PT = prothrombin time; TT = thrombin time; UFH = unfractionated heparin.</p>
+                </div>
+            </div>
+            <div data-bind="page: {id:'recommended_durations_withholding_doacs_based_procedural_risks',afterShow: listchange}"
+                class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Estimated Drug Half-Life Based on CrCl and Suggested Duration for Withholding DOAC Based on Bleed Risk</h1>
+                <div class="row columns">
+                    <div class="table-wrapper">
+                        <table class="table table-scroll" border="1">
+                            <thead>
+                                <tr class="gray-bg">
+                                    <td colspan="9"><center>Estimated Drug Half-Life Based on CrCl</center></td>
+                                </tr>
+                                <tr class="gray-bg">
+                                    <td></td>
+                                    <td colspan="5"><center>Dabigatran</center></td>
+                                    <td colspan="3"><center>Apixaban, Betrixaban, Edoxaban, or Rivaroxaban</center></td>
+                                </tr>
+                                <tr class="gray-bg">
+                                    <td>CrCl<br> mL/Min</td>
+                                    <td>&ge;80</td>
+                                    <td>50–79</td>
+                                    <td>30-49</td>
+                                    <td>15-29</td>
+                                    <td>&lt;15</td>
+                                    <td>&ge;30</td>
+                                    <td>15-29</td>
+                                    <td>&lt;15</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Estimated drug half-life, h</td>
+                                    <td>13</td>
+                                    <td>15</td>
+                                    <td>18</td>
+                                    <td>27</td>
+                                    <td>30 (off dialysis)</td>
+                                    <td>
+                                        &bull; Apixaban, betrixaban, rivaroxaban: 6–15 <br>
+                                        &bull; Betrixaban:19-27 
+                                    </td>
+                                    <td>
+                                        &bull; Apixaban: 17 <br>
+                                        &bull; Edoxaban: 17 <br>
+                                        &bull; Rivaroxaban: 9
+                                    </td>
+                                    <td>
+                                        &bull; Apixaban: 17 (off dialysis) <br>
+                                        &bull; Edoxaban: 10-17 (off dialysis)  <br>
+                                        &bull; Rivaroxaban: 13 (off dialysis) <br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>CrCl = creatinine clearance</p>
+
+                    <div class="table-wrapper">
+                        <table class="table table-scroll" border="1">
+                            <thead>
+                                <tr class="gray-bg">
+                                    <td colspan="9"><center>Suggested Duration for Withholding DOAC Based on Bleed Risk</center></td>
+                                </tr>
+                                <tr class="gray-bg">
+                                    <td></td>
+                                    <td colspan="5"><center>Dabigatran</center></td>
+                                    <td colspan="3"><center>Apixaban, Betrixaban, Edoxaban, or Rivaroxaban</center></td>
+                                </tr>
+                                <tr class="gray-bg">
+                                    <td>CrCl<br> mL/Min</td>
+                                    <td>&ge;80</td>
+                                    <td>50–79</td>
+                                    <td>30-49</td>
+                                    <td>15-29</td>
+                                    <td>&lt;15</td>
+                                    <td>&ge;30</td>
+                                    <td>15-29</td>
+                                    <td>&lt;15</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Low</td>
+                                    <td>&ge;24 h</td>
+                                    <td>&ge;36 h</td>
+                                    <td>&ge;48 h</td>
+                                    <td>&ge;72 h</td>
+                                    <td>No data. Consider measuring dTT and/or withholding &ge;96 h.</td>
+                                    <td>
+                                        &ge;24 h
+                                    </td>
+                                    <td>
+                                        &ge;36 h
+                                    </td>
+                                    <td>
+                                        No data. Consider measuring agent- specific anti-Xa level and/or withholding &ge;48 h.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Uncertain, intermediate, or high</td>
+                                    <td>&ge;48 h</td>
+                                    <td>&ge;72 h</td>
+                                    <td>&ge;96 h</td>
+                                    <td>&ge;120 h</td>
+                                    <td>No data. Consider measuring dTT</td>
+                                    <td>
+                                        48 h
+                                    </td>
+                                    <td colspan="2">
+                                        No data. Consider measuring agent-specific anti-Xa level and/or withholding &ge;72 h.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>NOTE: The duration for withholding is based upon the estimated DOAC half-life withholding times of 2 to 3 half-lives for low procedural bleeding risk and 4 to 5 drug half-lives for uncertain, intermediate, or high procedural bleeding risk</p>
+                    <p>CrCl = creatinine clearance; DOAC = direct-acting oral anticoagulant; dTT = dilute thrombin time. </p>
+                </div>
+            </div>
+            <div data-bind="page: {id:'critical_site_bleeds',afterShow: listchange}" class="group-section no-box-shadow"
+                style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Critical Site Bleeds</h1>
+                <div class="row columns">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Type of Bleed</th>
+                                <th>Initial Signs and Symptoms</th>
+                                <th>Potential Consequences of Bleed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Intracranial hemorrhage: </b>Includes intraparenchymal, subdural, epidural, and subarachnoid
+                                    hemorrhages</td>
+                                <td><b>Unusually intense headache, emesis</b>
+                                    <br>reduced or loss of consciousness, vision changes, numbness, weakness, aphasia,
+                                    ataxia, vertigo, seizures</td>
+                                <td>
+                                    Stupor or coma <br>
+                                    Permanent neurological deficit <br>
+                                    Death
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Other central nervous system hemorrhage: </b>Includes intraocular, intra- or extra- axial
+                                    spinal hemorrhages</td>
+                                <td><b>Intraocular: </b>monocular eye pain, vision changes, blindness
+                                    <br><b>Spinal: </b>back pain, bilateral extremity weakness or numbness, bowel or bladder
+                                    dysfunction, respiratory failure</td>
+                                <td><b>Intraocular: </b>permanent vision loss
+                                    <br><b>Spinal: </b> permanent disability, paraplegia, quadriplegia, death</td>
+                            </tr>
+                            <tr>
+                                <td><b>Pericardial tamponade</b></td>
+                                <td>Shortness of breath, tachypnea, hypotension, paradoxical pulse, jugular venous distension, tachycardia, muffed
+                                    heart sounds, rub</td>
+                                <td>Cardiogenic shock <br>
+                                    Death </td>
+                            </tr>
+                            <tr>
+                                <td><b>Airway: includes posterior epistaxis</b></td>
+                                <td><b>Airway: </b>hemoptysis, shortness of breath, hypoxia
+                                    <br><b>Posterior epistaxis: </b>profuse epistaxis, hemoptysis, hypoxia, shortness of breath</td>
+                                <td>Hypoxemic respiratory failure <br>
+                                Death</td>
+                            </tr>
+                            <tr>
+                                <td><b>Hemothorax, intra-abdominal bleeding, and retroperitoneal hemorrhage</b></td>
+                                <td>
+                                    <b>Hemothorax: </b>tachypnea, tachycardia, hypotension, decreased breath sounds<br>
+                                    <b>Intra-abdominal (nongastrointestinal): </b> abdominal pain, distension, hypotension, tachycardia <br>
+                                    <b>Retroperitoneal hemorrhage:</b>back/flank/hip pain, tachycardia, hypotension
+                                </td>
+                                <td><b>Hemothorax:</b> respiratory failure
+                                    <br><b>Retroperitoneal hemorrhage:</b> femoral neuropathy
+                                    <br><b>All:</b> hypovolemic shock, death</td>
+                            </tr>
+                            <tr>
+                                <td><b>Extremity bleeds: </b>Includes intramuscular and intra-articular bleeding</td>
+                                <td><b>Intramuscular: </b>pain, swelling, pallor, paresthesia, weakness, diminished pulse
+                                    <br><b>Intra-articular: </b> joint pain, swelling, decreased range of motion</td>
+                                <td><b>Intramuscular: </b>compartment syndrome, paralysis, limb loss
+                                    <br><b>Intra-articular: </b>irreversible joint damage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-bind="page: {id:'considerations_restarting_anticoagulation', afterShow: listchange}" class="group-section no-box-shadow" style="margin: 0 0.65rem 1rem 0.5rem;">
+                <h1 class="with-underline">Considerations for Restarting Anticoagulation</h1>
+                <div class="small-12 text-right"> <a id="considerations_restarting_oac_action" data-action="expand" onclick="OptimizeToggle(this)" data-accr="considerations_restarting_oac" class="underline">Expand All</a> </div>
+                <div class="row columns">
+                                                    <p>After a bleeding event, the indication for OAC should be reassessed to determine whether continued therapy is warranted based on established clinical practice guidelines. A risk-benefit assessment should be conducted in consultation with other practitioners and in discussion with patients or caregivers. The below information includes points to consider in determining the appropriateness of restarting anticoagulation. </p>
+                                                </div>
+                <div class="row columns collapse">
+                                                    <div id="considerations_restarting_oac" class="small-12 columns">
+                                                        <div class="nested-accordion" data-bind="">
+                                                            <div class="factors">
+                                                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.factors')">
+                                                                                <i class="fa fa-holder"></i><span class="text"> Factors that contribute to the risk-benefit assessment of restarting anticoagulation</span>
+                                                                            </h4>
+                                                                <div class="nested-collapsable-panel" style="display:none;">
+                                                                    <div class="row columns">
+                                                                        <ul>
+                                                                            <li>Whether the patient is NPO (nil per os, “nothing by mouth”)</li>
+                                                                            <li>Cancer-associated venous thromboembolism (VTE)</li>
+                                                                            <li>Pregnancy</li>
+                                                                            <li>High risk of rebleeding</li>
+                                                                            <li>Location of the bleed</li>
+                                                                            <li>The source of bleeding and whether it was identified and treated</li>
+                                                                            <li>Mechanism of the bleed</li>
+                                                                            <li>Being bridged back to VKA (vitamin K antagonist) with high thrombotic risk</li>
+                                                                            <li>Reversible factors such as high INR in a patient on a VKA</li>
+                                                                            <li>Concomitant anti-platelet therapy</li>
+                                                                            <li>Acute or worsening renal insufficiency leading to elevated OAC levels</li>
+                                                                            <li>Significant drug interactions that could increase DOAC levels (can be addressed prior to restarting therapy)</li>
+                                                                            <li>Whether further surgical or procedural interventions are planned</li>
+                                                                            <li>Thrombotic risk</li>
+                                                                            <li>Concurrent medications that interact with OAC levels</li>
+                                                                            <li>The indication for use of anticoagulation should be considered</li>
+                                                                            <li>Patient engagement in restarting anticoagulation</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="statement">
+                                                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.statement')">
+                                                                                <i class="fa fa-holder"></i><span class="text"> Some scenarios requiring special consideration for anticoagulant reinitiation post procedure</span>
+                                                                            </h4>
+                                                                <div class="nested-collapsable-panel" style="display:none;">
+                                                                    <div class="row columns">
+                                                                        <ul>
+                                                                            <li><span class="underline">Procedures to control bleeding</span>: For surgeries/procedures performed to control bleeding, restarting anticoagulation after the procedure may carry a higher bleeding risk.  Consider characteristics of the bleed, and whether the source of bleeding was identified.  Individualized strategies with close clinical monitoring apply for patients in whom bleeding was not successfully controlled by surgical/procedural management. </li>
+                                                                            <li><span class="underline">Neuraxial anesthesia</span>: The use of anticoagulants in the setting of neuraxial anesthesia raises the risk of a spinal or epidural hematoma.  All currently available DOACs carry a black box warning regarding their use in the setting of neuraxial anesthesia.  If an epidural catheter is still in place, DOAC use should be avoided.  See the American Society of Regional Anesthesia and Pain Management guidelines and the individual prescribing information for each DOAC for more information.</li>
+                                                                            <li><span class="underline">DOAC therapy following cardiac surgery</span>: The indication for a DOAC should be re-evaluated after cardiac surgery, especially if the patient has undergone a valvular procedure.  All DOACs are contraindicated in patients with mechanical valves.  For patients who have undergone valve surgery, transitioning a patient who was on a DOAC to warfarin after the procedure is suggested.</li>
+                                                                            <li><span class="underline">Gastrointestinal Bleeding (GI Bleeding)</span>: GI bleeding is a relatively common hemorrhagic complication of chronic OAC therapy, often leading to its permanent discontinuation.  For most cases of GI bleeding, it is reasonable to reinitiate OAC once hemostasis has been achieved.</li>
+                                                                            <li><span class="underline">Intracranial Hemorrhage</span>: A cautious, individualized approach to restarting OAC after intracranial hemorrhage is warranted. Factors associated with a higher risk of recurrence include the mechanism of intracranial hemorrhage (i.e., spontaneous vs. traumatic), lobar location of the initial bleed (suggesting amyloid angiopathy), the presence and number of microbleeds on magnetic resonance imaging, and ongoing anticoagulation. The timing of anticoagulation reinitiation following an ICH has not been systematically studied and varies widely in observational studies (72 hours to 30 weeks).  Current guidelines recommend avoiding anticoagulation for at least 4 weeks in patients without mechanical heart valves, and, if indicated, using aspirin monotherapy initially after an ICH.  It is favored to delay the resumption of anticoagulation for at least 4 weeks in patients without high thrombotic risk.</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="on-therapy">
+                                                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.on-therapy')">
+                                                                                <i class="fa fa-holder"></i><span class="text"> Consider for patients on concomitant antiplatelet therapy</span>
+                                                                            </h4>
+                                                                <div class="nested-collapsable-panel" style="display:none;">
+                                                                    <div class="row columns">
+                                                                        <ul>
+                                                                            <li>Reassess the need for aspirin in stable coronary artery disease</li>
+                                                                            <li>Reassess the need for dual antiplatelet therapy in patients after PCI and/or ACS and consider discontinuation of aspirin</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="not-on-therapy">
+                                                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.not-on-therapy')">
+                                                                                <i class="fa fa-holder"></i><span class="text"> Consider for patients not on concomitant antiplatelet therapy</span>
+                                                                            </h4>
+                                                                <div class="nested-collapsable-panel" style="display:none;">
+                                                                    <div class="row columns">
+                                                                        <ul>
+                                                                            <li>Whether or not the patient is taking concurrent medications that interact with OAC levels</li>
+                                                                            <li>May consider pharmacy consultation and switching OAC agent or interacting medication</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="possible">
+                                                                <h4 class="nested-toggle with-underline" onclick="nestedPanelVisibleToggle('.possible')">
+                                                                                <i class="fa fa-holder"></i><span class="text"> Possible conditions for which OAC may no longer be indicated</span>
+                                                                            </h4>
+                                                                <div class="nested-collapsable-panel" style="display:none;">
+                                                                    <div class="row columns">
+                                                                        <p>The following are possible conditions for which OAC may no longer be indicated:</p>
+                                                                        <ul>
+                                                                            <li>Nonvalvular AF with CHA2DS2-VASc (Congestive heart failure, Hypertension, Age [&gt;65 = 1 point, &ge;75 = 2 points], Diabetes, previous Stroke/transient ischemic attack [2 points]) score &lt;2 in men and &lt;3 in women</li>
+                                                                            <li>Temporary indication for OAC (e.g., postsurgical prophylaxis, OAC after an anterior MI without left ventricular thrombus, post-LAA closure device placement) </li>
+                                                                            <li>Recovered acute stress cardiomyopathy (e.g., Takotsubo cardiomyopathy)</li>
+                                                                            <li>First time provoked VTE &gt;3 months ago</li>
+                                                                            <li>Bioprosthetic valve placement in the absence of AF  &gt;3 months ago </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+            </div>
+            <div data-bind="page: {id:'indications_restarting_anticoagulation_high_thrombotic_risk',afterShow: listchange}"
+                class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Original Indications for Anticoagulation with High Thrombotic Risk</h1>
+                <div class="row columns">
+                    <p>Patients who are at high thrombotic risk will likely benefit from restarting anticoagulation, even if the
+                        risk of rebleeding is high. In general, conditions with high thrombotic risk favor early reinitiation of
+                        anticoagulation once hemostasis is achieved and the patient is clinically stable. </p>
+                </div>
+                <div class="row columns">
+                    <table class="table">
+                        <thead>
+                            <tr class="row">
+                                <th class="small-4">Indication</th>
+                                <th class="small-8">Patient Characteristics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row">
+                                <td class="small-4">Mechanical valve prosthesis with or without AF<sup>*</sup></td>
+                                <td class="small-8">
+                                    <ul>
+                                        <li>Mechanical valve (mitral > aortic) + additional thrombotic considerations: AF, HF, prior stroke/TIA</li>
+                                        <li>Caged ball or tilting disc valve prosthesis</li>
+                                        <li>Stroke/TIA within 6 months</li>                    
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">Nonvalvular AF<sup>†</sup></td>
+                                <td class="small-8">
+                                    <ul>
+                                        <li>AF with CHA2DS2-VASc score of &ge;4 <sup>‡</sup></li>
+                                        <li>Ischemic stroke/TIA within 3 months</li>
+                                        <li>Stroke risk &ge;10% per year</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">
+                                    Valvular AF (with moderate or greater mitral stenosis or a mechanical valve prosthesis)* 
+                                </td>
+                                <td class="small-8">&nbsp;</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">VTE<sup>†</sup></td>
+                                <td class="small-8">
+                                    <li>VTE within 3 months</li>
+                                    <li>History of unprovoked or recurrent VTE</li>
+                                    <li>Active cancer and history of cancer- associated VTE</li>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">Prior thromboembolism with interruption of anticoagulation</td>
+                                <td class="small-8">&nbsp;</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">Left ventricular thrombus<sup>§</sup></td>
+                                <td class="small-8">
+                                    <ul><li>&gt;3 months post MI, if recovery of LV function</li></ul>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">Left atrial thrombus</td>
+                                <td class="small-8">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="small-4">Left ventricular assist device<sup>§</sup></td>
+                                <td class="small-8">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>*Currently, only warfarin is indicated for patients ready to restart their anticoagulation.</p>
+                    <p>†Patients can resume any OAC when ready to restart their anticoagulation.</p>
+                    <p>‡For patients with CHA2DS2-VASc scores of 4, the annual rate of thromboembolism is 4% (2.8-5.4%).</p>
+                    <p>§Currently, only conventional-intensity warfarin therapy is indicated for patients ready to restart their anticoagulation.</p>
+                    <p>AF = atrial fibrillation; CHA2DS2-VASc = Congestive heart failure, Hypertension, Age ( &gt;65 = 1 point, &ge;75 = 2 points), Diabetes, previous Stroke/transient ischemic attack (2 points); HF = heart failure; LV = left ventricular; MI = myocardial infarction; TIA = transient ischemic attack; VTE = venous thromboembolism.</p>
+                </div>
+            </div>
+            <div data-bind="page: {id:'patient_thrombotic_risk_definition',afterShow: listchange}" class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                                <h1 class="with-underline">Patient Thrombotic Risk Definitions</h1>
+                                <div class="row columns">
+                                                    <p>The below definitions for thrombotic risk have been taken from the 2017 ACC Expert Consensus Decision Pathway for Periprocedural Management of Anticoagulation in Patients with Nonvalvular Atrial Fibrillation. They have been defined in relation to this document, and may not be considered as standard accepted definitions. </p>
+                                                </div>
+                <div class="row columns">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="22%"><b>Low</b></td>
+                                                                <td>CHA<sub>2</sub>DS<sub>2</sub>-VASc 1-4 (annualized stroke risk &lt;5%), no prior TE</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><b>Moderate</b></td>
+                                                                <td>CHA<sub>2</sub>DS<sub>2</sub>-VASc 5-6 (annualized stroke risk 5-10%) or prior TE more than 3 months previously</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><b>High</b></td>
+                                                                <td>CHA<sub>2</sub>DS<sub>2</sub>-VASc 7+ (annualized stroke risk &gt;10%) or prior TE within 3 months</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                            </div>
+            <div data-bind="page: {id:'components_clinician_patient_discussion',afterShow: listchange}"
+                class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem;">
+                <h1 class="with-underline">Components of the Clinician-Patient Discussion</h1>
+                <div class="row columns">
+                    <p>Optimal patient engagement in the decision to restart anticoagulation involves shared decision making with patients and care providers.  Discussions should include the risks of bleeding that come with resuming anticoagulation, including clinical signs of bleeding, implications of thrombotic events, and death without anticoagulation.</p>
+                </div>
+                <div class="row columns">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Factors to Consider</th>
+                                <th>Discussion Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Timing</td>
+                                <td>
+                                    <ul>
+                                        <li>The clinician-patient discussion should be carried out prior to reinitiation of anticoagulation to provide sufficient time for patients to formulate questions.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Associated Risks</td>
+                                <td>
+                                    <ul>
+                                        <li>Review clinical and site-specific signs of bleeding for which the patient should remain
+                                            vigilant (e.g., melena after a GI bleed).</li>
+                                        <li>Assess the risk of a thrombotic event, ideally by performing personalized risk assessment (e.g., CHA2DS2-VASc prediction of thromboembolism risk).</li>
+                                        <li>Discuss the sequelae associated with thromboembolic events (e.g., higher mortality for ischemic strokes with AF).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Associated benefits</td>
+                                <td>
+                                    <ul>
+                                        <li>Reinforce the net benefit from anticoagulation reinitiation in certain types of bleeds on an anticoagulant (e.g., GI bleeding).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-bind="page: {id:'prescribing_information_drugs', afterShow: listchange}" class="group-section no-box-shadow" style="margin: 0 .65rem 1rem .5rem">
+                <h1 class="with-underline">Prescribing Information for Drugs</h1>
+                <div class="row columns">
+                    <p>Please use the below links to access complete prescribing information for drugs referenced in this app.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Drug</th>
+                                <th>Link for Prescribing Information</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: $root.formData.prescribingDrugsInfo">
+                            <tr>
+                                <td data-bind="text: drug">Apixaban</td>
+                                <td>
+                                    <a data-bind="attr: {href: url}, text: url" target="_blank" class="link"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </script>
+                <script type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
+                <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+                <script type="text/javascript" src="assets/js/knockout-3.5.1.js"></script>
+                <script type="text/javascript" src="assets/js/underscore-1.13.6.min.js"></script>
+                <script type="text/javascript" src="assets/js/foundation-6.6.3.min.js"></script>
+                <script type="text/javascript" src="assets/js/koui.js"></script>
+                <script type="text/javascript" src="assets/js/pager.min.js"></script>
+                <script type="text/javascript" src="assets/js/app.js"></script>
+                <script type="text/javascript" src="assets/js/notification.js"></script>
+                <script type="text/javascript" src="assets/js/formdata.js"></script>
+                <script type="text/javascript" src="assets/js/appviewmodel.js"></script>
+                <script type="text/javascript" src="assets/js/cookie-util.js"></script>
+				<script type="text/javascript">getCookieBanner('https://www.acc.org');</script>
+                <script>
+                    $(document).foundation();
+                    //sessionStorage.setItem("CURRENT_NAVIGATION_PAGE", "AX");
+                    function simulateDevice(deviceType, version) {
+                        notification.osType = deviceType;
+                        notification.appVersion = version;
+                    }
+                    //simulateDevice(notification.osTypes.Android, '2.0');
+                </script>
+    </body>
+
+    </html>

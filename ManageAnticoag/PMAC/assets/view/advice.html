@@ -1,0 +1,244 @@
+
+<div class="data-display locked summary">
+    <!--<header class="header page">
+        <ul class="nav tabs tabs-primary float-left" style="visibility: visible;flex-wrap: nowrap;">
+                  <li class="icon"  style="height: 100%;">
+                      <a class="home fix-bounce" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+                          <i class="fa fa-bars"></i>
+                      </a>
+                  </li>
+            <li class="mobile-acc-logo">
+                    <a class="fix-bounce" href="../index.html" data-bind="click: appViewModel.goToHomePage">
+                        <span class=""><img src="../assets/img/headerlogo.svg" style="border-right: 1px solid #ccc;" alt="ACC BridgeAnticoag"></span>
+                        <span class=""><img src="../assets/img/manageanticoag.svg" alt="AnticoagManager"></span>
+                    </a>
+            </li>
+            </ul>
+        <a class="logo" href="../index.html" data-bind="click: appViewModel.goToHomePage">
+            <span class="acc-logo"><img src="../assets/img/headerlogo.svg" alt="AnticoagManager"></span>
+            <span class="bridge-anticoag-logo"><img src="../assets/img/manageanticoag.svg" alt="AnticoagManager"></span>
+        </a>
+    </header>-->
+    <!--<div class="nav tabs overlap hide-for-large">
+        <ul class="page-wrapper">
+            <li class="tab-title " data-bind = "click:appViewModel.goToSummary,css: appViewModel.adviceTabValueSummary" >
+                <a>Summary</a>
+            </li>
+            <li class="tab-title" data-bind = "click:appViewModel.goToAdviceFromProfile,css: appViewModel.adviceTabValueProfile">
+                <a>Patient Profile</a>
+            </li>
+        </ul>
+    </div>-->
+    <div class="page with-group-sections">
+        <div class="page-wrapper clearfix">
+            <div class="row collapse" style="margin-bottom: 0.36981em;">
+                <h3>Plan Periprocedural Interruption and Bridging</h3>
+                            <ul class="breadcrumbs small-12 columns">
+                                <li><a class="btn-ga4" href="" data-bind="click:appViewModel.goToPatientPageFromFooter">Patient Details</a></li>
+                                <li data-bind="visible: appViewModel.breadcrumbInterruptPresentOnAdvice"><a class="btn-ga4" data-bind="click:appViewModel.goToInterruptFromAdvice">Assess Interruption</a></li>
+                                <li data-bind="visible: appViewModel.breadcrumbBridgePresentOnAdvice"><a class="btn-ga4" data-bind="click:appViewModel.goToBridgeFromAdvice">Bridge</a></li>
+                                <li><a class="active" onclick="return false;">Advice</a></li>
+                            </ul>
+                        </div>
+            <div class="medium-6 columns" ddata-bind="visible:appViewModel.showTabViewSummary() == true">
+                <h1 class="clearfix">Summary
+                </h1>
+                <section class="section group-section not-available clearfix" data-bind="visible:appViewModel.interruptNoAdvice">
+                    <div class="row nopadding">
+                        <div class="small-12 columns nopadding">
+                            <h2 class="with-underline black black-underline">Interruption</h2>
+                            <p>Please complete inputs on <a data-bind="click:appViewModel.goToInterruptFromAdvice">Interruption</a> to see advice.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section group-section clearfix" data-bind="visible:appViewModel.interruptHasAdvice">
+                    <div class="row nopadding">
+                    <div class="small-12 columns nopadding" data-bind="visible: appViewModel.interruptAdviceStatus() == true">
+                        <h2 class="with-underline black">Interruption</h2>
+                        <p><span class="icon success"><i class="fa fa-check-circle success" aria-hidden="true"></i></span> <span class="icontext">ACC advice: <span data-bind="text:appViewModel.weatherInterruptAdvice"></span></span></p>
+                        <p><span class="icon success"><i class="fa fa-check-circle success" aria-hidden="true"></i></span> <span class="icontext" data-bind="text:appViewModel.whenInterruptAdvice"></span></p>
+                    </div>
+                    <div class="small-12 columns nopadding" data-bind="visible: appViewModel.interruptAdviceStatus() == false">
+                        <h2 class="with-underline black">Interruption</h2>
+                        <p><span class="icon caution"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> <span class="icontext">ACC advice: <span data-bind="text:appViewModel.weatherInterruptAdvice"></span></span></p>
+                        <p><span class="icon caution"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> <span class="icontext" data-bind="text:appViewModel.whenInterruptAdvice"></span></p>
+                    </div>
+                    </div>
+                </section>
+
+
+                <section class="section group-section not-available clearfix" data-bind="visible:appViewModel.bridgeNoAdvice">
+                    <div class="row nopadding">
+                        <div class="small-12 columns nopadding">
+                            <h2 class="with-underline black black-underline" >Bridging</h2>
+                            <p>Please complete inputs on <a data-bind="click:appViewModel.goToBridgeFromAdvice">Bridging</a> to see advice.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section group-section clearfix" data-bind="visible:appViewModel.bridgeHasAdvice">
+                    <div class="row nopadding">
+                    <div class="small-12 columns nopadding" data-bind="visible:appViewModel.showWarningTrueAdvice">
+                        <h2 class="with-underline black" >Bridging</h2>
+                        <p><span class="icontext">ACC advice: </span>
+                        <span class="icon warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span> <span data-bind="text:appViewModel.weatherBridgeAdviceWarning"></span></p>
+                    </div>
+                    <div class="small-12 columns nopadding" data-bind="visible:appViewModel.showWarningFalseAdvice">
+                        <div data-bind="visible: appViewModel.bridgeAdviceStatus() == true">
+                        <h2 class="with-underline black" >Bridging</h2>
+                        <p><span class="icon success"><i class="fa fa-check-circle success" aria-hidden="true"></i></span><span class="icontext">ACC advice: <span data-bind="text:appViewModel.weatherBridgeAdvice"></span></span> </p>
+                        <p><span class="icon success"><i class="fa fa-check-circle success" aria-hidden="true"></i></span> <span class="icontext" data-bind="text:appViewModel.whenBridgeAdvice"></span></p>
+                        </div>
+                        <div data-bind="visible: appViewModel.bridgeAdviceStatus() == false">
+                        <h2 class="with-underline black" >Bridging</h2>
+                        <p>
+                        <span class="icon caution"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span><span class="icontext">ACC advice:  <span data-bind="text:appViewModel.weatherBridgeAdvice"></span></span></p>
+                        <p><span class="icon caution"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> <span class="icontext" data-bind="text:appViewModel.whenBridgeAdvice"></span></p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <!--<section class="section group-section not-available clearfix" data-bind="visible:appViewModel.restartNoAdvice">
+                    <div class="row nopadding">
+                    <div class="small-12 columns nopadding">
+                        <h2 class="with-underline black black-underline">Restarting Anticoagulant</h2>
+                        <p>Please complete inputs on <a href="../OACRestart/index.html#!/content/calculator/" adata-bind="click:appViewModel.goToRestartFromAdvice">Restart Anticoagulant</a> to see advice.</p>
+                    </div>
+                    </div>
+                </section>-->
+                    <section class="section group-section clearfix" data-bind="visible:appViewModel.restartHasAdvice">
+                        <div class="row nopadding">
+                        <div class="small-12 columns nopadding">
+                        <h2 class="with-underline black">Restarting Anticoagulant</h2>
+                        <p><span class="icontext">ACC advice: </span>
+                        <span class="" data-bind="text:appViewModel.showRestartAdviceHeader,visible:appViewModel.hideAdviceHeader">
+                            </span>                         
+                            <i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true"
+                               data-bind="visible:appViewModel.advice_show_info,attr: { title: appViewModel.advice_info_title }"></i>
+
+                        <span data-bind="css:appViewModel.setClassForRestart"><span data-bind="text:appViewModel.showRestartAdviceText"></span></span></p>
+
+                    </div>
+                    </div>
+                </section>
+            </div>
+            <div class="medium-6 end columns" ddata-bind="visible:appViewModel.showTabViewProfile() == true" >
+
+                <h1 class="clearfix">Patient Profile
+                </h1>
+                <section class="section group-section clearfix">
+                    <div class="row nopadding">
+                    <div data-bind="visible:appViewModel.adviceInputs">
+                    <div class="small-12 columns nopadding">&nbsp;</div>
+                    <div class="small-12 columns nopadding">
+                        <p >Drug:<span class="float-right" data-bind="text:appViewModel.drugTypeOnAdvice">Value</span></p>
+                    </div>
+                    <div class="small-12 columns nopadding">&nbsp;</div>
+                    <div class="small-12 columns nopadding">
+                        <p>Patient Increased Bleed Risk?: <span class="float-right" data-bind="text:appViewModel.bleedRiskOnAdvice"></span></p>
+                    </div>
+                    </div>
+
+                    <div class="small-12 columns nopadding">&nbsp;</div>
+                    <div data-bind="visible:appViewModel.showRiskOnAdvice">
+                    <div class="small-12 columns nopadding">
+                        <p>Procedural bleed risk?: <span class="float-right" data-bind="text:appViewModel.riskTypeOnAdvice"></span></p>
+                    </div>
+                    <div class="small-12 columns visible-grid nopadding">
+                        <div class="panel">
+                            <p data-bind="text:appViewModel.procedureNameOnAdvice"></p>
+                            <p>Inputs &nbsp;&nbsp; True</p>
+                        </div>
+                    </div>
+                        </div>
+
+                    <div data-bind="visible:appViewModel.showChadvascOnAdvice">
+                    <div class="small-12 columns nopadding">
+                        <p>CHA<sub>2</sub>DS<sub>2</sub>-VASc: <span class="float-right" data-bind="text:appViewModel.chadVascScoreOnAdvice"></span></p>
+                    </div>
+                    <div class="small-12 columns visible-grid nopadding" data-bind="visible:appViewModel.showChadvascOnAdviceInput">
+                        <div class="panel">
+                            <p>AGE<span class="float-right" data-bind="text:appViewModel.chadvascAgeOnAdvice"></span></p>
+                            <p>SEX <span class="float-right" data-bind="text:appViewModel.chadvascSexOnAdvice"></span></p>
+                        </div>
+                    </div>
+                        </div>
+
+                    <div data-bind="visible:appViewModel.showCrclOnAdvice">
+                    <div class="small-12 columns nopadding">
+                        <p>CrCl  &#8805; 30 mL/min: <span class="float-right" data-bind="text:appViewModel.crclScoreValueOnAdvice"></span></p>
+                    </div>
+                    <div class="small-12 columns visible-grid nopadding" data-bind="visible:appViewModel.showAfterCompute">
+                        <div class="panel">
+                            <p>AGE<span class="float-right" data-bind="text:appViewModel.crclAgeOnAdvice"></span></p>
+                            <p>SEX<span class="float-right" data-bind="text:appViewModel.crclSexOnAdvice"></span></p>
+                            <p>WEIGHT<span class="float-right" data-bind="text:appViewModel.crclWeightOnAdvice"></span></p>
+                            <p>SCr<span class="float-right" data-bind="text:appViewModel.crclScoreOnAdvice"></span></p>
+
+
+                        </div>
+                    </div>
+                        </div>
+
+                    <div class="small-12 columns nopadding" data-bind="visible:appViewModel.showRestartAdvice">
+                        <p>Complete hemostasis achieved: <span class="float-right" data-bind="text:appViewModel.restartAdvice"></span></p>
+                        
+                    </div>
+                    <p>Post-Procedural Risk: <span class="float-right" data-bind="text:appViewModel.postProceduralRiskAdvice"></span></p>
+                    <div class="small-12 columns nopadding">&nbsp;</div>
+                    <div class="small-12 columns nopadding">
+                        <p >Thrombotic Risk:<span class="float-right" data-bind="text:appViewModel.thromboticRisk">Value</span></p>
+                    </div>
+                    </div>
+                </section>
+            </div>
+            <div class="small-12 columns panel clearfix btn-prev-next condensable small">
+                <a  class="button float-right blue-btn btn-ga4" data-bind="click:appViewModel.emailData">
+                    Email Advice Summary
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="small-12 columns panel clearfix condensable small">
+                <a href="../DetermineAnticoagRestart/index.html" class="button float-right blue-btn btn-ga4" data-bind="click:appViewModel.goToRestartPageFromBridge">
+                    Determine Anticoag Restart
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <footer class="page footer">
+            <div class="row">
+               <!--<a href="javascript:void(0)" class="logo text-center">
+                    <img src="assets/img/footerlogo.svg" alt="ACC">
+                    <img src="assets/img/bridge_anticog.svg" alt="BAC">
+               </a>-->
+                <ul class="nav tabs tabs-primary reverse swappable small row" style="visibility: visible;flex-wrap: initial;">
+                            
+                                        <li id="guideline-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/resources/" data-bind="click: appViewModel.goToResourcePage">
+                                                <span class="short-text btn-ga4">Resources</span>
+                                                <span class="long-text btn-ga4">Resources</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/terms/" data-bind="click: appViewModel.goToDisclaimerPage">
+                                                <span class="short-text btn-ga4">Terms</span>
+                                                <span class="long-text btn-ga4">Terms</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                                                <span class="short-text btn-ga4">About</span>
+                                                <span class="long-text btn-ga4">About App</span>
+                                            </a>
+                                        </li>
+
+                                        <li id="about-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/news/" data-bind="click: appViewModel.goToNewsPage">
+                                                <span class="short-text btn-ga4">News</span>
+                                                <span class="long-text btn-ga4">News</span>
+                                            </a>
+                                        </li>
+                        </ul>
+            </div>
+    </footer>
+    </div>
+  <script>setTimeout(function(){$(document).foundation();}, 1000);</script> 

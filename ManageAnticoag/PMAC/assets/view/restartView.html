@@ -1,0 +1,334 @@
+<div class="data-display">
+
+        <header class="header page">
+            <ul class="nav tabs tabs-primary show-for-medium hide-for-small-only float-left">
+                  <li class="icon hide-for-small-only"  style="height: 100%;">
+                      <a class="home fix-bounce" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+                          <i class="fa fa-bars"></i>
+                      </a>
+                  </li>
+            </ul>
+            <a class="logo" href="../index.html">
+                <span class="acc-logo"><img src="assets/img/headerlogo.svg" alt="ACC BridgeAnticoag"></span>
+                <span class="bridge-anticoag-logo"><img src="assets/img/BridgeAnticoag_Logo.svg" alt="Bridge Anitcoag"></span>
+            </a>
+
+            <ul class="nav tabs tabs-primary condensable condensable-word small" >
+                <li class="icon hide-for-medium"  style="height: 100%;">
+                      <a class="home" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+                          <i class="fa fa-bars"></i>
+                      </a>
+                 </li>
+                <li id="calculator-Tab" class="selected">
+                    <a aria-controls="evaluate">Evaluate</a>
+                </li>
+                <li id="recommendation-Tab" class="disabled" data-bind="visible:appViewModel.enableAdviceRestartDOAC() == false">
+                    <a aria-controls="advice">Advice</a>
+                </li>
+                <li id="recommendation-Tab" class="" data-bind="visible:appViewModel.enableAdviceRestartDOAC() == true,click:appViewModel.goToAdviceFromRestartDOAC">
+                    <a>Advice</a>
+                </li>
+                
+            </ul>
+        </header>
+
+        <div class="page paper-page with-group-sections">
+
+            <nav class="nav tabs overlap">
+                <ul class="page-wrapper">
+                    <li class="tab-title" data-bind="click:appViewModel.patientPageFromRestartDOAC">
+                        <a><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Patient</a>
+                    </li>
+                    <li class="tab-title" data-bind="click:appViewModel.goToInterruptFromRestartDOAC">
+                        <a><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Interrupt</a>
+                    </li>
+                    <li class="tab-title" data-bind="click:appViewModel.goToBridgeFromRestartDOAC">
+                        <a><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Bridge</a>
+                    </li>
+                    <li class="tab-title is-active">
+                        <a>Restart Anticoagulant</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="page-wrapper">
+                    <h1 class="clearfix">Restarting Anticoagulant
+                        <div class="small-12 medium-3 columns text-right float-right nopadding button-spacing">
+                            <button type="button" name="button" class="button  grey-btn cp-width" data-bind="click:appViewModel.clearRestartDOAC,visible:appViewModel.activeResetRestartDOAC">
+                                Clear Page</button>
+                             <button type="button" name="button" class="button clear-grey-btn disabled cp-width" data-bind="visible:appViewModel.inactiveResetRestartDOAC">
+                                Clear Page</button>
+                        </div>
+
+                    </h1>
+
+                  <!--  <div class="callout warning main-msg small-12" data-bind="visible:appViewModel.showWarningRestartDOAC">
+                    	<div class="row collapse">
+                      		<div class="column small-2 medium-1
+                                ">
+                    			<h5 style="" class="center"><span class="fa-stack fa-lg">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-info fa-stack-1x"></i>
+                    </span></h5>
+                    		</div>
+                    		<div class="column small-9 medium-10"><h5>Advice in this section assumes patient&apos;s anticoagulation was interrupted, and bridged if appropriate.</h5></div>
+                    		<div class="close-bar">
+                    	<!--	<a class="close-button" data-bind="click:appViewModel.closeInitialWarning"><i class="fa fa-times" aria-hidden="true"></i></a>-->
+                    	<!--	</div>
+                    	</div>
+                    </div>-->
+                  <!--<div class="row nopadding">
+                        <div class="message-group small-12" data-bind="visible:appViewModel.showWarningRestartDOAC">
+                            <div class="callout warning main-msg text-center">
+                                <!--<h4 class="sg">Attention</h4>
+                                <p><i class="fa fa-info-circle grey"></i>Advice in this section assumes patient&apos;s anticoagulation was interrupted, and bridged if appropriate.</p>
+                            </div>
+                        </div>
+                    </div>-->
+
+                <div class="callout warning main-msg small-12" data-bind="visible:appViewModel.showWarningRestartDOAC">
+                    <div class="row collapse">
+                        <div class="column small-2 medium-1">
+                            <h5 class="center">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-info fa-stack-1x"></i>
+                                </span>
+                            </h5>
+                        </div>
+                        <div class="column small-9 medium-10 end">
+                            <h5>Advice in this section assumes patient&apos;s anticoagulation was interrupted, and bridged if appropriate.</h5>
+                        </div>
+                    </div>
+                </div>
+                <section class="section group-section clearfix">
+                    <div class="row nopadding">
+                        <div class="small-12 columns nopadding">
+                            <div class="small-12 columns nopadding">
+                                <div class="small-12 columns nopadding">
+                                    <label>
+                                        <span class="text">Was cardiac valve surgery performed?
+                                        </span>
+                                    </label>
+                                    <div class="crcl-group inr-options condensable small" >
+                                        <span class="radio-custom" data-bind="click:appViewModel.selectCardiacSurgeryRestartDOAC">
+                                            <input type="radio" name="radioTIA"  value="cardiac-yes" data-bind="checked:appViewModel.cardiacSurgeryOnLoadRestartDOAC"/>
+                                            <label class="control control--radio">
+                                                Yes
+                                            </label>
+                                        </span>
+                                        <span class="radio-custom" data-bind="click:appViewModel.selectCardiacSurgeryRestartDOAC">
+                                            <input type="radio" name="radioTIA" value="cardiac-no" data-bind="checked:appViewModel.cardiacSurgeryOnLoadRestartDOAC"/>
+                                            <label class="control control--radio">
+                                                No
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="small-12 large-6 columns nopadding"></div>
+							</div>
+                            <div class="small-12 large-7 columns nopadding">
+                                <label for="">
+                                    <span class="text">Do any of the following apply to the performed procedure? </span>
+                                    <ul class="questions-block" data-bind="foreach:appViewModel.restartQARestartDOAC">
+                                        <li>
+                                            <label>
+                                                 <span data-bind="text:restartDOACName()"></span>
+                                                 <i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true"  data-bind="visible: +restart_doac_show_info(), attr: {  title: '' +restart_doac_info_title() }"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </label>
+						
+                                <span class="radio-custom" data-bind=" click: appViewModel.restartDoacProcedureQuestionYes">
+                                    <input type="radio" name="radioProcedure" value="performed-procedure-yes" data-bind="checked:appViewModel.restartDoacProcedureQuestionOnLoad" />
+                                    <label class="control control--radio">
+                                        <!--<i class="fa fa-check"></i>-->
+                                        Yes
+                                    </label>
+                                </span>
+                                <span class="radio-custom" data-bind="click: appViewModel.restartDoacProcedureQuestionNo">
+                                    <input type="radio" name="radioProcedure" value="performed-procedure-no" data-bind="checked:appViewModel.restartDoacProcedureQuestionOnLoad"/>
+                                    <label class="control control--radio">
+                                        <!--<i class="fa fa-check"></i>-->
+                                        No
+                                    </label>
+                                </span>
+						
+						    </div>
+                            <div class="small-12 large-6 columns nopadding">&nbsp;</div>
+                        
+                            <div class="small-12 columns nopadding">
+                            <div class="small-12 large-3 columns nopadding">
+                                <div class="small-12 columns nopadding">
+                                    <label>
+                                        <span class="text">Was Complete Hemostasis achieved?
+                                        </span>
+                                    </label>
+                                    <div class="crcl-group inr-options condensable small">
+                                        <span class="radio-custom" data-bind="click:appViewModel.selectCompleteHemostasisRestartDOAC">
+                                            <input type="radio" name="radioTIA1" value="homostasis-yes" data-bind="checked:appViewModel.homostasisOnLoadRestartDOAC"/>
+                                            <label class="control control--radio">
+                                                Yes
+                                            </label>
+                                        </span>
+                                        <span class="radio-custom" data-bind="click:appViewModel.selectCompleteHemostasisRestartDOAC">
+                                            <input type="radio" name="radioTIA1" name="radioTIA" value="homostasis-no" data-bind="checked:appViewModel.homostasisOnLoadRestartDOAC"/>
+                                            <label class="control control--radio">
+                                                No
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-bind="visible:appViewModel.showOralRestartDOAC" >
+                    <div class="small-12 columns nopadding">
+                        <label>
+                            <span class="text">Can the patient tolerate oral medications?
+                            </span>
+                        </label>
+                        <div class="crcl-group inr-options condensable small">
+                            <span class="radio-custom" data-bind="click:appViewModel.selectOralMedicationRestartDOAC">
+                                <input type="radio" name="radioLMWH" value="oral-medication-yes" data-bind="checked:appViewModel.oralMedicationOnLoadRestartDOAC"/>
+                                <label class="control control--radio">
+                                    Yes
+                                </label>
+                            </span>
+                            <span class="radio-custom" data-bind="click:appViewModel.selectOralMedicationRestartDOAC">
+                                <input type="radio" name="radioLMWH" value="oral-medication-no" data-bind="checked:appViewModel.oralMedicationOnLoadRestartDOAC"/>
+                                <label class="control control--radio">
+                                    No
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                        </div>
+
+                    <div data-bind="visible:appViewModel.showQARestartDOAC" >
+                    <div class="small-12 columns nopadding">
+                        <label>
+                            <span class="text">Plan or indication to administer parenteral agent after procedure?
+                            </span>
+                        </label>
+                        <div class="crcl-group inr-options condensable small">
+                            <span class="radio-custom" data-bind="click:appViewModel.selectParentalAgentRestartDOAC">
+                                <input type="radio" name="radioLMWH1" value="parental-agent-yes" data-bind="checked:appViewModel.parentalAgentOnLoadRestartDOAC"/>
+                                <label class="control control--radio">
+                                    Yes
+                                </label>
+                            </span>
+                            <span class="radio-custom" data-bind="click:appViewModel.selectParentalAgentRestartDOAC">
+                                <input type="radio" name="radioLMWH1" value="parental-agent-no" data-bind="checked:appViewModel.parentalAgentOnLoadRestartDOAC"/>
+                                <label class="control control--radio">
+                                    No
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                        </div>
+
+                     <div data-bind="visible:appViewModel.showWhatQARestartDOAC" >
+                    <div class="small-12 columns nopadding">
+                        <label>
+                             <span class="text">What is the procedure&apos;s post-procedural bleed risk?
+                                <i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true" title="A procedure&apos;s postprocedural bleed risk will often reflect periprocedural risk; however, details of the procedure may cause it to shift. Postprocedural bleed risk is dependent on 1) the timing of anticoagulation reinitiation, 2) the type of procedure performed, 3) intra-procedural findings, changes to the planned procedure, or complications, and 4) the anticoagulant used."></i>
+                            </span>
+                        </label>
+                        <div class="crcl-group inr-options condensable small">
+                            <span class="radio-custom" data-bind="click:appViewModel.selectPostProceduralRestartDOAC">
+                                <input type="radio" name="radioRestartHIT" value="high" data-bind="checked:appViewModel.postProceduralOnLoadRestartDOAC"/>
+                                <label class="control control--radio" >
+                                    High
+                                </label>
+                            </span>
+                            <span class="radio-custom" data-bind="click:appViewModel.selectPostProceduralRestartDOAC">
+                                <input type="radio" name="radioRestartHIT" value="low" data-bind="checked:appViewModel.postProceduralOnLoadRestartDOAC"/>
+                                <label class="control control--radio">
+                                    Low
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </section>
+                    <div class="row nopadding">
+                        <div class="message-group small-12">
+                            <h5 class="text-left">Advice: How to Restart Anticoagulant</h5>
+                            <div class="colored-paper callout secondary main-msg text-center" data-bind = "css:appViewModel.setRestartDOACColor">
+                            <span data-bind="text:appViewModel.showAdviceRestartDOAC"></span>
+                             <!--<i data-tooltip="" class="fa fa-info-circle has-tip tip-top open" aria-hidden="true" aria-haspopup="true"
+                                       data-bind="visible:appViewModel.restart_doac_advice_show_info,attr: { title: appViewModel.restart_doac_advice_info_title }"></i><br>
+                            <span data-bind="text:appViewModel.showAdviceNewRestartDOAC"></span>-->
+                                
+                                
+                            <span data-bind="text:appViewModel.showAdviceNewRestartDOAC"></span>
+                            <span data-bind="visible:appViewModel.showAdviceInBulletsRestartDOAC">
+                                <ul  data-bind="foreach:appViewModel.adviceInBulletsRestartDOAC">
+                                    <li><span data-bind="text:adviceNamesRestartDoac()"></span>
+                                    <i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true"  data-bind="visible: +restart_doac_advice_show_info(), attr: {  title: '' +restart_doac_advice_info_title() }"></i></li>
+                                </ul>    
+                            </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                <div class="panel clearfix btn-prev-next condensable small">
+                    <a class="button blue-btn float-left small-5 medium-3 large-3 btn-ga4" data-bind="click:appViewModel.goToBridgeFromRestartDOAC">
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true" ></i>
+                        Assess Bridging
+                    </a>
+                </div>
+                <div class="row button-group nopadding" id="ButtonGroup">
+                    <a class="button blue-btn ce-pmac-view-advice-summary" data-bind="click:appViewModel.goToAdviceFromRestartDOAC,attr: { disabled: appViewModel.disableAdviceValueRestartDOAC }">
+                        <span class="text ce-pmac-view-advice-summary">View Input and Advice Summary</span>
+                    </a>
+                    <a class="button blue-btn btn-ga4" data-bind="click:appViewModel.ToStartNewPatient">
+                        <span class="text">Start Over with a New Patient</span>
+                    </a>
+                </div>
+                
+            </div>
+            <footer class="page footer">
+                <div class="row">
+                   <!--<a href="javascript:void(0)" class="logo text-center">
+                        <img src="assets/img/footerlogo.svg" alt="ACC">
+                        <img src="assets/img/bridge_anticog.svg" alt="BAC">
+                   </a>-->
+                    <ul class="nav tabs tabs-primary reverse swappable small row">
+                        
+                            <li id="guideline-Tab" class="small-3 columns">
+                                <a class="btn-ga4" ahref="../index.html#!/content/resources/" data-bind="click: appViewModel.goToResourcePage">
+                                    <span class="short-text btn-ga4">Resources</span>
+                                    <span class="long-text btn-ga4">Resources</span>
+                                </a>
+                            </li>
+							<li id="legal-Tab" class="small-3 columns">
+                                <a class="btn-ga4" ahref="../index.html#!/content/terms/" data-bind="click: appViewModel.goToDisclaimerPage">
+                                    <span class="short-text btn-ga4">Terms</span>
+                                    <span class="long-text btn-ga4">Terms</span>
+                                </a>
+                            </li>
+                        <li id="legal-Tab" class="small-3 columns">
+                                <a class="btn-ga4" ahref="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                                    <span class="short-text btn-ga4">About</span>
+                                    <span class="long-text btn-ga4">About App</span>
+                                </a>
+                            </li>
+                            
+                            <li id="about-Tab" class="small-3 columns">
+                                <a class="btn-ga4" ahref="../index.html#!/content/news/" data-bind="click: appViewModel.goToNewsPage">
+                                    <span class="short-text btn-ga4">News</span>
+                                    <span class="long-text btn-ga4">News</span>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+        </footer>
+    </div>
+<div class="shrink-waypoint"></div>
+<script>setTimeout(function(){$(document).foundation();}, 50);</script>

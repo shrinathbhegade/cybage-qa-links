@@ -1,0 +1,401 @@
+        <div class="data-display">
+            <div class="page paper-page with-group-sections" id="bridgepage">
+                <div class="page-wrapper">
+                        <div class="row collapse nopadding" style="margin-bottom: 0.36981em;">
+                            <h3>Plan Periprocedural Interruption and Bridging</h3>
+                            <ul class="breadcrumbs small-12 columns medium-8">
+                                <li><a class="btn-ga4" href="" data-bind="click:appViewModel.patientPageFromBridge">Patient Details</a></li>
+                                <li data-bind="visible: appViewModel.breadcrumbInterruptPresentOnBridge"><a class="btn-ga4" data-bind="click:appViewModel.interruptPageFromBridge">Assess Interruption</a></li>
+                                <li><a class="active btn-ga4" onclick="return false;">Bridge</a></li>
+                            </ul>
+                            <div class="small-12 medium-4 columns text-right float-right nopadding" data-bind="visible:appViewModel.bridgeVMclearPageVisibility">
+
+                                <button type="button" name="button" class="button  cp-width" data-bind="visible:appViewModel.bridgeVMdisableClearBtn() == false,click:appViewModel.resetBragePage">
+									Clear Page</button>
+                                <button type="button" name="button" class="button clear-grey-btn disabled  cp-width" data-bind="visible:appViewModel.bridgeVMdisableClearBtn() == true">
+									Clear Page</button>
+							</div>
+                        </div>
+					<div class="callout warning" data-bind="visible:appViewModel.bridgeVMlockedSection">
+						<div class="row collapse">
+							<div class="small-2 medium-1 columns">
+								<h5 class="center">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-square-o fa-stack-2x grey"></i>
+										<i class="fa fa-lock fa-stack-1x grey"></i>
+									</span>
+								</h5>
+							</div>
+							<div class="small-10 medium-9 columns nopadding">
+								<div class="msg-block">
+									<h5 class="msg-header no-margin-vertical">This section is locked to prevent conflicting inputs</h5>
+									<p class="msg">Unlocking this page will allow input on this screen but reset all following pages</p>
+								</div>
+							</div>
+							<div class="small-12 medium-2 columns text-right msg-btn">
+								<a class="button secondary small expanded" data-bind="click:appViewModel.bridgeVMunlockSection">Unlock</a>
+							</div>
+						</div>
+					</div>
+
+					<!--<div class="tag locked clearfix" data-bind="visible:appViewModel.bridgeVMlockedSection">
+							<div class="row">
+								<div class="small-2 medium-1 columns">
+									<i class="fa fa-lock" aria-hidden="true"></i>
+								</div>
+								<div class="small-10 medium-9 columns nopadding">
+									<div class="msg-block">
+										<span class="msg-header">This section is locked to prevent conflicting inputs</span>
+										<span class="msg">Unlocking this page will allow input on this screen but reset all following pages</span>
+									</div>
+								</div>
+								<div class="small-12 medium-2 columns text-right">
+									<a class="button clear-grey-btn" data-bind="click:appViewModel.bridgeVMunlockSection">Unlock</a>
+								</div>
+							</div>
+						</div>-->
+
+						<div class="callout warning main-msg small-12" data-bind="visible:appViewModel.bridgeVMwarningMessage() == false">
+				        	<div class="row collapse">
+				          		<div class="column small-2 medium-1">
+				        			<h5 class="center">
+				                        <span class="fa-stack fa-lg">
+				                            <i class="fa fa-square-o fa-stack-2x"></i>
+				                            <i class="fa fa-info fa-stack-1x"></i>
+				                        </span>
+				                    </h5>
+				        		</div>
+				        		<div class="column small-9 medium-10 end">
+				                    <h5>Failure to interrupt prior to bridging increases bleed risk. Advice in this section assumes that anticoagulation has been appropriately interrupted.</h5>
+				                </div>
+				        	</div>
+				        </div>
+
+                    	<div class="row columns nopadding">
+							<div class="callout sg text-center small-12 brg-doac-info" data-bind="visible:appViewModel.bridgeVMwarningMessage">
+								<h4 class="sg">Parenteral bridging <span class="b-info">NOT</span> indicated for DOACs.</h4>
+								<p class="sg">Given the short half-lives of DOACS, bridging with a parenteral agent is rarely, if ever, needed prior to procedure.
+								</p>
+							</div>
+							<!--<div class="callout warning sg text-center small-12" data-bind="visible:appViewModel.bridgeVMwarningMessage() == false">
+								<h4 class="sg">Warning</h4>
+								<p class="sg"><i class="fa fa-info-circle grey"></i>Failure to interrupt prior to bridging increases bleed risk. Advice in this section assumes that anticoagulation has been appropriately interrupted.
+								</p>
+							</div>-->
+						</div>
+
+                    <section class="section group-section clearfix" data-bind="visible:appViewModel.bridgeVMscoreSectionVisibility">
+                    	<div class="row columns nopadding">
+                    		<h2 class="with-underline">Assess Whether to Bridge</h2>
+							<div class="small-12 columns nopadding">
+								<div class="small-12 large-6 columns nopadding">
+									
+									<div class="question required">
+										<div class="label-holder">
+											<label for="">
+												<span class="text">Enter CHA<sub>2</sub>DS<sub>2</sub>-VASc Score:</span>
+											</label>
+										</div>
+										<div class="input-holder">
+	<!--
+											<div class="input-space column small-12 medium-4">
+												<a class="button compute sg" data-bind="click:appViewModel.goToChadsVasc,attr: { disabled: appViewModel.disableValue }">
+													<i class="fa fa-calculator" aria-hidden="true"></i>
+													Compute
+												</a>
+											</div>
+	-->
+											<div class="input-space column small-12 ">
+												<div class="input-space column small-6 large-9">
+	<!--												<input type="text" data-bind="value:appViewModel.chadVascInputValue,enable:appViewModel.enableChadVascInput,valueUpdate: 'afterkeydown',event: { change: appViewModel.onchangeCha2dsVas }" />-->
+													<select id="chosenSingle" class="chosen-select" tabindex="3" data-bind="options: appViewModel.bridgeVMavailableChadVascValues, value: appViewModel.bridgeVMchadVascInputValue, optionsCaption: 'Select ',multiple:'false',event: { change: appViewModel.onchangeCha2dsVas },attr: { disabled: appViewModel.bridgeVMdisableValueDropDown }">
+											 </select>
+	<!--
+												   <div class="small-6 large-9 lock-notif clearfix" >
+													<i class="fa fa-lock" aria-hidden="true"></i>
+													Input is locked because it is computed.
+													<a data-bind="click: appViewModel.clearCrcl" class="float-right">Clear Score </a>
+												</div> 
+	-->
+												</div>
+											</div>
+											<div class="input-space column small-12 calc-crcl">
+												<a class="calc-crcl sg btn-ga4" data-bind="click:appViewModel.goToChadsVasc,attr: { disabled: appViewModel.bridgeVMdisableValue },visible:appViewModel.bridgeVMlockedSection() ==  false">
+												Calculate CHA<sub>2</sub>DS<sub>2</sub>-VASc
+												</a>
+												<a class="calc-crcl sg btn-ga4" data-bind="attr: { disabled: appViewModel.bridgeVMdisableValue },visible:appViewModel.bridgeVMlockedSection() ==  true">
+												Calculate CHA<sub>2</sub>DS<sub>2</sub>-VASc
+												</a>
+											</div>
+                                             <div class="small-12 lock-notif clearfix chad" data-bind="visible:appViewModel.chadsvascLock">
+                                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                                Input is locked because language is computed.
+                                                <a data-bind="click: appViewModel.chadsvascUnlock" class="float-right">Clear CHA<sub>2</sub>DS<sub>2</sub>-VASc</a>
+                                            </div>
+										</div>
+										<div class="message-holder">
+											<small class="error">
+											<i class="fa fa-holder"></i>Error message</small>
+											<small class="warning">
+											<i class="fa fa-holder"></i>Warning message</small>
+											<small class="data">
+											<i class="fa fa-holder"></i>Data message</small>
+										</div>
+									</div>
+									
+									
+								</div>
+								<div class="small-12 large-6 columns nopadding">
+									<label class="text">Prior thromboembolic event (TE):
+									</label>
+									<div class="switch-input-space">
+										<div class="switch radio" data-bind="click: appViewModel.displayWasItAStrokeOrTIANone">
+											<input data-bind="checked: appViewModel.bridgeVMTEchecked,attr: { disabled: appViewModel.bridgeVMdisableValue }" class="switch-input" id="yes-no-radio" type="radio" name="radio-switch" value="None">
+											<label class="switch-paddle" for="yes-no-radio">
+												<span class="show-for-sr">Do you like me?</span>
+												<span class="switch-active" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+												<span class="switch-inactive" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+											</label>
+										</div>
+										<label class="switch-value" for="yes-no-radio">None</label>
+									</div>
+									<div class="switch-input-space" data-bind="click: appViewModel.displayWasItAStrokeOrTIAWithin3">
+										<div class="switch radio">
+											<input class="switch-input" data-bind="checked: appViewModel.bridgeVMTEchecked,attr: { disabled: appViewModel.bridgeVMdisableValue }" id="yes-no-radio" value="Within3Months" type="radio" name="radio-switch"  >
+											<label class="switch-paddle" for="yes-no-radio">
+												<span class="show-for-sr">Do you like me?</span>
+												<span class="switch-active" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+												<span class="switch-inactive" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+											</label>
+										</div>
+										<label class="switch-value" for="yes-no-radio">Recent TE within 3 months</label>
+									</div>
+									<div class="switch-input-space">
+										<div class="switch radio" data-bind="click: appViewModel.displayWasItAStrokeOrTIAMoreThan3">
+											<input class="switch-input" id="yes-no-radio" data-bind="checked: appViewModel.bridgeVMTEchecked,attr: { disabled: appViewModel.bridgeVMdisableValue }" value="Morethan3Months" type="radio" name="radio-switch">
+											<label class="switch-paddle" for="yes-no-radio">
+												<span class="show-for-sr">Do you like me?</span>
+												<span class="switch-active" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+												<span class="switch-inactive" aria-hidden="true">
+													<i class="fa fa-holder"></i>
+												</span>
+											</label>
+										</div>
+										<label class="switch-value" for="yes-no-radio">TE > 3 months</label>
+									</div>
+								
+								</div>
+								<div class="small-12 columns nopadding"  data-bind="visible: appViewModel.bridgeVMsshowWasItAStrokeOrTIA() != true">
+									<label class="text" data-bind="text:appViewModel.bridgeVMpriorTE3RdQeustion">Was it a Stroke or TIA :
+									</label>
+									<div class="crcl-group inr-options condensable small">
+										<span class="radio-custom" data-bind="click:appViewModel.whetherYes3Ques">
+											<input type="radio" name="radioTIA" value="Yes" data-bind="checked: appViewModel.bridgeVMwhetherYesNo3QuesChecked,attr: { disabled: appViewModel.bridgeVMdisableValue }" />
+											<label class="control control--radio">
+												Yes
+											</label>
+										</span>
+										<span class="radio-custom" data-bind="click:appViewModel.whetherNo3Ques">
+											<input type="radio" name="radioTIA" value="No" data-bind="checked: appViewModel.bridgeVMwhetherYesNo3QuesChecked,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+											<label class="control control--radio">
+												No
+											</label>
+										</span>
+									</div>
+								</div>
+							</div>
+							</div>
+						</section>
+						<section class="section group-section clearfix" data-bind="visible:appViewModel.bridgeVMscoreSectionVisibility">
+							<div class="row columns nopadding">
+							<h2 class="with-underline">Assess How to Bridge</h2>
+							<div class="small-12 columns nopadding">
+								<label class="text">Heparin allergy or recent heparin-induced thrombocytoperia (HIT)?
+								</label>
+								<div class="crcl-group inr-options condensable small">
+									<span class="radio-custom" data-bind="click:appViewModel.displayCrclViewAndAdministerUFHOrLWMHYes">
+										<input type="radio" name="radioHIT" value="Yes" data-bind="checked: appViewModel.bridgeVMheparinBtnVal,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											Yes
+										</label>
+									</span>
+									<span class="radio-custom" data-bind="click:appViewModel.displayCrclViewAndAdministerUFHOrLWMHNo">
+										<input type="radio" name="radioHIT" value="No" data-bind="checked: appViewModel.bridgeVMheparinBtnVal,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											No
+										</label>
+									</span>
+								</div>
+							</div>
+							<div class="small-12 columns nopadding" data-bind="visible:appViewModel.bridgeVMshowCrclViewAndAdministerUFHOrLWMH() == true">
+								<label class="text">CrCl &#8805; 30 mL/min
+										<i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true" title="Cockcroft-Gault equation"></i>&nbsp;?
+								
+								</label>
+								<!--<a class="button compute sg" href="#" data-bind="click:appViewModel.goToCrCl,attr: { disabled: appViewModel.disableValue }">
+									<i class="fa fa-calculator" aria-hidden="true"></i>
+									Compute</a>-->
+								<div class="crcl-group condensable small">
+									<span class="radio-custom" data-bind="click:appViewModel.bridgeCrclYesClick">
+										<input type="radio" name="radioCRCL" value="Yes" data-bind="checked:appViewModel.bridgeVMcrclCheckVal,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											Yes
+										</label>
+									</span>
+									<span class="radio-custom" data-bind="click:appViewModel.bridgeCrclNoClick">
+										<input type="radio" name="radioCRCL" value="No" data-bind="checked:appViewModel.bridgeVMcrclCheckVal,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											No
+										</label>
+									</span>
+									<div class="small-12">
+										<a class="calc-crcl sg btn-ga4" href="#" data-bind="click:appViewModel.goToCrCl,attr: { disabled: appViewModel.bridgeVMdisableValue },visible:appViewModel.bridgeVMlockedSection() ==  false">
+										Calculate CrCl</a>
+										 <a class="calc-crcl sg btn-ga4"  data-bind="attr: { disabled: appViewModel.bridgeVMdisableValue },visible:appViewModel.bridgeVMlockedSection() ==  true">
+										Calculate CrCl</a>
+									</div>
+								</div>
+							</div>
+							<div class="small-12 columns nopadding" data-bind="visible:appViewModel.bridgeVMshowCrclViewAndAdministerUFHOrLWMHQues() == true">
+								<label class="text">Do you plan to administer Unfractionated Heparin (UFH) or Low Molecular Weight Heparin (LMWH)
+									<i data-tooltip="" class="fa fa-info-circle has-tip tip-top" aria-hidden="true" aria-haspopup="true" title="Using UFH vs LMWH depends on
+	1) renal function (CrCl),
+	2) inpatient vs. outpatient bridging setting
+	3) patient comfort with self-injections,
+	4) insurance coverage"></i>&nbsp;:
+								</label>
+								<div class="crcl-group inr-options condensable small">
+									<span class="radio-custom" data-bind="click:appViewModel.administerUFH">
+										<input type="radio" name="radioLMWH" value="UFH" data-bind="checked:appViewModel.bridgeVMcheckedUFH,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											UFH 
+										</label>
+									</span>
+									<span class="radio-custom" data-bind="click:appViewModel.administerLMWH">
+										<input type="radio" name="radioLMWH" value="LMWH" data-bind="checked:appViewModel.bridgeVMcheckedUFH,attr: { disabled: appViewModel.bridgeVMdisableValue }"/>
+										<label class="control control--radio">
+											LMWH
+										</label>
+									</span>
+								</div>
+							</div>
+							</div>
+                    </section>
+                    <div class="row columns nopadding">
+						<div class="message-group small-12" data-bind="visible:appViewModel.bridgeVMwhetherVisibility">
+							<h5 class="text-left">Advice: Whether to Bridge</h5>
+							<div class="colored-paper callout secondary main-msg text-center" data-bind="html:appViewModel.bridgeVMwhetherAdviceMsg,css: appViewModel.bridgeVMadviceBoxColor">
+								Not enough information. Please complete the inputs above.
+							</div>
+						</div>
+					</div>
+					<!-- Note: warning message class 'warning' and success message class 'success' -->
+                    <!-- <div class="message-group warning">
+                        <div class="main-msg text-center">
+                            ACC Warning
+                        </div>
+                        <div class="sub-msg text-center">
+                            Use of parental agents not indicated with DOAC
+                        </div>
+                    </div>-->
+						<div class="msg-forward-btn text-center" data-bind="visible:appViewModel.bridgeVMwantBridgeAnywayBtn">
+							<a href="#" class="button secondary" data-bind="click:appViewModel.bridgeAnywayClick,attr: { disabled: appViewModel.bridgeVMdisableValue }">I want to bridge anyway.<br>Show me how.</a>
+						</div>
+					<div class="row columns nopadding">
+						<div class="message-group small-12" data-bind="visible:appViewModel.bridgeVMwhenVisibility">
+							<h5 class="text-left">Advice: How to Bridge</h5>
+							<div class="colored-paper callout secondary main-msg text-center warning" data-bind="visible:appViewModel.bridgeVMwhenToBridgeAdviceSubboxVisible">
+                            Not advised, proceed with caution.
+                            
+                        	</div>
+							<div class="colored-paper callout secondary main-msg text-center small-12" data-bind="css: appViewModel.bridgeVMadviceBoxColorForWhenToBridge, html:appViewModel.bridgeVMwhenToAdviceMsg">
+								Not enough information. Please complete the inputs above.
+							</div>
+						</div>
+					</div>
+                    <div class="panel clearfix btn-prev-next condensable small">
+                        <a id="backbtn" href="#" class="button blue-btn float-left small-5 medium-3 large-3 btn-ga4" data-bind="click:appViewModel.interruptPageFromBridge">
+                            <span class="columns small-1 nopadding"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
+                            <span class="columns small-11">Assess Interruption</span>
+                        </a>
+                        <a id="oacrestartbtn" href="../DetermineAnticoagRestart/index.html#!/content/calculator/" class="button blue-btn float-right small-5 medium-3 large-3 btn-ga4" data-bind="click:appViewModel.goToRestartPageFromBridge">
+                           <span class="columns small-11 nopadding">Determine Anticoag Restart</span>
+                           <span class="columns small-1 nopadding"><i class="fa fa-arrow-circle-right fa-6" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    
+                    <div class="panel clearfix btn-prev-next" id="ButtonGroup">
+                        <a class="button blue-btn expanded ce-pmac-view-advice-summary" data-bind="click:appViewModel.bridgeGoToAdvice,attr: { disabled: appViewModel.bridgeVMdisableAdviceValue }">
+                            <span class="text ce-pmac-view-advice-summary">View Input and Advice Summary</span>
+                        </a>
+                    </div>
+                    <div class="panel clearfix btn-prev-next">
+                        <a class="button blue-btn expanded btn-ga4"  href="../index.html" ddata-bind="click:appViewModel.ToStartNewPatient" data-bind="click: appViewModel.goToHomePage">
+                            <span class="text btn-ga4"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                        </a>
+                    </div>
+    
+                </div>
+                  <footer class="page footer" id="bridgefooter">
+                    <div class="row">
+                        <!--<a href="javascript:void(0)" class="logo text-center">
+						<img src="assets/img/footerlogo.svg" alt="ACC">
+						<img src="assets/img/bridge_anticog.svg" alt="BAC">
+					   </a>-->
+                        <ul class="nav tabs tabs-primary reverse swappable small row" style="visibility: visible;flex-wrap: initial;">
+                            
+                                        <li id="guideline-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/resources/" data-bind="click: appViewModel.goToResourcePage">
+                                                <span class="short-text btn-ga4">Resources</span>
+                                                <span class="long-text btn-ga4">Resources</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/terms/" data-bind="click: appViewModel.goToDisclaimerPage">
+                                                <span class="short-text btn-ga4">Terms</span>
+                                                <span class="long-text btn-ga4">Terms</span>
+                                            </a>
+                                        </li>
+                                        <li id="legal-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/about/" data-bind="click: appViewModel.goToAboutTheAppPage">
+                                                <span class="short-text btn-ga4">About</span>
+                                                <span class="long-text btn-ga4">About App</span>
+                                            </a>
+                                        </li>
+
+                                        <li id="about-Tab" class="small-3 columns">
+                                            <a class="btn-ga4" href="../index.html#!/content/news/" data-bind="click: appViewModel.goToNewsPage">
+                                                <span class="short-text btn-ga4">News</span>
+                                                <span class="long-text btn-ga4">News</span>
+                                            </a>
+                                        </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+
+<script>setTimeout(function(){$(document).foundation();}, 10);</script>   
+<script>
+    var resizePage = function() {
+        $('#bridgepage .page-wrapper').css('min-height', window.innerHeight - $('#bridgefooter').height() - $('.header').height());
+    }
+    setTimeout(resizePage, 10);
+    window.addEventListener('resize', function() {
+        resizePage();
+        var difference = $("#oacrestartbtn").height() - $("#backbtn").height();
+        var newPadding = parseInt($("#oacrestartbtn").css('padding-top')) + difference/2;
+        $("#backbtn").css("padding-top", newPadding);
+        $("#backbtn").css("padding-bottom", newPadding);
+    });
+    
+</script>            

@@ -1,0 +1,132 @@
+.hamburger-menu {
+    font-weight: 200 !important;
+}
+.hamburger-menu a {
+    display: block;
+}
+.hamburger-menu li {
+    padding: 1rem 0.2rem !important;
+}
+.hamburger-menu li .fa {
+    font-size: 2em;
+}
+.hamburger-menu li h6 {
+    color: #666666;
+}
+.hamburger-menu li.selected {
+    background-color: #198daf;
+}
+.hamburger-menu li.selected h6, .hamburger-menu li.selected a {
+    color: #ffffff;
+}
+.hamburger-menu li.selected:hover .fa {
+    color: #ffffff;
+}
+
+
+
+
+/*INNER BARS*/
+
+.tabs.tabs-primary li a {
+    padding: .55em .25em .75em;
+}
+
+@media only screen and (min-width: 768px) {
+.tabs.tabs-primary li a {
+    padding: 1.72em .75em;
+}
+}
+
+/*HEIGHT OF MENU*/
+@media only screen and (min-width: 767px) {
+  .page.header .tabs {
+    float: right;
+    width: auto;
+      height: auto !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page.header .tabs {
+      height: auto !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .page.header .tabs {
+      height: auto !important;
+  }
+}
+
+/*NORMALIZING*/
+@media only screen and (min-width: 320px) {
+.tabs.tabs-primary {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+}
+
+@media only screen and (min-width: 768px) {
+.tabs.tabs-primary {
+    display: block;
+    font-size: 1.28571em;
+    line-height: 1.08889em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+.tabs.tabs-primary {
+    font-size: 1.57143em;
+    line-height: 1.78182em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+}
+
+@media only screen and (min-width: 1200px){
+.tabs.tabs-primary {
+    font-size: 1.57143em;
+    line-height: 1.78182em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+}
+
+/*Removing .js-off-canvas-exit*/
+.js-off-canvas-exit {
+    height: 0;
+    width: 0;
+}
+
+.mobile-acc-logo {
+    border: 0 !important;
+}
+.mobile-acc-logo img {
+        max-width: 40%;
+    }
+@media only screen and (min-width: 767px) {
+    .mobile-acc-logo {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+.tabs.tabs-primary li.icon {
+    -webkit-box-flex: 0 0 3em;
+    -moz-box-flex: 0 0 3em;
+    -webkit-flex: 0 0 3em;
+    -ms-flex: 0 0 3em;
+    flex: 0 0 3em;
+}
+    .tabs.tabs-primary li.icon i.fa-bars {
+        font-size: 1.5em;
+    }
+}
+
+.fa-tint {
+    padding-right: 4px;
+}
