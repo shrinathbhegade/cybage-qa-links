@@ -133,7 +133,8 @@ define(['knockout',"jquery","pager","databaseModel","databaseConstantsModel","ap
         this.interruptVisibleInterruptBtn =  ko.observable(false);
         this.interruptInActiveClearBtn =  ko.observable(true);
         this.interruptActiveClearBtn = ko.observable(false);
-        this.interruptSelectedItem = ko.observable();
+        this.interruptSelectedItem = ko.observable([]);
+        this.interruptSelectedItem.subscribe((newvalue) => { this.interruptActiveWhetherToInterrpt(); })
         this.interruptEnableCrclInput = ko.observable(true);
         this.interruptWhenToInterruptAdviceSubbox = ko.observable(appConstantsModel.not_advised_proceed_with_caution);
         this.interruptWhenToInterruptAdviceSubboxVisible = ko.observable(false);

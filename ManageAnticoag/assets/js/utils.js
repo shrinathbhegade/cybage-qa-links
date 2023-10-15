@@ -209,7 +209,7 @@ var _utils = function () {
         var cookiedate = new Date();
         cookiedate.setTime(cookiedate.getTime() + (exdays * 24 * 60 * 60 * 1000));
         var expires = "expires=" + cookiedate.toUTCString();
-        document.cookie = cname + "=" + cvalue + "; " + expires;
+        document.cookie = cname + "=" + cvalue + ";secure;samesite=none; " + expires;
     }
     /**
      * setCookie function used to get cookies detail from users machine
