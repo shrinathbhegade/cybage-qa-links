@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N2LCNSH');</script>
+        <!-- End Google Tag Manager -->
+            
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline';
+         script-src 'self' http://www.google-analytics.com/analytics.js 'unsafe-inline' 'unsafe-eval'" />
+    <link rel="shortcut icon" href="Assets/img/favicon.ico" />
+    <title>Email Result</title>
+
+    <link rel="stylesheet" href="Assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/css/foundation-sites.css">
+    <link rel="stylesheet" href="Assets/css/index.css">
+
+    <script src="Assets/js/modernizr.js"></script>
+    <script src="Assets/js/jquery-3.7.1.min.js"></script>
+    <!-- [if lte IE 9]><link rel="stylesheet" href="Assets/css/tabs-primary_Fallback-IE9.css"><! [endif] -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2LCNSH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div data-bind="page: {id:'content', role: 'start'}" class="page with-group-sections">
+
+        <!--Header-->
+        <div class="data-display">
+            <!-- Start for header section -->
+            <header class="header page">
+                <a href="#!/content/calculator/" class="logo">
+                    <img src="Assets/img/ICD_logo.png" alt="ICD_CRT_AUC Logo">
+                </a>
+            </header>
+            <!-- End for header section -->
+        </div>
+
+        <div data-bind="page: {id: 'advice', name: 'advice', role:'start', afterShow:tabchange ,beforeShow:pageScrollTop}" class="fullscreen-spacer">
+            <div class="page-wrapper">
+                <div class="page-wrapper">
+                    <div id="divEmailResult" class="row group-section no-box-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Assets/js/foundation-6.6.3.min.js"></script>
+    <script src="Assets/js/knockout-3.5.1.js"></script>
+    <script src="Assets/js/pager.min.js"></script>
+    <script src="Assets/js/config.js"></script>
+    <script src="Assets/js/utils.js"></script>
+    <script src="Assets/js/formdata.js"></script>
+    <script>$(document).foundation();</script>
+
+    <script type="text/javascript">
+
+        //Get email result from web api
+        var isNativeApplication = (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1);
+        utils.callWebApi('EmailResult/' + getParameterByName('id'), ajaxTypes.Get, null, showEmailResult)
+
+        function showEmailResult(content) {
+            $("#divEmailResult").html(content);
+            var adviceTooltipID = $('#scoreTooltip i').attr('data-yeti-box');
+            var title = $('#' + adviceTooltipID).html();
+            $('#scoreTooltip i').attr('title', title);
+            $(document).foundation();
+            customPanelToggle();
+
+            $('#adviceTabs li').on('click', function () {
+                var id = $(this).find('a').attr('name');
+                $(this).parent('ul').find('li').removeClass('active selected');
+                $(this).addClass('active selected');
+                if (id === 'auc_for_icd') {
+                    $('#cms').css('display', 'none');
+                    $('#auc_for_icd').css('display', 'block');
+                } else if (id === 'cms_icd') {
+                    $('#auc_for_icd').css('display', 'none');
+                    $('#cms').css('display', 'block');
+                    $('#panelCMS').show();
+                } else {
+                    console.log('no advice');
+                }
+                customPanelToggle();
+            });
+
+            $('.flip span').on('click', function () {
+                var self = $(this);
+                var className = $(this).attr('class');
+                if (className === 'viewMore') {
+                    self.parents('#auc_for_icd, #cms').find('.viewMore').css('display', 'none');
+                    self.parents('#auc_for_icd, #cms').find('.viewLess').css('display', 'inline');
+                    $('#panelAdvice,#panelCMS, #panelNoAdvice').slideToggle("slow");
+                } else {
+                    self.parents('#auc_for_icd, #cms').find('.viewLess').css('display', 'none');
+                    self.parents('#auc_for_icd, #cms').find('.viewMore').css('display', 'inline');
+                    $('#panelAdvice,#panelCMS, #panelNoAdvice').slideToggle("slow");
+                }
+            });
+            $(".fullscreen-spacer").css("min-height", viewHeight());
+        }
+
+        function customPanelToggle() {
+            if (isNativeApplication) {
+                $('#panelAdvice, #panelCMS, #panelNoAdvice').hide();
+                $('.viewMore').show();
+                $('.viewLess').hide();
+            } else {
+                $('#panelAdvice, #panelCMS, #panelNoAdvice').show();
+                $('#panelAdvice, #panelCMS, #panelNoAdvice').parents('#auc_for_icd, #cms').find('.viewMore').hide();
+                $('#panelAdvice, #panelCMS, #panelNoAdvice').parents('#auc_for_icd, #cms').find('.viewLess').show();
+            }
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        path = '#!/content/advice/';
+        pager.navigate(path);
+
+        /*Added the code for calculating min height of a page so as to remove white spacing below footer*/
+        var view = viewHeight();
+        function viewHeight() {
+            var viewportheight;
+
+            // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+            if (typeof window.innerWidth != 'undefined') {
+                viewportheight = window.innerHeight;
+            }
+
+                //	 IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+            else if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
+                viewportheight = document.documentElement.clientHeight;
+            }
+
+                //	 older versions of IE
+            else {
+                viewportheight = document.getElementsByTagName('body')[0].clientHeight;
+            }
+            return viewportheight;
+
+        };
+        mh = (view);
+        $(".fullscreen-spacer").css("min-height", mh);
+        $(window).resize(function () {
+            mh = viewHeight();
+            $(".fullscreen-spacer").css("min-height", mh);
+        });
+
+    </script>
+
+</body>
+</html>
