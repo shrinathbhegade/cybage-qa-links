@@ -123,7 +123,6 @@ var _utils = function () {
      * @param {button to be disabled until web api call} button
      */
     self.callWebApi = function (url, type, data, successFunction, parameter) {
-        console.log("Calling API....")
         try {
             $.ajax({
                 cache: false

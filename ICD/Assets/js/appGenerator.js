@@ -536,7 +536,7 @@ function removeQuestion(q) {
 function resetAll() {
     userActivity = [];
     $("#questionset div.page-wrapper").appendTo('#template');
-    $("input:radio, input:checkbox").attr('checked', false);
+    $('input:radio').prop('checked', false);
     $('#template .next-btn').css('display', '');
     $('#template .question').removeClass('warning');
     $('#template .question').css('height', '');
