@@ -1,0 +1,3200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg11875"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm"
+   sodipodi:docname="Non-Drug_1 table.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview738"
+     showgrid="false"
+     inkscape:snap-center="true"
+     inkscape:zoom="0.84096521"
+     inkscape:cx="459.75585"
+     inkscape:cy="1008.17"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11875" />
+  <defs
+     id="defs11869">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1">
+      <path
+         d="M 0.79926086,18.64942 L 96.976985,18.64942 L 96.976985,67.404333 L 0.79926086,67.404333 z"
+         id="path11877" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath2">
+      <path
+         d="M 97.776246,18.64942 L 270.94943,18.64942 L 270.94943,67.404333 L 97.776246,67.404333 z"
+         id="path11880" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath3">
+      <path
+         d="M 271.48227,18.64942 L 396.69981,18.64942 L 396.69981,67.404333 L 271.48227,67.404333 z"
+         id="path11883" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath4">
+      <path
+         d="M 0.79926086,67.937173 L 96.976985,67.937173 L 96.976985,181.69864 L 0.79926086,181.69864 z"
+         id="path11886" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath5">
+      <path
+         d="M 97.776246,67.937173 L 270.94943,67.937173 L 270.94943,181.69864 L 97.776246,181.69864 z"
+         id="path11889" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath6">
+      <path
+         d="M 271.48227,67.937173 L 396.69981,67.937173 L 396.69981,181.69864 L 271.48227,181.69864 z"
+         id="path11892" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath7">
+      <path
+         d="M 0.79926086,182.4979 L 96.976985,182.4979 L 96.976985,281.60624 L 0.79926086,281.60624 z"
+         id="path11895" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath8">
+      <path
+         d="M 97.776246,182.4979 L 270.94943,182.4979 L 270.94943,281.60624 L 97.776246,281.60624 z"
+         id="path11898" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath9">
+      <path
+         d="M 271.48227,182.4979 L 396.69981,182.4979 L 396.69981,281.60624 L 271.48227,281.60624 z"
+         id="path11901" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath10">
+      <path
+         d="M 0.79926086,282.13908 L 96.976985,282.13908 L 96.976985,381.24743 L 0.79926086,381.24743 z"
+         id="path11904" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath11">
+      <path
+         d="M 97.776246,282.13908 L 270.94943,282.13908 L 270.94943,381.24743 L 97.776246,381.24743 z"
+         id="path11907" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath12">
+      <path
+         d="M 271.48227,282.13908 L 396.69981,282.13908 L 396.69981,381.24743 L 271.48227,381.24743 z"
+         id="path11910" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath13">
+      <path
+         d="M 0.79926086,381.78027 L 96.976985,381.78027 L 96.976985,480.88862 L 0.79926086,480.88862 z"
+         id="path11913" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath14">
+      <path
+         d="M 97.776246,381.78027 L 270.94943,381.78027 L 270.94943,480.88862 L 97.776246,480.88862 z"
+         id="path11916" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath15">
+      <path
+         d="M 271.48227,381.78027 L 396.69981,381.78027 L 396.69981,480.88862 L 271.48227,480.88862 z"
+         id="path11919" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath16">
+      <path
+         d="M 0.79926086,481.42146 L 96.976985,481.42146 L 96.976985,580.52981 L 0.79926086,580.52981 z"
+         id="path11922" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath17">
+      <path
+         d="M 97.776246,481.42146 L 270.94943,481.42146 L 270.94943,580.52981 L 97.776246,580.52981 z"
+         id="path11925" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath18">
+      <path
+         d="M 271.48227,481.42146 L 396.69981,481.42146 L 396.69981,580.52981 L 271.48227,580.52981 z"
+         id="path11928" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath19">
+      <path
+         d="M 0.79926086,581.06265 L 96.976985,581.06265 L 96.976985,680.17099 L 0.79926086,680.17099 z"
+         id="path11931" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath20">
+      <path
+         d="M 97.776246,581.06265 L 270.94943,581.06265 L 270.94943,680.17099 L 97.776246,680.17099 z"
+         id="path11934" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath21">
+      <path
+         d="M 271.48227,581.06265 L 396.69981,581.06265 L 396.69981,680.17099 L 271.48227,680.17099 z"
+         id="path11937" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath22">
+      <path
+         d="M 0.79926086,680.70383 L 96.976985,680.70383 L 96.976985,779.81218 L 0.79926086,779.81218 z"
+         id="path11940" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath23">
+      <path
+         d="M 97.776246,680.70383 L 270.94943,680.70383 L 270.94943,779.81218 L 97.776246,779.81218 z"
+         id="path11943" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath24">
+      <path
+         d="M 271.48227,680.70383 L 396.69981,680.70383 L 396.69981,779.81218 L 271.48227,779.81218 z"
+         id="path11946" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath25">
+      <path
+         d="M 0.79926086,780.34502 L 96.976985,780.34502 L 96.976985,846.95009 L 0.79926086,846.95009 z"
+         id="path11949" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath26">
+      <path
+         d="M 97.776246,780.34502 L 270.94943,780.34502 L 270.94943,846.95009 L 97.776246,846.95009 z"
+         id="path11952" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath27">
+      <path
+         d="M 271.48227,780.34502 L 396.69981,780.34502 L 396.69981,846.95009 L 271.48227,846.95009 z"
+         id="path11955" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <pattern
+       id="EMFhbasepattern-5"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+  </defs>
+  <metadata
+     id="metadata11872">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="matrix(1.2910682,0,0,1.1409157,-52.225049,-34.28429)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:700;font-size:3.86953115px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="55.515373"
+       y="33.884987"
+       id="text11967"><tspan
+         style="stroke-width:0.26458332"
+         x="55.515373"
+         y="33.884987"
+         id="tspan11965"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:700;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan11961">Best Proven Nonpharmacologic Interventions for Hypertension*</tspan><tspan
+           dx="0.19619144"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:700;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan11963" /></tspan></text>
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.72685,35.153812 h 25.44702 v 12.89974 H 55.72685 Z"
+       id="path11969"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11971" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1)"
+       d="M 7.4597681,18.64942 H 90.316478 V 34.901058 H 7.4597681 Z"
+       id="path11973"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11975" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11983">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,31.437594)"
+         x="0"
+         y="0"
+         id="text11981"><tspan
+           x="0"
+           y="0"
+           id="tspan11979"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan11977">Nonpharmacol</tspan></tspan></text>
+    </g>
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1)"
+       d="M 7.4597681,34.901058 H 90.316478 V 51.152695 H 7.4597681 Z"
+       id="path11985"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11987" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11995">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,47.689231)"
+         x="0"
+         y="0"
+         id="text11993"><tspan
+           x="0"
+           y="0"
+           id="tspan11991"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan11989">ogic </tspan></tspan></text>
+    </g>
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath1)"
+       d="M 7.4597681,51.152695 H 90.316478 V 67.404333 H 7.4597681 Z"
+       id="path11997"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath1)"
+       id="g11999" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath1)"
+       id="g12009">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,63.940869)"
+         x="0"
+         y="0"
+         id="text12007"><tspan
+           x="0"
+           y="0"
+           id="tspan12005"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12001">Intervention</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12003" /></tspan></text>
+    </g>
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,35.153812 h 45.81874 v 12.89974 H 81.38534 Z"
+       id="path12011"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath2)"
+       id="g12013" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath2)"
+       d="M 104.70317,34.901058 H 264.02251 V 51.152695 H 104.70317 Z"
+       id="path12015"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath2)"
+       id="g12017" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath2)"
+       id="g12027">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,47.689231)"
+         x="0"
+         y="0"
+         id="text12025"><tspan
+           x="0"
+           y="0"
+           id="tspan12023"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12019">Dose</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12021" /></tspan></text>
+    </g>
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,35.153812 h 33.13048 v 12.89974 h -33.13048 z"
+       id="path12029"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath3)"
+       id="g12031" />
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath3)"
+       d="M 278.4092,18.64942 H 390.0393 V 34.901058 H 278.4092 Z"
+       id="path12033"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath3)"
+       id="g12035" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath3)"
+       id="g12043">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,31.437594)"
+         x="0"
+         y="0"
+         id="text12041"><tspan
+           x="0"
+           y="0"
+           id="tspan12039"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12037">Approximate </tspan></tspan></text>
+    </g>
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath3)"
+       d="M 278.4092,34.901058 H 390.0393 V 51.152695 H 278.4092 Z"
+       id="path12045"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-243.08581,-259.31027)"
+       clip-path="url(#clipEmfPath3)"
+       id="g12047" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath3)"
+       id="g12057">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,47.689231)"
+         x="0"
+         y="0"
+         id="text12055"><tspan
+           x="0"
+           y="0"
+           id="tspan12053"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12049">Impact on SBP</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12051" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,34.942342 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12059"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,34.942342 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path12061"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,34.942342 h 25.588 v 0.14098 h -25.588 z"
+       id="path12063"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,35.083322 h 25.588 v 0.0705 h -25.588 z"
+       id="path12065"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,35.083322 h 0.14098 v 0.0705 h -0.14098 z"
+       id="path12067"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,34.942342 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path12069"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,34.942342 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12071"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,35.083322 h 45.81874 v 0.0705 H 81.38534 Z"
+       id="path12073"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,35.083322 h 0.14098 v 0.0705 h -0.14098 z"
+       id="path12075"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,34.942342 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path12077"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,34.942342 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12079"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#c6d9f1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,35.083322 h 33.20097 v 0.0705 h -33.20097 z"
+       id="path12081"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,34.942342 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12083"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,34.942342 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path12085"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,35.153812 h 0.14098 v 12.89974 h -0.14098 z"
+       id="path12087"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,35.153812 h 0.14098 v 12.89974 h -0.14098 z"
+       id="path12089"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,35.153812 h 0.14098 v 12.89974 h -0.14098 z"
+       id="path12091"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,35.153812 h 0.14098 v 12.89974 h -0.14098 z"
+       id="path12093"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath4)"
+       id="g12111">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,80.725347)"
+         x="0"
+         y="0"
+         id="text12109"><tspan
+           x="0"
+           y="0"
+           id="tspan12099"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12095">Weight</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12097" /></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12107"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12101">loss</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12103">/body fat</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12105" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath5)"
+       id="g12147">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,80.725347)"
+         x="0"
+         y="0"
+         id="text12145"><tspan
+           x="0"
+           y="0"
+           id="tspan12115"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12113">Ideal body weight is best </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12119"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12117">goal but at least 1 kg </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12123"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12121">reduction in body weight for </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12127"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12125">most adults who are </tspan></tspan><tspan
+           x="0"
+           y="65.006546"
+           id="tspan12133"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12129">overweight. </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12131">Expect about 1 </tspan></tspan><tspan
+           x="0"
+           y="81.258186"
+           id="tspan12137"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12135">mm Hg for every 1 kg </tspan></tspan><tspan
+           x="0"
+           y="97.509819"
+           id="tspan12143"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12139">reduction in body weight.</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12141" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath6)"
+       id="g12201">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,81.524608)"
+         x="0"
+         y="0"
+         id="text12155"><tspan
+           x="0"
+           y="0"
+           id="tspan12153"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12149">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12151" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,81.524608)"
+         x="23.977825"
+         y="0"
+         id="text12173"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12163"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12157">Hypertension:</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12159" /><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12161" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12171"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12165">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12167">5 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12169" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,81.524608)"
+         x="0"
+         y="33.302536"
+         id="text12181"><tspan
+           x="0"
+           y="33.302536"
+           id="tspan12179"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12175">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12177" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,81.524608)"
+         x="23.977825"
+         y="33.302536"
+         id="text12199"><tspan
+           x="23.977825"
+           y="33.302536"
+           id="tspan12189"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12183">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12185">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12187" /></tspan><tspan
+           x="23.977825"
+           y="49.265427"
+           id="tspan12197"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12191">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12193">2/3 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12195" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,48.053552 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12203"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,48.053552 h 25.588 v 0.14098 h -25.588 z"
+       id="path12205"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,48.053552 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12207"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,48.053552 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12209"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,48.053552 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12211"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,48.053552 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12213"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,48.053552 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12215"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,48.265022 h 0.14098 v 30.0289 h -0.14098 z"
+       id="path12217"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,48.265022 h 0.14098 v 30.0289 h -0.14098 z"
+       id="path12219"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,48.265022 h 0.14098 v 30.0289 h -0.14098 z"
+       id="path12221"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,48.265022 h 0.14098 v 30.0289 h -0.14098 z"
+       id="path12223"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath7)"
+       id="g12243">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,195.28607)"
+         x="0"
+         y="0"
+         id="text12241"><tspan
+           x="0"
+           y="0"
+           id="tspan12231"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12225">Healthy diet </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12227">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12229" /></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12239"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12233">DASH</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12235" /><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12237" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath8)"
+       id="g12273">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,195.28607)"
+         x="0"
+         y="0"
+         id="text12271"><tspan
+           x="0"
+           y="0"
+           id="tspan12247"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12245">Diet rich in fruits, vegetables, </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12255"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12249">whole grains, and low</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12251">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12253">fat </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12259"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12257">dairy products with reduced </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12263"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12261">content of saturated and </tspan></tspan><tspan
+           x="0"
+           y="65.006546"
+           id="tspan12269"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12265">total fat</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12267" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath9)"
+       id="g12337">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,196.08533)"
+         x="0"
+         y="0"
+         id="text12281"><tspan
+           x="0"
+           y="0"
+           id="tspan12279"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12275">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12277" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,196.08533)"
+         x="23.977825"
+         y="0"
+         id="text12299"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12289"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12283">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12285">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12287" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12297"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12291">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12293">11 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12295" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,196.08533)"
+         x="0"
+         y="33.036118"
+         id="text12307"><tspan
+           x="0"
+           y="33.036118"
+           id="tspan12305"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12301">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12303" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,196.08533)"
+         x="23.977825"
+         y="33.036118"
+         id="text12325"><tspan
+           x="23.977825"
+           y="33.036118"
+           id="tspan12315"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12309">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12311">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12313" /></tspan><tspan
+           x="23.977825"
+           y="48.999008"
+           id="tspan12323"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12317">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12319">3 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12321" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,196.08533)"
+         x="0"
+         y="65.539391"
+         id="text12335"><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12329"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12327" /></tspan><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12333"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12331" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,78.293922 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12339"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,78.293922 h 25.588 v 0.14098 h -25.588 z"
+       id="path12341"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,78.293922 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12343"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,78.293922 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12345"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,78.293922 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12347"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,78.293922 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12349"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,78.293922 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12351"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,78.505392 h 0.14098 v 26.222418 h -0.14098 z"
+       id="path12353"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,78.505392 h 0.14098 v 26.222418 h -0.14098 z"
+       id="path12355"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,78.505392 h 0.14098 v 26.222418 h -0.14098 z"
+       id="path12357"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,78.505392 h 0.14098 v 26.222418 h -0.14098 z"
+       id="path12359"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath10)"
+       id="g12383">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,294.92726)"
+         x="0"
+         y="0"
+         id="text12381"><tspan
+           x="0"
+           y="0"
+           id="tspan12365"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12361">D</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12363">ietary sodium </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12373"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12367">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12369" /><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12371">reduced </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12379"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12375">intake</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12377" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath11)"
+       id="g12401">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,294.92726)"
+         x="0"
+         y="0"
+         id="text12399"><tspan
+           x="0"
+           y="0"
+           id="tspan12387"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12385">&lt;1,500 mg/d is optimal goal </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12391"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12389">but at least 1,000 mg/d </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12397"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12393">reduction in most adults</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12395" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath12)"
+       id="g12465">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,295.72652)"
+         x="0"
+         y="0"
+         id="text12409"><tspan
+           x="0"
+           y="0"
+           id="tspan12407"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12403">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12405" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,295.72652)"
+         x="23.977825"
+         y="0"
+         id="text12427"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12417"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12411">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12413">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12415" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12425"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12419">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12421">5/6 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12423" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,295.72652)"
+         x="0"
+         y="33.036118"
+         id="text12435"><tspan
+           x="0"
+           y="33.036118"
+           id="tspan12433"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12429">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12431" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,295.72652)"
+         x="23.977825"
+         y="33.036118"
+         id="text12453"><tspan
+           x="23.977825"
+           y="33.036118"
+           id="tspan12443"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12437">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12439">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12441" /></tspan><tspan
+           x="23.977825"
+           y="48.999008"
+           id="tspan12451"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12445">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12447">2/3 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12449" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:124.07931089%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,295.72652)"
+         x="0"
+         y="65.539391"
+         id="text12463"><tspan
+           x="0"
+           y="11.587154"
+           id="tspan12457"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12455" /></tspan><tspan
+           x="0"
+           y="11.587154"
+           id="tspan12461"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12459" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,104.72781 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12467"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,104.72781 h 25.588 v 0.14098 h -25.588 z"
+       id="path12469"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,104.72781 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12471"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,104.72781 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12473"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,104.72781 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12475"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,104.72781 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12477"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,104.72781 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12479"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,104.93928 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12481"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,104.93928 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12483"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,104.93928 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12485"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,104.93928 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12487"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath13)"
+       id="g12519">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,394.56845)"
+         x="0"
+         y="0"
+         id="text12517"><tspan
+           x="0"
+           y="0"
+           id="tspan12493"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12489">D</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12491">ietary </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12503"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12495">potassium</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12497" /><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12499">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12501" /></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12509"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12505">enhanced</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12507" /></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12515"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12511">intake</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12513" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath14)"
+       id="g12541">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,394.56845)"
+         x="0"
+         y="0"
+         id="text12539"><tspan
+           x="0"
+           y="0"
+           id="tspan12527"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12521">3,500</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12523">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12525">5,000 mg/d, </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12531"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12529">preferably by consumption </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12537"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12533">of a diet rich in potassium </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12535" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath15)"
+       id="g12605">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,395.36771)"
+         x="0"
+         y="0"
+         id="text12549"><tspan
+           x="0"
+           y="0"
+           id="tspan12547"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12543">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12545" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,395.36771)"
+         x="23.977825"
+         y="0"
+         id="text12567"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12557"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12551">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12553">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12555" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12565"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12559">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12561">4/5 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12563" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,395.36771)"
+         x="0"
+         y="33.036118"
+         id="text12575"><tspan
+           x="0"
+           y="33.036118"
+           id="tspan12573"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12569">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12571" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,395.36771)"
+         x="23.977825"
+         y="33.036118"
+         id="text12593"><tspan
+           x="23.977825"
+           y="33.036118"
+           id="tspan12583"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12577">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12579">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12581" /></tspan><tspan
+           x="23.977825"
+           y="48.999008"
+           id="tspan12591"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12585">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12587">2 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12589" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,395.36771)"
+         x="0"
+         y="65.805809"
+         id="text12603"><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12597"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12595" /></tspan><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12601"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12599" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,131.09121 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12607"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,131.09121 h 25.588 v 0.14098 h -25.588 z"
+       id="path12609"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,131.09121 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12611"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,131.09121 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12613"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,131.09121 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12615"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,131.09121 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12617"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,131.09121 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12619"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,131.30268 h 0.14098 v 26.15192 h -0.14098 z"
+       id="path12621"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,131.30268 h 0.14098 v 26.15192 h -0.14098 z"
+       id="path12623"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,131.30268 h 0.14098 v 26.15192 h -0.14098 z"
+       id="path12625"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,131.30268 h 0.14098 v 26.15192 h -0.14098 z"
+       id="path12627"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath16)"
+       id="g12647">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,494.20963)"
+         x="0"
+         y="0"
+         id="text12645"><tspan
+           x="0"
+           y="0"
+           id="tspan12633"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12629">Aerobic</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12631" /></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12637"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12635">physical </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12643"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12639">activity</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12641" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath17)"
+       id="g12675">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,494.20963)"
+         x="0"
+         y="0"
+         id="text12673"><tspan
+           x="0"
+           y="0"
+           id="tspan12657"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12649">● 90</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12651">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12653">150 min/wk</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12655" /></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12665"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12659">● 65%</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12661">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12663">75% heart rate </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12671"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12667">reserve</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12669" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath18)"
+       id="g12739">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,495.00889)"
+         x="0"
+         y="0"
+         id="text12683"><tspan
+           x="0"
+           y="0"
+           id="tspan12681"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12677">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12679" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,495.00889)"
+         x="23.977825"
+         y="0"
+         id="text12701"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12691"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12685">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12687">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12689" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12699"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12693">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12695">5/8 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12697" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,495.00889)"
+         x="0"
+         y="33.302536"
+         id="text12709"><tspan
+           x="0"
+           y="33.302536"
+           id="tspan12707"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12703">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12705" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,495.00889)"
+         x="23.977825"
+         y="33.302536"
+         id="text12727"><tspan
+           x="23.977825"
+           y="33.302536"
+           id="tspan12717"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12711">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12713">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12715" /></tspan><tspan
+           x="23.977825"
+           y="49.265427"
+           id="tspan12725"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12719">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12721">2/4 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12723" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,495.00889)"
+         x="0"
+         y="65.805809"
+         id="text12737"><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12731"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12729" /></tspan><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12735"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12733" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,157.4546 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12741"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,157.4546 h 25.588 v 0.14098 h -25.588 z"
+       id="path12743"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,157.4546 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12745"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,157.4546 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12747"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,157.4546 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12749"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,157.4546 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12751"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,157.4546 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12753"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,157.66607 h 0.14098 V 183.818 h -0.14098 z"
+       id="path12755"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,157.66607 h 0.14098 V 183.818 h -0.14098 z"
+       id="path12757"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,157.66607 h 0.14098 V 183.818 h -0.14098 z"
+       id="path12759"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,157.66607 h 0.14098 V 183.818 h -0.14098 z"
+       id="path12761"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath19)"
+       id="g12787">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,593.85082)"
+         x="0"
+         y="0"
+         id="text12785"><tspan
+           x="0"
+           y="0"
+           id="tspan12765"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12763">Dynamic </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12773"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12767">r</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12769">esistance</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12771" /></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12777"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12775">physical </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12783"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12779">activity</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12781" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath20)"
+       id="g12825">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,593.85082)"
+         x="0"
+         y="0"
+         id="text12823"><tspan
+           x="0"
+           y="0"
+           id="tspan12797"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12789">● 90</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12791">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12793">150 min/wk</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12795" /></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12807"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12799">● 50%</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12801">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12803">80% 1 rep maximum</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12805" /></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12811"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12809">● 6 exercises, 3 </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12815"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12813">sets/exercise, 10 </tspan></tspan><tspan
+           x="0"
+           y="65.006546"
+           id="tspan12821"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12817">repetitions/set</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12819" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath21)"
+       id="g12889">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,594.65008)"
+         x="0"
+         y="0"
+         id="text12833"><tspan
+           x="0"
+           y="0"
+           id="tspan12831"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12827">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12829" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,594.65008)"
+         x="23.977825"
+         y="0"
+         id="text12851"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12841"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12835">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12837">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12839" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan12849"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12843">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12845">4 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12847" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,594.65008)"
+         x="0"
+         y="33.302536"
+         id="text12859"><tspan
+           x="0"
+           y="33.302536"
+           id="tspan12857"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12853">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12855" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,594.65008)"
+         x="23.977825"
+         y="33.302536"
+         id="text12877"><tspan
+           x="23.977825"
+           y="33.302536"
+           id="tspan12867"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12861">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12863">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12865" /></tspan><tspan
+           x="23.977825"
+           y="49.265427"
+           id="tspan12875"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12869">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12871">2 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12873" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,594.65008)"
+         x="0"
+         y="65.805809"
+         id="text12887"><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12881"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12879" /></tspan><tspan
+           x="0"
+           y="11.453943"
+           id="tspan12885"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12883" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,183.818 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12891"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,183.818 h 25.588 v 0.14098 h -25.588 z"
+       id="path12893"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,183.818 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12895"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,183.818 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path12897"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,183.818 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12899"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,183.818 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path12901"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,183.818 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path12903"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,184.02947 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12905"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,184.02947 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12907"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,184.02947 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12909"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,184.02947 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path12911"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath22)"
+       id="g12937">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,693.49201)"
+         x="0"
+         y="0"
+         id="text12935"><tspan
+           x="0"
+           y="0"
+           id="tspan12915"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12913">Isometric </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12923"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12917">r</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12919">esistance</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12921" /></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12927"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12925">physical </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12933"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12929">activity</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12931" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath23)"
+       id="g12979">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,693.49201)"
+         x="0"
+         y="0"
+         id="text12977"><tspan
+           x="0"
+           y="0"
+           id="tspan12941"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12939">● 4 x 2 min (hand grip), 1 min </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan12947"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12943">rest </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12945">between exercises, </tspan></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan12955"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12949">30%</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12951">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12953">40% maximum </tspan></tspan><tspan
+           x="0"
+           y="48.75491"
+           id="tspan12959"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12957">voluntary contraction, 3 </tspan></tspan><tspan
+           x="0"
+           y="65.006546"
+           id="tspan12965"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12961">sessions/wk</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12963" /></tspan><tspan
+           x="0"
+           y="81.258186"
+           id="tspan12975"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12967">● 8</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12969">–</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12971">10 wk</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12973" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath24)"
+       id="g13043">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,694.29127)"
+         x="0"
+         y="0"
+         id="text12987"><tspan
+           x="0"
+           y="0"
+           id="tspan12985"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan12981">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan12983" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,694.29127)"
+         x="23.977825"
+         y="0"
+         id="text13005"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan12995"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12989">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12991">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12993" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan13003"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12997">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan12999">5 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13001" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,694.29127)"
+         x="0"
+         y="33.302536"
+         id="text13013"><tspan
+           x="0"
+           y="33.302536"
+           id="tspan13011"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan13007">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan13009" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,694.29127)"
+         x="23.977825"
+         y="33.302536"
+         id="text13031"><tspan
+           x="23.977825"
+           y="33.302536"
+           id="tspan13021"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13015">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13017">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13019" /></tspan><tspan
+           x="23.977825"
+           y="49.265427"
+           id="tspan13029"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13023">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13025">4 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13027" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,694.29127)"
+         x="0"
+         y="65.805809"
+         id="text13041"><tspan
+           x="0"
+           y="11.453943"
+           id="tspan13035"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13033" /></tspan><tspan
+           x="0"
+           y="11.453943"
+           id="tspan13039"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13037" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,210.1814 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13045"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,210.1814 h 25.588 v 0.14098 h -25.588 z"
+       id="path13047"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,210.1814 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13049"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,210.1814 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path13051"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,210.1814 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13053"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,210.1814 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path13055"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,210.1814 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13057"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,210.39287 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path13059"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,210.39287 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path13061"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,210.39287 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path13063"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,210.39287 h 0.14098 v 26.15193 h -0.14098 z"
+       id="path13065"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath25)"
+       id="g13085">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(7.459768,793.1332)"
+         x="0"
+         y="0"
+         id="text13083"><tspan
+           x="0"
+           y="0"
+           id="tspan13069"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13067">Alcohol </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan13075"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13071">consumption</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13073" /></tspan><tspan
+           x="0"
+           y="32.503273"
+           id="tspan13081"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13077">moderation</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13079" /></tspan></text>
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath26)"
+       id="g13119">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:122.07802534%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,793.1332)"
+         x="0"
+         y="0"
+         id="text13109"><tspan
+           x="0"
+           y="0"
+           id="tspan13089"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13087">In individuals who drink </tspan></tspan><tspan
+           x="0"
+           y="16.251637"
+           id="tspan13101"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13091">alcohol, reduce alcohol </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12px;font-family:Calibri;fill:#000000"
+             id="tspan13093">†</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13095" /><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13097">to:</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13099" /></tspan><tspan
+           x="0"
+           y="32.831398"
+           id="tspan13107"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13103">● Men: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13105">&lt;</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,793.1332)"
+         x="49.021332"
+         y="32.503277"
+         id="text13117"><tspan
+           x="49.021332"
+           y="32.503277"
+           id="tspan13115"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13111">2 drinks daily</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13113" /></tspan></text>
+    </g>
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath26)"
+       d="m 147.064,827.23499 h 6.66051 v 0.79926 H 147.064 Z"
+       id="path13121"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath26)"
+       id="g13141">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,841.88811)"
+         x="0"
+         y="0"
+         id="text13129"><tspan
+           x="0"
+           y="0"
+           id="tspan13127"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13123">● Women: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13125">&lt;</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(104.70317,841.88811)"
+         x="67.137909"
+         y="0"
+         id="text13139"><tspan
+           x="67.137909"
+           y="0"
+           id="tspan13137"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13131">1 </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13133">drink daily</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13135" /></tspan></text>
+    </g>
+    <path
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       clip-path="url(#clipEmfPath26)"
+       d="m 165.18058,843.48663 h 6.66051 v 0.79926 h -6.66051 z"
+       id="path13143"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,55.51538,30.219492)"
+       clip-path="url(#clipEmfPath27)"
+       id="g13197">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,793.93246)"
+         x="0"
+         y="0"
+         id="text13151"><tspan
+           x="0"
+           y="0"
+           id="tspan13149"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan13145">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan13147" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,793.93246)"
+         x="23.977825"
+         y="0"
+         id="text13169"><tspan
+           x="23.977825"
+           y="0"
+           id="tspan13159"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13153">Hypertension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13155">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13157" /></tspan><tspan
+           x="23.977825"
+           y="15.962892"
+           id="tspan13167"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13161">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13163">4 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13165" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,793.93246)"
+         x="0"
+         y="33.302536"
+         id="text13177"><tspan
+           x="0"
+           y="33.302536"
+           id="tspan13175"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:'Times New Roman';fill:#000000"
+             id="tspan13171">∙</tspan><tspan
+             dx="-0.236072"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Arial;fill:#000000"
+             id="tspan13173" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;line-height:119.90904808%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(278.4092,793.93246)"
+         x="23.977825"
+         y="33.302536"
+         id="text13195"><tspan
+           x="23.977825"
+           y="33.302536"
+           id="tspan13185"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:700;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13179">Normotension</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13181">: </tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13183" /></tspan><tspan
+           x="23.977825"
+           y="49.265427"
+           id="tspan13193"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13187">-</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13189">3 mm Hg</tspan><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:13.3125px;font-family:Calibri;fill:#000000"
+             id="tspan13191" /></tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,236.5448 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13199"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,236.5448 h 25.588 v 0.14098 h -25.588 z"
+       id="path13201"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,236.5448 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13203"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,236.5448 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path13205"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,236.5448 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13207"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,236.5448 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path13209"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,236.5448 h 0.14098 v 0.21147 h -0.14098 z"
+       id="path13211"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,236.75627 h 0.14098 v 17.48161 h -0.14098 z"
+       id="path13213"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13215"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.51538,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13217"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 55.65636,254.23788 h 25.588 v 0.14098 h -25.588 z"
+       id="path13219"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,236.75627 h 0.14098 v 17.48161 h -0.14098 z"
+       id="path13221"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.24436,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13223"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 81.38534,254.23788 h 45.81874 v 0.14098 H 81.38534 Z"
+       id="path13225"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,236.75627 h 0.14098 v 17.48161 h -0.14098 z"
+       id="path13227"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.20408,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13229"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 127.34506,254.23788 h 33.20097 v 0.14098 h -33.20097 z"
+       id="path13231"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,236.75627 h 0.14098 v 17.48161 h -0.14098 z"
+       id="path13233"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13235"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="m 160.54603,254.23788 h 0.14098 v 0.14098 h -0.14098 z"
+       id="path13237"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot13939"
+       xml:space="preserve"><flowRegion
+         id="flowRegion13941"><rect
+           y="978.23395"
+           x="209.28572"
+           height="110.71429"
+           width="395.71429"
+           id="rect13943" /></flowRegion><flowPara
+         id="flowPara13945" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.52226567px;line-height:121.69091702%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="40.451031"
+       y="261.65137"
+       id="text13986"><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="261.65137"
+         id="tspan13954"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.52226567px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13950">*Type, dose, and expected impact on BP in adults with a normal BP and with hypertension.</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.52226567px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13952" /></tspan><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="265.93765"
+         id="tspan13960"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.52226567px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13956">DASH indicates Dietary Approaches to Stop Hypertension; and SBP, systolic blood pressure.</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.52226567px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13958" /></tspan><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="270.31073"
+         id="tspan13978"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13962">https://www.nhlbi.nih.gov/health/resources/heart/hbp</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13964">-</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13966">dash</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13968">-</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13970">how</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13972">-</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13974">to </tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13976" /></tspan><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="274.68384"
+         id="tspan13984"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#650715;stroke-width:0.26458332"
+           id="tspan13980">http://dashdiet.org/dash_diet_tips.asp</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#650715;stroke-width:0.26458332"
+           id="tspan13982" /></tspan></text>
+    <path
+       style="fill:#650715;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332"
+       d="M 40.451038,275.67892 H 102.0596 v 0.28196 H 40.451038 Z"
+       id="path13988"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.17499995px;line-height:122.0523715%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="40.451031"
+       y="279.97885"
+       id="text14000"><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="279.97885"
+         id="tspan13994"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.17499995px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13990">†</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13992">In the United States, one &quot;standard&quot; drink contains roughly 14 grams of pure alcohol, which is typically </tspan></tspan><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="284.02765"
+         id="tspan13998"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan13996">found in 12 ounces of regular beer (usually about 5% alcohol), 5 ounces of wine (usually about 12% </tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;line-height:125%;font-family:Calibri;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="40.451031"
+       y="289.49506"
+       id="text14014"><tspan
+         style="stroke-width:0.26458332"
+         x="40.451031"
+         y="289.49506"
+         id="tspan14012"><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan14002">alcohol) and 1.5 ounces of distilled spirits (usuall</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan14004">y about 40% alcohol) </tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan14006">(29)</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan14008">.</tspan><tspan
+           dx="0"
+           dy="0"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:3.86953115px;font-family:Calibri;fill:#000000;stroke-width:0.26458332"
+           id="tspan14010" /></tspan></text>
+  </g>
+</svg>
