@@ -18,15 +18,16 @@
     <link rel="shortcut icon" type="image/png" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/styledown.css">
     <link rel="stylesheet" href="assets/css/normalize.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/jquery-uistructure.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="assets/css/foundation.min.css">
     <link rel="stylesheet" href="assets/css/foundation-sites.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/ascvd-riskplus.css">
     <link rel="stylesheet" href="assets/css/print-css.css">
-
+    <link rel="stylesheet" href="assets/css/pager.css"
 </head>
 
 <body onbeforeunload="window.scrollTo(0,0);">
@@ -263,7 +264,7 @@
                     <div class="small-12 medium-6 large-3 column age-input">
                         <div class="question required" data-bind="css: $root.ageValidation().status">
                             <div class="label-holder">
-                                <label for="">
+                                <label>
                                     <span data-bind="text: $root.FormData().formLabelText.current_age"></span>
                                     <i class="fa fa-info-circle tip-top has-tip"
                                         data-bind="attr: { title: $root.tooltips.en.age }, visible: $root.shouldShowTooltip('en')"
@@ -360,7 +361,7 @@
                     <div class="question small-12 medium-6 large-4 column required sys-blood-pressure-input"
                         data-bind="css: $root.bloodPresureValidation().status ">
                         <div class="label-holder">
-                            <label for="">
+                            <label>
                                 <span class="text" data-bind="html: $root.FormData().formLabelText.sys_blood_pressure">
                                     <!-- <small class="pre">(mm Hg)</small> -->
                                 </span>
@@ -384,7 +385,7 @@
                     <div class="question required required-advice small-12 medium-6 large-4 column end diastolic-blood-pressure-input"
                         data-bind="css: $root.DBloodPressureValidation().status ">
                         <div class="label-holder">
-                            <label for=""> <span class="text"
+                            <label> <span class="text"
                                     data-bind="html: $root.FormData().formLabelText.diastolic_blood_pressure">
                                     <!-- <small class="pre">(mm Hg)</small> -->
                                 </span>
@@ -411,7 +412,7 @@
                     <div class="question large-4 medium-6 small-12 column required total-cholesterol-input"
                         data-bind="css: $root.totalCholesterolValidation().status ">
                         <div class="label-holder">
-                            <label for="" data-bind="visible: shouldShowTooltip('ar')">
+                            <label data-bind="visible: shouldShowTooltip('ar')">
                                 <span class="text cholesterol-lbl" style="padding-right:0.1rem;"
                                     data-bind="text: $root.FormData().formLabelText.total_cholesterol"></span>
                                 <small
@@ -422,7 +423,7 @@
                                         <i class="fa fa-holder-dynamic"></i>
                                     </span>-->
                             </label>
-                            <label for=""
+                            <label
                                 data-bind="visible: shouldShowTooltip('en')  || shouldShowTooltip('pt') || shouldShowTooltip('es')|| shouldShowTooltip('de') || shouldShowTooltip('in')">
                                 <span class="text cholesterol-lbl" style="padding-right:0.1rem;"
                                     data-bind="visible: $root.Form().UnitOfMeasure(),html: $root.FormData().formLabelText.total_cholesterol_is"></span>
@@ -452,7 +453,7 @@
                     <div class="question large-4 medium-6 small-12 column required hdl-cholesterol-input"
                         data-bind="css: $root.hdlValidation().status ">
                         <div class="label-holder">
-                            <label for="" data-bind="visible: shouldShowTooltip('ar')">
+                            <label data-bind="visible: shouldShowTooltip('ar')">
                                 <span class="text cholesterol-lbl" style="padding-right:0.1rem;"
                                     data-bind="text: $root.FormData().formLabelText.hdl_cholesterol"></span>
                                 <small
@@ -463,7 +464,7 @@
                                         <i class="fa fa-holder-dynamic"></i>
                                     </span>-->
                             </label>
-                            <label for=""
+                            <label
                                 data-bind="visible: shouldShowTooltip('en')  || shouldShowTooltip('pt') || shouldShowTooltip('es') || shouldShowTooltip('de') || shouldShowTooltip('in')">
                                 <span class="text cholesterol-lbl" style="padding-right:0.1rem;"
                                     data-bind="visible: $root.Form().UnitOfMeasure(),html: $root.FormData().formLabelText.hdl_cholesterol_is">
@@ -490,29 +491,7 @@
                             data-bind="visible: $root.Form().UnitOfMeasure(),text: $root.FormData().formHints.hdl_cholesterol_is_hint">
                         </div>
                     </div>
-                    <!-- LDL Cholesterol input supressed for  MLASCVD -->
-                    <!-- <div class="question required large-4 medium-6 small-12 column end" data-bind="css: $root.ldlValidation().status, addCSS: {'required-advice': $root.Form().VisitType()==false}">
-                            <div class="label-holder">
-                                <label for=""> <span class="text" data-bind="with: $root.FormData().formToolTips.ldlToolTip">
-                                        LDL Cholesterol
-                                        <small class="pre" data-bind="visible: !$root.Form().UnitOfMeasure() ">(mg/dL)</small>
-                                        <small class="pre" data-bind="visible: $root.Form().UnitOfMeasure() ">(mmol/L)</small>
-                                        <i class="fa fa-info-circle tip-top" data-bind="attr: { title: tooltipTitle }" data-tooltip></i>
-                                    </span> <span class="required-holder">
-                                        <i class="fa fa-holder-dynamic"></i>
-                                    </span> </label>
-                            </div>
-                            <div class="input-holder">
-                                <div class="input-space">
-                                    <input type="number" data-bind="value:Form().LDLCholesterolValue, valueUpdate: 'blur', attr: { min: $root.Form().UnitOfMeasure() ? 0.777 : 30, max: $root.Form().UnitOfMeasure() ? 7.770 : 300, step: $root.Form().UnitOfMeasure() ? 0.001 : 1}"> </div>
-                            </div>
-                            <div class="message-holder"> <span data-bind="css: $root.ldlValidation().status">
-                                    <i class="fa fa-holder"></i>
-                                    <span class="text" data-bind="text: $root.ldlValidation().message"></span> </span>
-                            </div>
-                            <div class="hint" data-bind="visible: !$root.Form().UnitOfMeasure() ">Value must be between 30-300</div>
-                            <div class="hint" data-bind="visible: $root.Form().UnitOfMeasure() ">Value must be between 0.777-7.770</div>
-                        </div> -->
+                   
                     <div class="clearfix"></div>
                     <!----------------------- CHOLESTEROL ROW ENDS --------------------->
                     <!------------------------ PERSONAL HISTORY ROW --------------------->
@@ -721,31 +700,7 @@
                         </div>
                         <div class="hint"></div>
                     </div>
-                    <!-- Suppressed 'Quit Smoking' Select box for  MLASCVD -->
-                    <!-- <div class="question required small-12 large-4 column" data-bind="visible:quiteSmoking, css: $root.smokingSelectValidation().status">
-                            <div class="label-holder">
-                                <label for=""> <span class="text bold">How long ago did patient quit smoking?
-                                    </span> <span class="required-holder">
-                                        <i class="fa fa-holder-dynamic"></i>
-                                    </span> </label>
-                            </div>
-                            <div class="input-holder row collapse">
-                                <div class="input-space">
-                                    <select name="quitSelect" id="quitSelect" data-bind="
-                                                  options: $root.FormData().quiteSmoking,
-                                                  optionsText: 'label',
-                                                  optionsValue: $data,
-                                                  selectedOption: $root.Form().QuiteSmokingMonths,
-                                                  optionsCaption: 'Select',
-                                                  value:$root.Form().QuiteSmokingMonths"></select>
-                                </div>
-                            </div>
-                            <div class="message-holder"> <span data-bind="css: $root.smokingSelectValidation().status">
-                                <i class="fa fa-holder"></i>
-                                <span class="text" data-bind="text: $root.smokingSelectValidation().message"></span> </span>
-                            </div>
-                        </div>
-                    <div class="clearfix"></div> -->
+                 
                     <div class="question required small-12 medium-6 large-4 column on-hypertension-treatment-input"
                         data-bind="css: $root.hypertensionValidation().status">
                         <div class="label-holder">
@@ -868,7 +823,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineAgeValidation().status">
                                         <div class="label-holder">
-                                            <label for=""> <span class="text">Age at Previous Visit</span> <span
+                                            <label> <span class="text">Age at Previous Visit</span> <span
                                                     class="required-holder">
                                                     <i class="fa fa-holder-dynamic"></i>
                                                 </span> </label>
@@ -891,7 +846,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineTotalCholesterolValidation().status ">
                                         <div class="label-holder">
-                                            <label for="">
+                                            <label>
                                                 <span class="text">
                                                     Total Cholesterol at Previous Visit -->
                                                     <!-- ko if: (viewportWidth() >= 658 && viewportWidth() <= 713) || (viewportWidth() >= 1024 && viewportWidth() <= 1042) || (viewportWidth() <= 363)-->
@@ -931,7 +886,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineHdlValidation().status ">
                                         <div class="label-holder">
-                                            <label for="">
+                                            <label>
                                                 <span class="text">
                                                     HDL Cholesterol at Previous Visit-->
                                                     <!-- ko if: (viewportWidth() >= 647 && viewportWidth() <= 702) || (viewportWidth() >= 1024 && viewportWidth() <= 1026)  -->
@@ -970,7 +925,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineLdlValidation().status ">
                                         <div class="label-holder">
-                                            <label for=""> <span class="text">
+                                            <label> <span class="text">
                                                     LDL Cholesterol at Previous Visit
                                                     <!-- ko if: (viewportWidth() >= 658 && viewportWidth() <= 728) || (viewportWidth() >= 1071 && viewportWidth() <= 1081) || (viewportWidth() <= 363)-->
                                                     <br>
@@ -1011,7 +966,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineBloodPresureValidation().status ">
                                         <div class="label-holder">
-                                            <label for=""><span class="text pre">Systolic Blood Pressure at Previous
+                                            <label><span class="text pre">Systolic Blood Pressure at Previous
                                                     Visit <small class="">(mm Hg)</small></span> <span
                                                     class="required-holder">
                                                     <i class="fa fa-holder-dynamic"></i>
@@ -1036,7 +991,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineHypertensionValidation().status">
                                         <div class="label-holder">
-                                            <label for=""> <span class="text pre">On Hypertension Treatment at Previous
+                                            <label> <span class="text pre">On Hypertension Treatment at Previous
                                                     Visit?</span> <span class="required-holder">
                                                     <i class="fa fa-holder-dynamic"></i>
                                                 </span> </label>
@@ -1065,7 +1020,7 @@
                                     <div class="question required small-12 medium-6 large-4 column"
                                         data-bind="css: $root.baselineDiabeticValidation().status ,visible:(Form().Diabetic() != 'No')">
                                         <div class="label-holder">
-                                            <label for=""> <span class="text">History of Diabetes at Previous
+                                            <label> <span class="text">History of Diabetes at Previous
                                                     Visit?</span> <span class="required-holder">
                                                     <i class="fa fa-holder-dynamic"></i>
                                                 </span> </label>
@@ -45881,7 +45836,7 @@
     </script>
     <script src="assets/js/styledown.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.panzoom.js"></script>
     <script type="text/javascript" src="assets/js/chosen/chosen.jquery.js"></script>
     <script type="text/javascript" src="assets/js/selectonic.js"></script>
