@@ -1381,7 +1381,7 @@ observeDOM($('.score-bar-holder')[0], function(mut) {
 
 
 function getCookieBanner() {
-	var cookieValue = getCookie('ack-cookie-banner');
+	var cookieValue = getCookie('ml-cookie');
 	if (cookieValue) {
 		$.ajax({
 			method: 'GET',
@@ -1401,13 +1401,13 @@ function getCookieBanner() {
 	
 function makeAck() {
 	//set cookie
-	var cname = 'ack-cookie-banner';
+	var cname = 'ml-cookie';
 	var cvalue = new Date();
 	var d = new Date();
 	//expires in 10 days
-	d.setTime(d.getTime() + (10 * 224 * 60 * 60 * 1000));
+	d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
 	var expires = 'expires=' + d.toUTCString();1
-	CookieString = cname + '=' + cvalue.toUTCString() + ';' + expires + ';path=/'; + "secure; httpOnly" 
+    CookieString = cname + '=' + cvalue.toUTCString() + ';' + expires + ';path=/' + ";secure";
     document.cookie = CookieString;
 	//remove banner
 	removeBanner();
