@@ -1,0 +1,1026 @@
+/*** css for logo ***/
+.header.page .logo img {
+   height: 58px;
+   margin-top: 10px;
+}
+/*** css for select units ***/
+.switch-on {
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.switch-off {
+    position: absolute;
+    left: -19px;
+    top: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.switch-on .fa, .switch-off .fa {
+        display: inline;
+    }
+
+.switch label.units:after {
+    width: 4.3rem;
+    height: 1.8rem;
+}
+
+.switch.round label.units:after {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.switch label.units .switch-off {
+    left: -47px;
+    top: 5px;
+    z-index: 1;
+}
+
+.switch label.units .switch-off {
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    left: 130px;
+    top: 4px;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+label.units {
+    width: 125px;
+    height: 32px;
+}
+
+.units-outer label {
+    padding-top: 4px;
+}
+
+.units-outer .switch-value {
+    padding-left: 0;
+    padding-top: 5px;
+}
+
+table .units-outer input{
+    position: absolute;
+}
+
+.switch label.units .switch-on {
+    font-size: 14px;
+    z-index: 1;
+    color: #5c5c5c;
+    font-weight: normal;
+    left: 25px;
+    top: 0;
+    position: relative;
+}
+
+.switch input:checked + label.units:after {
+    left: 62px;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.switch input:checked + label.units .switch-on {
+    color: #fff;
+}
+
+.switch input:checked + label.units .switch-off {
+    color: #5c5c5c;
+}
+
+.switch input:checked + label.units .switch-off .fa-check:before {
+        display: none;
+    }
+
+.select .switch-on .fa-check:before {
+    content: "";
+}
+
+.switch input:checked + label.units .switch-on .fa-check:before {
+    content: "\f00c";
+}
+
+.switch.select label {
+    background-color: #008080;
+    position: absolute;
+    left: 50px;
+}
+
+.sunits {
+    margin-top: 20px;
+}
+
+select {
+    background: url("../img/arrow.png") 96% center no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.tabs {
+    margin-bottom: 0;
+}
+
+.tabs.overlap {
+        background: none;
+    }
+
+.number {
+      box-sizing: border-box;
+      background-color: #008080;
+      color: #fff;
+      border-radius: 10px;
+      padding: 0px 6px 0px 7px;
+      position: relative;
+      top: -2px;
+      font-size: 15px;
+      vertical-align: middle
+}
+
+
+@media screen\0 {
+   .number {
+      box-sizing: border-box;
+      background-color: #008080;
+      color: #fff;
+      border-radius: 10px;
+      width: 20px;
+      display: inline-block;
+      height: 20px;
+      padding: 10px;
+      padding-left: 7px;
+      position: relative;
+      top: -4px;
+   }
+}
+
+
+.therapyreview .scorebarlabel {
+    display: none;
+}
+
+/*** css for caution box ***/
+.caution-box-modal > ul {
+    margin: 0 0 .4rem 2.1rem;
+}
+
+.caution-box-modal > ul li {
+        font-size: 16px;
+        padding: 6px 0 0 6px;
+    }
+
+.caution-box-modal {
+    background-color: #FFF7EC;
+    border: 1px solid #FFCA86;
+}
+
+.tooltip > .nub {
+    border-color: transparent transparent #188DAE;
+}
+
+/*** css for collapsable-panel ***/
+.collapsable-panel .secondaryMedAdTop:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 40%;
+    margin-left: -10px;
+    border-style: solid;
+    border-width: 0 8px;
+    border-color: #c0c0c0 transparent transparent transparent;
+}
+
+.collapsable-panel.inset{
+    background-image: none;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+}
+
+/*** css for reviewTherapyErro ****/
+.reviewTherapyError .reveal-modal-bg {
+    z-index: -1;
+}
+.reviewTherapyError .alert-box:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 12%;
+    margin-left: -10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 8px;
+    border-bottom: 10px solid #d07600;
+}
+
+.alert-box .fa-info-circle {
+    color: #fff;
+    cursor: default;
+}
+
+.fa-repeat {
+    color: #008AD2;
+}
+
+.fa-info-circle {
+    color: #B9B9BB;
+    cursor: pointer;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+.reset {
+    margin-top: 40px;
+}
+
+.left10 {
+    margin-left: 10px;
+}
+
+.message-holder {
+    margin-top: .75rem;
+}
+
+select option {
+    border-right: 2px solid #c0c0c0;
+}
+
+select optgroup {
+    border-right: 2px solid #c0c0c0;
+}
+
+select optgroup option {
+        border-right: none;
+    }
+
+select optgroup, select option {
+    padding-left: 10px;
+}
+
+optgroup {
+    color: #333333;
+    font-weight: bold;
+}
+
+option {
+    color: #333333;
+}
+
+.tabs.overlap li.selected {
+    z-index: 1;
+}
+
+.tooltip {
+    z-index: 2000;
+    background: #188DAE;
+}
+
+.margin-10 {
+    margin-top: 10px;
+}
+
+.custom-size {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.therapy-custom-size {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/** css for scorebar panel **/
+.data {
+    font-family: "Roboto",Helvetica Neue,"Helvetica",Arial,sans-serif;
+}
+
+.scorebar-count {
+    display: inline-block;
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.scorebar-count-suffix {
+    display: inline-block;
+}
+
+.scorebar-score-container {
+    display: inline-block;
+}
+
+.suffix-blocked-width span {
+    display: block;
+}
+
+.data-display .data sub {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.custom-width .adjust-width-auto {
+    width: 50%;
+}
+
+.data .top {
+    font-size: 16px;
+}
+
+.scorebar_label {
+    font-size: 10px;
+    opacity: .9;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.scorebar-score-unit {
+    font-size: 10px;
+    opacity: .9;
+    font-weight: 600;
+}
+
+.scorebar_txt {
+    font-size: 10px;
+    opacity: .9;
+}
+
+.scorebar-panel-right {
+    background: url("../img/score_divider.png") 11px 6px no-repeat;
+    padding-left: 30px;
+    background-size: 1px auto;
+}
+
+.data-display .data {
+    background-color: #008080;
+    color: #FFF;
+    border-top: 10px solid #012557;
+    padding: 10px 0 15px 0;
+}
+
+.box {
+   box-sizing: border-box;
+   background-color: #008081;
+   width: 80px;
+   font-size: 12px;
+   padding: 2px 0 0 9px;
+   top: 0;
+   position: relative;
+   color: #fff;
+   line-height: 28px;
+}
+
+.data-display.stuck {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #008080;
+}
+
+.data-display.shrink {
+    background-color: #006666;
+    font-size: .8rem;
+}
+
+.data-display.shrink .data {
+        padding: .25rem;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+.data-display.shrink .data .top {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+.data-display.shrink .data .scorebar-count {
+            font-size: 26px;
+        }
+
+.data-display.shrink .data .scorebar_label {
+            font-size: 8px;
+        }
+
+.data-display .data .scorebar_label sub {
+    font-size: 8px;
+}
+
+.data-display.shrink .data .scorebar_txt {
+    font-size: 8px;
+}
+
+.data-display.shrink .data .scorebar-panel-left {
+    min-height: 3.8rem;
+}
+
+.data-display.shrink .data .scorebar-panel-right {
+    background-position: 11px 3px;
+}
+
+.data-display .data {
+    -moz-transition: padding .5s ease;
+    -webkit-transition: padding .5s ease;
+    -o-transition: padding .5s ease;
+    transition: padding .5s ease;
+}
+
+.scorebar-panel-left {
+    min-height: 4rem;
+}
+
+.therapyreview .scorebar-panel-left {
+    min-height: 3rem;
+}
+
+.scorebar-panel-left-inner {
+    position: absolute;
+    right: 10px;
+}
+
+.scorebar-panel-left .scorebar-panel .scorebar-count-suffix, .scorebar-panel-right .scorebar-panel .scorebar-count-suffix {
+    margin-left: -3px;
+}
+
+.alert-box .close {
+    opacity: 1;
+    color: #fff;
+}
+
+.alert-box .close:focus, .alert-box .close:hover {
+        opacity: 1;
+    }
+
+.alert-box {
+    padding: 1rem 2.71429rem 1rem 1rem;
+}
+
+.alert-box.alert.caution-box-style {
+    background-color: #FFF7EC;
+    border: 1px solid #FFCA86;
+    color: #333;
+    font-size: 14px;
+}
+
+.alert-box.caution-box-style .fa-info-circle {
+    color: #5c5c5c;
+}
+
+.alert-box.caution-box-style .close {
+    color: #333;
+}
+
+.question.custom_info .required-holder{background-color: transparent;display: inline-block;color: #333; }
+.custom_info .fa-holder-dynamic:before, .custom_info.fa:before, .custom_info > .fa-holder:before{content: "\f05a";color: #333;}
+.message-holder > .custom_info
+{
+    background-color: #FFF7EC;
+    border: 1px solid #FFCA86;
+    color: #333;
+    font-weight: 500;
+}
+
+.custom_info .message-holder > .custom_info{display: block;}
+.custom_info .input-holder select,.custom_info .input-holder textarea,.custom_info .input-holder input{border-color: #ff960d;}
+
+
+.text-contraindicated-color{color: red;}
+
+.tap-to-close{color: #fff;}
+
+@media only screen and (min-width: 768px){
+
+   .page.footer .tabs.primary.reverse,
+   .page.footer .tabs.primary.reverse li {
+       background-color: transparent;
+       border: 0;
+   }
+
+   .page.footer .tabs.primary.reverse li {
+       float: none;
+       display: inline-block;
+   }
+
+   .page.footer .tabs.primary.reverse {
+       float: none;
+       display: inline-block;
+   }
+
+   .page.footer {
+       text-align: center;
+   }
+
+   .page.footer .tabs.primary.reverse a, .page.footer .tabs.primary.reverse li a {
+       color: #fff;
+   }
+
+   .page.footer .tabs.primary.reverse a:hover,
+   .page.footer .tabs.primary.reverse li a:hover {
+       text-decoration: underline;
+   }
+
+   .page.footer .tabs.primary.reverse a:after, .page.footer .tabs.primary.reverse li a:after {
+    top: auto;
+    bottom: -1px;
+    border-width: 0px 8px;
+    border-bottom: 10px solid #fff;
+   }
+
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 280px) {
+    .header .tabs.primary li {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 280px) {
+    .page.footer .tabs.primary li {
+        width: 33.33%;
+    }
+}
+
+
+
+@media only screen
+and (min-device-width : 393px)
+and (orientation : portrait) {
+    .switch.select label {
+        left: 15px;
+    }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+   .secondaryMedAdTop .switch.select label {
+      background-color: #008080;
+      position: absolute;
+      left: 17px;
+   }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+   /*.therapy-tab{min-height: 685px !important;}*/
+   }
+
+
+@media only screen and (max-width: 420px) {
+  .swappable .short-text {
+    display: inline; }
+  .swappable .long-text {
+    display: none; }
+   .linespacing{line-height: 20px;padding-bottom: 5px;}
+
+   }
+
+@media only screen and (max-width: 767px){
+.page.footer .logo img {
+      display: block;
+      width: auto;
+}}
+
+
+
+@media only screen and (max-width: 768px) {
+    .switch label:after {
+         top: 0.20rem;
+    }
+    .tabs.primary li:last-child{
+        margin-right: -1px;
+    }
+   table td{line-height: 18px;}
+}
+
+.reviewTherapyError {
+    position: absolute;
+    top: 90px;
+    right: 15px;
+    z-index: 9999;
+}
+@media only screen and (min-width: 480px) {
+    .scorebar-count {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .scorebar_label {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .data .top {
+        font-size: 27px;
+    }
+
+    .scorebar_label {
+        font-size: 10px;
+        opacity: .9;
+        font-weight: 600;
+    }
+
+    .scorebar-score-unit {
+        font-size: 13px;
+        opacity: .7;
+        font-weight: 600;
+    }
+
+    .scorebar-count {
+        font-size: 55px;
+    }
+
+    .scorebar_txt {
+        font-size: 14px;
+        opacity: .7;
+    }
+
+    .data-display.shrink .data .top {
+        font-size: 22px;
+        line-height: 18px;
+    }
+
+    .data-display.shrink .data .scorebar-count {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .data-display.shrink .data .scorebar_label {
+        font-size: 10px;
+    }
+
+    .data-display .data .scorebar_label sub {
+        font-size: 10px;
+    }
+
+    .data-display.shrink .data .scorebar_txt {
+        font-size: 10px;
+    }
+
+    .data-display.shrink .data .scorebar-panel-right {
+        background-position: 11px 3px;
+    }
+
+    .data-display.shrink .data .scorebar-panel-left {
+        min-height: 3.8rem;
+    }
+
+    .data-display .data {
+        background-color: #008080;
+        color: #fff;
+        padding-top: 5px;
+        border-top: 10px solid #012557;
+    }
+
+    .data-display.shrink .data {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .box {
+      box-sizing: border-box;
+      background-color: #008081;
+      width: 85px;
+      padding-top: 3px;
+      font-size: 14px;
+      padding-left: 9px;
+      top: 7px;
+      position: relative;
+      color: #fff;
+      line-height: 32px;
+    }
+
+    .tabs.primary li a {
+        padding: 1.40em 0.75em;
+        color: #333;
+    }
+
+    .tooltip.tip-top > .nub {
+        border-color: #188DAE transparent transparent;
+    }
+
+    .scorebar-panel-left {
+        min-height: 4rem;
+    }
+
+    .data-display.therapyreview .data {
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .scorebar-panel-right {
+        background-position: 11px 12px;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+    }
+
+    .data .top {
+        font-size: 32px;
+    }
+
+    .scorebar_label {
+        font-size: 14px;
+        opacity: .9;
+        font-weight: 600;
+    }
+
+    .scorebar-score-unit {
+        font-size: 13px;
+        opacity: .7;
+        font-weight: 600;
+    }
+
+    .scorebar-count {
+        font-size: 65px;
+        line-height: 55px;
+    }
+
+    .scorebar_txt {
+        font-size: 14px;
+        opacity: .7;
+    }
+
+    .data-display.shrink .data .top {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .data-display.shrink .data .scorebar-count {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .data-display.shrink .data .scorebar_label {
+        font-size: 11px;
+    }
+
+    .data-display .data .scorebar_label sub {
+        font-size: 11px;
+    }
+
+    .data-display.shrink .data .scorebar_label sub {
+        font-size: 10px;
+    }
+
+    .data-display.shrink .data .scorebar_txt {
+        font-size: 11px;
+    }
+
+    .data-display.shrink .data .scorebar-panel-right {
+        background-position: 11px 3px;
+    }
+
+    .data-display.shrink .data .scorebar-score-unit {
+        font-size: 11px;
+    }
+
+    .data-display .data {
+        background-color: #008080;
+        color: #fff;
+        padding-top: 24px;
+        border-top: 10px solid #012557;
+    }
+
+    .data-display.therapyreview .data {
+        padding-top: 20px;
+    }
+
+    .box {
+      box-sizing: border-box;
+      background-color: #008081;
+      width: 96px;
+      padding-top: 3px;
+      font-size: 16px;
+      padding-left: 9px;
+      top: 7px;
+      position: relative;
+      color: #fff;
+      line-height: 32px;
+    }
+
+    .scorebar-panel-left {
+        min-height: 8.5rem;
+    }
+
+    .therapyreview .scorebar-panel-left {
+        min-height: 5rem;
+    }
+
+    .header.page .logo img {
+        height: 58px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .tooltip.tip-top > .nub {
+        border-color: #188DAE transparent transparent;
+        top: auto;
+        bottom: -10px;
+    }
+}
+
+/*Custom Css V2.3*/
+span.nub {display: none !important;}
+.button.disabled, .button[disabled] {
+    pointer-events: none;
+}
+
+.switch-value.round{cursor: default;}
+
+
+/*Custom CSS v3.0*/
+.colored-paper {
+    color: white;
+    margin: 0;
+    background-image: url('../img/construction-paper.png');
+    background-color: #008080;
+    padding: 0.5rem;
+}
+.advice-card .advice-card-body {
+    padding: 0.5rem;
+}
+.advice-card .advice-card-body * {
+    margin: 0;
+    padding: 0;
+}
+.advice-card .advice-card-body ul {
+    margin-left: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+    .colored-paper,
+    .advice-card .advice-card-body {
+        padding: 0.75rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .colored-paper,
+    .advice-card .advice-card-body {
+        padding: 1rem;
+    }
+}
+.circle-bullet-list {
+    list-style-type: circle;
+}
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.page.with-group-sections .page-wrapper > .group-section.equal-padding-card select {
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 767px) {
+    .page.with-group-sections .page-wrapper > .group-section.equal-padding-card {
+        padding: 0.75rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .page.with-group-sections .page-wrapper > .group-section.equal-padding-card {
+        padding: 1.5rem;
+    }
+}
+
+
+.recommendationTable .CORI, .recommendationTable .CORIIa, .recommendationTable .CORIIb, .recommendationTable .LOE-A, .recommendationTable .LOE-B, .recommendationTable .LOE-C {
+  text-align: center;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.recommendationTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.47em;
+}
+.recommendationTable td table td {
+  border-bottom: 1px solid #cccccc;
+  padding: .5em;
+}
+.recommendationTable .recommendationLevel1 {
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #b3b3b3;
+  font-size: 1.21429em;
+  line-height: 1.15294em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+.recommendationTable .recommendationLevel2 {
+  padding-left: 3%;
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  background-color: #e2f4ff;
+  border-bottom: 1px solid #cccccc;
+}
+.recommendationTable .recommendationLevel3 {
+  padding-left: 6%;
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+.recommendationTable .recommendationLevel4 {
+  padding-left: 9%;
+  font-size: 0.85714em;
+  line-height: 1.63333em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.recommendationTable .CORI {
+  background-color: #5bc889;
+  color: #333333;
+}
+.recommendationTable .CORIIa {
+  background-color: #f7e352;
+  color: #333333;
+}
+.recommendationTable .CORIIb {
+  background-color: #e9aa5b;
+  color: #333333;
+}
+.recommendationTable .LOE-A {
+  background-color: #17589d;
+  color: #333333;
+}
+.recommendationTable .LOE-B {
+  background-color: #4781be;
+  color: #333333;
+}
+.recommendationTable .LOE-C {
+  background-color: #75a1ce;
+  color: #333333;
+}
+.recommendationTable .No-Benifit {
+    background-color: 	#c34422;
+    color: #333333;
+    text-align: center;
+    font-weight: 700;
+}
+.recommendationTable .Harm {
+    background-color: 	#c32231;
+    color: #333333;
+    text-align: center;
+    font-weight: 700;
+}
+.recommendationTable thead th {
+  padding: 5px;
+  border-bottom-color: #114d74;
+}
+.recommendationTable thead small {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.85714em;
+  line-height: 1.63333em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+.recommendationTable thead strong {
+  display: block;
+  margin: 0 auto;
+  font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #114d74;
+}
+.recommendationTable thead strong.left {
+  text-align: left;
+  font-size: 1.3em;
+  margin: 0.2em 0.2em 0.2em 5PX;
+}
+.recommendationTable small.left {
+  text-align: left;
+  font-size: 11px;
+  margin-left: 5PX;
+}
+.margin-top-p {
+    margin-top: 1.42857rem;
+}
+.hidden-overflow {
+    overflow: hidden;
+}
