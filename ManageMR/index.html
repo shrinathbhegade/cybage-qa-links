@@ -31,14 +31,14 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ7Q8HG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <div data-bind="page: {id:'content', role: 'start'}" class="page with-group-sections">
 
     <div class="data-display">
         <!-- Start for header section -->
         <header class="header page">
             <a href="#!/content/calculator/" class="logo">
-                    <img src="Assets/img/MR_logo.png" alt="MR Logo">
+                    <img style="cursor: pointer;" src="Assets/img/MR_logo.png" alt="MR Logo">
             </a>
             <ul class="nav tabs tabs-primary">
                 <li id="calculator-Tab" data-bind="click:$root.Form().tabNavigation.bind('event', 'calculator')" class="selected">
@@ -124,7 +124,7 @@
 <div class='flex-container'>        <div data-guid="5ebe95d7-b6a7-43a4-a209-3857c7608b5d" class="question column large-4 medium-6 small-12  ">
             <div class="switch-input-space">
                 <div class="switch radio small">
-                    <input autocomplete="off" class="switch-input" type="radio" id="1a" data-guid="5ebe95d7-b6a7-43a4-a209-3857c7608b5d" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Mild MR" data-disclaimer="" name="1" data-ga="" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <input autocomplete="off" class="switch-input dummy" type="radio" id="1a" data-guid="5ebe95d7-b6a7-43a4-a209-3857c7608b5d" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Mild MR" data-disclaimer="" name="1" data-ga="" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
                     <label class="switch-paddle" for="1a">
                         <span class="switch-active" aria-hidden="true">
                         </span>
@@ -1641,7 +1641,23 @@ Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord a
             </a>
             <div class="message-container">
                 <div class="message-holder">
-                    <P><B>Terms of Service</B></P><P>Click the Terms tab at the bottom of the app before using ManageMR (&ldquo;the Product&rdquo;) to read the full Terms of Service and License Agreement (the &ldquo;Agreement&rdquo;) which governs the use of the Product. The Agreement includes, among other detailed terms and conditions, certain disclaimers of warranties by the American College of Cardiology Foundation (&ldquo;ACCF&rdquo;) and requires the user to agree to release ACCF from any and all liability arising in connection with your use of the Product. By using the Product, you accept and agree to be bound by all of the terms and conditions set forth in the Agreement, including such disclaimers and releases. If you do not accept the terms and conditions of the Agreement, you may not proceed to use the Product. The Agreement is subject to change from time to time, and your continued use of the Product constitutes your acceptance of and agreement to be bound by any revised terms of the Agreement.</P><P></P><P><B>About ManageMR:</B></P><P>Use this app to help verify MR severity and etiology, inform intervention decisions and need for referral based on severity, etiology, and other parameters. </P><P></P><P><B>HOW to use this app:</B></P><P>1. Enter your patient&rsquo;s profile on this screen by answering the questions below. </P><P>2. Review full advice based on that profile on the Advice screen.  </P><P></P><P><B>WHEN to use this app:</B> After  thorough examination of a patient with chronic MR, assessing a patient's clinical presentation including symptoms, physical exam, exercise tolerance, and goals of care. In addition, ECHO findings should be reported using standardized nomenclature to further guide the surgical/interventional decision-making supported by this app. </P><P><A HREF='http://www.acc.org/tools-and-practice-support/clinical-toolkits/valvular-heart-disease-initiatives-tools' TARGET='_blank'>Download a tool to help with standardized ECHO Reporting here.</A></P><P></P>
+                    <P>
+                        <B>Terms of Service</B>
+                    </P>
+                    <P>
+                        Click the Terms tab at the bottom of the app before using ManageMR (&ldquo;the Product&rdquo;) to read the full Terms of Service and License Agreement (the &ldquo;Agreement&rdquo;) which governs the use of the Product. The Agreement includes, among other detailed terms and conditions, certain disclaimers of warranties by the American College of Cardiology Foundation (&ldquo;ACCF&rdquo;) and requires the user to agree to release ACCF from any and all liability arising in connection with your use of the Product. By using the Product, you accept and agree to be bound by all of the terms and conditions set forth in the Agreement, including such disclaimers and releases. If you do not accept the terms and conditions of the Agreement, you may not proceed to use the Product. The Agreement is subject to change from time to time, and your continued use of the Product constitutes your acceptance of and agreement to be bound by any revised terms of the Agreement.
+
+                    </P>
+                    <P></P>
+                    <P><B>About ManageMR:</B></P>
+                    <P>Use this app to help verify MR severity and etiology, inform intervention decisions and need for referral based on severity, etiology, and other parameters. </P>
+                    <P></P>
+                    <P><B>HOW to use this app:</B></P>
+                    <P>1. Enter your patient&rsquo;s profile on this screen by answering the questions below. </P>
+                    <P>2. Review full advice based on that profile on the Advice screen.  </P>
+                    <P></P>
+                    <P><B>WHEN to use this app:</B> After  thorough examination of a patient with chronic MR, assessing a patient's clinical presentation including symptoms, physical exam, exercise tolerance, and goals of care. In addition, ECHO findings should be reported using standardized nomenclature to further guide the surgical/interventional decision-making supported by this app. </P>
+                    <P><A HREF='https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Quality-and-Clinical-Toolkits/Valvular-Heart-Disease/ECHO-checklist.pdf' TARGET='_blank'>Download a tool to help with standardized ECHO Reporting here.</A></P><P></P>
                     <p class="text-right bold not-show-again">
                         <a onclick="donotshowClicked('e312aa02-16ff-458b-af3e-6b622875647b')">Do not show me this again</a>
                     </p>
@@ -2011,10 +2027,10 @@ Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord a
 </div>
 <div class="row advice-action invisible">
     <div class="large-12 medium-12 small-12">
-        <a href="#!/content/calculator/" id="btnCalRiskNav" class="button left">
+        <a href="#!/content/calculator/" id="btnCalRiskNav" class="button left btn-ga4">
             <i class="fa fa-arrow-circle-left fa-6"></i>&nbsp;Evaluate
         </a>
-        <a id="Email" class="button right" onclick="sendEmail();">Email Advice&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
+        <a id="Email" class="button right btn-ga4" onclick="sendEmail();">Email Advice&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
     </div>
 </div> 
 </div>
@@ -2036,14 +2052,14 @@ Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord a
                 <div class="row">
                         <div class="page-wrapper">
                             <div class="row columns small-12">
-                                <div class="holder decision-tree-assessing-severity-panzoom" style="position: relative">
+                                <div  class="holder decision-tree-assessing-severity-panzoom" style="position: relative">
                                     <div class="button-group small panzoom-buttons">
-                                        <button class="zoom-in button icon-only  secondary" formnovalidate> <i class="fa fa-plus-circle"></i> <span class="text">Zoom In</span></button>
-                                        <button class="zoom-out button icon-only  secondary" formnovalidate><i class="fa fa-minus-circle"></i> <span class="text">Zoom Out</span></button>
-                                        <button class="reset ui-btn button icon-only  secondary" formnovalidate><i class="fa fa-refresh"></i> <span class="text">Reset</span></button>
+                                        <button class="zoom-in-dt button icon-only  secondary" formnovalidate> <i class="fa fa-plus-circle"></i> <span class="text">Zoom In</span></button>
+                                        <button class="zoom-out-dt button icon-only  secondary" formnovalidate><i class="fa fa-minus-circle"></i> <span class="text">Zoom Out</span></button>
+                                        <button class="reset-dt ui-btn button icon-only  secondary" formnovalidate><i class="fa fa-refresh"></i> <span class="text">Reset</span></button>
                                     </div>
                                     <div class="parent panzoom" style="margin: 0;">
-                                        <div class="panzoom-element"> <img src="Assets/img/decision-tree-assessing-severity.jpg" alt="Figure&nbsp;12"> </div>
+                                        <div id="dec-tree" class="panzoom-element"> <img src="Assets/img/decision-tree-assessing-severity.jpg" alt="Figure&nbsp;12"> </div>
                                     </div>
                                 </div>
                                 &nbsp;Additional Considerations:
@@ -2447,12 +2463,12 @@ Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord a
                             <div class="row columns small-12">
                                 <div class="holder eligibility-transcatheter-panzoom" style="position: relative">
                                     <div class="button-group small panzoom-buttons">
-                                        <button class="zoom-in button icon-only  secondary" formnovalidate> <i class="fa fa-plus-circle"></i> <span class="text">Zoom In</span></button>
-                                        <button class="zoom-out button icon-only  secondary" formnovalidate><i class="fa fa-minus-circle"></i> <span class="text">Zoom Out</span></button>
-                                        <button class="reset ui-btn button icon-only  secondary" formnovalidate><i class="fa fa-refresh"></i> <span class="text">Reset</span></button>
+                                        <button class="zoom-in-et button icon-only  secondary" formnovalidate> <i class="fa fa-plus-circle"></i> <span class="text">Zoom In</span></button>
+                                        <button class="zoom-out-et button icon-only  secondary" formnovalidate><i class="fa fa-minus-circle"></i> <span class="text">Zoom Out</span></button>
+                                        <button class="reset-et ui-btn button icon-only  secondary" formnovalidate><i class="fa fa-refresh"></i> <span class="text">Reset</span></button>
                                     </div>
                                     <div class="parent panzoom" style="margin: 0;">
-                                        <div class="panzoom-element"> <img alt="Figure&nbsp;7" src="Assets/img/eligibility-transcatheter-e2e.svg"> </div>
+                                        <div id="eleg-transc" class="panzoom-element"> <img alt="Figure&nbsp;7" src="Assets/img/eligibility-transcatheter-e2e.svg"> </div>
                                     </div>
                                 </div>
                                 <div class="bold">
@@ -2668,7 +2684,7 @@ Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord a
                 <h3 class="highlighted">When was this App last updated?</h3>
             </div>
             <div class="medium-12 small-12 columns">
-                <p>March 2020</p>
+                <p>December 2023</p>
             </div>
         </div>
         <div class="row">

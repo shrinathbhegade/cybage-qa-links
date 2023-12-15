@@ -5,6 +5,24 @@ This file contains the functional code for web and mobile application.
 Licensed under the Cybage license.
 
 */
+
+// var panzoom = function (currentPanzoomClass) {
+//     var $windowheight = $(window).height() - 50;
+//     var $scaleZoom = $('.parent.panzoom').width() / $('.panzoom-element img').width();
+//     var resultZoom = "'scale(" + $scaleZoom + ")'";
+//     var $panHolder = $(currentPanzoomClass + " .panzoom-element");
+//     var $panButtons = $(currentPanzoomClass + " .panzoom-buttons");
+//     $(currentPanzoomClass + ".parent.panzoom").height($windowheight);
+//     $panHolder.panzoom({
+//         $zoomIn: $panButtons.find(".zoom-in")
+//         , $zoomOut: $panButtons.find(".zoom-out")
+//         , $reset: $panButtons.find(".reset")
+//         , contain: 'invert'
+//     , });
+// };
+
+
+
 // loading mobile app files if application.type is mobile
 var tabchange = function (data) {
     var hash = location.hash;

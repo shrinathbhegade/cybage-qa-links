@@ -488,29 +488,39 @@ function createShortURL() {
     });
 }
 
-var panzoom = function (currentPanzoomClass) {
-    var $windowheight = $(window).height() - 50;
-    var $scaleZoom = $('.parent.panzoom').width() / $('.panzoom-element img').width();
-    var resultZoom = "'scale(" + $scaleZoom + ")'";
-    var $panHolder = $(currentPanzoomClass + " .panzoom-element");
-    var $panButtons = $(currentPanzoomClass + " .panzoom-buttons");
-    $(currentPanzoomClass + ".parent.panzoom").height($windowheight);
-    Panzoom($panHolder,{
-        zoomIn: $panButtons.find(".zoom-in")
-        , zoomOut: $panButtons.find(".zoom-out")
-        , reset: $panButtons.find(".reset")
-        , contain: 'invert'
-    , });
-};
-
 function appLoad() {
     if (!isQueryStringOn) {
         $('.page-wrapper').removeClass('invisible');
         setHeight();
     }
     //Add all panzooms
-    panzoom('.decision-tree-assessing-severity-panzoom');
-    panzoom('.eligibility-transcatheter-panzoom');
+    //panzoom('.decision-tree-assessing-severity-panzoom');
+    //panzoom('.eligibility-transcatheter-panzoom');
+    var element_dt = document.querySelector('#dec-tree');
+    let parent = element_dt.parentElement;
+    let panzoom = Panzoom(element_dt, { contain: 'inside' });
+    parent.addEventListener('wheel', panzoom.zoomWithWheel);
+    // This demo binds to shift + wheel
+    parent.addEventListener('wheel', function (event) {
+        if (!event.shiftKey) return
+        panzoom.zoomWithWheel(event)
+    });
+    $(".zoom-in-dt").on('click', panzoom.zoomIn);
+    $(".zoom-out-dt").on('click', panzoom.zoomOut);
+    $(".reset-dt").on('click', panzoom.reset);
+
+    var element_et = document.querySelector('#eleg-transc');
+    parent = element_et.parentElement;
+    panzoom = Panzoom(element_et, { contain: 'inside' });
+    parent.addEventListener('wheel', panzoom.zoomWithWheel);
+    // This demo binds to shift + wheel
+    parent.addEventListener('wheel', function (event) {
+        if (!event.shiftKey) return
+        panzoom.zoomWithWheel(event)
+    });
+    $(".zoom-in-et").on('click', panzoom.zoomIn);
+    $(".zoom-out-et").on('click', panzoom.zoomOut);
+    $(".reset-et").on('click', panzoom.reset);
 }
 
 function getQueryString(field, url) {

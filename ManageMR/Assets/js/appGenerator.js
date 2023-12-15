@@ -731,7 +731,7 @@ function resetAll() {
     $('.next-btn').removeClass('hide');
     $("#questionset div.page-wrapper").appendTo('#template');
     $("#questionset div.page-message").appendTo('#template');
-    $("input:radio, input:checkbox").attr('checked', false);
+    $("input:radio, input:checkbox").prop('checked', false);
     $('#template .next-btn').css('display', '');
     $('#template .question').removeClass('warning');
     $('#template .question').css('height', '');
