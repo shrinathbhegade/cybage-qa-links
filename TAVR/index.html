@@ -17,14 +17,13 @@ Licensed under the Cybage license.
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Security-Policy" content="default-src *; img-src 'self' data:; style-src 'self' 'unsafe-inline';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
         <title>TAVR In-Hospital Mortality Risk Calculator</title>
     <!-- build:css -->
 		  <link href="Assets/css/normalize.min.css" rel="stylesheet"> 	
 		  <link href="Assets/css/foundation.min.css" rel="stylesheet">
 		  <link href="Assets/css/style-4F4190.css" rel="stylesheet"> 		  
-		  <link href="Assets/css/custom_style.css" rel="stylesheet"> 		  
+		  <link href="Assets/css/custom_style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico"> 		  
 		<!-- endbuild -->
         <script type="text/javascript" src="Assets/js/modernizr.js"></script>
 		</head>	  
@@ -38,9 +37,9 @@ Licensed under the Cybage license.
         <!-- Start for header section -->
         <div class="app-nav">
             <header class="header page clearfix">
-               <a href="javascript:void(0)" class="logo">
-                <img src="Assets/img/logo.png" alt="TAVR In-Hospital Mortality Risk Calculator"  height="56px"> 
-               </a>
+               <a href="#!/content/evaluate/" class="logo">
+                <img style="cursor: pointer !important;" src="Assets/img/logo.png" alt="TAVR In-Hospital Mortality Risk Calculator"  height="56px"> 
+               </a> 
                <ul class="nav tabs primary condensable small" role="tablist">
                   <li id="evaluateTab" class="tab-title selected"  role="presentation">
                      <a href="#!/content/evaluate/" role="tab" tabindex="0" aria-selected="true" aria-controls="evaluate">Calculate  Risk</a>
