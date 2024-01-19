@@ -235,6 +235,17 @@ function formObject() {
             self.isWarningOn(false);
             appStorage['isWarningOn'] = false;
     };
+    self.isRiskCalculated = ko.computed(() => {
+        return typeof (self.age()) !== 'undefined' && self.age() !== '' &&
+            typeof (self.sex()) !== 'undefined' && self.sex() !== '' &&
+            typeof (self.race()) !== 'undefined' && self.race() !== '' &&
+            typeof (self.creatinine()) !== 'undefined' && self.creatinine() !== '' &&
+            typeof (self.dialysisValue()) !== 'undefined' && self.dialysisValue() !== '' &&
+            typeof (self.proaccsiteValue()) !== 'undefined' && self.proaccsiteValue() !== '' &&
+            typeof (self.nyhaValue()) !== 'undefined' && self.nyhaValue() !== '' && self.scldValue() !== '' &&
+            typeof (self.scldValue()) !== 'undefined' && self.scldValue() !== '' && self.scldValue() !== '' &&
+            typeof (self.acuityStatusText()) !== 'undefined' && self.acuityStatusText() !== '';
+    })
     
 /**
  * this function is used to change info button text of procedure status field
@@ -508,7 +519,7 @@ function formObject() {
 /**
  * this function is used to Validate and focus all fields 
 */   
-    self.fieldValidation = function(){
+    self.fieldValidation = function () {
         if(typeof(self.age()) === 'undefined' || self.age() === ''){
             self.ageWarning(true);
             self.elementFocus('age');

@@ -495,11 +495,11 @@ Licensed under the Cybage license.
                         </div>
                         <div class="row">
                            <div class="large-12 medium-12 small-12">
-                              <a href="" class="button right predictedrisk-btn hide-for-small-only predictrisk-ce" data-bind="click:$root.Form().fieldValidation.bind()">
+                              <a href="" class="button right predictedrisk-btn hide-for-small-only predictrisk-ce" data-bind="event:{click:$root.Form().fieldValidation.bind()}, css :{disabled:!$root.Form().isRiskCalculated()}">
                                 Predicted Risk &nbsp;&nbsp;
                                 <i class="fa fa-arrow-circle-right fa-6"></i>
                               </a>
-                              <a href="" class="button small right predictedrisk-btn show-for-small-only predictrisk-ce" data-bind="click:$root.Form().fieldValidation.bind()">
+                              <a href="" class="button small right predictedrisk-btn show-for-small-only predictrisk-ce" data-bind="event:{click:$root.Form().fieldValidation.bind()}, css :{disabled:!$root.Form().isRiskCalculated()} ">
                                 Predicted Risk &nbsp;&nbsp;
                                 <i class="fa fa-arrow-circle-right fa-6"></i>
                                </a>
