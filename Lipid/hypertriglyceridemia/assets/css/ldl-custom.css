@@ -1,0 +1,225 @@
+.small.nav-list li.disc-style.bullet-one {
+  list-style: none;
+  border: none;
+  font-weight: 400;
+}
+
+.small.nav-list li.disc-style.bullet-three {
+  list-style: square;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.small.nav-list li.disc-style {
+  background: white;
+}
+
+.box {
+  text-align: center;
+  background-color: #9a1267;
+  width: 250px;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+.box p {
+  font-weight: 600;
+  color: #fff;
+}
+
+.custom-list-tab {
+  line-height: 1.5rem;
+}
+
+.pipe_symbol {
+  display: inline-block;
+}
+
+
+.race--group-button.button-group .button {
+  width: 25%;
+  white-space: nowrap;
+}
+
+.race--group-button.button-group .button:first-child {
+  width: 49%;
+}
+
+#lipid_panel .hint {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.alert-box .close {
+  font-size: 1.57143rem;
+  padding: 9px 6px 4px;
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0.18571rem;
+  color: #333;
+  opacity: 1;
+  background: inherit;
+  margin-top: 0;
+}
+
+.alert-box .not-show-again a {
+  color: #198dae;
+  font-weight: 700;
+  position: absolute;
+  right: 0.18571rem;
+  bottom: 0;
+
+}
+
+.alert-box .not-show-again a:hover,
+a:focus {
+  color: #167996;
+}
+.mr-top {
+  margin-top: 10px;
+}
+.table.checklist-therapy tfoot{
+  background: white;
+  border: 0;
+  word-break: break-word;
+}
+ .table.checklist-therapy tfoot tr{
+  background-color: white;
+  border: 0;
+}
+
+.table.checklist-therapy tfoot tr td {
+  font-size: 0.875rem !important;
+  background-color: white;
+  border: 0;
+}
+.move-right{
+  margin-left:18px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .race--group-button.button-group .button {
+    width: 100% !important;
+    white-space: nowrap;
+    border-bottom: 1px #fff solid;
+  }
+
+  .clearfix {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .table.checklist-therapy tfoot tr td {
+    font-size: 0.8rem !important;
+      }
+  .i .fa-holder {
+    margin-right: 8px;
+  }
+
+  table {
+    border: 0;
+  }
+  
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+
+    font-weight: bold;
+
+  }
+
+  .table tr+tr td {
+    border-top: none;
+  }
+
+  tbody {
+    border: none;
+  }
+
+  .table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  #desk_content {
+    display: none;
+
+  }
+
+  div.pipe_symbol {
+    display: block;
+  }
+
+  .race--group-button.button-group .button {
+    width: 100% !important;
+    white-space: nowrap;
+    border-bottom: 1px #fff solid;
+  }
+
+  #optimize ul {
+    font-size: 0.90em;
+  }
+
+  #optimize p {
+    font-size: 0.90em;
+  }
+
+  .mr-left {
+    margin-left: 10px;
+  }
+
+  .mr-left-20 {
+    margin-left: 20px;
+  }
+
+}

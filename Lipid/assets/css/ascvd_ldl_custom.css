@@ -1,0 +1,42 @@
+.right{
+    float:right;
+}
+.hyperT_keys .table td{
+    border-right: 1px solid grey;
+  }
+.reset {
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+.reset .switch-value{
+    padding-left:25px;
+}
+.reset-btn{
+    margin-top: 2px;
+    margin-right:0px;
+}
+.help_me_container{
+    position: relative;
+}
+.help_me_button{
+    position:absolute;
+    top:0;
+    right:0;
+}
+.accordion h4{
+    cursor:pointer;
+}
+.text_align{
+  margin-left: 28px;
+}
+.modal_css
+{
+    padding:0;
+    overflow:hidden;
+    text-decoration:none;
+    outline:none;
+    border:none;
+}
+.off-canvas-wrapper{
+    overflow: hidden;
+}

@@ -1,0 +1,161 @@
+
+.small.nav-list li.disc-style.bullet-one{
+  list-style: none;
+  border:none;
+    font-weight: 400;
+}
+.small.nav-list li.disc-style.bullet-three{
+  list-style: square;
+  border:none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.small.nav-list li.disc-style{
+  background: white;
+}
+
+.advice .no-bullet{
+  margin: 5px;
+  padding: 5px;
+}
+
+@media screen and (min-width: 40em) {
+.reveal {
+width: 905px;
+max-width: 75rem;
+}
+}
+.group2c-text, .group2a-text, .group2b-text {
+position: relative;
+text-transform: uppercase;		
+}
+/* <!-- .group2c-text:after, group2a-text:after,  --> */
+.group2b-text:after, .group2cas-text:after {
+content: ' ';
+display: block;
+width: 1.1em;
+height: 1.1em;
+border-radius: 1em;
+position: absolute;
+left: 0.3em;
+top: 0.25em;
+transition: left 0.15s, margin-left 0.15s;
+color: #333;			
+}
+/* <!-- .group2c-text:before, .group2a-text:before, --> */
+.group2b-text:before, .group2cas-text:before {
+content: 'No';
+right: -35px;
+position: absolute;
+color: #333;
+font-size: 14px;			
+}	
+.switch-group2b input:checked ~ .group2b-text:before {
+content: 'Yes';
+right: -35px;
+position: absolute;
+color: #333;
+font-size: 14px;		
+}	
+.switch-group2cas input:checked ~ .group2cas-text:before {
+content: 'Yes';
+right: -35px;
+position: absolute;
+color: #333;
+font-size: 14px;		
+}
+.button-group.selectable .button.selectedAge, .button-group.selectable .button.selectedAge:hover, .button-group.selectable .button.selectedAge:focus {
+background-color: #85195d;
+color: #fff;
+}
+.toggle-check-input {
+width: 1px;
+height: 1px;
+position: absolute;
+}
+
+.toggle-check-text {
+display: inline-block;
+position: relative;
+text-transform: uppercase;
+background: #CCC;
+padding: 0.03em 0.5em 0.03em 2em;
+border-radius: 1em;
+min-width: 2em;
+color: #FFF;
+cursor: pointer;
+transition: background-color 0.15s;
+}
+
+.toggle-check-text:after {
+content: ' ';
+display: block;
+background: #FFF;
+width: 1.1em;
+height: 1.1em;
+border-radius: 1em;
+position: absolute;
+left: 0.3em;
+top: 0.25em;
+transition: left 0.15s, margin-left 0.15s;
+}
+
+.toggle-check-input:checked ~ .toggle-check-text {
+background: #8ad869;
+padding-left: 0.5em;
+padding-right: 2em;
+}
+
+.toggle-check-input:checked ~ .toggle-check-text:after {
+left: 100%;
+margin-left: -1.4em;
+}
+.switch-range.switch.small {
+height: 1.05rem;
+}
+.switch-range.switch.small .switch-paddle {
+width: 122.8px;
+text-align: center;
+line-height: 28px;	
+border: 0;
+}
+.switch-range .switch-paddle::after {
+background: transparent;
+}
+.switch-range input:checked ~ .switch-paddle {
+text-align: center;
+line-height: 28px;
+}
+.switch-range-outer.switch-input-space {
+display: inline-block;
+padding-right: 0;
+margin-left: -2px;
+}
+.switch-range-outer.switch-input-space .switch {
+display: inherit;
+width: 122px;
+}
+.box {
+text-align: center;
+background-color: #9a1267;
+width: 250px;
+padding-top: 10px;
+padding-bottom: 3px;
+font-size: 14px;
+font-weight: 600;
+color: #ffffff;
+line-height: 32px;
+margin-bottom: 5px;
+}
+.box p {
+color: #ffffff;
+font-weight: 700;
+}
+.cursor-nodrop {
+cursor: no-drop;
+}
+.no-pointerevents{
+pointer-events: none;
+}
