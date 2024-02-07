@@ -1,3 +1,26 @@
+/*  Alert box styles starts */
+.alert-box .close {
+  font-size: 1.57143rem;
+  padding: 9px 6px 4px;
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0.18571rem;
+  color: #333;
+  opacity: 1;
+  background: inherit;
+  margin-top: 0;
+}
+.alert-box .not-show-again a {
+  color: #198dae;
+  font-weight: 700;
+  position: absolute;
+  right: 0.18571rem;
+  bottom: 0;
+}
+/*  Alertbox ends */
+
+/*  Splashscreen styles starts  */
 .hide {
   display: none;
 }

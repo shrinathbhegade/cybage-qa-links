@@ -1,4 +1,5 @@
 var UUID;
+const tosKey = 'ldlTOS';
 var isNativeApplication = (document.URL.indexOf("http") === -1 && document.URL.indexOf("https") === -1);
 
 $(window).on('load', () => {
@@ -39,6 +40,12 @@ $(document).ready(function () {
     // input text focus moved after next/go/return key press End.
     // Code to transfer focus on keypad click event, should be done on document.ready() only.
     // Start
+    if (typeof (Storage) !== "undefined") {
+        if (localStorage.getItem(tosKey) !== null) {
+          appmodel.doNotShowAgainVisible(false);
+        }
+    }
+    
     $('.selectPatient').css('display', 'none');
     (function ($) {
         $.fn.enterAsTab = function (options) {
@@ -715,3 +722,11 @@ const closeMenuList = () => {
         }, 200);
     }   
 }
+
+const notShowAgain = function () {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem(tosKey, "true");
+        appmodel.doNotShowAgainVisible(false);
+    }
+    return false;
+};

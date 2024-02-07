@@ -1,6 +1,7 @@
 //Declare Common code (I)
 var isNativeApplication = (document.URL.indexOf("http") === -1 && document.URL.indexOf("https") === -1);
 var focusMode = false;
+const tosKey = 'statinTOS';
 
 $(window).on('load', () => {
     appmodel.hideSplash(true);  
@@ -208,6 +209,12 @@ $(function () {
             return false;
         }
     });
+
+    if (typeof (Storage) !== "undefined") {
+        if (localStorage.getItem(tosKey) !== null) {
+          appmodel.doNotShowAgainVisible(false);
+        }
+    }
 });
 
 
@@ -219,6 +226,14 @@ window.addEventListener('keyboardDidShow', function () {
 window.addEventListener('keyboardDidHide', function () {
     $("#scorebar").slideDown();
 });
+
+const notShowAgain = function () {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem(tosKey, "true");
+        appmodel.doNotShowAgainVisible(false);
+    }
+    return false;
+};
 
 //GDPR
 function getCookieBanner() {

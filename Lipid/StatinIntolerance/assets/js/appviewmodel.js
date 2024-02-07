@@ -493,6 +493,7 @@ function viewModel(){
 	var self = this;
 	var AppDataObj={};
 	self.hideSplash = ko.observable(false);
+	self.doNotShowAgainVisible = ko.observable(true);
 	self.Data = data;
 	self.FormData = formData;
 	self.ResultData = resultTable;
