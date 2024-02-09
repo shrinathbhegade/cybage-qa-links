@@ -969,7 +969,5 @@ function getCookie(cname) {
 
 $('input[type=radio][name=primary-switch-a]').change(function (evt) {
   appmodel.Form().TenYearRiskAction('cancel');
-  if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
-    appmodel.Form().asvd10yrrisk(evt.target.value);
-  }
+  appmodel.Form().asvd10yrrisk(evt.target.value);
 });
