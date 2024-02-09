@@ -415,14 +415,6 @@ function formObject(parent) {
         }
     });
     self.triglyceridesRange.subscribe(function (data) {
-        $('input[type=radio][name=primary-switch]').change(function () {
-            sessionStorage.removeItem('v4ascvd');
-            sessionStorage.removeItem('v4Diabetic');
-            sessionStorage.removeItem('asvd10yrrisk');
-            sessionStorage.removeItem('ldlcRange');
-            sessionStorage.removeItem('highRisk');
-        });
-
         if (data == "group3") {
             self.showAdviceBtn(true);
         } else if (data == "group2" && self.Age() < 40) {

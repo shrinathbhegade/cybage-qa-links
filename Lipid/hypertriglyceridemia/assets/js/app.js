@@ -967,7 +967,18 @@ function getCookie(cname) {
   return '';
 }
 
-$('input[type=radio][name=primary-switch-a]').change(function (evt) {
-  appmodel.Form().TenYearRiskAction('cancel');
-  appmodel.Form().asvd10yrrisk(evt.target.value);
+//Unnecessary change event, removing...
+// $('input[type=radio][name=primary-switch-a]').change(function (evt) {
+//   appmodel.Form().TenYearRiskAction('cancel');
+//   if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
+//     appmodel.Form().asvd10yrrisk(evt.target.value);
+//   }
+// });
+
+$('input[type=radio][name=primary-switch]').change(function () {
+  sessionStorage.removeItem('v4ascvd');
+  sessionStorage.removeItem('v4Diabetic');
+  sessionStorage.removeItem('asvd10yrrisk');
+  sessionStorage.removeItem('ldlcRange');
+  sessionStorage.removeItem('highRisk');
 });
