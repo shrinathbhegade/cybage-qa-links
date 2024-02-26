@@ -1,0 +1,988 @@
+<!doctype html>
+<!--
+Copyright © 2015-2016 Cybage Software Pvt. Ltd.
+This file contains the code for web and mobile functionality.
+Licensed under the Cybage license.
+-->
+<html class="no-js" lang="en">
+  <head>
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-NSJTQFV');</script>
+   <!-- End Google Tag Manager -->
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TAVR In-Hospital Mortality Risk Calculator</title>
+    <!-- build:css -->
+		  <link href="Assets/css/normalize.min.css" rel="stylesheet"> 	
+		  <link href="Assets/css/foundation.min.css" rel="stylesheet">
+		  <link href="Assets/css/style-4F4190.css" rel="stylesheet"> 		  
+		  <link href="Assets/css/custom_style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico"> 		  
+		<!-- endbuild -->
+        <script type="text/javascript" src="Assets/js/modernizr.js"></script>
+		</head>	  
+</head>
+  <body>
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSJTQFV"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+	<div data-bind="page: {id:'content', role: 'start'}" class="page  with-group-sections"> 
+        <!-- Start for header section -->
+        <div class="app-nav">
+            <header class="header page clearfix">
+               <a href="#!/content/evaluate/" class="logo">
+                <img style="cursor: pointer !important;" src="Assets/img/logo.png" alt="TAVR In-Hospital Mortality Risk Calculator"  height="56px"> 
+               </a> 
+               <ul class="nav tabs primary condensable small" role="tablist">
+                  <li id="evaluateTab" class="tab-title selected"  role="presentation">
+                     <a href="#!/content/evaluate/" class="btn-ga4" role="tab" tabindex="0" aria-selected="true" aria-controls="evaluate">Calculate  Risk</a>
+                  </li>
+                  <li id="recommendationTab" role="presentation" class="tab-title">
+                     <a class="predictrisk-ce" href="#!/content/recommendation/" role="tab" tabindex="0" aria-selected="false" aria-controls="recommendation" data-bind="click:$root.tabNavigation.bind('event', 'recommendation')">Predicted  Risk</a>
+                  </li>
+               </ul>
+            </header>
+		</div>
+        <!-- END for header section -->
+        <div class="tabs-content">
+             <!-- Start for Calculate risk section -->
+            <div id="evaluate" data-bind="page: {id: 'evaluate', name: 'evaluate',afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper">
+                        <div class="row" data-bind="visible: $root.Form().isWarningOn">
+                            <div class="medium-12">
+                                <div data-alert="" class="alert-box alert caution-box-style">
+                                   This risk-adjusted mortality estimate is recommended to be used for guidance in the overall conversation about the TAVR procedure and not as a recommendation for or against any medical procedure. <a class="close" id="appNotificationClose">x</a>
+                                </div>
+                            </div>
+                        </div>                          
+                        <div class="row">
+                            <div class=" medium-12 row collapse">
+                                <div class="medium-10 small-7 columns"><h1>Calculate Risk<blockquote>* All parameters are required to derive the adjusted TAVR in-hospital mortality risk</blockquote></h1></div>
+                                <div class="medium-2 small-4 columns"><a class="right reset-all bold" data-bind="click:$root.Form().calculateRiskReset"><i class="fa fa-repeat"></i>
+                                &nbsp;Reset All</a></div>
+                            </div>
+                        </div>                        
+                        <div class="row group-section patient-information">
+                           <div class="large-12 medium-12 small-12 large-centered medium-centered columns patient-information">
+                              <div class="heading-title patient-demographics">
+                                 <h2 class="with-underline">Patient Demographics</h2>
+                                 <!-- <a class="right reset-btn bold" href="" data-bind="click:$root.Form().patientDemographicsReset">
+                                    <i class="fa fa-repeat"></i>&nbsp;Reset</a>
+                                 </a> -->  
+                              </div>
+                           </div>
+                           <div class="large-4 medium-6 small-12 columns patient-information">
+                                 <div data-bind="attr: { class:$root.Form().ageWarning()?'question warning custom-input': 'question'}" class="question">
+                                    <div class="label-holder">
+                                       <label for="age">
+                                        <span class="text">Age
+                                        <span class="hint">(18-100)</span>
+                                        </span>
+                                         <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span> </label>
+                                    </div>
+                                    <div class="input-holder">
+                                       <div class="small-10 custom-input-holder">
+                                          <div class="input-space small-12">
+                                             <input type="text" name="age" id="age" value="" data-bind="value:$root.Form().age">
+                                          </div>
+                                       </div>
+                                       <div class="input-space column small-2">
+                                          <small class="value">Years</small>
+                                       </div>
+                                    </div>
+                                    <div class="message-holder">
+                                        <small class="error">
+                                            <i class="fa fa-holder"></i>Error message 
+                                        </small>
+                                        <small class="warning">
+                                            <i class="fa fa-holder"></i>Enter value 
+                                        </small>
+                                        <small class="info"> 
+                                            <i class="fa fa-holder"></i>Data message 
+                                        </small> 
+                                    </div>                                            
+                                 </div>
+                            </div>
+                           <div class="large-4 medium-6 small-12 columns patient-information">
+                                <div data-bind="attr: { class:$root.Form().sexWarning()?'question warning': 'question'}" class="question">
+                                    <div class="label-holder">
+                                     <label for="sex"> 
+                                        <span class="text">Sex</span> 
+                                        <span class="required-holder"> 
+                                            <i class="fa fa-holder-dynamic"></i> 
+                                        </span> 
+                                     </label>
+                                    </div>
+                                    <div class="input-holder">
+                                     <div class="input-space small-10">
+                                        <select name="sex" id="sex" value="" data-bind="value:$root.Form().sex">
+                                           <option value="">Select</option>
+                                           <option value="male">Male</option>
+                                           <option value="female">Female</option>
+                                        </select>
+                                     </div>
+                                    </div>
+                                    <div class="message-holder">
+                                        <small class="error"> 
+                                            <i class="fa fa-holder"></i>Error message 
+                                        </small> 
+                                        <small class="warning"> 
+                                            <i class="fa fa-holder"></i>Select value 
+                                        </small>
+                                        <small class="data">
+                                            <i class="fa fa-holder"></i>Data message 
+                                        </small> 
+                                    </div>                                      
+                               </div>
+                            </div>
+                            <div class="large-4 medium-12 small-12 columns patient-information">
+                               <div data-bind="attr: { class:$root.Form().raceWarning()?'question warning large-12 medium-6': 'question large-12 medium-6'}" class="question large-12 medium-6">
+                                  <div class="label-holder">
+                                     <label for="race"> <span class="text">Race</span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span> </label>
+                                  </div>
+                                  <div class="input-holder">
+                                     <div class="input-space small-10">
+                                        <select name="race" id="race" value=""  data-bind="value:$root.Form().race">
+                                           <option value="">Select</option>
+                                           <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                           <option value="Asian">Asian</option>
+                                           <option value="Black or African American">Black or African American</option>
+                                           <option value="Hispanic or Latino">Hispanic or Latino</option>
+                                           <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                           <option value="White">White</option>
+                                        </select>
+                                     </div>
+                                  </div>
+                                  <div class="message-holder"> 
+                                    <small class="error">
+                                        <i class="fa fa-holder"></i>Error message 
+                                    </small>
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i>Select value
+                                    </small> 
+                                    <small class="data">
+                                        <i class="fa fa-holder"></i>Data message 
+                                    </small> 
+                                  </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="row group-section patient-information">
+                           <div class="large-12 medium-12 small-12 large-centered medium-centered columns patient-information">
+                              <div class="heading-title">
+                                 <h2 class="with-underline">Patient Pre-Procedural Characteristics</h2>
+                              </div>
+                              <div class="row collapse renal-function-container">
+                                 <div class="large-12 medium-12 small-12 columns box-container">
+                                    <h4 class="with-underline">Renal Function</h4>
+                                    <a class="right reset-btn bold" href="" data-bind="click:$root.Form().renalFunctionReset">
+                                    <i class="fa fa-repeat"></i>&nbsp;Reset</a>
+                                    <span class="box right">Glomerular Filtration Rate (calculated):
+                                    <span id="gfrx" class="gfr" data-bind="text:$root.Form().xgfr"></span>mL/min/1.73m<sup>2</sup>
+                                    <span>
+                                    <i class="fa fa-info-circle tip-left" data-tooltip aria-haspopup="true" title="Derived using eGFR (MDRD equation) and presence or absence of regular dialysis. (30 to 90 mL/min/1.73m2)"></i>
+                                    </span>
+                                    </span>
+                                 </div>
+                              </div>
+                                <div class="row">
+                                    <div class="small-11 large-4 medium-5 columns units-outer left">
+                                        <span class="switch-value" for="">Select Units</span>
+                                        <div class="switch round select">
+                                            <input id="cv2-select" name="creatinineSIUnit" type="checkbox" data-bind="checked: $root.Form().creatinineSIUnit">
+                                            <label class="units" for="cv2-select">
+                                                <span class="switch-on" style="color: #5c5c5c;">
+                                                   <i class="fa fa-check"></i>&nbsp;<span data-bind="text: $root.Form().creatinineSIUnit() ? 'SI':'US'"></span>
+                                                </span>
+                                                <!-- <span style="position: absolute;top: 5px;left: 95px;" class="switch-off"><i class="fa fa-check"></i>&nbsp;US</span> -->
+                                            </label>
+                                        </div>
+                                    </div>                                         
+                                </div>
+                                <div class="row">
+                                   <div class="large-4 medium-6 small-12 columns patient-information creatinine-container">
+                                      <div data-bind="attr: { class:$root.Form().creatinineWarning}" class="question">
+                                         <div class="label-holder">
+                                            <label for="creatinine"> <span class="text"> Serum Creatinine <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Creatinine level closest to the date and time prior to the procedure and anesthetic management."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span></label>
+                                         </div>
+                                         <div class="input-holder">
+                                            <div class="small-10 custom-input-holder">
+                                               <div class="input-space small-12">
+                                                  <input type="text" name="creatinine" id="creatinine"  value="" data-bind="value:$root.Form().creatinine">
+                                               </div>
+                                            </div>
+                                            <div class="input-space column small-2">  
+                                                <small class="value" data-bind="text:$root.Form().creatinineSIUnitText">mg/dL</small>
+                                            </div>
+                                         </div>
+                                         <div class="message-holder"> <small class="error"> <i class="fa fa-holder"></i><span data-bind="text:$root.Form().creatinineWarningFormat">Enter values in the format x.x OR xx.x OR x,x OR xx,x </span></small> <small class="warning"> <i class="fa fa-holder"></i> <span data-bind="text:$root.Form().creatinineWarningText">Please enter a value between 0.1 and 150</span></small> <small class="data"> <i class="fa fa-holder"></i>Data message </small> </div>                                         
+                                      </div>
+                                   </div>
+                                   <div class="large-4 medium-6 small-12 columns left patient-information">
+                                      <div data-bind="attr: { class:$root.Form().dialysisWarning()?'question warning checkbox-holder': 'question'}">
+                                         <div class="label-holder">
+                                            <label for="dialysis"> <span class="text">Currently on Dialysis? <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="The presence or absence of regular dialysis is required to determine the calculated GFR value."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span> </label>
+                                         </div>
+                                         <div class="dialysis-actions input-holder row collapse">
+                                            <div class="input-space column small-12">
+                                               <ul id="dialysis" tabindex='7' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().dialysisValue()}" class="button-group even-2 selectable">
+                                                  <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().dialysisAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                  <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().dialysisAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                               </ul>
+                                            </div>
+                                         </div>
+                                         <div class="message-holder">
+                                            <small class="error">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="warning">
+                                                <i class="fa fa-holder"></i> Select value
+                                            </small>
+                                            <small class="data">
+                                                <i class="fa fa-holder"></i>Data message
+                                            </small>
+                                          </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="row">               
+                                   <div class="large-4 medium-12 small-12 columns left patient-information">
+                                      <div data-bind="attr: { class:$root.Form().proceduresiteWarning()?'question warning large-12 medium-6 small-12': 'question large-12 medium-6 small-12'}">
+                                         <div class="label-holder">
+                                            <label> <span class="text">Procedure Access Site <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Non-femoral, alternate access sites - transapical, transaortic, transsubclavian/transaxillary, or transiliac."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span></label>
+                                         </div>
+                                         <div class="input-holder">
+                                            <div class="input-space small-10">
+                                               <select name="proceduresite" id="proceduresite" value="" data-bind="value:$root.Form().proaccsiteValue">
+                                                  <option value="">Select</option>
+                                                  <option value="femoral">Femoral</option>
+                                                  <option value="non-femoral">Non-Femoral</option>
+                                               </select>
+                                            </div>
+                                         </div>
+                                        <div class="message-holder">
+                                            <small class="error">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="warning">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="data">
+                                                <i class="fa fa-holder"></i>Data message 
+                                            </small> 
+                                        </div>                                             
+                                      </div>
+                                   </div>
+                                   <div class="large-4 medium-6 small-12 columns left">
+                                      <div data-bind="attr: { class:$root.Form().nyhaWarning()?'question warning checkbox-holder': 'question'}">
+                                         <div class="label-holder">
+                                            <label for="nyha"> <span class="text">NYHA Class IV within 2 weeks? <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Patient is unable to perform any physical activity without discomfort. Discomfort increases with physical activity. Symptoms of heart failure at rest."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span></label>
+                                         </div>
+                                         <div class="input-holder row collapse">
+                                            <div class="input-space column small-12">
+                                               <ul id="nyha" tabindex='9' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().nyhaValue()}" class="button-group even-2 selectable">
+                                                  <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().nyhaAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                  <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().nyhaAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                               </ul>
+                                            </div>
+                                         </div>
+                                         <div class="message-holder">
+                                            <small class="error">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="warning">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="data">
+                                                <i class="fa fa-holder"></i>Data message 
+                                            </small>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="large-4 medium-6 small-12 columns left">
+                                      <div data-bind="attr: { class:$root.Form().scldWarning()?'question warning checkbox-holder': 'question'}">
+                                         <div class="label-holder">
+                                            <label for="scld"><span class="text">Severe Chronic Lung Disease? <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Patient has COPD, chronic bronchitis, emphysema, or is currently receiving inhaled or oral pharmacological therapy."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span> </label>
+                                         </div>
+                                         <div class="input-holder row collapse">
+                                            <div class="input-space column small-12">
+                                               <ul id="scld" tabindex='10' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().scldValue()}" class="button-group even-2 selectable">
+                                                  <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().scldAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                  <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().scldAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                               </ul>
+                                            </div>
+                                         </div>
+                                         <div class="message-holder">
+                                            <small class="error">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="warning">
+                                                <i class="fa fa-holder"></i> Select value 
+                                            </small>
+                                            <small class="data">
+                                                <i class="fa fa-holder"></i>Data message 
+                                            </small>
+                                          </div>
+                                      </div>
+                                   </div>
+                                </div>
+                           </div>
+                           <div class="large-12 medium-12 small-12 large-centered medium-centered columns patient-information">
+                              <div class="row collapse">
+                                 <div class="large-12 medium-12 small-12 columns box-container">
+                                     <h4 class="with-underline">
+                                        Acuity Status <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Acuity status is based on the procedure status and findings of pre-procedure cardiogenic shock, inotropes, mechanical assist device, and cardiac arrest."></i>
+                                      </h4>
+                                      <a class="right reset-btn bold" href="" data-bind="click:$root.Form().acuityStatusReset">
+                                       <i class="fa fa-repeat"></i>&nbsp;Reset
+                                      </a> 
+                                      <span class="box right">Acuity Status: 
+                                        <span data-bind="{text: $root.Form().acuityStatusText}"></span>
+                                      </span>
+                                      <p class="acuity-info">
+                                        Select all the below parameters to calculate the acuity status.
+                                      </p>
+                                 </div>
+                              </div>                              
+                              <div class="row">
+                                       <div class="large-4 medium-6 small-12 columns left">
+                                            <div data-bind="attr: { class:$root.Form().procedureWarning()?'question warning large-12 medium-12 small-12': 'question large-12 medium-12 small-12'}" class="question large-12 medium-12 small-12">
+                                               <div class="label-holder">
+                                                  <label for="procedureStatus"> <span class="text">Procedure Status <i class="fa fa-info-circle tip-top procedure-status-tooltip" data-tooltip aria-haspopup="true" title=" The type of procedure is determined based on the clinical status of the patient prior to the procedure."></i></span> <span class="required-holder"> <i class="fa fa-holder-dynamic"></i> </span> </label>
+                                               </div>
+                                                <div class="input-holder">
+                                                     <div class="input-space small-10">
+                                                        <select name="procedureStatus" id="procedureStatus" value="" data-bind="{value:$root.Form().procedureStatus, click:$root.Form().acuityStatusAction.bind()}">
+                                                           <option value="">Select one</option>
+                                                           <option value="Elective">Elective</option>
+                                                           <option value="Urgent">Urgent</option>
+                                                           <option value="Emergency">Emergency</option>
+                                                           <option value="Salvage">Salvage</option>
+                                                        </select>
+                                                     </div>
+                                                </div>
+                                                <div class="message-holder">
+                                                    <small class="error">
+                                                        <i class="fa fa-holder"></i>Error message
+                                                    </small>
+                                                    <small class="warning">
+                                                        <i class="fa fa-holder"></i>Select value 
+                                                    </small>
+                                                    <small class="info">
+                                                        <i class="fa fa-holder"></i>Data message
+                                                    </small>
+                                                </div>                                               
+                                            </div>
+                                       </div>
+                                       <div class="large-8 medium-12 small-12 columns left">
+                                          <div class="row">
+                                             <div class="large-6 medium-6 small-12 columns left">
+                                                <div data-bind="attr: { class:$root.Form().pcarrestWarning()?'question warning checkbox-holder': 'question'}">
+                                                   <div class="label-holder">
+                                                      <label for="pcarrest"> <span class="text">Prior cardiac arrest <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Sudden cardiac arrest that is reversed, usually by CPR, and/or defibrillation or cardioversion, or cardiac pacing."></i> </span><span class="required-holder"> <i class="fa fa-holder-dynamic"></i></span> </label>
+                                                   </div>
+                                                   <div class="input-holder row collapse">
+                                                      <div class="input-space column small-12">
+                                                         <ul id="pcarrest" tabindex='12' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().pcarrestValue()}" class="button-group even-2 selectable">
+                                                            <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().pcarrestAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                            <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().pcarrestAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <div class="message-holder">
+                                                    <small class="error">
+                                                        <i class="fa fa-holder"></i>Error message 
+                                                    </small> 
+                                                    <small class="warning"> 
+                                                        <i class="fa fa-holder"></i>Select value 
+                                                    </small>
+                                                    <small class="info">
+                                                        <i class="fa fa-holder"></i>Data message
+                                                    </small>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="large-6 medium-6 small-12 columns left">
+                                                <div data-bind="attr: { class:$root.Form().pcshockWarning()?'question warning checkbox-holder': 'question'}">
+                                                   <div class="label-holder">
+                                                      <label for="pcshock"> <span class="text"> Prior cardiogenic shock <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="End organ hypoperfusion due to cardiac failure. Persistent hypotension (SBP < 80-90 or MAP 30 mmHg lower than baseline) and severe reduction in Cardiac Index (< 1.8 w/o support or <2.2 w/ support)."></i> </span><span class="required-holder"> <i class="fa fa-holder-dynamic"></i></span></label>
+                                                   </div>
+                                                   <div class="input-holder row collapse">
+                                                      <div class="input-space column small-12">
+                                                         <ul id="pcshock" tabindex='13' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().pcshockValue()}" class="button-group even-2 selectable">
+                                                            <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().pcshockAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                            <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().pcshockAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <div class="message-holder">
+                                                    <small class="error">
+                                                        <i class="fa fa-holder"></i>Error message 
+                                                    </small> 
+                                                    <small class="warning"> 
+                                                        <i class="fa fa-holder"></i>Select value 
+                                                    </small>
+                                                    <small class="info">
+                                                        <i class="fa fa-holder"></i>Data message 
+                                                    </small> 
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="large-6 medium-6 small-12 columns left">
+                                                <div data-bind="attr: { class:$root.Form().ppinotropesWarning()?'question warning checkbox-holder': 'question'}">
+                                                   <div class="label-holder">
+                                                      <label for="ppinotropes"> <span class="text"> Pre-procedure inotropes <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Positive inotropes ex: dopamine, dobutamine, norepinephrine,  inamrinone, milrinone. Negative inotropes ex: beta blockers, calcium channel blockers, antiarrhythmics."></i> </span><span class="required-holder"> <i class="fa fa-holder-dynamic"></i></span>  </label>
+                                                   </div>
+                                                   <div class="input-holder row collapse">
+                                                      <div class="input-space column small-12">
+                                                         <ul id="ppinotropes" tabindex='14' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().ppinotropesValue()}" class="button-group even-2 selectable">
+                                                            <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().ppinotropesAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                            <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().ppinotropesAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <div class="message-holder">
+                                                    <small class="error"> 
+                                                        <i class="fa fa-holder"></i>Error message 
+                                                    </small>
+                                                    <small class="warning">
+                                                        <i class="fa fa-holder"></i>Select value
+                                                    </small> 
+                                                    <small class="info">
+                                                        <i class="fa fa-holder"></i>Data message 
+                                                    </small>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="large-6 medium-6 small-12 columns left">
+                                                <div data-bind="attr: { class:$root.Form().ppmechanicalWarning()?'question warning checkbox-holder': 'question'}">
+                                                   <div class="label-holder">
+<label for="ppmechanical"> <span class="text"> Mechanical assist device <i class="fa fa-info-circle tip-top" data-tooltip aria-haspopup="true" title="Ex: IABP (intra-aortic balloon pump), catheter-based assist device, ventricular assist device."></i> </span><span class="required-holder"><i class="fa fa-holder-dynamic"></i></span></label>
+                                                   </div>
+                                                   <div class="input-holder row collapse">
+                                                      <div class="input-space column small-12">
+                                                         <ul id="ppmechanical" tabindex='15' data-bind="attr: { 'class': 'button-group even-2 selectable ' + $root.Form().ppmechanicalValue()}" class="button-group even-2 selectable">
+                                                            <li class="btn1" > <a href="" class="button" data-bind="click:$root.Form().ppmechanicalAction.bind('event', 'selected-btn1')"> <i class="fa fa-check"></i> <span class="text">Yes</span> </a> </li>
+                                                            <li class="btn2"> <a href="" class="button" data-bind="click:$root.Form().ppmechanicalAction.bind('event', 'selected-btn2')"> <i class="fa fa-check"></i> <span class="text">No</span> </a> </li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <div class="message-holder"> 
+                                                    <small class="error">
+                                                        <i class="fa fa-holder"></i>Error message 
+                                                    </small> 
+                                                    <small class="warning">
+                                                        <i class="fa fa-holder"></i>Select value 
+                                                    </small> 
+                                                    <small class="info"> 
+                                                        <i class="fa fa-holder"></i>Data message 
+                                                    </small> 
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="large-12 medium-12 small-12">
+                              <a href="" class="button right predictedrisk-btn hide-for-small-only predictrisk-ce" data-bind="event:{click:$root.Form().fieldValidation.bind()}, css :{disabled:!$root.Form().isRiskCalculated()}">
+                                Predicted Risk &nbsp;&nbsp;
+                                <i class="fa fa-arrow-circle-right fa-6"></i>
+                              </a>
+                              <a href="" class="button small right predictedrisk-btn show-for-small-only predictrisk-ce" data-bind="event:{click:$root.Form().fieldValidation.bind()}, css :{disabled:!$root.Form().isRiskCalculated()} ">
+                                Predicted Risk &nbsp;&nbsp;
+                                <i class="fa fa-arrow-circle-right fa-6"></i>
+                               </a>
+                           </div>
+                        </div>
+
+            </div>
+             <!-- END for Calculate risk section -->
+            <!-- Start for Predicted risk section -->
+            <div id="recommendation" data-bind="page: {id: 'recommendation', name: 'recommendation', afterShow:tabchange ,beforeShow:scorebarValign }" class="page-wrapper" style="display:none">
+                <div class="row">
+                    <div class=" medium-12 row collapse">
+                        <div class="medium-10 small-10 columns"><h1>Predicted Risk</h1></div>
+                    </div>
+                </div>                   
+                <div class="row group-section scorebar-container patient-information">
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns predicted-risk-scorebar">
+                      <div class="heading-title">
+                         <h2 class="with-underline">Adjusted TAVR In-Hospital Mortality Risk</h2>
+                      </div>
+                   </div>
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns">
+                      <span>
+                      <a href="https://www.jacc.org/doi/10.1016/j.jacc.2014.07.787?articleid=1904559" target="_blank" class="link">Click here for info about this risk model</a>
+                      </span>
+                   </div>
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns scorebox-container">
+                      <div class="row" data-equalizer>
+                         <div class="large-6 medium-6 small-12 columns patient-risk" data-equalizer-watch>
+                            <div class="scorebar-panel">
+                               <div class="large-5 medium-5 small-5 columns scorebar-panel-left">
+                                  <div class="scorebar-panel-block">
+                                     <div class="scorebarlabel">Patient's Risk</div>
+                                     <div class="patient-risk-avg">
+                                        <span data-bind="text:$root.Form().predictedRiskValue">2.4</span><span class="percentage">%</span>
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="large-7 medium-7 small-7 columns scorebar-panel-right">
+                                  <div class="scorebar-panel-block">
+                                     <div class="scorebarlabel">National Average</div>
+                                     <div class="patient-risk-avg">
+                                        <span>4</span><span class="percentage">%</span>
+                                     </div>
+                                     <div class="avg-container">
+                                        <span class="national-risk-avg-date">as of May 2015</span>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="large-6 medium-6 small-12 columns patient-risk-desc" data-equalizer-watch>
+                            <div class="row collapse">
+                               <div class="large-12 medium-12 small-12 columns">
+                                  <div>
+                                     In the United States, the average mortality of all patients undergoing this procedure is <b>4%</b>.
+                                  </div>
+                                  <div>
+                                     Taking into account the patient's specific clinical condition, the statistical estimate that <span data-bind="text:$root.Form().gendertext">she</span> might not survive the procedure is <b><span data-bind="text:$root.Form().predictedRiskValue">2.4</span>%</b>.
+                                  </div>
+                                  <div>
+                                     This means that for every 100 patients having a similar clinical makeup, there would be <b><span data-bind="text:$root.Form().predictedRiskValue">2.4</span></b> who did not survive.
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="large-12 medium-12 small-12 columns">
+                            <div class="row collapse">
+                               <div class="large-12 medium-12 small-12 columns">
+                                  <span class="small-info">The model provides an objective risk-adjusted estimate of in-hospital mortality which has real value for both patient and provider.  It should be considered as one element in the evaluation process, to be considered along with the other traditional factors that determine whether the patient is an appropriate candidate for the procedure.</span>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="row collapse">
+                   <div class="large-12 medium-12 small-12 columns">
+                      <p class="bold evaluation-text">Based on following evaluation</p>
+                   </div>
+                </div>
+                <div class="row group-section scorebar-container">
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns">
+                      <div class="heading-title">
+                         <h2 class="with-underline">Patient Demographics</h2>
+                      </div>
+                   </div>
+                   <div class="small-12 large-centered medium-centered columns patient-information-actions">
+                      <div class="question clearfix">
+                         <div class="row">
+                            <div class="large-4 medium-4 small-6 columns patient-information">
+                               <div class="label-holder">
+                                  <span class="small-12 columns"><span class="text bold">Age :</span> <span class="text-normal" data-bind="text:$root.Form().age">63 </span> <span class="text-normal">Years</span></span>
+                               </div>
+                            </div>
+                            <div class="large-4 medium-4 small-6 columns patient-information">
+                               <div class="label-holder">
+                                  <span class="small-12 columns">
+                                  <span class="text bold">Sex :</span>
+                                  <span class="text-normal textcapital" data-bind="text:$root.Form().gender"></span>
+                                  </span>
+                               </div>
+                            </div>
+                            <div class="large-4 medium-4 small-12 columns patient-information end">
+                               <div class="label-holder">
+                                  <span class="small-12 columns">
+                                  <span class="text bold">Race :</span>
+                                  <span class="text-normal" data-bind="text:$root.Form().race"></span>
+                                  </span>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="row group-section scorebar-container">
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns">
+                      <div class="heading-title">
+                         <h2 class="with-underline">Patient Pre-Procedural Characteristics</h2>
+                      </div>
+                   </div> 
+                   <div class="large-12 medium-12 small-12 large-centered medium-centered columns"> 
+                    <table class="table banded">
+                        <thead>
+                          <tr>
+                            <th width="40%">Renal Function</th>
+                            <th colspan="2">Glomerular Filtration Rate (calculated): <span data-bind="text:$root.Form().xgfr"></span> mL/min/1.73m<sup>2</sup></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Serum Creatinine (SCr)</td>
+                            <td class="bold" colspan="2">
+                                <span data-bind="text:$root.Form().creatinine"></span>
+                                <span data-bind="text:$root.Form().creatinineSIUnitText">mg/dL</span>                                
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Dialysis</td>
+                            <td class="bold" width="30%">
+                                <span data-bind="visible: $root.Form().dialysis()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold" width="30%">
+                                <span data-bind="visible: !$root.Form().dialysis()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>NYHA Class IV</td>
+                            <td class="bold">
+                                <span data-bind="visible: $root.Form().nyha()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold">
+                                <span data-bind="visible: !$root.Form().nyha()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                           <tr>
+                            <td>Severe Chronic Lung Disease</td>
+                            <td class="bold">
+                                <span data-bind="visible: $root.Form().scld()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold">
+                                <span data-bind="visible: !$root.Form().scld()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Procedure Access Site</td>
+                            <td class="bold">
+                                 <span data-bind="visible: !$root.Form().proaccsite()"><i class="fa fa-check"></i> Femoral </span>
+                            </td>
+                            <td class="bold">
+                                 <span data-bind="visible: $root.Form().proaccsite()"><i class="fa fa-check"></i> Non-Femoral </span>
+                            </td>
+                          </tr>                              
+                        </tbody>                          
+                      </table>
+                      </div>
+                     <div class="large-12 medium-12 small-12 large-centered medium-centered columns">   
+                        <table class="table banded">
+                        <thead>
+                          <tr>
+                            <th width="40%">Acuity Status</th>
+                            <th colspan="2"> <span  data-bind="text:$root.Form().acuityStatusText">Category 3</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>                          
+                          <tr>
+                            <td>Procedure Status</td>
+                            <td class="bold" colspan="2"> 
+                                <span  data-bind="text:$root.Form().procedureStatus" class="textcapital">Elective</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Prior Cardiac arrest within 24 hrs?</td>
+                            <td class="bold" width="30%">
+                                <span data-bind="visible: $root.Form().pcarrest()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold" width="30%">
+                                <span data-bind="visible: !$root.Form().pcarrest()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Prior cardiogenic shock within 24 hrs?</td>
+                            <td class="bold">
+                                <span data-bind="visible: $root.Form().pcshock()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold">
+                                <span data-bind="visible: !$root.Form().pcshock()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                           <tr>
+                            <td>Pre-procedure inotropes within 24 hrs?</td>
+                            <td class="bold">
+                                <span data-bind="visible: $root.Form().ppinotropes()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold">
+                                <span data-bind="visible: !$root.Form().ppinotropes()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Pre-procedure mechanical assist device?</td>
+                            <td class="bold">
+                                <span data-bind="visible: $root.Form().ppmechanical()"><i class="fa fa-check"></i> Yes </span>
+                            </td>
+                            <td class="bold">
+                                <span data-bind="visible: !$root.Form().ppmechanical()"><i class="fa fa-check"></i> No </span>
+                            </td>
+                          </tr>                              
+                        </tbody>
+                      </table>                          
+                    </div>
+                </div>
+                <div class="row hide-for-small-only">
+                   <div class="small-12">
+                      <a href="" class="button right left10 btn-ga4" data-bind="click:$root.sendEmail.bind()">Email Results &nbsp;&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
+                      <a href="#!/content/evaluate/" class="button right btn-ga4"><i class="fa fa-arrow-circle-left fa-6"></i>&nbsp;&nbsp; Calculate Risk </a>
+                   </div>
+                </div>
+                <div class="row show-for-small-only">
+                   <div class="small-12">
+                      <a href="" class="small button right left10 btn-ga4" data-bind="click:$root.sendEmail.bind()">Email Results &nbsp;&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
+                      <a href="#!/content/evaluate/" class="small button right btn-ga4"><i class="fa fa-arrow-circle-left fa-6"></i>&nbsp;&nbsp; Calculate Risk </a>
+                   </div>
+                </div>
+            </div>    
+            <!-- END for Predicted risk section -->
+            <!-- Start for About page section -->
+            <div id="about" data-bind="page: {id: 'about', name: 'about',afterShow:tabchange ,beforeShow:pageScrollTop}"  class="page-wrapper" style="min-height: 770px; display:none">
+                <div class="row">
+                    <div class=" medium-12 row collapse">
+                        <div class="medium-10 small-10 columns"><h1>About the App</h1></div>
+                    </div>
+                </div>                   
+                <div class="row group-section patient-information">
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">When was this app last updated?</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>January 2024</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">How can I provide feedback?</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p><a href="https://forms.gle/ttZvkyVEGw1RihHSA" target="_blank" class="link">Click here to fill out our feedback survey</a></p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">How is this app intended to be used?</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>The STS/ACC TAVR In-Hospital Mortality Risk App is intended to be used by physicians at the point-of-care to evaluate a patient’s potential risk of death while in the acute care setting from the TAVR procedure.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">How was this app developed?</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>The STS/ACC TAVR In-Hospital Mortality Risk App was developed at the ACC in collaboration with STS using the STS/ACC TVT Registry risk-adjusted mortality model. Development of the App was overseen by a group of clinical leaders and experts representing the target audience. Technical experts designed and built the App. Several rounds of user testing were conducted by physicians, nurse practitioners, and others with sample patients.</p>
+                         <p class="hint">Please see the Resources section of this app for links to additional references.</p>
+                         <p>
+                            <b>For Support </b> <br />
+                            <b>Call:</b> (202) 375-6000, ext. 5603 <br />
+                            <b>or</b> (800) 253-4636 <br />
+                            <b>Fax:</b> (202) 375-7000<br />
+                            <b>Email:</b> <a href="mailto:resource@acc.org" class="link">resource@acc.org</a> <br />
+                         </p>
+                      </div>
+                   </div>
+               </div>
+            </div>
+            <!-- END for About page section -->
+            <!-- Start for Resources page section -->
+            <div id="resources" data-bind="page: {id: 'resources', name: 'resources',afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper" style="min-height: 770px; display:none">
+                <div class="row">
+                    <div class=" medium-12 row collapse">
+                        <div class="medium-10 small-7 columns"><h1>Resources</h1></div>
+                    </div>
+                </div>                    
+                <div class="row group-section patient-information">
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Full Guidelines and other References</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <ol>
+                            <li>
+                               <p><a href="https://www.jacc.org/doi/10.1016/j.jacc.2014.07.787?articleid=1904559" target="_blank" class="link" >TAVR risk score for the prediction of mortality</a> : Hans R. Figulla, Alexander Lauten; Christian Hamm; Rudiger Lange; Stefan Sack; Friedrich W. Mohr.Based on data from the German Aortic Valve Registry (GARY) a novel scoring system to predict 1year-mortality in patients undergoing transcatheter aortic valve replacement was developed. J Am Coll Cardiol. 2014; 64(11_S):.  doi:10.1016/j.jacc.2014.07.787</p>
+                            </li>
+                            <li>
+                               <p><a href="https://www.acc.org/latest-in-cardiology/articles/2014/03/28/16/47/one-year-outcomes-from-the-sts-acc-tvt-registry" target="_blank" class="link">STS/ACC TVT Registry News Story</a> : One Year Outcomes From the STS/ACC TVT Registry Presentation. March 31, 2014</p>
+                            </li>
+                         </ol>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Clinician/Patient Resources</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <ul>
+                            <li>
+                               <p><a href="https://www.jacc.org/doi/10.1016/j.jcin.2013.01.063?articleid=1654038" target="_blank" class="link">Long-Term Results for Transcatheter Aortic Valve Replacement (TAVR)</a> : Pablo Codner; Abid Asali; Hanna Vaknin-Assa; Yaron Shapira; Gabriel Greenberg; Katia Orbin; Marina Kupershmidt; Tamir Bental; Alexander Battler; Alexander Sagie; Ran Kornowski. TAVR is an emerging technique for the treatment of severe symptomatic aortic stenosis (AS). Few data reported the long-term outcomes of patients undergoing TAVR. J Am Coll Cardiol Intv. 2013;6(2_S):S44-S45. doi:10.1016/j.jcin.2013.01.063</p>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+            </div>      
+            <!-- END for Resources page section -->
+            <!-- Start for Disclaimer page section -->
+            <div id="disclaimer" data-bind="page: {id: 'disclaimer', name: 'disclaimer',afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper" style="display:none">
+                <div class="row">
+                    <div class=" medium-12 row collapse">
+                        <div class="medium-10 small-10 columns"><h1>Terms of Services</h1></div>
+                    </div>
+                </div>
+                <div class="row group-section patient-information">
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">TAVR License Agreement</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>This is a Legal Agreement ("Agreement") between the American College of Cardiology Foundation, affiliated entities, and ACCF's suppliers (collectively, "ACCF" or "we") and you and your agents ("you") for the use of the TAVR (the "Product"). The Product allows you to access certain content ("Content") relating to transcatheter aortic valve replacement therapies.</p>
+                         <p>By using the Product, you accept and agree to be bound by all of the terms and conditions set forth in this Agreement . If you do not wish to accept the terms and conditions of this Agreement, do not proceed to use the Product.</p>
+                         <p>ACCF may change the terms of this Agreement from time to time without further notice directly to you. When the terms are changed, ACCF will post a general conspicuous notice. If you do not agree with the revised terms, please discontinue use of the Product immediately .Your continued use of the Product following such notice constitutes your acceptance of any revised terms of the Agreement. This Agreement expressly incorporates by reference and includes rules or disclaimers that may be posted and updated within the Product or communicated to you from time to time.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Term and Termination</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>ACCF may terminate your access and/or the Product at any time. You agree that any termination of your access to the Product shall not result in any liability or other obligation of ACCF to you, your agent, or any third party in connection with such termination.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Intellectual Property Rights</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>This Product, including the information, text, graphics, images, audio and video files, trademarks and other materials that may be contained therein (collectively "Content"), is owned by ACCF and/or its suppliers and is protected by patents, copyrights, trademarks, and other proprietary rights. Except as specifically provided in this Agreement, your use of the Product shall be governed and constrained by applicable patent, copyright, trademark and other intellectual property laws.</p>
+                         <p>ACCF grants you a limited, nonexclusive, nontransferable, revocable license to utilize and access the Product for your noncommercial, personal use according to the terms and conditions in this Agreement. You may not modify, publish, transmit, participate in the transfer or sale of, reproduce, create derivative works from, distribute, perform, display, incorporate into another website, or in any other way exploit the Service and/or any of the Content, in whole or in part. Except as expressly granted by this Agreement, you acquire no right, title or interest in the Product or the Content or other data or materials incorporated in the Product. ACCF, ACC or affiliates or licensors thereof shall retain all right, title and interest in the Product and Content.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Limitation of Liability</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>YOU EXPRESSLY UNDERSTAND AND AGREE THAT ACCF SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA LOSS, OR OTHER LOSSES (EVEN IF ACCF HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES) RESULTING FROM: (i) THE USE OR INABILITY TO USE THE PRODUCT, (ii) THE COST OF ANY SUBSTITUTE PRODUCTS AND/OR SERVICES RESULTING FROM ANY PRODUCTS, DATA, INFORMATION OR SERVICES OBTAINED OR WHICH YOU WERE UNABLE TO OBTAIN OR TRANSACTIONS EFFECTED OR FAILED TO BE EFFECTED, (iii) THE USE OR INABILITY TO USE ANY THIRD PARTY APPLICATIONS CONTAINED WITHIN THE SERVICE, OR (iv) ANY MATTER OTHERWISE RELATED TO YOUR USE OF THE PRODUCT.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Disclaimer of Warranties</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>THE PRODUCT AND CONTENT ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. ACCF AND ITS SUPPLIERS EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND WITH RESPECT TO THE PRODUCT OR CONTENT, WHETHER EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. ACCF MAKES NO WARRANTY THAT THE PRODUCT AND/OR ANY CONTENT THEREIN WILL MEET YOUR REQUIREMENTS, OR WILL BE UNINTERRUPTED, TIMELY, SECURE, CURRENT, ACCURATE, COMPLETE OR ERROR-FREE OR THE RESULTS THAT MAY BE OBTAINED BY USE OF THE PRODUCT OR ANY CONTENT THEREIN WILL BE ACCURATE OR RELIABLE. YOU UNDERSTAND AND ACKNOWLEDGE THAT YOUR SOLE AND EXCLUSIVE REMEDY WITH RESPECT TO ANY DEFECT IN OR DISSATISFACTION WITH THE PRODUCT IS TO CEASE ITS USE.</p>
+                         <p>The Content on the Product are presented as an educational service intended for licensed healthcare professionals. While the Content in the Product is about specific medical and healthcare issues, the Content is not a substitute for or replacement of personalized medical advice and is not intended to be used as the sole basis for making individualized medical or health-related decisions.</p>
+                         <p>The views and opinions expressed are those of the contributing authors and editors and do not necessarily represent the views of the ACCCF. The material is not intended to present the only, or necessarily best, methods or procedures for the medical situations addressed, but rather is intended to represent an approach, view, statement or opinion.</p>
+                         <p>Although all advertising material on the Product is expected to conform to ethical and medical standards, inclusion on this Product does not constitute a guarantee or endorsement by the publisher of the quality or value of such product or of the claim made of it by its manufacturer.</p>
+                         <p>In addition, any statements about commercial products are solely the opinion(s) of the author(s) and do not represent an ACCF endorsement or evaluation of these products. These statements should not be used in advertising or for any commercial purpose.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Force Majeure</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>Neither party shall be liable or considered in default under this Agreement when the failure or delay of performance is caused by circumstances beyond its reasonable control and occurring without its fault or negligence, including failure of suppliers, licensors, subcontractors, and carriers, acts of civil or military authorities, national emergencies, fire, flood, acts of God, threats or acts of terrorism, insurrection, and war, provided the party invoking this Section immediately provides notice thereof to the other and does everything reasonable possible to resume its performance hereunder.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">No Assignment</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>This agreement is personal to you, and you may not assign your rights or obligations to anyone. No Waiver.</p>
+                         <p>Neither failure nor delay on the part of any party to exercise any right, remedy, power or privilege hereunder nor course of dealing between the parties shall operate as a waiver thereof, or of the exercise of any other right, remedy, power or privilege. No term of this Agreement shall be deemed waived, and no breach consented to, unless such waiver or consent shall be in writing and signed by the party claimed to have waived or consented. No waiver of any rights or consent to any breaches shall constitute a waiver of any other rights or consent to any other breach.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Severability</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>If any provision in this Agreement is held invalid or unenforceable under applicable law, the remaining provisions shall continue in full force and effect.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Indemnification</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>You hereby agree to indemnify, defend and hold ACCF, its directors, officers, shareholders, parents, subsidiaries, affiliates, agents and licensors harmless from and against any and all liability, losses, damages and costs, including, without limitation, reasonable attorneys' fees and costs, incurred in connection with any claim arising from your use of the Product or Content.</p>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="medium-12 small-12 columns">
+                         <h3 class="highlighted">Governing Law</h3>
+                      </div>
+                      <div class="medium-12 small-12 columns">
+                         <p>These Terms and Conditions will be governed by and construed exclusively in accordance with the laws of the District of Columbia, USA, without regard to its conflicts of law principles and, to the extent applicable, the federal laws of the United States. If a dispute arises between ACCF and you, we hereby agree to submit such dispute to non-binding mediation, followed by binding arbitration, if necessary. Both the mediation and arbitration will be conducted by JAMS applying the laws of the District of Columbia without regard to its conflicts of laws principles and in the District of Columbia as venue.</p>
+                      </div>
+                   </div>
+                </div>
+           </div>
+        </div>        
+            <!-- END for Disclaimer page section -->
+
+      </div>
+    </div>
+    <!-- Start for Footer section -->	
+    <footer class="page footer">
+       <div class="row collapse">
+          <div class="large-12 medium-12 small-12 large-centered medium-centered columns">
+             <a href="javascript:void(0)" class="logo">
+             <img style="border:none 0; " width="100%" height="100%" src="Assets/img/footerlogo.png" alt="TAVR In - Hospital Mortality Risk Calculator">
+             </a>
+          </div>
+       </div>
+       <div class="row collapse">
+          <div class="large-12 medium-12 small-12 large-centered medium-centered columns clearfix">
+             <ul class="nav tabs primary reverse swappable small"  role="tablist">
+                <li id="resourcesTab" class="">
+                   <a href="#!/content/resources/" role="tab" aria-selected="true" aria-controls="resources">
+                   <span class="short-text btn-ga4">Resources</span>
+                   <span class="long-text btn-ga4">Resources</span>
+                   </a>
+                </li>
+                <li id="disclaimerTab" class="">
+                   <a href="#!/content/disclaimer/" role="tab" aria-selected="true" aria-controls="disclaimer">
+                   <span class="short-text btn-ga4">Disclaimer</span>
+                   <span class="long-text btn-ga4">Disclaimer</span>
+                   </a>
+                </li>
+                <li id="aboutTab" class="">
+                   <a href="#!/content/about/" role="tab"  aria-selected="true" aria-controls="about">
+                   <span class="short-text btn-ga4">About</span>
+                   <span class="long-text btn-ga4">About</span>
+                   </a>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </footer>    
+    <!-- End for Footer section -->
+   
+    <script src="Assets/js/jquery-3.7.1.min.js"></script>
+    <script src="Assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <script src="Assets/js/cookie-banner.js"></script>
+    <script type="text/javascript">getCookieBanner('https://www.acc.org');</script>
+    <script src="Assets/js/foundation.min.js"></script>
+    <script src="Assets/js/knockout-3.5.1.js"></script>
+    <script src="Assets/js/pager.min.js"></script>
+    <script type="text/javascript" src="Assets/js/formdata.js?v=12"></script>
+    <script type="text/javascript" src="Assets/js/app.js?v=12"></script>
+    <script type="text/javascript" src="Assets/js/appviewmodel.js?v=12"></script>
+    <script>$(document).foundation();</script>    
+  </body>
+</html>

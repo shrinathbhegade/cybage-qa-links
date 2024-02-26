@@ -1,0 +1,91 @@
+/*  Alert box styles starts */
+.alert-box .close {
+  font-size: 1.57143rem;
+  padding: 9px 6px 4px;
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0.18571rem;
+  color: #333;
+  opacity: 1;
+  background: inherit;
+  margin-top: 0;
+}
+.alert-box .not-show-again a {
+  color: #198dae;
+  font-weight: 700;
+  position: absolute;
+  right: 0.18571rem;
+  bottom: 0;
+}
+/*  Alertbox ends */
+
+/*  Splashscreen styles starts  */
+.hide {
+  display: none;
+}
+.splash-screen {
+  background:#9f1d51;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  text-align: center;
+}
+.splash-screen .splash-overlay,
+.splash-screen .splash-overlay h5 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+.splash-screen .splash-overlay {
+  border: 0;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+}
+.splash-screen .splash-overlay h5 {
+  font-size: 22px;
+  color: #ffffff;
+  width: 130px;
+  height: 20px;
+}
+.show-for-mobile-landscape,
+.show-for-mobile-potrait {
+  display: none;
+}
+@media (min-width: 768px) {
+  .splash-screen .callout h5 {
+    width: 160px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 730px) {
+  .show-for-mobile-landscape {
+    display: block;
+  }
+  .show-for-large-up,
+  .show-for-medium-only {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .show-for-large-up,
+  .show-for-medium-only,
+  .show-for-mobile-landscape {
+    display: none;
+  }
+  .show-for-mobile-potrait {
+    display: block;
+  }
+}
+@media (max-width: 1372px) {
+  .show-for-medium-only {
+    display: none;
+  }
+}

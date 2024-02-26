@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="Assets/img/favicon.ico" />
+    <title>ManageMR Email Result</title>
+
+    <link rel="stylesheet" href="Assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/css/foundation-sites.css">
+    <link rel="stylesheet" href="Assets/css/index.css">
+    <link rel="stylesheet" href="Assets/css/mr.css">
+    <link rel="stylesheet" href="Assets/css/pager.css">
+    <script src="Assets/js/modernizr.js" crossorigin="anonymous"></script>
+    <script src="Assets/js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <!-- [if lte IE 9]><link rel="stylesheet" href="Assets/css/tabs-primary_Fallback-IE9.css"><! [endif] -->
+</head>
+<body>
+
+    <div data-bind="page: {id:'content', role: 'start'}" class="page with-group-sections">
+
+        <div class="data-display">
+            <!-- Start for header section -->
+            <header class="header page">
+                <a href="#!/content/calculator/" class="logo">
+                    <img style="cursor: pointer;" src="Assets/img/MR_logo.png" alt="MR Logo">
+                </a>
+            </header>
+            <!-- End for header section -->
+            <div id='emailresult' class='page-wrapper fullscreen-spacer content-padding emailresult-page invisible'></div>
+        </div>
+
+        <!-- Start for AUC question section -->
+
+        <div data-bind="page: {id: 'calculator', name: 'calculator', afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding invisible">
+
+            <div class="row collapse">
+                <div class="medium-10 small-7 columns">
+                    <h1>
+                        Evaluate
+                        <div class="sub-line">* Answer each question in the series below to view Advice.</div>
+                    </h1>
+                </div>
+                <div class="medium-2 small-4 columns">
+                    <a id="resetAll" class="right reset bold" onclick="resetAll();">
+                        <i class="fa fa-repeat"></i>
+                        &nbsp;Reset All
+                    </a>
+                </div>
+            </div>
+
+            <div id="questionset"></div>
+        </div>
+        <div id="template" class="hide">
+
+<div class='page-wrapper' id=c8cf5a39-13df-4198-a6ae-4f2ae2a5718c data-label='MR Severity'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>What is the SEVERITY of Patient's MR?</span>
+&nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="For purposes of this app, patient’s MR severity will be used to help determine need for referral and feasibility or repair. Select a patient’s severity level if it has already been confirmed, or walk through an assessment of ECHO parameters to help better determine severity if it is unclear or unconfirmed."></i>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="5ebe95d7-b6a7-43a4-a209-3857c7608b5d" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="1a" data-guid="5ebe95d7-b6a7-43a4-a209-3857c7608b5d" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Mild MR" data-disclaimer="" name="1" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="1a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=1a>Mild                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Characterized by 4 or more of the following:
+- Single Jet with VCW &lt; 0.3 cm
+- PISA Radius Absent or &lt; 0.4 cm at Nyquist 30-40 cm/s
+- Mitral A Wave Dominant Inflow
+- Soft or Incomplete Jet by CW Doppler
+- Normal PA Systolic Pressure
+- MR Duration &lt; 30% of Systole" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="00b74c5a-9baf-4954-aa27-df25ea3f4266" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="1b" data-guid="00b74c5a-9baf-4954-aa27-df25ea3f4266" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Moderate MR" data-disclaimer="" name="1" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="1b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=1b>Moderate                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="028524af-fde9-4e36-82c0-7bf95985f736" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="1c" data-guid="028524af-fde9-4e36-82c0-7bf95985f736" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Severe MR" data-disclaimer="" name="1" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="1c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=1c>Severe                         <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Characterized by 4 or more of the following:
+- Major Anatomic Defect
+- Any Jet with VCW &gt; 0.7 cm or VCA &gt; 0.4 cm2
+- PISA Radius &gt; 1.0 cm at Nyquist 30-40 cm/s
+- Systolic Flow Reversal in &gt; 1 Pulmonary Vein
+- Dense Triangular CW Profile
+- Well-Aligned CW Velocity &lt; 4.5 m/s (High LAP)
+- PASP &gt; 50 mmHg with no other cause" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="fdb0f543-2ba3-49b5-b44f-45318baf0e93" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="1d" data-guid="fdb0f543-2ba3-49b5-b44f-45318baf0e93" data-questionguid="c8cf5a39-13df-4198-a6ae-4f2ae2a5718c" data-label="Assess Severity" data-disclaimer="" name="1" onclick="evaluateNextQuestion('c8cf5a39-13df-4198-a6ae-4f2ae2a5718c','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="1d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=1d>I Want to Assess ECHO/Doppler Parameters to Help Verify Severity                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=35b03fdc-5933-493b-8032-a02938a86957 data-label='Ischemic or Other Functional MR'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Which of the Following did Diagnostic Testing Indicate?</span>
+&nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="To determine if ischemic MR, consider:  Stress testing, Invasive or non-invasive coronary angiography, Cardiac MRI • To determine if other functional MR, consider: Serologies and other blood tests, Cardiac MRI, Endomyocardial biopsy"></i>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="9bf8bd65-7d93-4693-83bf-9d9a74f63982" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="10a" data-guid="9bf8bd65-7d93-4693-83bf-9d9a74f63982" data-questionguid="35b03fdc-5933-493b-8032-a02938a86957" data-label="Ischemic MR" data-disclaimer="" name="10" onclick="evaluateNextQuestion('35b03fdc-5933-493b-8032-a02938a86957','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="10a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=10a>Ischemic MR                     <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="48b630d5-e9c0-4b6b-b962-735ea556fb1e" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="10b" data-guid="48b630d5-e9c0-4b6b-b962-735ea556fb1e" data-questionguid="35b03fdc-5933-493b-8032-a02938a86957" data-label="Other Secondary MR" data-disclaimer="" name="10" onclick="evaluateNextQuestion('35b03fdc-5933-493b-8032-a02938a86957','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="10b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=10b>Other Secondary MR                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Infiltrative, hypertrophic, or dilated cardiomyopathy" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="755ed38f-f634-4723-9031-9f5c264c74f5" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="10c" data-guid="755ed38f-f634-4723-9031-9f5c264c74f5" data-questionguid="35b03fdc-5933-493b-8032-a02938a86957" data-label="Not sure/unknown" data-disclaimer="" name="10" onclick="evaluateNextQuestion('35b03fdc-5933-493b-8032-a02938a86957','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="10c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=10c>Unknown Function Status                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=045d6cf1-aed0-439b-9789-46e126e4c1ef data-label='Severe MR Characteristics'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select All Criteria Typical of Severe MR That Apply to Your Patient:</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="b2aa466e-af00-4910-a7da-d5e41908e208" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17a" data-guid="b2aa466e-af00-4910-a7da-d5e41908e208" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Major Anatomic Defect" data-exclusive="False" data-disclaimer="Flail Leaflet, Large Perforation, Absent Coaptation" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17a');" data-form-parent="">
+                    <label class="switch-paddle" for="17a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17a>Major Anatomic Defect                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="E.g., flail leaflet with torn chords, severe leaflet retraction without visible coaptation, or leaflet destruction and perforation due to endocarditis" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="d5fa09c4-2859-40ee-9032-3a98cd94423f" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17b" data-guid="d5fa09c4-2859-40ee-9032-3a98cd94423f" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Any jet with VCW &gt;=0.7 cm or VCA &gt;=0.5 cm2" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17b');" data-form-parent="">
+                    <label class="switch-paddle" for="17b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17b>Any Jet with VCW <U>></U> 0.7 cm or VCA <U>></U> 0.5 cm<SUP>2</SUP>                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Vena Contracta Width
+Vena Contracta Area" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="6a85a9ea-acb6-451b-a651-00a67fffb58b" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17c" data-guid="6a85a9ea-acb6-451b-a651-00a67fffb58b" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="PISA radius &gt;= 1.0 cm at Nyquist 30-40 cm/s" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17c');" data-form-parent="">
+                    <label class="switch-paddle" for="17c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17c>PISA Radius <U>></U> 1.0 cm at Nyquist 30-40 cm/s                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Proximal Isovelocity Surface Area" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="3903b6a4-69ac-44eb-927a-55d2fae24da6" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17d" data-guid="3903b6a4-69ac-44eb-927a-55d2fae24da6" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Pulmonary Vein Systolic Flow Reversal" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17d');" data-form-parent="">
+                    <label class="switch-paddle" for="17d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17d>Pulmonary Vein Systolic Flow Reversal                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="ea762501-8bb2-43f3-970c-06e39b4bf0d3" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17e" data-guid="ea762501-8bb2-43f3-970c-06e39b4bf0d3" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Dense triangular CW profile" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17e');" data-form-parent="">
+                    <label class="switch-paddle" for="17e">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17e>Dense Triangular CW Profile                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Continuous Wave" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="be5d43e5-f36b-4917-9d9f-b5cef984714b" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17f" data-guid="be5d43e5-f36b-4917-9d9f-b5cef984714b" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Well-aligned CW velocity &lt; 4.5 m/s (high LAP)" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17f');" data-form-parent="">
+                    <label class="switch-paddle" for="17f">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17f>Well-Aligned CW Velocity < 4.5 m/s (High LAP)                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Continuous Wave" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="09ca313f-0d42-4514-aca2-7ed9aadd65b8" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17g" data-guid="09ca313f-0d42-4514-aca2-7ed9aadd65b8" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="PASP &gt; 50 mmHg with no other cause" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17g');" data-form-parent="">
+                    <label class="switch-paddle" for="17g">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17g>PASP > 50 mmHg with No Other Cause                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Pulmonary Artery Systolic Pressure" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="658b2d55-f952-4ded-b358-6cfbd0cc2818" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17h" data-guid="658b2d55-f952-4ded-b358-6cfbd0cc2818" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Dilated LA and/or LV with no other cause" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17h');" data-form-parent="">
+                    <label class="switch-paddle" for="17h">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17h>Dilated LA and/or LV with No Other Cause                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="9a948936-e605-4a1a-86de-2e1415aa6274" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17i" data-guid="9a948936-e605-4a1a-86de-2e1415aa6274" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="Central Large Jet &gt; 50% of LA" data-exclusive="False" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17i');" data-form-parent="">
+                    <label class="switch-paddle" for="17i">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17i>Central Large Jet > 50% of LA                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="b63919ca-e449-47dc-91c3-1de14be10170" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="17j" data-guid="b63919ca-e449-47dc-91c3-1de14be10170" data-questionguid="045d6cf1-aed0-439b-9789-46e126e4c1ef" data-label="None of these Severe Criteria" data-exclusive="True" data-disclaimer="" onclick="performExclusive('045d6cf1-aed0-439b-9789-46e126e4c1ef', '17j');" data-form-parent="">
+                    <label class="switch-paddle" for="17j">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=17j>None of These Severe Criteria                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+</div></section>                <div class="row next-btn text-center" data-next-btn="045d6cf1-aed0-439b-9789-46e126e4c1ef">
+                    <div class="large-12 columns">
+                        <a id="next_btn" class="button disabled" onclick="evaluateNextQuestion('045d6cf1-aed0-439b-9789-46e126e4c1ef','MultipleChoiceMultipleAnswers')">Next</a>
+                    </div>
+                </div>
+</div><div class='page-wrapper' id=22a7bf33-2475-440c-a261-66c4e9fdb365 data-label='MR Etiology'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>What is the ETIOLOGY of the Patient's MR?</span>
+&nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="For purposes of this app, patient’s MR etiology will be used to help determine need for referral and feasibility or repair. Select a patient’s MR etiology if it has already been confirmed, or walk through an assessment to help determine etiology if it is unclear or unconfirmed."></i>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="8306b254-a81a-4e6c-99a2-28b8e03317dc" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="2a" data-guid="8306b254-a81a-4e6c-99a2-28b8e03317dc" data-questionguid="22a7bf33-2475-440c-a261-66c4e9fdb365" data-label="Primary MR" data-disclaimer="" name="2" onclick="evaluateNextQuestion('22a7bf33-2475-440c-a261-66c4e9fdb365','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="2a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=2a>Primary                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Defined by principal involvement of the leaflets and/or chordae tendineae in the pathologic process (e.g., myxomatous disease, endocarditis)." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="a4cf309b-ace1-45fe-a051-8690f6fa213b" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="2b" data-guid="a4cf309b-ace1-45fe-a051-8690f6fa213b" data-questionguid="22a7bf33-2475-440c-a261-66c4e9fdb365" data-label="Secondary MR" data-disclaimer="" name="2" onclick="evaluateNextQuestion('22a7bf33-2475-440c-a261-66c4e9fdb365','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="2b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=2b>Secondary                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Defined by the absence of morphological abnormalities of the leaflets and chords, and manifested by restricted leaflet motion below the annular plane." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="b3236b91-0421-4e29-9196-beae7af8bf00" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="2c" data-guid="b3236b91-0421-4e29-9196-beae7af8bf00" data-questionguid="22a7bf33-2475-440c-a261-66c4e9fdb365" data-label="Mixed Etiology" data-disclaimer="" name="2" onclick="evaluateNextQuestion('22a7bf33-2475-440c-a261-66c4e9fdb365','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="2c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=2c>Mixed                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="When both Primary and Secondary mechanisms are present.
+Example: Known secondary MR due to ischemic cardiomyopathy with new torn chord and flail leaflet." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="1a367599-cfd2-429b-939d-68cbf51227c1" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="2d" data-guid="1a367599-cfd2-429b-939d-68cbf51227c1" data-questionguid="22a7bf33-2475-440c-a261-66c4e9fdb365" data-label="Assess Etiology" data-disclaimer="" name="2" onclick="evaluateNextQuestion('22a7bf33-2475-440c-a261-66c4e9fdb365','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="2d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=2d>I Want to Assess Mechanism/Morphology to Help Verify Etiology                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=18e78a9c-3744-4e08-99be-b53f57ad73d6 data-label='Large Crescentic Orifice?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Large Crescentic Orifice?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="cfc0c45d-5190-45d1-af15-e81bd223ac54" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="21a" data-guid="cfc0c45d-5190-45d1-af15-e81bd223ac54" data-questionguid="18e78a9c-3744-4e08-99be-b53f57ad73d6" data-label="Yes - Large Crescentic Orifice" data-disclaimer="" name="21" onclick="evaluateNextQuestion('18e78a9c-3744-4e08-99be-b53f57ad73d6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="21a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=21a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="e6c12b93-a022-43f2-a192-cad16f2560fc" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="21b" data-guid="e6c12b93-a022-43f2-a192-cad16f2560fc" data-questionguid="18e78a9c-3744-4e08-99be-b53f57ad73d6" data-label="Not a Large Crescentic Orifice" data-disclaimer="" name="21" onclick="evaluateNextQuestion('18e78a9c-3744-4e08-99be-b53f57ad73d6','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="21b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=21b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=5bf36303-6556-4db8-bef0-ea647d5079b1 data-label='Mild MR Characteristics'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select All Criteria Typical of Mild MR That Apply to Your Patient:</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="45578656-36e8-45aa-906e-a8844daa2d7a" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22a" data-guid="45578656-36e8-45aa-906e-a8844daa2d7a" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Single Jet with VCW &lt; 0.3 cm" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22a');" data-form-parent="">
+                    <label class="switch-paddle" for="22a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22a>Single Jet with VCW <U><</U> 0.3 cm                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Vena Contracta Width" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="04849e0d-51e4-46d7-80b4-bba2a17cd074" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22b" data-guid="04849e0d-51e4-46d7-80b4-bba2a17cd074" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="PISA Radius Absent or &lt; 0.3 cm at Nyquist 30-40 cm/s" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22b');" data-form-parent="">
+                    <label class="switch-paddle" for="22b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22b>PISA Radius Absent or < 0.3 cm at Nyquist 30-40 cm/s                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Proximal Isovelocity Surface Area" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="4b2d528e-a2ac-42ee-bdaf-8e4d3ba55407" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22c" data-guid="4b2d528e-a2ac-42ee-bdaf-8e4d3ba55407" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Mitral A Wave Dominant Inflow" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22c');" data-form-parent="">
+                    <label class="switch-paddle" for="22c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22c>Mitral A Wave Dominant Inflow                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="96566faa-7a20-4817-bb53-5204cea37ac8" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22d" data-guid="96566faa-7a20-4817-bb53-5204cea37ac8" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Soft or Incomplete Jet by CW Doppler" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22d');" data-form-parent="">
+                    <label class="switch-paddle" for="22d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22d>Soft or Incomplete Jet by CW Doppler                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Continuous Wave" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="1238e98b-af01-43e6-9f72-41b148959000" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22e" data-guid="1238e98b-af01-43e6-9f72-41b148959000" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Normal PA Systolic Pressure" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22e');" data-form-parent="">
+                    <label class="switch-paddle" for="22e">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22e>Normal PA Systolic Pressure                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="ec9df1fd-3c03-478c-9801-518ceb22c029" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22f" data-guid="ec9df1fd-3c03-478c-9801-518ceb22c029" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="MR Duration &lt; 30% of Systole" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22f');" data-form-parent="">
+                    <label class="switch-paddle" for="22f">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22f>MR Duration < 30% of Systole                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="22f28f37-f6dc-4c37-8b99-e4010d4ca913" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22g" data-guid="22f28f37-f6dc-4c37-8b99-e4010d4ca913" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Both LA and LV size normal" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22g');" data-form-parent="">
+                    <label class="switch-paddle" for="22g">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22g>Both LA and LV Size Normal                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="3c70e63d-0b2f-4381-9e29-e7a4fcaed933" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22h" data-guid="3c70e63d-0b2f-4381-9e29-e7a4fcaed933" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="Small Narrow Central Jet" data-exclusive="False" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22h');" data-form-parent="">
+                    <label class="switch-paddle" for="22h">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22h>Small Narrow Central Jet                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+        <div data-guid="37135fc7-e3fa-487e-b1ba-e575165c5626" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch checkbox small">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="22i" data-guid="37135fc7-e3fa-487e-b1ba-e575165c5626" data-questionguid="5bf36303-6556-4db8-bef0-ea647d5079b1" data-label="None of these Mild Criteria" data-exclusive="True" data-disclaimer="" onclick="performExclusive('5bf36303-6556-4db8-bef0-ea647d5079b1', '22i');" data-form-parent="">
+                    <label class="switch-paddle" for="22i">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<label class='switch-value' for=22i>None of These Mild Criteria                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>                                            </div>
+        </div>
+</div></section>                <div class="row next-btn text-center" data-next-btn="5bf36303-6556-4db8-bef0-ea647d5079b1">
+                    <div class="large-12 columns">
+                        <a id="next_btn" class="button disabled" onclick="evaluateNextQuestion('5bf36303-6556-4db8-bef0-ea647d5079b1','MultipleChoiceMultipleAnswers')">Next</a>
+                    </div>
+                </div>
+</div><div class='page-wrapper' id=dd236605-0c5e-4046-ad96-00f01a6f3b8d data-label=''><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Hidden Severity</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="21ac9bc1-a6c7-4933-afec-e833d01b49c9" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="24a" data-guid="21ac9bc1-a6c7-4933-afec-e833d01b49c9" data-questionguid="dd236605-0c5e-4046-ad96-00f01a6f3b8d" data-label="24a. Mild MR" data-disclaimer="" name="24" onclick="evaluateNextQuestion('dd236605-0c5e-4046-ad96-00f01a6f3b8d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="24a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=24a>Hidden Mild MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="612a8900-76ab-40da-b2b4-bd0c70b4b476" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="24b" data-guid="612a8900-76ab-40da-b2b4-bd0c70b4b476" data-questionguid="dd236605-0c5e-4046-ad96-00f01a6f3b8d" data-label="24b. Moderate MR" data-disclaimer="" name="24" onclick="evaluateNextQuestion('dd236605-0c5e-4046-ad96-00f01a6f3b8d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="24b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=24b>Hidden Moderate MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="77c70778-e77d-4011-8404-8a69e8404a38" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="24c" data-guid="77c70778-e77d-4011-8404-8a69e8404a38" data-questionguid="dd236605-0c5e-4046-ad96-00f01a6f3b8d" data-label="24c. Severe MR" data-disclaimer="" name="24" onclick="evaluateNextQuestion('dd236605-0c5e-4046-ad96-00f01a6f3b8d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="24c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=24c>Hidden Severe MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="b0968ac6-dcd9-4820-be6c-c164e9f740dc" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="24d" data-guid="b0968ac6-dcd9-4820-be6c-c164e9f740dc" data-questionguid="dd236605-0c5e-4046-ad96-00f01a6f3b8d" data-label="24d. Moderate-to-Severe MR" data-disclaimer="" name="24" onclick="evaluateNextQuestion('dd236605-0c5e-4046-ad96-00f01a6f3b8d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="24d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=24d>Moderate-to-Severe Hidden MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="98bf4268-658a-4694-b303-5d68cd7f895c" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="24e" data-guid="98bf4268-658a-4694-b303-5d68cd7f895c" data-questionguid="dd236605-0c5e-4046-ad96-00f01a6f3b8d" data-label="24e. Mild-to-Moderate" data-disclaimer="" name="24" onclick="evaluateNextQuestion('dd236605-0c5e-4046-ad96-00f01a6f3b8d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="24e">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=24e>Mild-to-Moderate                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=d576d164-3a8d-4f30-a683-668e6be1c0b9 data-label=''><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Hidden Etiology</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="79ea0ef6-08a0-494c-9c65-c7fb99a9b2f5" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="25a" data-guid="79ea0ef6-08a0-494c-9c65-c7fb99a9b2f5" data-questionguid="d576d164-3a8d-4f30-a683-668e6be1c0b9" data-label="25a. Primary MR" data-disclaimer="" name="25" onclick="evaluateNextQuestion('d576d164-3a8d-4f30-a683-668e6be1c0b9','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="25a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=25a>Hidden Primary MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="aebe7979-a006-4511-8880-58c70f1c6a7f" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="25b" data-guid="aebe7979-a006-4511-8880-58c70f1c6a7f" data-questionguid="d576d164-3a8d-4f30-a683-668e6be1c0b9" data-label="25b. Secondary MR" data-disclaimer="" name="25" onclick="evaluateNextQuestion('d576d164-3a8d-4f30-a683-668e6be1c0b9','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="25b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=25b>Hidden Secondary MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="f6e389be-5908-4de8-bdcf-4f35e06d71af" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="25c" data-guid="f6e389be-5908-4de8-bdcf-4f35e06d71af" data-questionguid="d576d164-3a8d-4f30-a683-668e6be1c0b9" data-label="25c. Mixed MR" data-disclaimer="" name="25" onclick="evaluateNextQuestion('d576d164-3a8d-4f30-a683-668e6be1c0b9','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="25c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=25c>Hidden Mixed MR                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=61689eaa-e729-47ae-a2bc-e08c71a9a3df data-label='Quantitative Grade'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select Quantitative Grade That Best Describes Your Patient:</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="78cf7fb9-1b77-487c-90d7-d463891f5d16" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="radio" id="26a" data-guid="78cf7fb9-1b77-487c-90d7-d463891f5d16" data-questionguid="61689eaa-e729-47ae-a2bc-e08c71a9a3df" data-label="Grade I" data-disclaimer="" name="26" onclick="evaluateNextQuestion('61689eaa-e729-47ae-a2bc-e08c71a9a3df','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="26a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<div class='switch-value'><label class='switch-value' for=26a>                    <h5 class="with-underline">
+                        Grade I
+
+
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/276b292b-eddc-4ede-af39-746145e3b0ed_2821542667_1743.png" alt="" style="margin-top:10px;">
+</label>
+                </div>            </div>
+        </div>
+        <div data-guid="67787ec9-4f72-45c7-b54c-d4b058582027" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="radio" id="26b" data-guid="67787ec9-4f72-45c7-b54c-d4b058582027" data-questionguid="61689eaa-e729-47ae-a2bc-e08c71a9a3df" data-label="Grade II" data-disclaimer="" name="26" onclick="evaluateNextQuestion('61689eaa-e729-47ae-a2bc-e08c71a9a3df','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="26b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<div class='switch-value'><label class='switch-value' for=26b>                    <h5 class="with-underline">
+                        Grade II
+
+
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/d6367d50-d9b4-4d59-a138-6a80c987b94c_2659077256_1892.png" alt="" style="margin-top:10px;">
+</label>
+                </div>            </div>
+        </div>
+        <div data-guid="60dc32b9-e187-4587-9721-66aefd28c8b3" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="radio" id="26c" data-guid="60dc32b9-e187-4587-9721-66aefd28c8b3" data-questionguid="61689eaa-e729-47ae-a2bc-e08c71a9a3df" data-label="Grade III" data-disclaimer="" name="26" onclick="evaluateNextQuestion('61689eaa-e729-47ae-a2bc-e08c71a9a3df','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="26c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<div class='switch-value'><label class='switch-value' for=26c>                    <h5 class="with-underline">
+                        Grade III
+
+
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/583050f5-24a7-4a84-9c0e-dd7b6b6a9e29_1169854567_4865.png" alt="" style="margin-top:10px;">
+</label>
+                </div>            </div>
+        </div>
+        <div data-guid="5fac9e4d-f321-43d9-80b3-6c10f5762652" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="radio" id="26d" data-guid="5fac9e4d-f321-43d9-80b3-6c10f5762652" data-questionguid="61689eaa-e729-47ae-a2bc-e08c71a9a3df" data-label="Grade IV" data-disclaimer="" name="26" onclick="evaluateNextQuestion('61689eaa-e729-47ae-a2bc-e08c71a9a3df','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="26d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<div class='switch-value'><label class='switch-value' for=26d>                    <h5 class="with-underline">
+                        Grade IV
+
+
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/289a12fb-bae5-4fe4-afc4-fb517ccc5e6c_888230728_1873.png" alt="" style="margin-top:10px;">
+</label>
+                </div>            </div>
+        </div>
+        <div data-guid="6933b2d1-e635-4fe6-a311-8855953fe955" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="radio" id="26e" data-guid="6933b2d1-e635-4fe6-a311-8855953fe955" data-questionguid="61689eaa-e729-47ae-a2bc-e08c71a9a3df" data-label="Unknown Grade" data-disclaimer="" name="26" onclick="evaluateNextQuestion('61689eaa-e729-47ae-a2bc-e08c71a9a3df','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="26e">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<div class='switch-value'><label class='switch-value' for=26e>                    <h5 class="with-underline">
+                        Unknown
+
+
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/4e5a8906-27c6-4a7b-86be-4b87c012ab66_1117984972_24590.jpg" alt="" style="margin-top:10px;">
+</label>
+                </div>            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=155b0de6-02bb-4647-adea-9e84e9e07883 data-label='Flail leaflet or tethering?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Is Flail Leaflet or Tethering Present?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="e86dfe31-4d27-4f6e-8d3b-4fd89f66ecf0" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="28a" data-guid="e86dfe31-4d27-4f6e-8d3b-4fd89f66ecf0" data-questionguid="155b0de6-02bb-4647-adea-9e84e9e07883" data-label="Flail Leaflet" data-disclaimer="" name="28" onclick="evaluateNextQuestion('155b0de6-02bb-4647-adea-9e84e9e07883','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="28a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=28a>Flail Leaflet                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="c86d9c20-a0c8-44ac-b430-35ab35780a6e" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="28b" data-guid="c86d9c20-a0c8-44ac-b430-35ab35780a6e" data-questionguid="155b0de6-02bb-4647-adea-9e84e9e07883" data-label="Tethering" data-disclaimer="" name="28" onclick="evaluateNextQuestion('155b0de6-02bb-4647-adea-9e84e9e07883','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="28b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=28b>Tethering                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="c848f890-7a93-4616-9e91-1ea5312ae9d4" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="28c" data-guid="c848f890-7a93-4616-9e91-1ea5312ae9d4" data-questionguid="155b0de6-02bb-4647-adea-9e84e9e07883" data-label="Both/Neither" data-disclaimer="" name="28" onclick="evaluateNextQuestion('155b0de6-02bb-4647-adea-9e84e9e07883','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="28c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=28c>Both/Neither                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=3ac3cdee-75a5-4169-abbe-12fb446d977d data-label='Candidate for surgery?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Candidate for surgery?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="d88a1963-b9dc-4bff-98ec-318a0a5bb4a9" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="29a" data-guid="d88a1963-b9dc-4bff-98ec-318a0a5bb4a9" data-questionguid="3ac3cdee-75a5-4169-abbe-12fb446d977d" data-label="29a. Yes" data-disclaimer="" name="29" onclick="evaluateNextQuestion('3ac3cdee-75a5-4169-abbe-12fb446d977d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="29a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=29a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="d4ef979b-1eff-4e99-83cd-184ea54a7bf2" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="29b" data-guid="d4ef979b-1eff-4e99-83cd-184ea54a7bf2" data-questionguid="3ac3cdee-75a5-4169-abbe-12fb446d977d" data-label="29b. Prohibitive Risk" data-disclaimer="" name="29" onclick="evaluateNextQuestion('3ac3cdee-75a5-4169-abbe-12fb446d977d','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="29b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=29b>Prohibitive Risk                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=7fa49624-3c68-48c4-8dfd-bf0692f509a5 data-label='Leaflet Morphology'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select Leaflet Morphology</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="33086a11-f5db-4b0a-91dd-42d2f48c8d7a" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="3a" data-guid="33086a11-f5db-4b0a-91dd-42d2f48c8d7a" data-questionguid="7fa49624-3c68-48c4-8dfd-bf0692f509a5" data-label="Normal" data-disclaimer="" name="3" onclick="evaluateNextQuestion('7fa49624-3c68-48c4-8dfd-bf0692f509a5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="3a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=3a>Normal                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="8ea64854-f6f4-4e2a-a840-d99da5847ec2" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="3b" data-guid="8ea64854-f6f4-4e2a-a840-d99da5847ec2" data-questionguid="7fa49624-3c68-48c4-8dfd-bf0692f509a5" data-label="Abnormal" data-disclaimer="" name="3" onclick="evaluateNextQuestion('7fa49624-3c68-48c4-8dfd-bf0692f509a5','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="3b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=3b>Abnormal                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Abnormal mitral leaflet morphology includes thickening, calcification, redundancy, perforation, vegetations, other masses, and clefts. Abnormal subvalvular morphology includes chordal rupture, thickening, fusion, vegetations or masses. Such abnormalities should be described in detail when assessing a TEE." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=c8c7d8ae-3dee-493e-9d66-764bfcd56e97 data-label='LVEF &lt; 50%?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>LVEF < 50%?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="d986bc0a-6362-45d7-9de9-65e6d58d1f00" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="30a" data-guid="d986bc0a-6362-45d7-9de9-65e6d58d1f00" data-questionguid="c8c7d8ae-3dee-493e-9d66-764bfcd56e97" data-label="30a. Yes" data-disclaimer="" name="30" onclick="evaluateNextQuestion('c8c7d8ae-3dee-493e-9d66-764bfcd56e97','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="30a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=30a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="84a3edd1-1faa-436b-9894-5b3b89297388" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="30b" data-guid="84a3edd1-1faa-436b-9894-5b3b89297388" data-questionguid="c8c7d8ae-3dee-493e-9d66-764bfcd56e97" data-label="30b. No" data-disclaimer="" name="30" onclick="evaluateNextQuestion('c8c7d8ae-3dee-493e-9d66-764bfcd56e97','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="30b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=30b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=5856bbfd-3adf-435b-92e4-f91551b69f39 data-label='Revasc indicated?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Is revascularization indicated?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="0c1d0098-b374-4ad0-8666-b3e3e92bcaa0" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="31a" data-guid="0c1d0098-b374-4ad0-8666-b3e3e92bcaa0" data-questionguid="5856bbfd-3adf-435b-92e4-f91551b69f39" data-label="31a. Yes" data-disclaimer="" name="31" onclick="evaluateNextQuestion('5856bbfd-3adf-435b-92e4-f91551b69f39','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="31a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=31a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="fe525b83-d765-4bb6-a1fe-93b3977b7ba1" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="31b" data-guid="fe525b83-d765-4bb6-a1fe-93b3977b7ba1" data-questionguid="5856bbfd-3adf-435b-92e4-f91551b69f39" data-label="31b. No" data-disclaimer="" name="31" onclick="evaluateNextQuestion('5856bbfd-3adf-435b-92e4-f91551b69f39','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="31b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=31b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=0536b1fd-2327-4f62-bb59-742c36582752 data-label='Candidate for surgery?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Is CABG preferred or is there a need for other surgery?</span>
+&nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Aortic valve replacement, root/ascending aortic replacement, tricuspid valve repair or replacement, surgical ablation of atrial fibrillation, etc"></i>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="09675d29-7479-430d-97b6-49356f039bfa" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="32a" data-guid="09675d29-7479-430d-97b6-49356f039bfa" data-questionguid="0536b1fd-2327-4f62-bb59-742c36582752" data-label="32a. Yes" data-disclaimer="" name="32" onclick="evaluateNextQuestion('0536b1fd-2327-4f62-bb59-742c36582752','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="32a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=32a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="05d0bf0e-ebdc-4b57-99f2-97ee65438de5" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="32b" data-guid="05d0bf0e-ebdc-4b57-99f2-97ee65438de5" data-questionguid="0536b1fd-2327-4f62-bb59-742c36582752" data-label="32b. No" data-disclaimer="" name="32" onclick="evaluateNextQuestion('0536b1fd-2327-4f62-bb59-742c36582752','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="32b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=32b>No                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Patients not considered candidates for MV surgery could be considered for cardiac transplant/left ventricular assist device therapy if TMVr not feasible." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=1604a28e-7a80-4303-b4a0-8307eee6795e data-label='Ongoing symtpoms in spite of GDMT?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>After initiating or intensifying GDMT, does the patient have ongoing HF symtpoms?</span>
+&nbsp;                <i class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" data-tooltip aria-haspopup="true" data-disable-hover="false" title="Response to GDMT, CRT and/or AF rhythm control is evaluated 3 months after optimization."></i>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="41e117be-3733-4583-bc0e-f2485e83c99f" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="33a" data-guid="41e117be-3733-4583-bc0e-f2485e83c99f" data-questionguid="1604a28e-7a80-4303-b4a0-8307eee6795e" data-label="33a. Yes" data-disclaimer="" name="33" onclick="evaluateNextQuestion('1604a28e-7a80-4303-b4a0-8307eee6795e','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="33a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=33a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="415fbb84-ead3-4bd5-b57b-7b16b7947d3a" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="33b" data-guid="415fbb84-ead3-4bd5-b57b-7b16b7947d3a" data-questionguid="1604a28e-7a80-4303-b4a0-8307eee6795e" data-label="33b. No" data-disclaimer="" name="33" onclick="evaluateNextQuestion('1604a28e-7a80-4303-b4a0-8307eee6795e','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="33b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=33b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=e90a5c43-a663-49de-bfd4-9c2b2a01318a data-label='Candidate for CRT?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Candidate for CRT?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="ef1ce140-c460-4f78-96f2-6dee1507c596" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="34a" data-guid="ef1ce140-c460-4f78-96f2-6dee1507c596" data-questionguid="e90a5c43-a663-49de-bfd4-9c2b2a01318a" data-label="34a. Yes" data-disclaimer="" name="34" onclick="evaluateNextQuestion('e90a5c43-a663-49de-bfd4-9c2b2a01318a','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="34a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=34a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="93ff19bf-fb9e-4897-b24c-256bb3f676e0" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="34b" data-guid="93ff19bf-fb9e-4897-b24c-256bb3f676e0" data-questionguid="e90a5c43-a663-49de-bfd4-9c2b2a01318a" data-label="34b. No" data-disclaimer="" name="34" onclick="evaluateNextQuestion('e90a5c43-a663-49de-bfd4-9c2b2a01318a','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="34b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=34b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=25b1273c-0bc0-4e3d-b4bb-c119bb6310cb data-label='<P>Likelihood of successful repair &gt; 95% AND Peri-op risk &lt; 1%?</P>'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Likelihood of successful repair > 95% AND Peri-op risk < 1%?</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="a3c6f772-2e58-427f-aaa7-0cac7fd693ac" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="37a" data-guid="a3c6f772-2e58-427f-aaa7-0cac7fd693ac" data-questionguid="25b1273c-0bc0-4e3d-b4bb-c119bb6310cb" data-label="37a. Yes" data-disclaimer="" name="37" onclick="evaluateNextQuestion('25b1273c-0bc0-4e3d-b4bb-c119bb6310cb','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="37a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=37a>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="8dccbbeb-04b8-44ce-a111-c6f5b721a470" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="37b" data-guid="8dccbbeb-04b8-44ce-a111-c6f5b721a470" data-questionguid="25b1273c-0bc0-4e3d-b4bb-c119bb6310cb" data-label="37b. No" data-disclaimer="" name="37" onclick="evaluateNextQuestion('25b1273c-0bc0-4e3d-b4bb-c119bb6310cb','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="37b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=37b>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=6801c72d-8718-4b93-a782-34b8f8194a85 data-label='Carpentier Classification'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select the Carpentier Classification of Leaflet Motion</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="a4cc7286-3c5e-4553-9faa-fce0ca2f1b9a" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="4a" data-guid="a4cc7286-3c5e-4553-9faa-fce0ca2f1b9a" data-questionguid="6801c72d-8718-4b93-a782-34b8f8194a85" data-label="Type I" data-exclusive="False" data-disclaimer="" onclick="performExclusive('6801c72d-8718-4b93-a782-34b8f8194a85', '4a');" data-form-parent="">
+                    <label class="switch-paddle" for="4a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<div class='switch-value'><label class='switch-value' for=4a>                    <h5 class="with-underline">
+                        Normal - Type I
+                            <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Endocarditis, perforation, congenital abnormalities" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/e1e12dd1-ca03-4b46-86cc-69d6a9cfd77d_3470990044_146583.jpg" alt="" style="margin-top:10px;">
+</label>                                            <a onclick="openModal('Normal', 'Assets\\img\\2e4dee70-1e0e-45cd-8e19-245953b5aad0_2438159730_1347399.gif')" class="button primary tiny expanded"><i class="fa fa-film"></i> Click to view ECHO image</a>
+                                <div class='image-container invisible hide'>
+                                    <img src='Assets\img\2e4dee70-1e0e-45cd-8e19-245953b5aad0_2438159730_1347399.gif' />
+                                </div>
+                </div>            </div>
+        </div>
+        <div data-guid="7beca700-b9bb-46f4-a09f-547ab70d8da2" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="4b" data-guid="7beca700-b9bb-46f4-a09f-547ab70d8da2" data-questionguid="6801c72d-8718-4b93-a782-34b8f8194a85" data-label="Type II" data-exclusive="False" data-disclaimer="" onclick="performExclusive('6801c72d-8718-4b93-a782-34b8f8194a85', '4b');" data-form-parent="">
+                    <label class="switch-paddle" for="4b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<div class='switch-value'><label class='switch-value' for=4b>                    <h5 class="with-underline">
+                        Prolapse or Flail - Type II
+                            <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Myxomatous degeneration with thickened leaflets (Barlow’s or forme fruste)" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/9ef9ea76-6262-40b1-b15d-dfa22986741a_1122216785_152924.jpg" alt="" style="margin-top:10px;">
+</label>                                            <a onclick="openModal('Prolapse or Flail', 'Assets\\img\\83f3c6db-a8f2-4152-aa26-831e87bdc72b_3343178377_2722657.gif')" class="button primary tiny expanded"><i class="fa fa-film"></i> Click to view ECHO image</a>
+                                <div class='image-container invisible hide'>
+                                    <img src='Assets\img\83f3c6db-a8f2-4152-aa26-831e87bdc72b_3343178377_2722657.gif' />
+                                </div>
+                </div>            </div>
+        </div>
+        <div data-guid="23ac7cd7-ac89-446a-92e0-8a03d86db8e0" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch checkbox small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="4c" data-guid="23ac7cd7-ac89-446a-92e0-8a03d86db8e0" data-questionguid="6801c72d-8718-4b93-a782-34b8f8194a85" data-label="Type IIIA" data-exclusive="False" data-disclaimer="" onclick="performExclusive('6801c72d-8718-4b93-a782-34b8f8194a85', '4c');" data-form-parent="">
+                    <label class="switch-paddle" for="4c">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<div class='switch-value'><label class='switch-value' for=4c>                    <h5 class="with-underline">
+                        Restricted in Both Systole & Diastole - Type IIIA
+                            <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="Examples: Rheumatic, radiation, drugs, toxins, carcinoid, collagen vascular disease or other inflammatory conditions" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/94b0b856-6015-428b-9e1b-cccdef7704de_686993256_136297.jpg" alt="" style="margin-top:10px;">
+</label>                                            <a onclick="openModal('Restricted in both Systole &amp; Diastole', 'Assets\\img\\63ebbac9-dbac-474c-ba4a-4d710b8e48ed_3932934547_992596.gif')" class="button primary tiny expanded"><i class="fa fa-film"></i> Click to view ECHO image</a>
+                                <div class='image-container invisible hide'>
+                                    <img src='Assets\img\63ebbac9-dbac-474c-ba4a-4d710b8e48ed_3932934547_992596.gif' />
+                                </div>
+                </div>            </div>
+        </div>
+        <div data-guid="976e80eb-9b6b-49ae-977a-59dd42023087" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch checkbox small rotate" style="vertical-align: middle;">
+                    <input autocomplete="off" class="switch-input" type="checkbox" id="4d" data-guid="976e80eb-9b6b-49ae-977a-59dd42023087" data-questionguid="6801c72d-8718-4b93-a782-34b8f8194a85" data-label="Type IIIB" data-exclusive="False" data-disclaimer="" onclick="performExclusive('6801c72d-8718-4b93-a782-34b8f8194a85', '4d');" data-form-parent="">
+                    <label class="switch-paddle" for="4d">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+<div class='switch-value'><label class='switch-value' for=4d>                    <h5 class="with-underline">
+                        Restricted in Systole Only - Type IIIB
+                        <span class="required-holder">
+                            <i class="fa fa-holder-dynamic"></i>
+                        </span>
+                    </h5>
+                            <img class="small-12" src="Assets/img/75f14d1e-82d6-49dc-91c8-dc588ec9c067_3485764344_142031.jpg" alt="" style="margin-top:10px;">
+</label>                                            <a onclick="openModal('Restricted in Systole Only', 'Assets\\img\\b68812af-78dd-4afd-a735-e733db822199_2434744917_1255571.gif')" class="button primary tiny expanded"><i class="fa fa-film"></i> Click to view ECHO image</a>
+                                <div class='image-container invisible hide'>
+                                    <img src='Assets\img\b68812af-78dd-4afd-a735-e733db822199_2434744917_1255571.gif' />
+                                </div>
+                </div>            </div>
+        </div>
+</div></section>                <div class="row next-btn text-center" data-next-btn="6801c72d-8718-4b93-a782-34b8f8194a85">
+                    <div class="large-12 columns">
+                        <a id="next_btn" class="button disabled" onclick="evaluateNextQuestion('6801c72d-8718-4b93-a782-34b8f8194a85','MultipleChoiceMultipleAnswers')">Next</a>
+                    </div>
+                </div>
+</div><div class='page-wrapper' id=02f592c0-3c1b-4db3-b189-40c794bade21 data-label='Symptom Status'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Select Symptom Status</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="d290bba6-c5c7-4692-bba2-4def7ba27ff9" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="8a" data-guid="d290bba6-c5c7-4692-bba2-4def7ba27ff9" data-questionguid="02f592c0-3c1b-4db3-b189-40c794bade21" data-label="Symptomatic" data-disclaimer="" name="8" onclick="evaluateNextQuestion('02f592c0-3c1b-4db3-b189-40c794bade21','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="8a">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=8a>Symptomatic                        <i data-tooltip aria-haspopup="true" data-disable-hover="false" title="E.g., exertional dyspnea, fatigue, palpitations" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]"></i>
+                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="f2673ea8-1ce9-4074-b926-6561b6510e9d" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="8b" data-guid="f2673ea8-1ce9-4074-b926-6561b6510e9d" data-questionguid="02f592c0-3c1b-4db3-b189-40c794bade21" data-label="Asymptomatic" data-disclaimer="" name="8" onclick="evaluateNextQuestion('02f592c0-3c1b-4db3-b189-40c794bade21','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="8b">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=8b>Asymptomatic                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div><div class='page-wrapper' id=673d2d73-d05e-4d56-ba04-dce8dd7532c2 data-label='Additional Characteristics?'><section class='row group-section'>    <div class="column">
+        <h2 class="with-underline highlighted">
+            <span class="order-marker hollow question-index hide"></span>
+
+            <span>Are Any of the Following Additional Characteristics Present?<br>• Ejection Fraction <U><</U> 0.6<br>• Left Ventricular End-Systolic Diameter <U>></U> 4.0 cm<br>• Serial Increase in LV Size or Decrease in LV Function Over Time<br>• Recent-onset Atrial Fibrillation<br>• Pulmonary Artery Systolic Pressure > 50 mmHg</span>
+        </h2>
+    </div>
+<div class='flex-container'>        <div data-guid="5fb1f85a-88a7-49b6-950d-b61ff30d6b28" class="question column large-4 medium-6 small-12  ">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="9g" data-guid="5fb1f85a-88a7-49b6-950d-b61ff30d6b28" data-questionguid="673d2d73-d05e-4d56-ba04-dce8dd7532c2" data-label="Yes, additional risk factor(s) present" data-disclaimer="" name="9" onclick="evaluateNextQuestion('673d2d73-d05e-4d56-ba04-dce8dd7532c2','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="9g">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=9g>Yes                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+        <div data-guid="89353ab7-996a-47a1-b5f2-7a54bde996f4" class="question column large-4 medium-6 small-12  end">
+            <div class="switch-input-space">
+                <div class="switch radio small">
+                    <input autocomplete="off" class="switch-input" type="radio" id="9h" data-guid="89353ab7-996a-47a1-b5f2-7a54bde996f4" data-questionguid="673d2d73-d05e-4d56-ba04-dce8dd7532c2" data-label="None of the given additional characteristics" data-disclaimer="" name="9" onclick="evaluateNextQuestion('673d2d73-d05e-4d56-ba04-dce8dd7532c2','MultipleChoiceSingleAnswer', 'StandardQuestion', this)" data-form-parent="">
+                    <label class="switch-paddle" for="9h">
+                        <span class="switch-active" aria-hidden="true">
+                        </span>
+                        <span class="switch-inactive" aria-hidden="true">
+                        </span>
+                    </label>
+                </div>
+
+<label class='switch-value' for=9h>No                    <span class="required-holder">
+                        <i class="fa fa-holder-dynamic"></i>
+                    </span>
+</label>
+                            </div>
+        </div>
+</div></section></div>
+
+    
+
+        <div class="page-message callout warning" data-id="100" id="e312aa02-16ff-458b-af3e-6b622875647b">
+            
+            <a class="close-bar">
+                <span class="close-button" aria-label="Dismiss alert" data-close="">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </a>
+            <div class="message-container">
+                <div class="message-holder">
+                    <P><B>Terms of Service</B></P>
+                    <P>Click the Terms tab at the bottom of the app before using ManageMR (&ldquo;the Product&rdquo;) to read the full Terms of Service and License Agreement (the &ldquo;Agreement&rdquo;) which governs the use of the Product. The Agreement includes, among other detailed terms and conditions, certain disclaimers of warranties by the American College of Cardiology Foundation (&ldquo;ACCF&rdquo;) and requires the user to agree to release ACCF from any and all liability arising in connection with your use of the Product. By using the Product, you accept and agree to be bound by all of the terms and conditions set forth in the Agreement, including such disclaimers and releases. If you do not accept the terms and conditions of the Agreement, you may not proceed to use the Product. The Agreement is subject to change from time to time, and your continued use of the Product constitutes your acceptance of and agreement to be bound by any revised terms of the Agreement.</P><P></P>
+                    <P><B>About ManageMR:</B></P>
+                    <P>Use this app to help verify MR severity and etiology, inform intervention decisions and need for referral based on severity, etiology, and other parameters. </P><P></P>
+                    <P><B>HOW to use this app:</B></P>
+                    <P>1. Enter your patient&rsquo;s profile on this screen by answering the questions below. </P>
+                    <P>2. Review full advice based on that profile on the Advice screen.  </P><P></P>
+                    <P><B>WHEN to use this app:</B> After  thorough examination of a patient with chronic MR, assessing a patient's clinical presentation including symptoms, physical exam, exercise tolerance, and goals of care. In addition, ECHO findings should be reported using standardized nomenclature to further guide the surgical/interventional decision-making supported by this app. </P>
+                    <P><A HREF='https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Quality-and-Clinical-Toolkits/Valvular-Heart-Disease/ECHO-checklist.pdf' TARGET='_blank'>Download a tool to help with standardized ECHO Reporting here.</A></P><P></P>
+                    <p class="text-right bold not-show-again">
+                        <a onclick="donotshowClicked('e312aa02-16ff-458b-af3e-6b622875647b')">Do not show me this again</a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="page-message callout highlighted" data-id="403" id="cba1b1e7-2335-454a-b309-9f2480371d17">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Etiology is likely Primary
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="600" id="cf359f3f-b75c-4358-ac1c-c2f6cde3a0ad">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    If Secondary MR is suspected, use diagnostic testing to determine if it is of ischemic or nonischemic origin, and to determine LV function.
+                    <i data-tooltip="" aria-haspopup="true" data-disable-hover="false" title="To determine if ischemic MR, consider:  Stress testing, Invasive or non-invasive coronary angiography, Cardiac MRI • To determine if other functional MR, consider: Serologies and other blood tests, Cardiac MRI, Endomyocardial biopsy" class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" style="margin-top: 5px;margin-left: 5px;"></i>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="203" id="0e12d761-cebd-4fc9-bb6c-e4789d832413">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    <P><B>Consider:</B> Patients may reduce their activity level to avoid symptoms. It is helpful to ask the patient or their family what is the most vigorous activity s/he currently undertakes and compare that to what s/he was able to do previously. </P>
+
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="601" id="bd071cd3-5f42-4d06-a3fb-37eb7f7b47f6">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    Initiate or intensify GDMT for HF with LV systolic dysfunction
+                    <i data-tooltip="" aria-haspopup="true" data-disable-hover="false" title="Response to GDMT, CRT and/or AF rhythm control is evaluated 3 months after optimization." class="fa fa-info-circle has-tip [tip-top tip-bottom tip-left tip-right] [radius round]" style="margin-top: 5px;margin-left: 5px;"></i>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="405" id="2cb4a0e8-2750-46e8-a224-0deea6c12bf7">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Etiology is likely Mixed
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="404" id="53e21de4-35cc-47f0-9d2c-77873bdadcb1">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Etiology is likely Secondary
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="501" id="60ce107c-c416-4965-9621-2fbdaef1f583">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    In making final determination of etiology, consider common pitfall: anterior leaflet override due to posterior leaflet restriction is pure secondary MR and not mixed etiology.
+
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="200" id="c5ed7ee5-ad73-423e-b474-640de8784ee5">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    <P><B>Consider:</B> Echo tends to underestimate MR severity in eccentric or wall-impinging jets.</P>
+
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="201" id="aba5590d-5ac2-44f0-8be8-0f6dd5147030">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    <P><B>Consider:</B> Common reasons for overestimation of MR severity, such as high MR driving velocity and MR duration limited to very early or very late systole.</P><P></P><P></P>
+
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="304" id="2fd5c0f9-9afb-4510-be6e-228abaa2f79a">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    <P><B>Severity is likely mild based on assessment.</B></P><P>However, final determination should depend on integration of these parameters in conjunction with other clinical evidence including symptoms, exercise tolerance, physical exam and chamber sizes. In cases where different parameters are discordant among themselves or with clinical findings, severity is still uncertain and further testing is advised. See Advice tab for more information.</P>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="303" id="00655488-6b3a-4728-b5d5-6f9cb7c16c6f">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    <P><B>Severity is likely severe based on assessment.</B></P><P>However, final determination should depend on integration of these parameters in conjunction with other clinical evidence including symptoms, exercise tolerance, physical exam and chamber sizes. In cases where different parameters are discordant among themselves or with clinical findings, severity is still uncertain and further testing is advised. See Advice tab for more information.   </P>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="306" id="4bfb2413-3d1f-4f4d-9e58-b362de7d941b">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    <P>Severity is likely mild-to-moderate. Further testing is advised. See Advice tab for more information. </P>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout info" data-id="500" id="b2eca213-9b12-43f2-bbf1-1315c08b8f15">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-holder-dynamic fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+
+                    In making final determination, also consider possibility of mixed MR due to both primary and secondary causes.
+
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="402" id="b90c4a3a-7898-458c-80d7-69c8089a423a">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Selected Etiology: Secondary
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="400" id="9146d10e-a0a1-442e-86c7-412cecb97465">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Selected Etiology: Primary
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="401" id="b152ea80-d452-499c-b3aa-814b760894a3">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Selected Etiology: Mixed
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="308" id="7e6d60ab-4446-472c-a4f6-0e5108961083">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    Severity is unknown. Further testing is advised. See Advice tab for more information. 
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="307" id="db10a945-a890-4a43-b751-2b732196224f">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    <P>Severity is moderate-to-severe. Further testing is advised. See Advice tab for more information. </P>
+                </div>
+            </div>
+            
+            </div>
+        <div class="page-message callout highlighted" data-id="305" id="b01b13a3-67bb-421f-a064-a2660787e853">
+            
+            <div class="message-container">
+                <div class="icon-holder">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="message-holder">
+                    <P><B>Severity is likely moderate based on assessment.</B></P><P>However, final determination should depend on integration of these parameters in conjunction with other clinical evidence including symptoms, exercise tolerance, physical exam and chamber sizes. In cases where different parameters are discordant among themselves or with clinical findings, severity is still uncertain and further testing is advised. See Advice tab for more information.   </P>
+                </div>
+            </div>
+            
+            </div>
+
+</div>
+
+        <div data-bind="page: {id: 'advice', name: 'advice', afterShow:tabchange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding advice-page invisible">
+            <div class="row">
+                <div class="medium-12">
+                    <h1>Advice</h1>
+                </div>
+            </div>
+            <div id="divAdvice" class="row">
+                <section>
+                    <!-- ko foreach: $root.Form().recommendationMessage -->
+                    <div class="page with-group-sections">
+                        <div class="page-wrapper" data-bind="attr: { 'data-advice-id': $data.externalIdentifier}">
+                            <div class="medium-12">
+                                <div class="card panelAdviceContainer">
+                                    <div class="colored-paper">
+                                        <h2 data-bind="html: $data.highLiteracyRecommendation">Severity</h2>
+                                    </div>
+                                    <div id="panelAdvice" class="section-padding panelAdvice" style="border-bottom: 1px solid rgb(179, 179, 179); position:relative">
+                                        <h5 data-bind="html: $data.averageLiteracyRecommendation">CC. MR is likely severe.</h5>
+                                        <!-- ko if: ($data.RecommendationMedia !== null) -->
+                                        <div class="viewMedia" style="position:absolute;right:0;bottom: 5px">
+                                            <a class="link right" style="text-decoration: none;" data-bind="click: viewMedia.bind('event', $data.RecommendationMedia.mediaGuId)">View Table&nbsp;<i class="fa fa-table fa-6"></i></a>
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                    <div class="row flip column" style="height:25px;padding-top:10px;">
+                                        <span class="viewLess">
+                                            <a class="link left" onclick="advicePanelHide.bind(this)()">Close Advice Box&nbsp;<i class="fa fa-arrow-up fa-6"></i></a>
+                                        </span>
+                                        <span class="viewMore">
+                                            <a onclick="advicePanelHide.bind(this)()" class="link left mmr-ga4-ce">View Full Advice&nbsp;<i class="fa fa-arrow-down fa-6"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <small>*A Comprehensive (Level I) Valve Center should have the resources and capabilities to evaluate and perform all commercially approved interventional and surgical procedures. A Level I center should also have advanced imaging modalities (e.g., 3D echocardiography, cardiac magnetic resonance) that may not be available at a Level II center. </small>
+                    <div class="page-wrapper">
+                        <div class="row collapse large-12 medium-12 small-12 content-padding">
+                            <h2 class="">Inputs</h2>
+                        </div>
+                    </div>
+                    <div class="page with-group-sections">
+                        <div class="page-wrapper">
+                            <div class="row">
+                                <div class="group-section inputs no-box-shadow" id="inputsection"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***End of Advice*** -->
+                </section>
+            </div>
+            <div class="row advice-action invisible">
+                <div class="large-12 medium-12 small-12">
+                    <a href="#!/content/calculator/" id="btnCalRiskNav" class="button left btn-ga4">
+                        <i class="fa fa-arrow-circle-left fa-6"></i>&nbsp;Evaluate
+                    </a>
+                    <a id="Email" class="button right btn-ga4" onclick="sendEmail();">Email Advice&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="page: {id: 'notification', name: 'notification', afterShow:footerChange ,beforeShow:pageScrollTop}" class="page-wrapper fullscreen-spacer content-padding invisible">
+            <div class="page-wrapper fullscreen-spacer">
+                <div class="page section group-section" style="padding:0px;">
+                    <div class="row collapse" data-bind="foreach: criticalNotification()">
+                        <div class="columns large-12 medium-12 small-12 text-center medium-text-left large-text-left">
+                            <h2 class="highlighted colored-paper" style="color:white;margin:0;">
+                                <i class="fa fa-lock fa-2" aria-hidden="true"></i>&nbsp;Locked
+                            </h2>
+                        </div>
+                        <div class="columns large-12 medium-12 small-12" style="padding:15px;">
+                            <h4 data-bind="text: Title"></h4>
+                            <p data-bind="text: Text"></p>
+                            <br /> <a class="button" data-bind="visible:(DisplayAppStoreUrl && notification.osType !== notification.osTypes.Web), attr: { href: notification.appStoreURL}">Go to store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <footer class="page footer">
+            <a class="logo">
+                <img style="border:none 0; " src="Assets/img/MR_logo_Mobile.png" alt="Manage MR Mobile Logo">
+            </a>
+        </footer>
+        <div class="page modal-window" style="padding:0;">
+            <div class="row collapse large-12 medium-12 small-12 content-padding">
+                <div class="reveal modal modal-width" id="appModalWindow" data-v-offset="33" data-close-on-click='false' data-close-on-esc='false' data-reveal>
+                    <h4></h4>
+                    <img src="" alt="">
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="text-center reveal modal modal-width" id="appRecommendationModalWindow" data-v-offset="33" data-close-on-click='false' data-close-on-esc='false' data-reveal style="top:0!important">
+                    <img src="" alt="">
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--    Loading cordova.js dynamically if mobile device is detected-->
+    <script type="text/javascript">
+        if (document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1) {
+            //if mobile device detected
+            //Load mobile-app.js dynamically
+            var mobileScript = document.createElement('script');
+            mobileScript.setAttribute('src', 'Assets/js/mobile-app.js');
+            document.body.appendChild(mobileScript);
+            var cordovaScript = document.createElement('script');
+            cordovaScript.setAttribute('src', 'cordova.js');
+            document.head.appendChild(cordovaScript);
+            document.getElementsByTagName("body").className = "noselect";
+        }
+    </script>
+    <script src="Assets/js/nodes.js"></script>
+    <script src="Assets/js/client.js"></script>
+    <script src="Assets/js/appGenerator.js"></script>
+    <script src="Assets/js/foundation.min.js"></script>
+    <script src="Assets/js/knockout-3.5.1.js"></script>
+    <script src="Assets/js/pager.min.js"></script>
+    <script src="Assets/js/config.js"></script>
+    <script src="Assets/js/utils.js"></script>
+    <script src="Assets/js/app.js"></script>
+    <script src="Assets/js/notification.js"></script>
+    <script src="Assets/js/formdata.js"></script>
+    <script src="Assets/js/appviewmodel.js"></script>
+    <script>$(document).foundation();</script>
+    <script> window.onload = appLoad;</script>
+</body>
+</html>

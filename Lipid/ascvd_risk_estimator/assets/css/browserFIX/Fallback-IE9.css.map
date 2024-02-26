@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAwCI,yCAAmB;ECvCvB,aAAa;IAGX,OAAO,EAAE,KAAK;IACd,KAAK,EAAC,IAAI;;EACV,gBAAE;IACD,OAAO,EAAE,UAAU;;;ADwBhB,yCAAmB;EC9BzB,aAAa;IAUX,OAAO,EAAE,KAAK;;EACd,gBAAE;IAAC,OAAO,EAAE,KAAK;IAAC,KAAK,EAAC,IAAI;;;;AAG9B,gCAA+B;EAC9B,QAAQ,EAAC,QAAQ;;;AAElB,gCAA+B;EAC9B,GAAG,EAAC,CAAC",
+"sources": ["../../scss/helpers/_breakpoints.scss","../../scss/browserFIX/Fallback-IE9.scss"],
+"names": [],
+"file": "Fallback-IE9.css"
+}

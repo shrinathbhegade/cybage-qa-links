@@ -1,0 +1,109 @@
+.custom_padding{padding: 10px 15px}
+.page.footer .tabs{
+    margin:auto;
+}
+.padding_left_top{
+    padding:8px;
+}
+.padding_left_top h6{
+    font-size: 0.88em
+}
+.tabs.tabs-primary li.selected:hover {
+    border-bottom-color: #00386b;
+}
+.nav-list li{
+   padding: 0.50rem 1.5rem;
+}
+
+.tooltip:before {
+  border-color: #1a364f transparent !important;
+}
+.tooltip.top:before {
+  border-color: #1a364f transparent !important;
+}
+.tooltip.left:before {
+  border-color: transparent #1a364f transparent !important;
+}
+.tooltip.right:before {
+  border-color:  transparent #1a364f transparent #1a364f !important;;
+}
+
+
+tbody td.text-center, thead th.text-center {
+    text-align: center;
+}
+
+/*NESTED ACCORDIONS*/
+
+.nested-accordion {
+    border: 0px none transparent;
+}
+
+.nested-accordion .nested-collapsable-panel {
+    display: block;
+}
+
+.nested-accordion .nested-toggle .fa {
+    color: #25b6e0;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.nested-accordion .nested-toggle .fa.fa-holder:before {
+    content: "  ";
+}
+
+.nested-accordion .nested-toggle .text {
+    color: #525252;
+    padding-left: .5rem;
+}
+
+.nested-accordion .nested-toggle:hover .fa {
+    color: #198dae;
+}
+
+.nested-accordion .nested-toggle:hover .text {
+    color: #333333;
+}
+
+.nested-accordion .nested-selected .nested-toggle .fa {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #3adb76;
+}
+
+.recommendationTable .No-Benifit {
+    background-color: 	#c32231;
+    color: #333333;
+}
+
+.table.checklist-therapy {
+    word-break: break-word;
+}
+.table th {
+    vertical-align: middle;
+}
+.patient-scenario {
+    list-style: none;
+}
+.patient-scenario a{
+  word-wrap: break-word;
+    display: block;
+    color: blue;
+    text-decoration: underline;
+}
+
+.accordion a{
+    color: #25b6e0;
+}
+.nested-accordion h4 small{
+    color: #525252;
+}

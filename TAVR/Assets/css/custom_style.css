@@ -1,0 +1,411 @@
+.page.header .logo,
+.page.footer .logo{
+    cursor: default;
+}
+.page.header .logo img {
+    height: 53px;
+    margin-top: 20px;
+ }
+ 
+.tabs.primary li:focus {
+  text-decoration: none; 
+}
+.tabs.primary li.selected a {
+  text-decoration: none; 
+}
+.tabs.primary li.selected a:focus {
+    text-decoration: none; 
+}
+.reset-all{
+    margin-top: 66px;
+ }
+.reset-btn{
+    position: absolute;
+    right: 0px;
+    top: 10px;   
+}
+.patient-demographics .reset-btn{
+    right: 7px;
+    top: 10px;   
+}
+.alert-box.alert.caution-box-style {
+    background-color: #FFF7EC;
+    border: 1px solid #FFCA86;
+    color: #333;
+    font-size: 14px;
+}
+#race{
+    padding-right: 20px;
+}
+@media screen\0{
+     #race{
+        padding-right:.57143rem;
+    }   
+}
+.box-container {
+  position: relative; }
+
+.box {
+  width: auto;
+  position: relative;
+  top: -11px;
+  right: 0;
+  font-size: 1.14286rem;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #4F4190;
+  padding: 1px 15px; }
+
+.unit-container {
+  background-color: #4F4190; }
+
+.fa-repeat {
+  color: #008ad2; }
+
+.input-suffix {
+  padding: 14px 0; }
+
+.right-info-container {
+  position: relative; }
+
+.renal-function-container .fa-info-circle {
+  margin-left: 5px;
+  color: #ffffff; }
+
+.tip-top, .tip-left {
+  cursor: pointer; }
+/*** css for select units ***/
+.units-outer {
+    width: 270px;
+}
+.switch-on {
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.switch-off {
+    position: absolute;
+    left: -19px;
+    top: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+.switch-on .fa, .switch-off .fa {
+    display: inline;
+}
+.switch label.units:after {
+    width: 4.3rem;
+    height: 1.8rem;
+}
+.switch.round label.units:after {
+    border-radius: 2rem 0 0 2rem;
+}
+.switch label.units .switch-off {
+    left: -47px;
+    top: 5px;
+    z-index: 1;
+}
+.switch label.units .switch-off {
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+    left: 55px;
+    top: 0;
+}
+label.units {
+    width: 125px;
+    height: 32px;
+}
+.units-outer label {
+    padding-top: 4px;
+}
+.units-outer .switch-value {
+    padding-left: 0;
+}
+.switch label.units .switch-on {
+    font-size: 14px;
+    z-index: 1;
+    color: #5c5c5c;
+    font-weight: normal;
+    left: 25px;
+    top: 0;
+    position: relative;
+}
+.switch input:checked + label.units:after {
+    left: 62px;
+    border-radius: 0 2rem 2rem 0;
+}
+.switch input:checked + label.units .switch-on {
+    color: #fff;
+}
+.switch input:checked + label.units .switch-off {
+    color: #5c5c5c;
+}
+.switch input:checked + label.units .switch-off .fa-check:before {
+        display: none;
+    }
+.select .switch-on .fa-check:before {
+    content: "";
+}
+.switch input:checked + label.units .switch-on .fa-check:before {
+    content: "\f00c";
+}
+.switch.select label {
+    background-color: #4F4190;
+    position: absolute;
+    left: 50px;
+}
+/*swicth end*/
+.input-holder .custom-input-holder {
+  float: left;
+}
+/*Predicted risk page styling start*/ 
+.text-normal {
+  white-space: normal;
+}
+.left10 {
+  margin-left: 10px; }
+ 
+ .scorebox-container {
+    color: #ffffff;
+    margin-top: 30px;
+ }
+ .scorebox-container .scorebar-panel {
+    height: 100%; 
+ }
+ .scorebox-container .scorebar-panel-block {
+    display: inline-block;
+    text-align: left; 
+ }
+ .scorebox-container .patient-risk {
+    background: #4F4190;
+    overflow: hidden;
+    padding: 0px 20px 0px 20px; 
+ }
+ .scorebox-container .patient-risk div {
+    margin: 0;
+ }
+ .scorebox-container .patient-risk .scorebarlabel {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 2em;
+    line-height: 1.2em;
+    font-weight: normal;
+ }
+ .scorebox-container .patient-risk-desc {
+    background: #6e5fb2;
+    overflow: hidden;
+    padding: 10px 11px;
+    display: table-cell;
+    vertical-align: middle; 
+ }
+ .scorebox-container .scorebar-panel-right {
+    background-image: url("../img/score_divider.png");
+    background-position: 10px 8px;
+    padding-left: 30px !important;
+    background-repeat: no-repeat;
+    background-size: 1px auto;
+ }
+ .scorebox-container .patient-risk-avg {
+    display: inline-block;
+    font-size: 4.8em;
+    line-height: 1em;
+    font-weight: bold; }
+ .scorebox-container .percentage {
+    font-size: 0.7em; 
+ }
+ .scorebox-container .avg-container {
+    display: inline-block; 
+ }
+ .scorebox-container .national-risk-avg-date {
+    font-size: 1em;
+    font-weight: normal;
+ }
+ .scorebox-container .small-info {
+    color: #333;
+    font-size: 12px;
+    margin: 10px 0 0;
+    line-height: normal;
+ } 
+.evaluation-text {
+  margin-bottom: 0px;
+  margin-top: 1.42857rem; 
+}
+span.tooltip{
+    overflow: hidden;
+}
+
+.units .switch-on .fa-check:before {
+  content: "\f00c";
+}
+
+ /*Predicted risk page styling End*/ 
+ @media only screen and (min-width: 280px) and (max-width: 767px) {
+ .patient-demographics .reset-btn{
+        top: 20px;   
+  }     
+  .header .tabs.primary li {
+    width: 50%; }
+  .page.footer .tabs.primary li {
+    width: 33.33%; }
+  .scorebox-container .patient-risk .scorebarlabel {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    font-weight: normal; }
+  .score-box-container .score-box {
+    float: right;
+    position: relative;
+    bottom: 0; }
+   .scorebox-container .patient-risk {
+    padding: 10px 6px 6px 6px;
+   }
+   .scorebox-container .patient-risk-desc {
+      padding: 10px 6px 6px 6px;
+    }
+   .scorebox-container .scorebar-panel-right {
+      background-position: 5px 2px;
+      padding-left: 20px !important;
+      background-repeat: no-repeat;
+    }
+    .scorebox-container .patient-risk-avg {
+      font-size: 2.6em;
+      line-height: 0.8em;
+    }
+    .scorebox-container .percentage {
+      font-size: 0.7em; }
+    .scorebox-container .national-risk-avg-date {
+      font-size: 0.6em;
+    }      
+ }
+@media only screen and (min-width: 767px) and (max-width: 767px){
+    .page.header .logo{ 
+        display: none;
+    }    
+ .header .tabs{
+     width: 100%!important;
+ } 
+  .header .tabs.primary li {
+    width: 50%; }     
+ }
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+   .page.header .logo img{ 
+        height: 30px;
+        margin-top: 20px;   
+    }
+   .patient-demographics .reset-btn {
+        top: 20px;
+    }
+  .page.footer .tabs {
+    float: none;
+    text-align: center; }
+  .page.footer .tabs.primary li {
+    padding: 1em 0.5em;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    float: none;
+    display: inline-block; }
+  .page.footer .tabs.primary li.selected,
+  .page.footer .tabs.primary li:hover {
+    background-color: transparent; }
+  .page.footer .tabs.primary li a {
+    padding: 0;
+    color: #fff; }
+  .page.footer .tabs.primary li:hover a {
+    color: #fff;
+    text-decoration: underline; } 
+  }
+ @media only screen and (min-width: 1024px){
+    .patient-demographics .reset-btn {
+        top: 20px;
+    }     
+ } 
+ @media only screen and (min-width: 1024px) and (max-width: 1154px) {
+   .page.header .logo img{ 
+        height: 43px;
+        margin-top: 22px;   
+    }     
+    .scorebox-container .patient-risk {
+        padding: 20px 25px 20px 25px; }
+    .scorebox-container .patient-risk .scorebarlabel {
+        font-size: 1.4em;
+        line-height: 1.2em;
+    }
+    .scorebox-container .patient-risk-desc {
+      padding: 10px 11px;
+    }
+   .scorebox-container .patient-risk-avg {
+      font-size: 3.8em;
+      line-height: 1em;
+    }
+    .scorebox-container .percentage {
+      font-size: 0.7em; }
+    .scorebox-container .national-risk-avg-date {
+      font-size: 0.8em;
+    }
+ }
+@media only screen and (min-width: 1152px) and (max-width: 1260px) {
+    .scorebox-container .patient-risk {
+      padding: 1.4em 1.2em; 
+    }
+    .scorebox-container .patient-risk .scorebarlabel {
+        font-size: 1.6em;
+        line-height: 1.2em;
+    }
+    .scorebox-container .patient-risk-desc {
+      padding: 10px 11px;
+    }
+    .scorebox-container .scorebar-panel-right {
+      background-size: 1px auto; }
+    .scorebox-container .patient-risk-avg {
+      font-size: 3.8em;
+      line-height: 1em;
+    }
+    .scorebox-container .percentage {
+      font-size: 0.7em; }
+ }
+@media only screen and (max-width: 40em) {
+  .scorebox-container .scorebar-panel-left,
+  .scorebox-container .scorebar-panel-right {
+    text-align: center;
+    transform: none; }
+  .scorebox-container .patient-risk-desc {
+    padding: 1rem; } 
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .patient-demographics .reset-btn {
+        top: 20px;
+    }    
+    .scorebox-container .patient-risk {
+        padding: 1rem; 
+    }
+    .scorebox-container .patient-risk .scorebarlabel {
+        font-size: 1.4em;
+        line-height: 1.2em;
+    }
+    .scorebox-container .patient-risk-desc {
+      padding: 10px 11px;
+      display: table-cell;
+      vertical-align: middle; 
+    }
+    .scorebox-container .scorebar-panel-right {
+      background-size: 1px auto; 
+    }
+    .scorebox-container .patient-risk-avg {
+      font-size: 2.8em;
+      line-height: 1em;
+    }
+    .scorebox-container .percentage {
+      font-size: 0.7em; 
+    }
+    .scorebox-container .national-risk-avg-date {
+      font-size: 0.7em;
+      font-weight: normal; }
+}
