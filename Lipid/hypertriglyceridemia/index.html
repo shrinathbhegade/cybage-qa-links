@@ -21,14 +21,13 @@
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/styledown.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/normalize.min.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/jquery-ui.css">
-
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/jquery-uistructure.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/foundation-sites.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/font-awesome.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/index.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/ldl-custom.css">
     <link rel="stylesheet" href="../hypertriglyceridemia/assets/css/print-css.css">
-    <link rel="stylesheet" href="../assets/css/splash.css">
+    <link rel="stylesheet" href="assets/css/splash.css">
 </head>
 
 <body>
@@ -850,7 +849,7 @@
                                     </div>
                                 </div>
                                 <div class="row collapse button-container"
-                                    data-bind="visible:$root.Form().showAdviceBtn()">
+                                    data-bind="visible:$root.Form().showAdviceBtn() || $root.Form().asvd10yrrisk() !== null">
                                     <div class="large-12 medium-12 small-12">
                                         <a tabindex="22" class="small button right"
                                             data-bind="click:$root.tabNavigation.bind('event', 'advice')"
