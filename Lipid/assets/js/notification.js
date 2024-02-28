@@ -1,7 +1,7 @@
 var _notification = function () {
 	var self = this;
 	self.showCritical = true;
-	self.webApiUrl = 'https://tools.acc.org/ACCUtility.Web/';
+	self.webApiUrl = 'https://tools.stage.acc.org/ACCUtility.Web/';
 	self.appId = 'org.acc.ldlcmanager';
 	self.userGuid = 'a7b3e523-3f8d-4b33-a1c4-ec9e9aa3a5bb';
 	self.appVersion = '1.0';
