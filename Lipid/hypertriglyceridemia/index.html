@@ -154,7 +154,7 @@
                                 <li id="calculator-Tab" class="selected">
                                     <a href="#!/content/calculator/" class="condensable small btn-ga4" data-bind="click:$root.tabNavigation.bind('event', 'evaluate')">Evaluate</a>
                                 </li>
-                                <li id="advice-Tab" class="" data-bind="css:$root.Form().showAdviceBtn()?'':'disabled'">
+                                <li id="advice-Tab" class="" data-bind="css:($root.Form().showAdviceBtn() || ($root.Form().asvd10yrrisk() !== null))?'':'disabled'">
                                     <a href="#!/content/advice/" class="condensable small hypert-ce-ga4" data-bind="click:$root.tabNavigation.bind('event', 'advice')">Advice</a>
                                 </li>
                             </ul>
