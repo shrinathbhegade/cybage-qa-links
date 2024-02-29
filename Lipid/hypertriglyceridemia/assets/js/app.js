@@ -969,7 +969,15 @@ function getCookie(cname) {
 
 //Unnecessary change event, removing...
 $('input[type=radio][name=primary-switch-a]').change(function (evt) {
-  appmodel.Form().TenYearRiskAction('cancel');
+  appmodel.Form().TenYearRiskAction('cancel', evt);
+
+  // setTimeout(()=>{
+  //   //appmodel.Form().asvd10yrrisk(evt.target.value);
+  //   if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
+  //     appmodel.Form().asvd10yrrisk(evt.target.value);
+  //   }
+  // },600);
+  
   if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
     appmodel.Form().asvd10yrrisk(evt.target.value);
   }

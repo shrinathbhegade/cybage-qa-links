@@ -154,7 +154,7 @@
                                 <li id="calculator-Tab" class="selected">
                                     <a href="#!/content/calculator/" class="condensable small btn-ga4" data-bind="click:$root.tabNavigation.bind('event', 'evaluate')">Evaluate</a>
                                 </li>
-                                <li id="advice-Tab" class="" data-bind="css:($root.Form().showAdviceBtn() || ($root.Form().asvd10yrrisk() !== null))?'':'disabled'">
+                                <li id="advice-Tab" class="" data-bind="css:$root.Form().showAdviceBtn() ? '':'disabled'">
                                     <a href="#!/content/advice/" class="condensable small hypert-ce-ga4" data-bind="click:$root.tabNavigation.bind('event', 'advice')">Advice</a>
                                 </li>
                             </ul>
@@ -849,7 +849,7 @@
                                     </div>
                                 </div>
                                 <div class="row collapse button-container"
-                                    data-bind="visible:$root.Form().showAdviceBtn() || $root.Form().asvd10yrrisk() !== null">
+                                    data-bind="visible:$root.Form().showAdviceBtn()">
                                     <div class="large-12 medium-12 small-12">
                                         <a tabindex="22" class="small button right"
                                             data-bind="click:$root.tabNavigation.bind('event', 'advice')"

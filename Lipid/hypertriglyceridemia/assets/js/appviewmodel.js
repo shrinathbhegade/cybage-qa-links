@@ -559,10 +559,15 @@ function formObject(parent) {
         }
 
     });
+    self.checkShowAdviceBtnState = () =>{
+        let score = self.asvd10yrrisk();
+        if (score !== null || score !== undefined){
+            self.showAdviceBtn(true);
+        }
+    };
     self.asvd10yrrisk.subscribe(function (data) {
         if (data !== '') {
             self.showAdviceBtn(true);
-
             if (data == 'Low') {
                 self.asvd10yrriskValue('Low (<5%)');
             } else if (data == 'Intermediate') {
@@ -602,7 +607,8 @@ function formObject(parent) {
 
     self.HDLCholesterolValue(undefined);
 
-    self.TenYearRiskAction = function (data) {
+    //adding default param sender of the event, if it is sent by 10yr risk buttons don't hide show advice button..
+    self.TenYearRiskAction = function (data, sender=null) {
         if (data === 'save') {
             var TenYearRiskValue = parseFloat(self.TenYearRisk());
             if (TenYearRiskValue < 5) {
@@ -634,7 +640,8 @@ function formObject(parent) {
             if (self.triglyceridesRange() == 'group3' || (self.triglyceridesRange() == 'group2' && self.Age() < 40)) {
                 self.showAdviceBtn(true);
             } else {
-                self.showAdviceBtn(false);
+                if (sender === null)
+                    self.showAdviceBtn(false);
             }
         }
     };
