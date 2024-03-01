@@ -1,0 +1,1600 @@
+{
+	"GDMT":{
+		"ACE_ARB":{
+			"queCopytext":"cp_gdmt_que",
+            "options":[
+				{
+					"id":"ARNI",
+					"alias":"Neither",
+					"queCopytext":"cp_gdmt_arni",
+					"opQueCopytext":"",
+                    "options":[],
+                    "selectedOpt":"",
+                    "que":[],
+					"firstLineAdvice": {"Initiation":"cp_neither_fla_init","Titration":"cp_neither_fla_tit","Monitoring":"cp_neither_fla_mon","Guideline":"cp_neither_fla_gui"}
+                },
+                {		
+					"id":"ACEI",
+					"alias":"ACEI",
+					"queCopytext":"cp_gdmt_ace",
+					"opQueCopytext":"cp_gdmt_ace_d",
+                    "options":[
+								{"id":"op0", "copytext":"cp_none", "doseId":""},
+                                {"id":"op1", "copytext":"cp_ace_drug1", "doseId":"dose1"},
+                                {"id":"op2", "copytext":"cp_ace_drug2", "doseId":"dose2"},
+                                {"id":"op3", "copytext":"cp_ace_drug3", "doseId":"dose3"},
+                                {"id":"op4", "copytext":"cp_ace_drug4", "doseId":"dose4"},
+                                {"id":"op5", "copytext":"cp_ace_drug5", "doseId":"dose5"},
+                                {"id":"op6", "copytext":"cp_ace_drug6", "doseId":"dose6"},
+                                {"id":"op7", "copytext":"cp_ace_drug7", "doseId":"dose7"},
+                                {"id":"op8", "copytext":"cp_ace_drug8", "doseId":"dose8"}
+                            ],
+                    "selectedOpt":"op0",
+                    "que":[
+                        {"id":"que1","copytext":"cp_ace_que1","selectedOpt":"none","tooltipCP":"tooltip_cp1","warning":false,"isViewContraindications":true},
+                        {"id":"que2","copytext":"cp_ace_que2","selectedOpt":"none","tooltipCP":"tooltip_ACEI_cp2","warning":false,"isViewContraindications":false}
+                    ],
+					"firstLineAdvice":{
+						"op0":{"advice":"cp_ace_flt_not","Initiation":"cp_ace_fla_init0","Titration":"cp_ace_fla_tit0","Monitoring":"cp_ace_fla_mon0","Guideline":"cp_ace_fla_gui0"},
+						"op1":{"advice":"cp_ace_flt_captopril","Initiation":"cp_ace_fla_init1","Titration":"cp_ace_fla_tit1","Monitoring":"cp_ace_fla_mon1","Guideline":"cp_ace_fla_gui1"},
+						"op2":{"advice":"cp_ace_flt_enalopril","Initiation":"cp_ace_fla_init2","Titration":"cp_ace_fla_tit2","Monitoring":"cp_ace_fla_mon2","Guideline":"cp_ace_fla_gui2"},
+						"op3":{"advice":"cp_ace_flt_fosinopril","Initiation":"cp_ace_fla_init3","Titration":"cp_ace_fla_tit3","Monitoring":"cp_ace_fla_mon3","Guideline":"cp_ace_fla_gui3"},
+						"op4":{"advice":"cp_ace_flt_lisinopril","Initiation":"cp_ace_fla_init4","Titration":"cp_ace_fla_tit4","Monitoring":"cp_ace_fla_mon4","Guideline":"cp_ace_fla_gui4"},
+						"op5":{"advice":"cp_ace_flt_perindopril","Initiation":"cp_ace_fla_init5","Titration":"cp_ace_fla_tit5","Monitoring":"cp_ace_fla_mon5","Guideline":"cp_ace_fla_gui5"},
+						"op6":{"advice":"cp_ace_flt_quinapril","Initiation":"cp_ace_fla_init6","Titration":"cp_ace_fla_tit6","Monitoring":"cp_ace_fla_mon6","Guideline":"cp_ace_fla_gui6"},
+						"op7":{"advice":"cp_ace_flt_rampiril","Initiation":"cp_ace_fla_init7","Titration":"cp_ace_fla_tit7","Monitoring":"cp_ace_fla_mon7","Guideline":"cp_ace_fla_gui7"},
+						"op8":{"advice":"cp_ace_flt_trandolapril","Initiation":"cp_ace_fla_init8","Titration":"cp_ace_fla_tit8","Monitoring":"cp_ace_fla_mon8","Guideline":"cp_ace_fla_gui8"}
+					}
+                },
+                {
+					"id":"ARB",
+					"alias":"ARB",
+					"queCopytext":"cp_gdmt_arb",
+					"opQueCopytext":"cp_gdmt_arb_d",
+                    "options":[
+							{"id":"op0", "copytext":"cp_none", "doseId":""},
+                            {"id":"op1", "copytext":"cp_arb_drug1", "doseId":"dose9"},
+							{"id":"op2", "copytext":"cp_arb_drug2", "doseId":"dose10"},
+							{"id":"op3", "copytext":"cp_arb_drug3", "doseId":"dose11"}
+                        ],
+                    "selectedOpt":"op0",
+                    "que":[
+                        {"id":"que1","copytext":"cp_arb_que1","selectedOpt":"none","tooltipCP":"tooltip_cp1","warning":false,"isViewContraindications":true},
+                        {"id":"que2","copytext":"cp_arb_que2","selectedOpt":"none","tooltipCP":"tooltip_cp2","warning":false,"isViewContraindications":false}
+                    ],
+					"firstLineAdvice":{
+						"op0":{"advice":"cp_arb_flt_not","Initiation":"cp_arb_fla_init0","Titration":"cp_arb_fla_tit0","Monitoring":"cp_arb_fla_mon0","Guideline":"cp_arb_fla_gui0"},
+						"op1":{"advice":"cp_arb_flt_candesartan","Initiation":"cp_arb_fla_init1","Titration":"cp_arb_fla_tit1","Monitoring":"cp_arb_fla_mon1","Guideline":"cp_arb_fla_gui1"},
+						"op2":{"advice":"cp_arb_flt_losartan","Initiation":"cp_arb_fla_init2","Titration":"cp_arb_fla_tit2","Monitoring":"cp_arb_fla_mon2","Guideline":"cp_arb_fla_gui2"},
+						"op3":{"advice":"cp_arb_flt_valsartan","Initiation":"cp_arb_fla_init3","Titration":"cp_arb_fla_tit3","Monitoring":"cp_arb_fla_mon3","Guideline":"cp_arb_fla_gui3"}
+					}
+                },                
+                {
+					"id":"Neither",
+					"alias":"Neither",
+					"queCopytext":"cp_gdmt_neither",
+					"opQueCopytext":"",
+                    "options":[],
+                    "selectedOpt":"",
+                    "que":[
+                        {"id":"que1","copytext":"cp_neither_que","selectedOpt":"none","tooltipCP":"","warning":false,"isViewContraindications":false}
+                    ],
+					"firstLineAdvice": {"Initiation":"cp_neither_fla_init","Titration":"cp_neither_fla_tit","Monitoring":"cp_neither_fla_mon","Guideline":"cp_neither_fla_gui"}
+                }
+            ],				
+			"selectedOpt":"",
+			"selectedViewOpt":"",
+			"warning":false
+		},
+		"beta_blocker":{
+			"queCopytext":"cp_bb_que",
+			"drugs":{
+				"que":"cp_bb_que_d",
+				"options":[
+							{"id":"bb_opsl", "copytext":"cp_bb_select", "value":false, "doseId":""},
+                            {"id":"bb_op0", "copytext":"cp_bb_none", "value":false, "doseId":""},
+                            {"id":"bb_op1", "copytext":"cp_bb_drug1", "value":true, "doseId":"dose16"},
+                            {"id":"bb_op2", "copytext":"cp_bb_drug2", "value":true, "doseId":"dose17"},
+                            {"id":"bb_op3", "copytext":"cp_bb_drug3", "value":true, "doseId":"dose18"},
+							{"id":"bb_op4", "copytext":"cp_bb_drug4", "value":true, "doseId":"dose19"}
+						],
+				"selectedOpt":"bb_opsl",
+				"warning":false,
+				"firstLineAdvice":{
+					"bb_op0":{"advice":"cp_bb_flt_not","Initiation":"cp_bb_fla_init_not","Titration":"cp_bb_fla_tit_not","Monitoring":"cp_bb_fla_mon_not"},
+					"bb_op1":{"advice":"cp_bb_flt_bisopropol","Initiation":"cp_bb_fla_init_Bisoprolol","Titration":"cp_bb_fla_tit_Bisoprolol","Monitoring":"cp_bb_fla_mon_Bisoprolol"},
+					"bb_op2":{"advice":"cp_bb_flt_carevidol","Initiation":"cp_bb_fla_init_Carvedilol","Titration":"cp_bb_fla_tit_Carvedilol","Monitoring":"cp_bb_fla_mon_Carvedilol"},
+					"bb_op3":{"advice":"cp_bb_flt_CarevidolCR","Initiation":"cp_bb_fla_init_CarvedilolCR","Titration":"cp_bb_fla_tit_CarvedilolCR","Monitoring":"cp_bb_fla_mon_CarvedilolCR"},
+					"bb_op4":{"advice":"cp_bb_flt_metoprolol","Initiation":"cp_bb_fla_init_Metoprolol","Titration":"cp_bb_fla_tit_Metoprolol","Monitoring":"cp_bb_fla_mon_Metoprolol"}
+				}				
+			},
+			"ques":[
+				{"id":"bb_que1","copytext":"","selectedOpt":"none","warning":false}
+			]
+			
+		},
+		"diuretic":{
+			"ques":[
+				{"id":"deu_que1","copytext":"cp_deu_que1","selectedOpt":"none","warning":false}
+			],		
+			"firstLineAdvice":{
+				"no":{"advice":"cp_diuretic_flt_not","Initiation":"cp_diuretic_not_init","Titration":"cp_diuretic_not_tit","Monitoring":"cp_diuretic_not_mon"},
+				"yes":{"advice":"cp_diuretic_flt","Initiation":"cp_diuretic_not_init","Titration":"cp_diuretic_not_tit","Monitoring":"cp_diuretic_not_mon"}
+			}		
+		}
+			
+	},
+	"patient":{
+		"NYHA":{
+			"queCopytext":"cp_nyha_que",
+			"options":[
+						{"id":"NYHASL", "copytext":"cp_nyha_select", "value":false},
+						{"id":"NYHAI", "copytext":"cp_nyha1", "value":true},
+						{"id":"NYHAII", "copytext":"cp_nyha2", "value":true},
+						{"id":"NYHAIII", "copytext":"cp_nyha3", "value":true},
+						{"id":"NYHAIV", "copytext":"cp_nyha4", "value":true},
+						{"id":"NYHAUN", "copytext":"cp_nyha_unknown", "value":false}
+					],
+			"selectedOpt":"NYHASL",
+			"warning":false
+		},
+		"LVEF":{
+			"queCopytext":"cp_lvef_que",
+			"options":[
+						{"id":"LSL", "copytext":"cp_lvef_select", "value":false},
+						{"id":"lvef1", "copytext":"cp_lvef1", "value":true},
+						{"id":"lvef2", "copytext":"cp_lvef2", "value":true},
+						{"id":"LUN", "copytext":"cp_lvef_unknown", "value":false}
+					],
+			"selectedOpt":"LSL",
+			"warning":false
+		},
+		"additionalMedications":{
+			"queCopytext":"cp_add_medications",
+			"options":[
+						{"id":"am1", "copytext":"cp_am1","isSelected":false},
+						{"id":"am2", "copytext":"cp_am2","isSelected":false},
+						{"id":"am3", "copytext":"cp_am3","isSelected":false},
+						{"id":"am4", "copytext":"cp_am4","isSelected":false},
+						{"id":"am5", "copytext":"cp_am5","isSelected":false}
+					],
+			"warning":false
+		},
+		"indication":{
+			"queCopytext":"cp_indication_que",
+			"CIforIvabridine":{"copytext":"cp_ivabradine_ci","isAdviceTriggered":false,"yesSelected":false,"noSelected":false, "rasNonCIs":["que5_op2", "que5_op4"]},
+			"options":[
+						{"id":"i1", "copytext":"cp_i1","selectedOpt":false},
+						{"id":"i5", "copytext":"cp_i5","selectedOpt":false},
+						{"id":"i2", "copytext":"cp_i2","selectedOpt":false},
+						{"id":"i6", "copytext":"cp_i6","selectedOpt":false},
+						{"id":"i7", "copytext":"cp_i7","selectedOpt":false},
+						{"id":"i3", "copytext":"cp_i3","selectedOpt":false},
+						{"id":"i4", "copytext":"cp_i4","selectedOpt":false}
+					]
+		},
+		"modifier":{
+			"queCopytext":"cp_modifier_que",
+			"options":[
+						{"id":"m1", "copytext":"cp_m1","selectedOpt":false},
+						{"id":"m3", "copytext":"cp_m3","selectedOpt":false},
+						{"id":"m5", "copytext":"cp_m5","selectedOpt":false},
+						{"id":"m6", "copytext":"cp_m6","selectedOpt":false},
+						{"id":"m7", "copytext":"cp_m7","selectedOpt":false},
+						{"id":"m8", "copytext":"cp_m8","selectedOpt":false},
+						{"id":"m9", "copytext":"cp_m9","selectedOpt":false},
+						{"id":"m10", "copytext":"cp_m10","selectedOpt":false}
+					]
+		},
+		"dependent_indication_modifier":[
+			{"indication": "i2","modifier":"m6"}
+		]		
+	},
+	"doses":{
+				"dose1":{"initDose":"ind1","maxDose":"md1"},
+				"dose2":{"initDose":"ind2","maxDose":"md2"},
+				"dose3":{"initDose":"ind3","maxDose":"md3"},
+				"dose4":{"initDose":"ind4","maxDose":"md4"},
+				"dose5":{"initDose":"ind5","maxDose":"md5"},
+				"dose6":{"initDose":"ind6","maxDose":"md6"},
+				"dose7":{"initDose":"ind7","maxDose":"md7"},
+				"dose8":{"initDose":"ind8","maxDose":"md8"},
+				"dose9":{"initDose":"ind9","maxDose":"md9"},
+				"dose10":{"initDose":"ind10","maxDose":"md10"},
+				"dose11":{"initDose":"ind11","maxDose":"md11"},
+				"dose12":{"initDose":"ind12","maxDose":"md12"},
+				"dose13":{"initDose":"ind13","maxDose":"md13"},
+				"dose14":{"initDose":"ind14","maxDose":"md14"},
+				"dose15":{"initDose":"ind15","maxDose":"md15"},
+				"dose16":{"initDose":"ind16","maxDose":"md16"},
+				"dose17":{"initDose":"ind17","maxDose":"md17"},
+				"dose18":{"initDose":"ind18","maxDose":"md18"},
+				"dose19":{"initDose":"ind19","maxDose":"md19"},
+				"dose20":{"initDose":"ind20","maxDose":"md20"},
+				"dose21":{"initDose":"ind21","maxDose":"md21"}				
+			},
+	"contraindications":{
+		"ACE_ARB":{
+			"id":"ACE_ARB",
+			"ques":[{"id":"que1","copytext":"cp_RAAS_contraindication_que1","options":[{"id":"que1_op1","copytext":"cp_RAAS_contraindication_que1_op1","isSelected":false}]},
+				{"id":"que2","copytext":"cp_RAAS_contraindication_que2","options":[{"id":"que2_op1","copytext":"cp_RAAS_contraindication_que2_op1","isSelected":false},{"id":"que2_op2","copytext":"cp_RAAS_contraindication_que2_op2","isSelected":false}]},
+				{"id":"que3","copytext":"cp_RAAS_contraindication_que3","options":[
+					{"id":"que3_op1","copytext":"cp_RAAS_contraindication_que3_op1","isSelected":false},
+					{"id":"que3_op2","copytext":"cp_RAAS_contraindication_que3_op2","isSelected":false, "dependent":{"queId":"que5","optionId":"que5_op1", "autoSelect":true}},
+					{"id":"que3_op3","copytext":"cp_RAAS_contraindication_que3_op3","isSelected":false}]},
+				{"id":"que4","copytext":"cp_RAAS_contraindication_que4","options":[{"id":"que4_op1","copytext":"cp_RAAS_contraindication_que4_op1","isSelected":false}]},
+				{"id":"que5","copytext":"cp_RAAS_contraindication_que5","options":[
+					{"id":"que5_op1","copytext":"cp_RAAS_contraindication_que5_op1","isSelected":false, "dependent":{"queId":"que3","optionId":"que3_op2", "autoSelect":true, "skipFromMail":true}},
+					{"id":"que5_op2","copytext":"cp_RAAS_contraindication_que5_op2","isSelected":false},
+					{"id":"que5_op3","copytext":"cp_RAAS_contraindication_que5_op3","isSelected":false},
+					{"id":"que5_op4","copytext":"cp_RAAS_contraindication_que5_op4","isSelected":false}
+					
+					]}
+			],
+			"description":"",
+			"hide":true
+		},
+		"beta_blocker":{
+			"id":"beta_blocker",
+			"ques":[
+						{
+							"id":"que_con_bb","copytext":"cp_BB_contraindication_que",
+							"options":[
+								{"id":"que_con_bb_op1","copytext":"cp_BB_contraindication_que_op1","isSelected":false},
+								{"id":"que_con_bb_op2","copytext":"cp_BB_contraindication_que_op2","isSelected":false},
+								{"id":"que_con_bb_op3","copytext":"cp_BB_contraindication_que_op3","isSelected":false},
+								{"id":"que_con_bb_op4","copytext":"cp_BB_contraindication_que_op4","isSelected":false},
+								{"id":"que_con_bb_op5","copytext":"cp_BB_contraindication_que_op5","isSelected":false},
+								{"id":"que_con_bb_op6","copytext":"cp_BB_contraindication_que_op6","isSelected":false},
+								{"id":"que_con_bb_op7","copytext":"cp_BB_contraindication_que_op7","isSelected":false},
+								{"id":"que_con_bb_op8","copytext":"cp_BB_contraindication_que_op8","isSelected":false},
+								{"id":"que_con_bb_op9","copytext":"cp_BB_contraindication_que_op9","isSelected":false},
+								{"id":"que_con_bb_op10","copytext":"cp_BB_contraindication_que_op10","isSelected":false},
+								{"id":"que_con_bb_op11","copytext":"cp_BB_contraindication_que_op11","isSelected":false}
+							]
+						}
+					],
+			"description":"",
+			"hide":true
+		},
+		"diuretic":{
+			"id":"diuretic",
+			"ques":[
+						{
+							"id":"que_con_diuretic","copytext":"cp_diuretic_contraindication_que",
+							"options":[
+								{"id":"que_con_du_op1","copytext":"cp_diuretic_contraindication_que_op1","isSelected":false},
+								{"id":"que_con_du_op2","copytext":"cp_diuretic_contraindication_que_op2","isSelected":false},
+								{"id":"que_con_du_op3","copytext":"cp_diuretic_contraindication_que_op3","isSelected":false},
+								{"id":"que_con_du_op4","copytext":"cp_diuretic_contraindication_que_op4","isSelected":false},
+								{"id":"que_con_du_op5","copytext":"cp_diuretic_contraindication_que_op5","isSelected":false},
+								{"id":"que_con_du_op6","copytext":"cp_diuretic_contraindication_que_op6","isSelected":false},
+								{"id":"que_con_du_op7","copytext":"cp_diuretic_contraindication_que_op7","isSelected":false}
+							]
+						}
+					],
+			"description":"",
+			"hide":true
+		}
+	},
+	"exception":{
+		"ACE_ARB":{
+			"id":"ACE_ARB",
+			"heading1":"exp_ACE_ARB_heading",
+			"heading2":"exception_common",
+			"description":"",
+			"options":[
+				{"id":"op1","copytext":"exp_ACE_ARB_op1","value":false},
+				{"id":"op2","copytext":"exp_ACE_ARB_op2","value":false},
+				{"id":"op3","copytext":"exp_ACE_ARB_op3","value":false},
+				{"id":"op4","copytext":"exp_ACE_ARB_op4","value":false},
+				{"id":"op5","copytext":"exp_ACE_ARB_op5","value":false},
+				{"id":"op6","copytext":"exp_ACE_ARB_op6","value":false},
+				{"id":"op7","copytext":"exp_ACE_ARB_op7","value":false},
+				{"id":"op8","copytext":"exp_ACE_ARB_op8","value":false},
+				{"id":"op9","copytext":"exp_ACE_ARB_op9","value":false}
+			]
+		},
+		"beta_blocker":{
+			"id":"beta_blocker",
+			"heading1":"exp_BB_heading",
+			"heading2":"exception_common",
+			"description":"",
+			"options":[
+				{"id":"op1","copytext":"exp_BB_op1","value":false},
+				{"id":"op2","copytext":"exp_BB_op2","value":false},
+				{"id":"op3","copytext":"exp_BB_op3","value":false},
+				{"id":"op4","copytext":"exp_BB_op4","value":false},
+				{"id":"op5","copytext":"exp_BB_op5","value":false},
+				{"id":"op6","copytext":"exp_BB_op6","value":false},
+				{"id":"op7","copytext":"exp_BB_op7","value":false}
+			]
+		},
+		"diuretic":{
+			"id":"diuretic",
+			"heading1":"exp_Diu_heading",
+			"heading2":"exception_common",
+			"description":"",
+			"options":[
+				{"id":"op1","copytext":"exp_Diu_op1","value":false},
+				{"id":"op2","copytext":"exp_Diu_op2","value":false},
+				{"id":"op3","copytext":"exp_Diu_op3","value":false},
+				{"id":"op4","copytext":"exp_Diu_op4","value":false},
+				{"id":"op5","copytext":"exp_Diu_op5","value":false},
+				{"id":"op6","copytext":"exp_Diu_op6","value":false}
+			]
+		}
+
+	},
+	"analytics":{  
+		"Evaluate":{  
+			"Pt_AA":{  
+				"id":"Pt_AA",
+				"Event":"User selects Aldosterone antagonist",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_AA"
+			},	
+			"Pt_SGLT2i":{  
+				"id":"Pt_SGLT2i",
+				"Event":"User selects SGLT2 inhibitor",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_SGLT2i"
+			},	
+			"Pt_Ivabradine":{  
+				"id":"Pt_Ivabradine",
+				"Event":"User selects Ivabradine",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Ivabradine"
+			},	
+			"Pt_Hydral":{  
+				"id":"Pt_Hydral",
+				"Event":"User selects Hydralazine + isosorbide dinitrate",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Hydral"
+			},	
+			"Evaluate_tab":{  
+				"id":"Evaluate_tab",
+				"Event":"User clicks Evaluation tab",
+				"Category":"Navigation",
+				"Action":"Clicked",
+				"Label":"Evaluate tab"
+			},
+			"Advice_button":{  
+				"id":"Advice_button",
+				"Event":"User clicks View Advice button",
+				"Category":"Primary Function",
+				"Action":"Clicked",
+				"Label":"Advice button"
+			},
+			"Advice_tab":{  
+				"id":"Advice_tab",
+				"Event":"User clicks Advice tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Advice tab"
+			},
+			"Drug_Ref_tab":{  
+				"id":"Drug_Ref_tab",
+				"Event":"User clicks Drug Reference tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Drug Ref tab"
+			},
+			"Pt_NYHA_UN":{  
+				"id":"Pt_NYHA_UN",
+				"Event":"User selects NYHA Uknown",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NYHA Unknown"
+			},
+			"Pt_NYHA_I":{  
+				"id":"Pt_NYHA_I",
+				"Event":"User selects NYHA Class I",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NYHA I"
+			},
+			"Pt_NYHA_II":{  
+				"id":"Pt_NYHA_II",
+				"Event":"User selects NYHA Class II",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NYHA II"
+			},
+			"Pt_NYHA_III":{  
+				"id":"Pt_NYHA_III",
+				"Event":"User selects NYHA Class III",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NYHA III"
+			},
+			"Pt_NYHA_IV":{  
+				"id":"Pt_NYHA_IV",
+				"Event":"User selects NYHA Class IV",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NYHA IV"
+			},
+			"Pt_LVEF_35":{  
+				"id":"Pt_LVEF_35",
+				"Event":"User selects LVEF < 35%",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_LVEF 35"
+			},
+			"Pt_LVEF_40":{  
+				"id":"Pt_LVEF_40",
+				"Event":"User selects LVEF 36 - 40",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_LVEF 40"
+			},
+			"Pt_NSR":{  
+				"id":"Pt_NSR",
+				"Event":"User selects \"Normal Sinus Rhythm\"",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_NSR"
+			},
+			"Pt_eGFR20":{  
+				"id":"Pt_eGFR20",
+				"Event":"User selects \"Estimated eGFR ≥ 20 mL/min/1.73 m2\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_eGFR20"
+			},
+			"Pt_eGFR30":{  
+				"id":"Pt_eGFR30",
+				"Event":"User selects \"Estimated eGFR ≥ 30 mL/min/1.73 m2\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_eGFR30"
+			},
+			"Pt_K5":{  
+				"id":"Pt_K5",
+				"Event":"User selects \"K+ ≤ 5.0 mEq/L\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_K5"
+			},
+			"Pt_Creatinine":{  
+				"id":"Pt_Creatinine",
+				"Event":"User selects \"Creatinine ≤ 2.5 mg/dl in males or ≤ 2.0 mg/dl in females\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Creatinine"
+			},
+			"Pt_is_black":{  
+				"id":"Pt_is_black",
+				"Event":"User selects \"Patient is black\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_is black"
+			},
+			"Pt_QRS_150_LBBB":{  
+				"id":"Pt_QRS_150_LBBB",
+				"Event":"User selects \"QRS ≥ 150 msec with LBBB pattern\" in Additional/Alternate Therapies",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_QRS 150 LBBB"
+			},		
+			"Pt_MI":{  
+				"id":"Pt_MI",
+				"Event":"User selects \"< 1 y survival and/or < 40 d post MI\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_< 1 yr_< 40 day MI"
+			},
+			"Pt_Conduction_defects":{  
+				"id":"Pt_Conduction_defects",
+				"Event":"User selects \"History of conduction defects\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Conduction defects"
+			},
+			"Pt_T1diabetes":{  
+				"id":"Pt_T1diabetes",
+				"Event":"User selects \"Type I diabetes\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_T1diabetes"
+			},
+			"Pt_Bradycardia":{  
+				"id":"Pt_Bradycardia",
+				"Event":"User selects \"Patients in whom bradycardia could lead to hemodynamic compromise\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Bradycardia"
+			},
+			"Pt_75_years":{  
+				"id":"Pt_75_years",
+				"Event":"User selects \"Elderly (≥75 years old)\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_> 75 years"
+			},
+			"Pt_Lactation":{  
+				"id":"Pt_75_years",
+				"Event":"User selects \"Lactation\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_Lactation"
+			},
+			"Pt_dialysis":{  
+				"id":"Pt_dialysis",
+				"Event":"User selects \"On dialysis\" in contraindications",
+				"Category":"Answer Choice",
+				"Action":"Selected",
+				"Label":"Pt_dialysis"
+			}
+		},
+		"Drug_Reference":{  
+			"Reference_table_ACE":{  
+				"id":"Reference_table_ACE",
+				"Event":"User accesses ACEI table ",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_ACE"
+			},
+			"Reference_table_ARB":{  
+				"id":"Reference_table_ARB",
+				"Event":"User accesses ARB table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_ARB"
+			},
+			"Reference_table_ARNI":{  
+				"id":"Reference_table_ARNI",
+				"Event":"User accesses ARNI table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_ARNI"
+			},
+			"Reference_table_Ivabridine":{  
+				"id":"Reference_table_Ivabridine",
+				"Event":"User accesses Ivabridine table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Ivabridine"
+			},
+			"Reference_table_Aldos_Antag":{  
+				"id":"Reference_table_Aldos_Antag",
+				"Event":"User accesses Aldosterone Antagonist table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Aldos Antag"
+			},
+			"Reference_table_Beta_Blocker":{  
+				"id":"Reference_table_Beta_Blocker",
+				"Event":"User accesses Beta Blocker table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Beta Blocker"
+			},
+			"Reference_table_Hydral":{  
+				"id":"Reference_table_Hydral ",
+				"Event":"User accesses Hydralazine table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Hydral "
+			},
+			"Reference_table_ICD":{  
+				"id":"Reference_table_ICD",
+				"Event":"User accesses ICD table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_ICD"
+			},
+			"Reference_table_CRT":{  
+				"id":"Reference_table_CRT",
+				"Event":"User accesses CRT table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_CRT"
+			},
+			"Reference_table_Reassessment":{  
+				"id":"Reference_table_Reassessment",
+				"Event":"User accesses Reassessment table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Reassessment"
+			},
+			"Reference table_Diuretics":{  
+				"id":"Reference_table_Reassessment",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Diuretics"
+			},
+			"Reference table_Guiding_Principles_for_Treatment":{  
+				"id":"Reference_table_Reassessment",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Guiding_Principles_for_Treatment"
+			},
+			"Reference table_Considerations_for_Improving_Adherence":{  
+				"id":"Reference_table_Reassessment",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Considerations_for_Improving_Adherence"
+			},
+			"Triggers_for_HF_Patient_Referral_to_a_Specialist_Program":{  
+				"id":"Triggers_for_HF_Patient_Referral_to_a_Specialist_Program",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Referral_Triggers"
+			},
+			"Reference_Quick_Links":{  
+				"id":"Reference_Quick_Links",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Quick_links"
+			},
+			"Reference_table_SGLT2i":{  
+				"id":"Reference_table_SGLT2i",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_SGLT2i"
+			},
+			"Reference_table_Transcath_MRVr":{  
+				"id":"Reference_table_Transcath_MRVr",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Transcath_MRVr"
+			},
+			"Reference_table_Clinical_Guidance_for_AA":{  
+				"id":"Reference_table_Clinical_Guidance_for_AA",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Clinical_Guidance_for_AA"
+			},
+			"Reference_table_Important_Patho":{  
+				"id":"Reference_table_Important_Patho",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Important_Patho"
+			},
+			"Reference_table_Prior_Auth":{  
+				"id":"Reference_table_Prior_Auth",
+				"Event":"User selects (other) table",
+				"Category":"Resource",
+				"Action":"Open",
+				"Label":"Reference table_Prior_Auth"
+			}
+		},
+		"Advice":{  
+			"Rec_Ivabridine_current":{  
+				"id":"Rec_Ivabridine_current",
+				"Event":"User selects Ivabradine on the Evaluate screen (Additional medications patient is currently taking)",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Ivabridine_current"
+			},
+			"Rec_Aldos_Antag_current":{  
+				"id":"Rec_Aldos_Antag_current",
+				"Event":"User selects Aldosterone antagonist on the Evaluate screen (Additional medications patient is currently taking)",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Aldos Antag_current"
+			},
+			"Rec_SGLT2i_current":{  
+				"id":"Rec_SGLT2i_current",
+				"Event":"User selects SGLT2 inhibitor on the Evaluate screen (Additional medications patient is currently taking)",
+				"Category":"Recommendation",
+				"Action":"Calcu lated",
+				"Label":"Rec_SGLT2i_current"
+			},	
+			"Rec_Hydral_current":{  
+				"id":"Rec_Hydral_current",
+				"Event":"User selects Hydralazine + isosorbide dinitrate on the Evaluate screen (Additional medications patient is currently taking)",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Hydral_current"
+			},	
+			"Rec_Unknown":{  
+				"id":"Rec_Unknown",
+				"Event":"User selects NYHA Unknown on the Evaluate screen and gets the resulting advice",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Unknown"
+			},
+			"Rec_SGLT2i_eligible":{  
+				"id":"Rec_SGLT2i_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for SGLT2i",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_SGLT2i_eligible"
+			},
+			"Print":{  
+				"id":"Print",
+				"Event":"User clicked Email",
+				"Category":"PrintTo",
+				"Action":"Clicked",
+				"Label":"Print"
+			},"Email":{  
+				"id":"Email",
+				"Event":"User clicked Email",
+				"Category":"Mailto",
+				"Action":"Clicked",
+				"Label":"Email"
+			},
+			"Evaluate_tab":{  
+				"id":"Evaluate_tab",
+				"Event":"User clicks the Evalute tab at the top of the Advice screen",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Evaluate tab"
+			},
+			"No_GDMT":{  
+				"id":"No_GDMT",
+				"Event":"User selects that they are not on ACEI/ARB/ARNI, not on a beta blocker, and not on a diuretic - They rest of the Evaluate screen is not shown",
+				"Category":"Result",
+				"Action":"Calculated",
+				"Label":"No_GDMT"
+			},
+			"Rec_ACEARB_ARNI_Not":{  
+				"id":"Rec_ACEARB_ARNI_Not",
+				"Event":"User selects \"Neither (ACEI/ARB)\" and \"Not on ARNI\" to generate the advice for not being on an ACEI, ARB, or ARNI",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACEARB_ARNI_Not on any"
+			},
+			"Rec_ACEARB_No_ARNI_Yes":{  
+				"id":"Rec_ACEARB_No_ARNI_Yes",
+				"Event":"Severity Advice 2 = NO ACEI/ARB_Yes ARNI",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACEARB_No_ARNI_Taking"
+			},
+			"Rec_ACE_Taking_No_Drug":{  
+				"id":"Rec_ACE_Taking_No_Drug",
+				"Event":"User selects that they are taking an ACEI, but does not select a drug",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Taking_No Drug Named"
+			},
+			"Rec_ACE_Captopril":{  
+				"id":"Rec_ACE_Captopril",
+				"Event":"User selects that they are taking an ACEI, and selects Captopril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Captopril"
+			},
+			"Rec_ACE_Enalopril":{  
+				"id":"Rec_ACE_Enalopril",
+				"Event":"User selects that they are taking an ACEI, and selects Enalopril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Enalopril"
+			},
+			"Rec_ACE_Fosinopril":{  
+				"id":"Rec_ACE_Fosinopril",
+				"Event":"User selects that they are taking an ACEI, and selects Fosinopril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Fosinopril"
+			},
+			"Rec_ACE_Lisinopril":{  
+				"id":"Rec_ACE_Lisinopril",
+				"Event":"User selects that they are taking an ACEI, and selects Lisinopril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Lisinopril"
+			},
+			"Rec_ACE_Perindopril":{  
+				"id":"Rec_ACE_Perindopril",
+				"Event":"User selects that they are taking an ACEI, and selects Perindopril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Perindopril"
+			},
+			"Rec_ACE_Quinapril":{  
+				"id":"Rec_ACE_Quinapril",
+				"Event":"User selects that they are taking an ACEI, and selects Quinapril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Quinapril"
+			},
+			"Rec_ACE_Rampiril":{  
+				"id":"Rec_ACE_Rampiril",
+				"Event":"User selects that they are taking an ACEI, and selects Rampiril",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Rampiril"
+			},
+			"Rec_ACE_Trandolap":{  
+				"id":"Rec_ACE_Trandolap",
+				"Event":"User selects that they are taking an ACEI, and selects Trandolap",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ACE_Trandolap"
+			},
+			"Rec_ARB_Taking_No_Drug":{  
+				"id":"Rec_ARB_Taking_No_Drug",
+				"Event":"User selects that they are taking an ARB, but does not select a drug",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARB_Taking_No Drug Named"
+			},
+			"Rec_ARB_Candesartan":{  
+				"id":"Rec_ARB_Candesartan",
+				"Event":"User selects that they are taking an ARB, and selects Candesartan",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARB_Candesartan"
+			},
+			"Rec_ARB_Losartan":{  
+				"id":"Rec_ARB_Losartan",
+				"Event":"User selects that they are taking an ARB, and selects Losartan",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARB_Losartan"
+			},
+			"Rec_ARB_Valsartan":{  
+				"id":"Rec_ARB_Valsartan",
+				"Event":"User selects that they are taking an ARB, and selects Valsartan",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARB_Valsartan"
+			},
+			"Rec_BB_Not":{  
+				"id":"Rec_BB_Not",
+				"Event":"User selects \"None\" for beta blocker",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_BB_Not on"
+			},
+			"Rec_BB_Bisopropol":{  
+				"id":"Rec_BB_Bisopropol",
+				"Event":"User selects Bisopropol for beta blocker",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_BB_Bisopropol"
+			},
+			"Rec_BB_Carevidol":{  
+				"id":"Rec_BB_Carevidol",
+				"Event":"User selects Carevidol for beta blocker",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_BB_Carevidol"
+			},
+			"Rec_BB_Carevidol_CR":{  
+				"id":"Rec_BB_Carevidol_CR",
+				"Event":"User selects Carevidol CR for beta blocker",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_BB_Carevidol CR"
+			},
+			"Rec_BB_Metopropol":{  
+				"id":"Rec_BB_Metopropol",
+				"Event":"User selects Metopropol for beta blocker",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_BB_Metopropol"
+			},
+			"Rec_Diuretic_Not":{  
+				"id":"Rec_Diuretic_Not",
+				"Event":"User selects that they are NOT taking a diuretic",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Diuretic_Not on"
+			},
+			"Rec_Diuretic_Taking":{  
+				"id":"Rec_Diuretic_Taking",
+				"Event":"User selects that they ARE taking a diuretic",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Diuretic_Taking"
+			},
+			"Rec_NYHA_I":{  
+				"id":"Rec_NYHA_I",
+				"Event":"User selects NYHA Class I on the Evaluate screen and gets the resulting advice",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_NYHA I"
+			},
+			"Rec_ARNI_eligible":{  
+				"id":"Rec_ARNI_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for ARNI",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARNI_eligible"
+			},
+			"Rec_ARNI_NOT_eligible":{  
+				"id":"Rec_ARNI_NOT_eligible",
+				"Event":"User makes selections on the Evlaute screen that make them ineligible for ARNI",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ARNI_NOT eligible"
+			},
+			"Rec_Ivabridine_eligible_5_mg":{  
+				"id":"Rec_Ivabridine_eligible_5_mg",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for 5 mg initiation dose of Ivabridine",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Ivabridine_eligible_5 mg"
+			},
+			"Rec_Ivabridine_eligible_2.5_mg":{  
+				"id":"Rec_Ivabridine_eligible_2.5_mg",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for 2.5 mg initiation dose of Ivabridine",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Ivabridine_eligible_2.5 mg"
+			},
+			"Rec_Aldos_Antag_eligible":{  
+				"id":"Rec_Aldos_Antag_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for aldosterone antagonists",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Aldos Antag_eligible"
+			},
+			"Rec_Hydral_eligible":{  
+				"id":"Rec_Hydral_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for Hydralazine + Isosorbide Dinitrate",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_Hydral_eligible"
+			},
+			"Rec_ICD_eligible":{  
+				"id":"Rec_ICD_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for ICD",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_ICD_eligible"
+			},
+			"Rec_CRT_eligible":{  
+				"id":"Rec_CRT_eligible",
+				"Event":"User makes selection on the Evaluate screen that make them eligible for CRT",
+				"Category":"Recommendation",
+				"Action":"Calculated",
+				"Label":"Rec_CRT_eligible"
+			}
+		},
+		"Resources":{  
+			"Resources_tab":{  
+				"id":"Resources_tab",
+				"Event":"User selects Evaluate tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Resources tab"
+			},
+			"About_tab":{  
+				"id":"About_tab",
+				"Event":"User selects 'About the App' tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"About tab"
+			},
+			"Disclaimer_tab":{  
+				"id":"Disclaimer_tab",
+				"Event":"User selects 'Terms' tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Terms tab"
+			},
+			"News_tab":{  
+				"id":"News_tab",
+				"Event":"User selects 'News' tab",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"News tab"
+			},
+			"Evaluation":{  
+				"id":"Evaluation",
+				"Event":"User selects 'Evaluate'",
+				"Category":"Navigation",
+				"Action":"Clicked tab",
+				"Label":"Evaluation"
+			}
+		}
+	},
+	"copytext":{
+		"cp_add_medications":"Select the medication(s) the patient is currently prescribed:",
+		"cp_am1":"Aldosterone antagonist",
+		"cp_am2":"SGLT2 inhibitors",
+		"cp_am3":"Hydralazine + isosorbide dinitrate",
+		"cp_am4":"Ivabradine",
+		"cp_am5":"None of these",
+		"exception_common":"Select all that apply to this patient, and/or enter additional reason in box below",
+		"exp_ACE_ARB_heading":"To help document contraindication(s) for prescribing ACEI/ARB:",
+		"exp_ACE_ARB_op1":"Allergy/hypersesitivity to ACEI and ARB",
+		"exp_ACE_ARB_op2":"Aortic stenosis, moderate or severe",
+		"exp_ACE_ARB_op3":"Angioedema with an ACEI",
+		"exp_ACE_ARB_op4":"Angiodema with an ARB",
+		"exp_ACE_ARB_op5":"Hyperkalemia",
+		"exp_ACE_ARB_op6":"Hypotension",
+		"exp_ACE_ARB_op7":"Pregnancy",
+		"exp_ACE_ARB_op8":"Renal artery stenosis (bilateral, or unilateral with a solitary functioning kidney)",
+		"exp_ACE_ARB_op9":"Worsening renal function/renal disease/dysfunction",
+
+		"exp_BB_heading":"To help document contraindication(s) for prescribing beta blocker: ",
+		"exp_BB_op1":"Allergy/hypersensitivity to specific beta blocker(s) ",
+		"exp_BB_op2":"Asthma ",
+		"exp_BB_op3":"Chronic obstructive pulmonary disease ",
+		"exp_BB_op4":"Diabetes, prone to hypoglycemia unawareness ",
+		"exp_BB_op5":"Second degree AV block ",
+		"exp_BB_op6":"Third degree AV block ",
+		"exp_BB_op7":"Sinus Bradycardia ",
+
+		"exp_Diu_heading":"To help document contraindication(s) for prescribing diuretics: ",
+		"exp_Diu_op1":"Allergy/hypersensitivity to specific diuretic(s)",
+		"exp_Diu_op2":"Anuria",
+		"exp_Diu_op3":"Electrolyte imbalance",
+		"exp_Diu_op4":"Hepatic coma",
+		"exp_Diu_op5":"Hypokalemia",
+		"exp_Diu_op6":"Renal dysfunction",
+		
+		"ind1":"6.25 mg TID","md1":"50 mg TID",
+		"ind2":"2.5 mg BID","md2":"10–20 mg BID",
+		"ind3":"5–10 mg QD","md3":"40 mg QD",
+		"ind4":"2.5–5 mg QD","md4":"20–40 mg QD",
+		"ind5":"2 mg QD","md5":"8–16 mg QD",
+		"ind6":"5 mg BID","md6":"20 mg BID",
+		"ind7":"1.25–2.5 mg QD","md7":"10 mg QD",
+		"ind8":"1 mg QD","md8":"4 mg QD",
+		"ind9":"4 to 8 mg QD","md9":"32 mg QD",
+		"ind10":"25–50 mg QD","md10":"50–150 mg QD",
+		"ind11":"20–40 mg BID","md11":"160 mg BID",
+		"ind12":"49/51 mg BID (sacubitril/valsartan)[therapy may be initiated at 24/26 mg BID (sacubitril/valsartan)]","md12":"97/103 mg BID(sacubitril/valsartan)",
+		"ind13":"5 mg BID","md13":"7.5 mg BID",
+		"ind14":"12.5–25 mg QD","md14":"25 mg QD or BID",
+		"ind15":"25 mg QD","md15":"50 mg QD",
+		"ind16":"1.25 mg QD","md16":"10 mg QD",
+		"ind17":"3.125 mg BID","md17":"50 mg BID",
+		"ind18":"10 mg QD","md18":"80 mg QD",
+		"ind19":"12.5–25 mg QD","md19":"200 mg QD",
+		"ind20":"20 mg isosorbide dinitrate / 37.5 mg hydralazine TID","md20":"40 mg isosorbide dinitrate / 75 mg hydralazine TID",
+		"ind21":"20–30 mg isosorbide dinitrate / 25–50 mg hydralazine TID or QID","md21":"120 mg QD in divided doses isosorbide dinitrate / 300 mg QD in divided doses hydralazine",		
+		"cp_none":"Select option",
+        "cp_gdmt_que":"Select which type of RAS inhibitor the patient is currently prescribed: ",
+        "cp_gdmt_ace":"ACEI",
+		"cp_gdmt_arb":"ARB",
+		"cp_gdmt_arni":"ARNI",
+        "cp_gdmt_neither":"None",
+        "cp_gdmt_ace_d":"ACEI (Select which one):",
+		"cp_gdmt_arb_d":"ARB (Select which one):",
+		"cp_ace_drug1":"Captopril",
+		"cp_ace_drug2":"Enalapril",
+		"cp_ace_drug3":"Fosinopril",
+		"cp_ace_drug4":"Lisinopril",
+		"cp_ace_drug5":"Perindopril",
+		"cp_ace_drug6":"Quinapril",
+		"cp_ace_drug7":"Ramipril",
+		"cp_ace_drug8":"Trandolapril",
+		"cp_arb_drug1":"Candesartan",
+		"cp_arb_drug2":"Losartan",
+		"cp_arb_drug3":"Valsartan",
+		"cp_ace_que1":"Does patient have any contraindications to ARBs or sacubitril?",
+		"cp_ace_que2":"Is patient tolerating and stable on the ACEI? ",
+		"cp_arb_que1":"Does patient have any contraindications to ARBs or sacubitril?",
+		"cp_arb_que2":"Is patient tolerating and stable on the ARB?",
+		"cp_neither_que":"Is patient current taking an ARNI?",
+		"cp_bb_que":"Is the patient currently taking a beta blocker? ",
+		"cp_bb_que_d":"Select which beta blocker the patient is currently prescribed:",
+		"cp_bb_select":"Select option",
+		"cp_bb_none":"None",
+		"cp_bb_drug1":"Bisoprolol",
+		"cp_bb_drug2":"Carvedilol",
+		"cp_bb_drug3":"Carvedilol CR",
+		"cp_bb_drug4":"Metoprolol succinate extended release (metoprolol CR/XL)",
+		
+		"cp_bb_que_bisoprolol":"Is the patient on a maximally tolerated beta blocker dose, and has a heart rate of &ge; 70 bpm?<br/> (The target dose for bisoprolol is 10 mg daily)",
+		"cp_bb_que_carvedilol":"Is the patient on a maximally tolerated beta blocker dose, and has a heart rate of &ge; 70 bpm?<br/> (The target dose for carvedilol is 25 mg twice daily for weight <85 kilograms and 50 mg twice daily for weight ≥85 kilograms)",
+		"cp_bb_que_carevedilolCR":"Is the patient on a maximally tolerated beta blocker dose, and has a heart rate of &ge; 70 bpm?<br/> (The target dose for carevedilol CR is 80 mg daily)",
+		"cp_bb_que_metoprolol":"Is the patient on a maximally tolerated beta blocker dose, and has a heart rate of &ge; 70 bpm?<br/> (The target dose for metoprolol CR/XL is 200 mg daily)",
+		
+		"cp_deu_que1":"Select whether the patient is currently prescribed diuretic(s):",
+		"cp_nyha_que":"Select NYHA Class",
+		"cp_nyha_select":"Select option",
+		"cp_nyha1":"I",
+		"cp_nyha2":"II",
+		"cp_nyha3":"III",
+		"cp_nyha4":"IV",
+
+		"cp_nyha1_email_text":"NYHA I",
+		"cp_nyha2_email_text":"NYHA II",
+		"cp_nyha3_email_text":"NYHA III",
+		"cp_nyha4_email_text":"NYHA IV",
+
+		"cp_nyha_unknown":"Unknown",
+		"cp_lvef_que":"Select LVEF Range",
+		"cp_lvef_select":"Select option",
+		"cp_lvef_unknown":"Unknown",
+		"cp_lvef1":"&le;35%",
+		"cp_lvef2":"36-40%",
+		"cp_lvef1_email_text":"LVEF %3C%3D35%25",
+		"cp_lvef2_email_text":"LVEF 36-40%25",
+
+
+		"cp_modifier_que":"Select all the following contraindications/dosing modifiers that apply:",
+		"cp_m1":"< 1 y survival and/or < 40 d post MI",
+		"cp_m3":"History of conduction defects",
+		"cp_m5":"Elderly (&ge;75 years old)",
+		"cp_m6":"Severe renal impairment (eGFR < 30 mL/min/1.73m<sup>2</sup>)",
+		"cp_m7":"Moderate Hepatic Impairment (Child-Pugh Class B)",
+		"cp_m8":"Type I diabetes",
+		"cp_m9":"Lactation",
+		"cp_m10":"On dialysis",		
+
+		"cp_m1_email_text":"%3C 1 y survival and/or %3C 40 d post MI",
+		"cp_m3_email_text":"Conduction Defects",
+		"cp_m5_email_text":"Elderly",
+		"cp_m6_email_text":"Severe renal impairment",
+		"cp_m7_email_text":"Moderate Hepatic Impairment",
+		"cp_m8_email_text":"T1 diabetes",
+		"cp_m9_email_text":"Lactation",
+		"cp_m10_email_text":"Dialysis",	
+
+		"tooltip_cp1":"i.e., history of angioedema",
+		"tooltip_ACEI_cp2":"According to clinical judgement",
+		"tooltip_cp2":"For instance, patients with hypertension should be titrated to attain systolic blood pressure less than 130 mm Hg",
+		"cp_indication_que":"Select all the following indications that apply:",
+		"cp_i1":"Normal Sinus Rhythm",
+		"cp_i2":"Estimated eGFR &ge; 30 mL/min/1.73 m<sup>2</sup>",
+		"cp_i3":"Patient is black",
+		"cp_i4":"QRS &ge; 150 msec with LBBB pattern",
+		"cp_i5":"Estimated eGFR &ge; 20 mL/min/1.73 m<sup>2</sup>",
+		"cp_i6":"K+ &le; 5.0 mEq/L",
+		"cp_i7":"Creatinine &le; 2.5 mg/dl in males or &le; 2.0 mg/dl in females",
+
+		
+		"cp_i1_email_text":"NSR",
+		"cp_i2_email_text":"eGFR %3E%3D 30 mL/min/1.73 m2",
+		"cp_i3_email_text":"AA",
+		"cp_i4_email_text":"QRS %3E%3D 150 msec with LBBB pattern",
+		"cp_i5_email_text":"eGFR %3E%3D 20 mL/min/1.73 m2",
+		"cp_i6_email_text":"K+ %3C%3D 5.0 mEq/L",
+		"cp_i7_email_text":"Cr %3C%3D 2.5 mg/dl in males or %3C%3D 2.0 mg/dl in females",
+		
+		"cp_ivabradine_ci":"Does patient have any contraindications to Ivabradine?",
+
+		"cp_arb_ras5":"<h5>ACEI/ARB:</h5><br/>If patient has contraindications to ARB/sacubitril or is not tolerating and stable on ARB, consider ACEI as an alternative to reduce morbidity and mortality if patient has no additional contraindications to ACEI.",
+		"cp_arb_ras5_email_text":"ACEI: Initiation suggested if unable to tolerate or unstable on ARB%0d%0aARB: Consider discontinuing in favor of ACEI",
+
+		"cp_acei_ras6":"<h5>ACEI:</h5> <br/>Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved. <br/><br/> <table><thead><tr><th class='large-6'>ACEI</th><th class='large-6'>Suggested Target Dose</th></tr></thead><tbody><tr><td>Captopril</td><td>50 mg 3x daily</td></tr><tr><td>Enalapril</td><td>10-20 mg twice daily</td></tr><tr><td>Fosinopril</td><td>40 mg daily</td></tr><tr><td>Lisinopril</td><td>20-40 mg daily</td></tr><tr><td>Perindopril</td><td>8-16 mg daily</td></tr><tr><td>Quinapril</td><td>20 mg twice daily</td></tr><tr><td>Ramipril</td><td>10 mg daily</td></tr><tr><td>Trandolapril</td><td>4 mg daily</td></tr></tbody></table>",
+		"cp_acei_ras6_email_text":"ACEI/ARB: Consider titrating to max tolerated dose",
+
+		"cp_acei_ras14":"<h5>ACEI/ARB:</h5> <br/>In cases where patient is intolerant to ACE inhibitors because of cough or angioedema, but no additional contraindications to ARBs are present, initiation of ARB is suggested.",
+		"cp_acei_ras14_email_text":"ACEI/ARB: If unstable/not tolerating ACEI, initiation of ARB suggested if no C/I present",
+
+		"cp_RAS1_ace":"<h5>ACEI:</h5><br/>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_RAS1_ace_email_text": "ACEI: RAS inhibitor not indicated.",
+		"cp_RAS1_arb":"<h5>ARB:</h5><br/>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_RAS1_arb_email_text": "ARB: RAS inhibitor not indicated.",
+
+		"cp_ras13":"<h5>ARNI:</h5></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ras13_email_text": "ARNI: RAS inhibitor not indicated.",
+
+		"cp_ace_flt_not":"<h5>ACEI:</h5> <br/>Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved. <br/><br/> <table><thead><tr><th class='large-6'>ACEI</th><th class='large-6'>Suggested Target Dose</th></tr></thead><tbody><tr><td>Captopril</td><td>50 mg 3x daily</td></tr><tr><td>Enalapril</td><td>10-20 mg twice daily</td></tr><tr><td>Fosinopril</td><td>40 mg daily</td></tr><tr><td>Lisinopril</td><td>20-40 mg daily</td></tr><tr><td>Perindopril</td><td>8-16 mg daily</td></tr><tr><td>Quinapril</td><td>20 mg twice daily</td></tr><tr><td>Ramipril</td><td>10 mg daily</td></tr><tr><td>Trandolapril</td><td>4 mg daily</td></tr></tbody></table>",
+		"cp_ace_flt_not_email_text":"ACEI/ARB: Consider titrating to max tolerated dose",
+		
+		"cp_ace_flt_captopril_email_text":"ACEI (Captopril): Consider titrating to target dose of 50 mg 3x daily",
+		"cp_ace_flt_enalopril_email_text":"ACEI (Enalapril): Consider target dose of 10-20 mg twice daily",
+		"cp_ace_flt_fosinopril_email_text":"ACEI (Fosinopril): Consider target dose of 40 mg daily",
+		"cp_ace_flt_lisinopril_email_text":"ACEI (Lisinopril): Consider target dose of 20-40 mg daily",
+		"cp_ace_flt_perindopril_email_text":"ACEI (Perindopril): Consider target of dose 8-16 mg daily",
+		"cp_ace_flt_quinapril_email_text":"ACEI (Quinapril): Consider target dose of 20 mg twice daily",
+		"cp_ace_flt_rampiril_email_text":"ACEI (Ramipril): Consider target dose of 10 mg daily",
+		"cp_ace_flt_trandolapril_email_text":"ACEI (Trandolapril): Consider target dose of 4 mg daily",
+
+		"cp_ace_flt_captopril":"<h5>ACEI (Captopril):</h5><br/>Suggested target dose: 50 mg 3x daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_enalopril":"<h5>ACEI (Enalapril):</h5><br/>Suggested target dose: 10-20 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_fosinopril":"<h5>ACEI (Fosinopril):</h5><br/>Suggested target dose: 40 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_lisinopril":"<h5>ACEI (Lisinopril):</h5><br/>Suggested target dose: 20-40 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_perindopril":"<h5>ACEI (Perindopril):</h5><br/>Suggested target dose: 8-16 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_quinapril":"<h5>ACEI (Quinapril):</h5><br/>Suggested target dose: 20 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_rampiril":"<h5>ACEI (Ramipril):</h5><br/>Suggested target dose: 10 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_ace_flt_trandolapril":"<h5>ACEI (Trandolapril):</h5><br/>Suggested target dose: 4 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		
+
+
+		"cp_ace_flt_captopril_ras1":"<h5>ACEI (Captopril):</h5><br/>Suggested target dose: 50 mg 3x daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_enalopril_ras1":"<h5>ACEI (Enalapril):</h5><br/>Suggested target dose: 10-20 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_fosinopril_ras1":"<h5>ACEI (Fosinopril):</h5><br/>Suggested target dose: 40 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_lisinopril_ras1":"<h5>ACEI (Lisinopril):</h5><br/>Suggested target dose: 20-40 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_perindopril_ras1":"<h5>ACEI (Perindopril):</h5><br/>Suggested target dose: 8-16 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_quinapril_ras1":"<h5>ACEI (Quinapril):</h5><br/>Suggested target dose: 20 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_rampiril_ras1":"<h5>ACEI (Ramipril):</h5><br/>Suggested target dose: 10 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_ace_flt_trandolapril_ras1":"<h5>ACEI (Trandolapril):</h5><br/>Suggested target dose: 4 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		
+		"cp_ace_flt_captopril_ras1_email_text":"ACEI (Captopril): RAS inhibitor not indicated.",
+		"cp_ace_flt_enalopril_ras1_email_text":"ACEI (Enalapril): RAS inhibitor not indicated.",
+		"cp_ace_flt_fosinopril_ras1_email_text":"ACEI (Fosinopril): RAS inhibitor not indicated.",
+		"cp_ace_flt_lisinopril_ras1_email_text":"ACEI (Lisinopril): RAS inhibitor not indicated.",
+		"cp_ace_flt_perindopril_ras1_email_text":"ACEI (Perindopril): RAS inhibitor not indicated.",
+		"cp_ace_flt_quinapril_ras1_email_text":"ACEI (Quinapril): RAS inhibitor not indicated.",
+		"cp_ace_flt_rampiril_ras1_email_text":"ACEI (Ramipril): RAS inhibitor not indicated.",
+		"cp_ace_flt_trandolapril_ras1_email_text":"ACEI (Trandolapril): RAS inhibitor not indicated.",
+		
+		"cp_ace_arb_on_arni":"<h5>ACEI/ARB:</h5> <br/>If patient is tolerating ACEI/ARB, switching to ARNI is suggested to further reduce morbidity and mortality. ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor. <br/><br/>See ARNI box below for more information.",
+		"cp_ace_arb_on_arni_email_text": "ACEI/ARB: Switch to ARNI",
+		"cp_arb_flt_not":"<h5>ARB:</h5> <br/>Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved. <br/><br/> <table><thead><tr><th class='large-6'>ARB</th><th class='large-6'>Suggested Target Dose</th></tr></thead><tbody><tr><td>Candesartan</td><td>32 mg daily</td></tr><tr><td>Losartan</td><td>50-150 mg daily</td></tr><tr><td>Valsartan</td><td>160 mg twice daily</td></tr></tbody></table>",
+		"cp_arb_flt_not_email_text":"ACEI/ARB: Consider titrating to max tolerated dose",
+		
+		"cp_arb_flt_candesartan":"<h5>ARB (Candesartan):</h5> <br/>Suggested target dose: 32 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_arb_flt_losartan":"<h5>ARB (Losartan):</h5> <br/>Suggested target dose: 50-150 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_arb_flt_valsartan":"<h5>ARB (Valsartan):</h5> <br/>Suggested target dose: 160 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		
+		
+		"cp_arb_flt_candesartan_email_text":"ARB (Candesartan): Consider target dose of 32 mg daily",
+		"cp_arb_flt_losartan_email_text":"ARB (Losartan): Consider target dose of 50-150 mg daily",
+		"cp_arb_flt_valsartan_email_text":"ARB (Valsartan): Consider target dose of 160 mg twice daily",
+
+		"cp_arb_flt_candesartan_ras1":"<h5>ARB (Candesartan):</h5> <br/>Suggested target dose: 32 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_arb_flt_losartan_ras1":"<h5>ARB (Losartan):</h5> <br/>Suggested target dose: 50-150 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_arb_flt_valsartan_ras1":"<h5>ARB (Valsartan):</h5> <br/>Suggested target dose: 160 mg twice daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.</br></br>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		
+		"cp_arb_flt_candesartan_ras1_email_text":"ARB (Candesartan): RAS inhibitor not indicated.",
+		"cp_arb_flt_losartan_ras1_email_text":"ARB (Losartan): RAS inhibitor not indicated.",
+		"cp_arb_flt_valsartan_ras1_email_text":"ARB (Valsartan): RAS inhibitor not indicated.",
+
+		
+		"cp_neither_flt_on_arni":"<h5>ACEI/ARB:</h5> <br/>ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor.",
+		"cp_neither_flt_on_arni_email_text":"ARNI/ACEI/ARB: RAS inhibitor not indicated.",
+
+		"cp_neither_flt_not_arni":"<h5>ACEI/ARB:</h5><br/>Initiation of ACEI is suggested to reduce morbidity and mortality. Initiation of ARBs is suggested for patients intolerant to inhibitors because of cough or angioedema, or as an alternative for ACEIs in patients already taking ARBs for other indications.",
+		"cp_neither_flt_not_arni_email_text":"ACEI: Initiation suggested%0d%0aARB: Initiation suggested if ACEI-intolerant.",
+		"cp_bb_flt_not":"<h5>Evidence-Based Beta Blocker(s):</h5><br/>Initiation of 1 of the 3 beta blockers proven to reduce mortality (e.g., bisoprolol, carvedilol, and sustained-release metoprolol succinate) is suggested.",
+		"cp_bb_flt_not_email_text":"EVIDENCE-BASED BETA BLOCKER(S): Initiation suggested",
+		
+		"cp_bb_flt_bisopropol":"<h5>Evidence-Based Beta Blocker (Bisoprolol):</h5> <br/>Suggested target dose: 10 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_bb_flt_carevidol":"<h5>Evidence-Based Beta Blocker (Carvedilol):</h5> <br/>Suggested target dose: 25 mg twice daily for weight <85 kilograms and 50 mg twice daily for weight ≥85 kilograms. <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_bb_flt_CarevidolCR":"<h5>Evidence-Based Beta Blocker (Carvedilol CR):</h5> <br/>Suggested target dose: 80 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_bb_flt_metoprolol":"<h5>Evidence-Based Beta Blocker (Metoprolol succinate extended release (metoprolol CR/XL)):</h5> <br/>Suggested target dose: 200 mg daily <br/> Consider increasing dose at least every 2 weeks until maximum tolerated or target dose is achieved.",
+		"cp_bb_flt_bisopropol_email_text":"EVIDENCE-BASED BETA BLOCKER (Bisoprolol): Consider target dose of 10 mg daily",
+		"cp_bb_flt_carevidol_email_text":"EVIDENCE-BASED BETA BLOCKER (Carvedilol): Consider target dose of 25 mg twice daily for weight <85 kilograms and 50 mg twice daily for weight >=85 kilograms.",
+		"cp_bb_flt_CarevidolCR_email_text":"EVIDENCE-BASED BETA BLOCKER (Carvedilol CR): Consider target dose of 80 mg daily",
+		"cp_bb_flt_metoprolol_email_text":"EVIDENCE-BASED BETA BLOCKER (Metoprolol CR/XL): Consider target dose of 200 mg daily",
+		
+		"cp_diuretic_flt_not":"<h5>Diuretic(s):</h5><br/> <ul><li>Initiate diuretics as needed (i.e. to address persistent volume overload/eliminate evidence of fluid retention) (GL).</li><li>Furosemide is the most common loop diuretic in HF treatment, but some patients respond more favorably to bumetanide or torsemide due to their increased oral bioavailability (EC).</li></ul>",
+		"cp_diuretic_flt":"<h5>Diuretic(s):</h5> <br/>Titrate dose to relief of congestion over days to weeks. In some instances it may be necessary to reduce diuretic dosing in the setting of increasing doses of ACEI/ARB/ARNI. If reaching high doses of loop diuretic (ie equivalent of 120 mg of furosemide twice daily) consider addition of a thiazide diuretic, taken together with loop diuretic.",
+		"cp_diuretic_flt_not_email_text":"DIURETIC(S): Initiate as needed",
+		"cp_diuretic_flt_email_text":"DIURETIC(S): Titrate to relief of congestion",
+		
+		"cp_adv_at_all_patient1":"<h5>For all patients:</h5><br/>Referrals may be needed for consultation and, if indicated, comanagement as well as consideration of advanced therapies, recognition and management of specific or unusual cardiomyopathies, or annual review. Clinical triggers for referral include persistent or worsening symptoms, adverse clinical events, or other features suggesting that the patient is at high risk for disease progression or death.",		
+		"cp_adv_at_all_patient2":"<br/>Reassess symptoms for improvement throughout the care process. If patient progresses to stage D HFrEF (refractory NYHA class III-IV), consider next steps as indicated including palliative care, transplant, LVAD, and investigational studies.",		
+		
+		"cp_adv_at_nyha":"ACC/AHA HF Guideline does not currently have specific recommendations for additional medications for Class I Stage C HFrEF patients.",		
+		"cp_adv_at_nyha_email_text":"",
+		
+		"cp_adv_at_arni10":			"<h5>ARNI:</h5> <br/>If patient is tolerating ACEI/ARB, switching to ARNI is suggested to further reduce morbidity and mortality. ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation:</h5><ul><li>If taking enalapril &le; 10 mg daily or valsartan &le; 160 mg daily (or therapeutically equivalent dose of another ACEI or ARB): 24/26 mg 2x daily</li><li>If taking enalapril > 10 mg daily or valsartan > 160 mg daily (or therapeutically equivalent dose of another ACEI or ARB): 49/51 mg 2x daily</li></ul></li><li><h5>In 2 weeks, assess tolerability. If possible, increase stepwise to 97/103 mg 2x daily.</h5></li></ul></div>",		
+		
+		"cp_adv_at_arni10_black":	"<h5>ARNI:</h5> <br/>If patient is tolerating ACEI/ARB, switching to ARNI is suggested to further reduce morbidity and mortality. ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor. <br/><br/>See Therapy Reference tab in this app for more information on initiating ARNIs in African American patients who may also be initiating hydralazine + isosorbide dinitrate. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: 24/26 mg 2x daily</h5></li><li><h5>In 2 weeks, assess tolerability. If possible, increase stepwise to 97/103 mg 2x daily.</h5></li></ul></div>",		
+		
+		
+		"cp_adv_at_arni24":			"<h5>ARNI:</h5> <br/>If patient is tolerating ACEI/ARB, switching to ARNI is suggested to further reduce morbidity and mortality. ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: 24/26 mg 2x daily</h5></li><li><h5>In 2 weeks, assess tolerability. If possible, increase stepwise to 97/103 mg 2x daily.</h5></li></ul></div>",
+		"cp_adv_at_arni24_black":	"<h5>ARNI:</h5> <br/>If patient is tolerating ACEI/ARB, switching to ARNI is suggested to further reduce morbidity and mortality. ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor. <br/><br/>See Therapy Reference tab in this app for more information on initiating ARNIs in African American patients who may also be initiating hydralazine + isosorbide dinitrate. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: 24/26 mg 2x daily</h5></li><li><h5>In at least 2-4 weeks, assess tolerability. If possible, increase stepwise to 97/103 mg 2x daily.</h5></li></ul></div>",
+		
+		"cp_adv_at_arni_email_text":"ARNI: Switching to ARNI is suggested for ACEI/ARB tolerant patients with no C/I",
+		
+		"cp_adv_at_arni_not":"<h5>ARNI (patient does not meet current ACC/AHA/HFSA Guideline indications)</h5> <br/>Patient does not currently meet the guideline indications for ARNI initiation. Patient should be NYHA Class II-III, and be shown to have adequate blood pressure on ACEI or ARB without contraindications to ARBs and sacubitril. <br/><br/> No predicate data currently exists to support initiation of ARNI in patients who have not yet tried ACEI or ARB. However, the writers are aware that some clinicians may consider initiating ARNI in ACEI/ARB-naïve patients who have met the additional initiation criteria. <br/>In such cases, a discussion with the patient regarding the risks is advised. An initial dose of 24/26 mg 2x daily is suggested along with close follow-up and serial assessment.",
+		"cp_adv_at_arni_not_email_text":"ARNI: Patient does not currently meet criteria for ARNI initiation",
+		
+		"cp_adv_at_arni_ace":"<h5>ARNI (patient does not meet criteria)</h5> <br/>Patient does not meet criteria to switch to ARNI. Patient should be stable and tolerating ACEI or ARB without contraindications to ARBs and sacubitril.",
+		"cp_adv_at_arni_ace_email_text":"ARNI: Patient does not currently meet criteria for ARNI initiation",
+		"cp_adv_at_ivabradine1":"<h5>Ivabradine:</h5> <br/>Patient meets basic ACC/AHA/HFSA guideline indications for ivabradine. Initiation/titration suggested. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: 5 mg twice daily</h5></li><li><h5>Re-assess heart rate in at least 2-4 weeks after initiation and follow these next steps:</h5></li></ul></div><table><thead><tr><th class='large-6'>Heart Rate</th><th class='large-6'>Next Step</th></tr></thead><tbody><tr><td>< 50 bpm or symptoms of bradycardia</td><td>Reduce dose by 2.5 mg twice daily or discontinue if already at 2.5 mg twice daily</td></tr><tr><td>50-60 bpm</td><td>Maintain current dose</td></tr><tr><td>> 60 bpm</td><td>Increase by 2.5 mg twice daily until reaching maximum dose of 7.5 mg twice daily</td></tr></tbody></table>",
+		"cp_adv_at_ivabradine1_email_text":"IVABRIDINE: Patient meets basic indications. Initiation suggested",
+		"cp_adv_at_ivabradine2":"<h5>Ivabradine:</h5> <br/>Patient meets basic ACC/AHA/HFSA guideline indications for ivabradine. Initiation/titration suggested.<div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: 2.5 mg twice daily</h5></li><li><h5>Re-assess heart rate in at least 2-4 weeks after initiation and follow these next steps:</h5></li></ul></div><table><thead><tr><th class='large-6'>Heart Rate</th><th class='large-6'>Next Step</th></tr></thead><tbody><tr><td>< 50 bpm or symptoms of bradycardia</td><td>Reduce dose by 2.5 mg twice daily or discontinue if already at 2.5 mg twice daily</td></tr><tr><td>50-60 bpm</td><td>Maintain current dose</td></tr><tr><td>> 60 bpm</td><td>Increase by 2.5 mg twice daily until reaching maximum dose of 7.5 mg twice daily</td></tr></tbody></table>",
+		"cp_adv_at_ivabradine2_email_text":"IVABRIDINE: Patient meets basic indications Initiation/titration suggested",
+
+		"cp_adv_at_ivabradine3":"<h5>Ivabradine:</h5> <br/>Patient is on Ivabradine. Ivabradine is indicated in patients with NYHA II-III, LVEF ≤ 35%, resting HR ≥ 70, on maximally-tolerated beta-blocker dose and in normal sinus rhythm.<div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation: </h5><ul><li>2.5 mg twice daily if patient is elderly (≥ 75 years old) or has a history of conduction defects.</li><li>Otherwise, 5 mg twice daily</li></ul></li><li><h5>Re-assess heart rate in at least 2-4 weeks after initiation and follow these next steps:</h5></li></ul></div><table><thead><tr><th class='large-6'>Heart Rate</th><th class='large-6'>Next Step</th></tr></thead><tbody><tr><td> < 50 bpm or symptoms of bradycardia</td><td>Reduce dose by 2.5 mg twice daily or discontinue if already at 2.5 mg twice daily</td></tr><tr><td>50-60 bpm</td><td>Maintain current dose</td></tr><tr><td>> 60 bpm</td><td>Increase by 2.5 mg twice daily until reaching maximum dose of 7.5 mg twice daily</td></tr></tbody></table>",
+		"cp_adv_at_ivabradine3_email_text":"IVABRIDINE: Patient currently taking",
+
+		"cp_adv_at_ivabradine4":"<h5>Ivabradine:</h5> <br/>Ivabradine is contraindicated in patients who are lactating or with severe hepatic impairment (Child-Pugh C).",
+		"cp_adv_at_ivabradine4_email_text":"IVABRIDINE: Contraindicated",
+
+
+		"cp_adv_at_aldosterone":"<h5>Aldosterone antagonist:</h5> <br/>Patient meets basic ACC/AHA/HFSA guideline indications for aldosterone antagonist. Initiation/titration suggested. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation</h5><ul><li>Spironolactone: 12.5-25 mg once daily</li><li>Eplerenone: 25 mg daily</li></ul></li><li><h5>Consider increasing dose every two weeks until maximum/target dose achieved</h5><ul><li>Spironolactone: 25 mg daily or twice daily</li><li>Eplerenone: 50 mg daily</li></ul></li></ul></div>",
+		"cp_adv_at_aldosterone_email_text":"ALDOS ANTAG: Patient meets basic indications. Initiation suggested",
+
+		"cp_adv_at_aldosterone_aam14":"<h5>Aldosterone antagonist:</h5> <br/>Patient is on aldosterone antagonist. Aldosterone antagonists are indicated in patients with NYHA II-IV, and 1 or more of the following:<ul class='list'><li> eGFR ≥ 30 mL/min/1.73 m<sup>2</sup></li><li> Or K+ ≤ 5.0 mEq/L</li><li> Or creatinine ≤ 2.5 mg/dl in males or creatinine ≤ 2.0 mg/dl in females</li></ul><div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation</h5><ul><li>Spironolactone: 12.5-25 mg once daily</li><li>Eplerenone: 25 mg daily</li></ul></li><li><h5>Consider increasing dose every two weeks until maximum/target dose achieved</h5><ul><li>Spironolactone: 25 mg daily or twice daily</li><li>Eplerenone: 50 mg daily</li></ul></li></ul></div>",
+		"cp_adv_at_aldosterone_aam14_email_text":"ALDOS ANTAG: Patient currently taking",
+
+
+
+		"cp_adv_at_hydralazine":"<h5>Hydralazine + Isosorbide Dinitrate:</h5> <br/>Patient meets basic ACC/AHA/HFSA guideline indications for hydralazine + isosorbide dinitrate. Initiation/titration suggested. <div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation</h5><ul><li>Fixed dose combination: 20 mg isosorbide dinitrate/37.5 mg hydralazine 3x a day</li><li>Isosorbide dinitrate and hydralazine: 20-30 mg isosorbide dinitrate/25-50 mg hydralazine 3x daily or once a day</li></ul></li><li><h5>Consider increasing dose of hydralazine and/or isosorbide dinitrate every two weeks until maximum/target dose achieved</h5><ul><li>Fixed dose combination: 40 mg isosorbide dinitrate/75 mg hydralazine 3x a day</li><li>Isosorbide dinitrate and hydralazine: 40 mg isosorbide dinitrate 3x daily with 100 mg hydralazine 3x daily</li></ul></li></ul></div>",
+		"cp_adv_at_hydralazine_email_text":"HY-ISND: Patient meets basic indications. Initiation suggested",
+
+		"cp_adv_at_AAM15":"<h5>Hydralazine + Isosorbide Dinitrate:</h5> <br/>Patient is on hydralazine + isosorbide dinitrate, which is indicated for persistently symptomatic black patients despite ARNI/beta-blocker/aldosterone antagonist/SGLT2 inhibitor, and with NYHA III-IV.<div class='indent-list'><u>Suggested Dosing</u><ul class='list'><li><h5>Initiation</h5><ul><li>Fixed dose combination: 20 mg isosorbide dinitrate/37.5 mg hydralazine 3x a day</li><li>Isosorbide dinitrate and hydralazine: 20-30 mg isosorbide dinitrate/25-50 mg hydralazine 3x daily or once a day</li></ul></li><li><h5>Consider increasing dose of hydralazine and/or isosorbide dinitrate every two weeks until maximum/target dose achieved</h5><ul><li>Fixed dose combination: 40 mg isosorbide dinitrate/75 mg hydralazine 3x a day</li><li>Isosorbide dinitrate and hydralazine: 40 mg isosorbide dinitrate 3x daily with 100 mg hydralazine 3x daily</li></ul></li></ul></div>",
+		"cp_adv_at_AAM15_email_text":"HY-ISND: Patient meets basic indications. Initiation suggested",
+
+
+
+		"cp_adv_at_icd":"<h5>ICD:</h5> <br/>Patient meets initial ACC/AHA guideline indications for ICD eligibility.",
+		"cp_adv_at_icd_email_text": "ICD: Patient meets initial indications",
+		"cp_adv_at_crt":"<h5>CRT or CRT-D:</h5> <br/>Patient meets initial ACC/AHA guideline indications for CRT or CRT-D eligibility.",
+		"cp_adv_at_crt_email_text": "CRT or CRT-D: Patient meets initial indications",
+
+		"cp_ace_drug_heading":"<div class='column large-12'><h2><span>Angiotensin-Converting Enzyme Inhibitors (ACEIs)</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+
+		"cp_ace_drug_init":"<ul><li>ARNIs are the preferred agents, but for patients in whom ARNI administration is not possible, an ACEI/ARB is recommended (EC).</li><li>The risk of angioedema with ACEI is particularly high in black patients (0.5%). This risk however should not preclude initiation of ACEI absent a documented history of angioedema (EC).</li><li>For patients intolerant to ACEIs because of cough or angioedema, or who are already taking ARBs for other reasons, ARBs are a recommended alternative to ACEIs (GL).</li></ul><br /><table><thead><tr><th>ACEI</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>Captopril</td><td>6.25 mg 3x daily</td></tr><tr><td>Enalapril</td><td>2.5 mg twice daily</td></tr><tr><td>Fosinopril</td><td>5-10 mg daily</td></tr><tr><td>Lisinopril</td><td>2.5–5 mg daily</td></tr><tr><td>Perindopril</td><td>2 mg daily</td></tr><tr><td>Quinapril</td><td>5 mg twice daily</td></tr><tr><td>Ramipril</td><td>1.25-2.5 mg daily</td></tr><tr><td>Trandolapril</td><td>1 mg daily</td></tr></tbody></table>",
+		"cp_ace_drug_tit":"<ul><li>Consider increasing dose of ACEI every 2 weeks until maximum tolerated or target dose is achieved (EC).</li><li>For optimal titration of ACEI, lower loop diuretic doses may be necessary to permit titration. In this circumstance, careful attention to potassium concentrations is needed, as the kaluretic effects of loop diuretics may no longer be present, and restriction of supplemental and/or dietary potassium may be necessary (EC).</li></ul> <br /><table><thead><tr><th>ACEI</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>Captopril</td><td>50 mg 3x daily</td></tr><tr><td>Enalapril</td><td>10-20 mg twice daily</td></tr><tr><td>Fosinopril</td><td>40 mg daily</td></tr><tr><td>Lisinopril</td><td>20-40 mg daily</td></tr><tr><td>Perindopril</td><td>8-16 mg daily</td></tr><tr><td>Quinapril</td><td>20 mg twice daily</td></tr><tr><td>Ramipril</td><td>10 mg daily</td></tr><tr><td>Trandolapril</td><td>4 mg daily</td></tr></tbody></table>",
+		"cp_ace_drug_mon":"Within 1-2 weeks after initiation and after dose increase during titration, monitor (EC): <br/> <ul><li>Blood pressure</li><li>Renal function</li><li>Potassium</li></ul>",
+		"cp_ace_drug_gui":"The use of ACE inhibitors is beneficial for patients with prior or current symptoms of chronic HFrEF to reduce morbidity and mortality (I,A).",	
+		
+		"cp_arb_drug_heading":"<div class='column large-12'><h2><span>Angiotensin Receptor Blockers (ARBs)</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites</p></div>",
+
+		
+		"cp_arb_drug_init":"<ul><li>For patients intolerant to ACEI because of cough or angioedema, or who are already taking ARBs for other reasons, ARBs are a recommended alternative to ACEI (GL).</li></ul><br /><table><thead><tr><th>ARB</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>Candesartan</td><td>4-8 mg daily</td></tr><tr><td>Losartan</td><td>25-50 mg daily</td></tr><tr><td>Valsartan</td><td>20-40 mg twice daily</td></tr></tbody></table>",
+		"cp_arb_drug_tit":"<ul><li>Consider increasing dose of ARB every 2 weeks until maximum tolerated or target dose is achieved (EC).</li><li>For optimal titration of ARBs, lower loop diuretic doses may be necessary to permit titration. In this circumstance, careful attention to potassium concentrations is needed, as the kaluretic effects of loop diuretics may no longer be present, and restriction of supplemental and/or dietary potassium may be necessary (EC).</li></ul> <br /><table><thead><tr><th>ARB</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>Candesartan</td><td>32 mg daily</td></tr><tr><td>Losartan</td><td>50-150 mg daily</td></tr><tr><td>Valsartan</td><td>160 mg twice daily</td></tr></tbody></table>",
+		"cp_arb_drug_mon":"Within 1-2 weeks after initiation and after dose increase during titration, monitor (EC): <br/> <ul><li>Blood pressure</li><li>Renal function</li><li>Potassium</li></ul>",
+		"cp_arb_drug_gui":"The use of ARBs to reduce morbidity and mortality is recommended in patients with prior or current symptoms of chronic HFrEF who are intolerant to ACE inhibitors because of cough or angioedema (I,A).",
+		
+		"cp_bb_drug_heading":"<div class='column large-12'><h2><span>Evidence-Based Beta Blockers</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		
+		"cp_bb_drug_init":"The 2013 AHA/ACC Heart Failure Guideline recommends initiation of one of the following evidence-based beta blockers to reduce morbidity and mortality: <br /> <br /><table><thead><tr><th>Drug</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>Bisoprolol</td><td>1.25 mg daily</td></tr><tr><td>Carvedilol</td><td>3.125 mg twice daily</td></tr><tr><td>Carvedilol CR</td><td>10 mg daily</td></tr><tr><td>Metoprolol succinate extended release (metoprolol CR/XL)</td><td>12.5-25 mg daily</td></tr></tbody></table>",
+		"cp_bb_drug_tit":"<ul><li>Consider increasing dose of beta blocker every 2 weeks in patients with no evidence of decompensated HF and no contraindications to higher doses, until maximum tolerated or target dose achieved (EC).</li><li>Longer time periods may be needed for frail patients or those with marginal hemodynamics, whereas more rapid titration may be reasonable in clinically stable patients without hypotension (EC).</li><li>Following adjustment, patients should be cautioned that there may be a transient worsening of HF symptoms such as dyspnea, fatigue, erectile dysfunction, or dizziness (EC).</li></ul><br /><table><thead><tr><th>Drug</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>Bisoprolol</td><td>10 mg daily</td></tr><tr><td>Carvedilol</td><td>25 mg twice daily for weight <85 kilograms and 50 mg twice daily for weight ≥85 kilograms</td></tr><tr><td>Carvedilol CR</td><td>80 mg daily</td></tr><tr><td>Metoprolol succinate extended release (metoprolol CR/XL)</td><td>200 mg daily</td></tr></tbody></table>",
+		"cp_bb_drug_mon":"Within 1-2 weeks after initiation and after dose increase during titration, monitor (EC):<ul><li>Heart rate</li><li>Blood pressure</li><li>Signs of congestion</li></ul>",
+		"cp_bb_drug_gui":"Use of 1 of the 3 beta blockers proven to reduce mortality (e.g., bisoprolol, carvedilol, and sustained-release metoprolol succinate) is recommended for all patients with current or prior symptoms of HFrEF, unless contraindicated, to reduce morbidity and mortality (I,A).",
+
+		"cp_diuretic_drug_heading":"<div class='column large-12'><h2><span>Diuretics</span></div>",
+
+		"cp_diuretic_drug_init":"<ul><li>Select initial loop diuretic dose. Initial dose depends on multiple factors including renal function and prior exposure to diuretic therapy (EC).</li><li>Furosemide is the most common loop diuretic in HF treatment, but some patients respond more favorably to bumetanide or torsemide due to their increased oral bioavailability (GL).</li><li>Diuretics should generally be combined with an ACE inhibitor, beta blocker, aldosterone antagonist, and moderate sodium restriction (GL).</li><li>Research limitations make it difficult to give precise recommendations, but some degree (e.g., <3 g/d) of sodium restriction in patients with stage C and D HF should be considered (GL).</li></ul>",
+		"cp_diuretic_drug_tit":"<ul><li>Titrate dose to relief of congestion over days to weeks.</li><li>If reaching high doses of loop diuretic (i.e. equivalent of 80 mg of furosemide twice daily) consider changing to a different loop diuretic, or addition of a thiazide diuretic, taken together with loop diuretic (EC).</li><li>For optimal titration of ACEI, ARBs, or ARNI, lower loop diuretic doses may be necessary to permit titration; in this circumstance, careful attention to potassium concentrations is needed, as the kaliuretic effects of loop diuretics may no longer be present, and restriction of supplemental and/or dietary potassium may be necessary (EC).</li><li>In outpatients with HF, diuretic therapy is commonly initiated with low doses, and the dose is increased until urine output increases and weight decreases, generally by 0.5 to 1.0 kg daily (GL).</li><li>In some instances it may be necessary to reduce diuretic dosing in the setting of increasing doses of ACEI/ARB/ARNI (EC).</li><li>Once fluid retention has resolved, treatment with the diuretic should be maintained in some patients to prevent the recurrence of volume overload (GL).</li></ul>",
+		"cp_diuretic_drug_mon":"After initiation and during titration of loop diuretics, monitor (EC):<br/> <ul><li>Renal function within 2-3 days</li><li>Blood pressure</li><li>Electrolytes</li></ul>",
+		"cp_diuretic_drug_gui":"Diuretics are recommended in patients with HFrEF who have evidence of fluid retention, unless contraindicated, to improve symptoms (I,C).",
+			
+		"cp_aldosterone_drug_heading":"<div class='column large-12'><h2><span>Aldosterone Antagonists</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		
+		"cp_aldosterone_drug_init":"Select an initial dose of aldosterone antagonist. It is not necessary to achieve target or maximally tolerated doses of other drugs before adding aldosterone antagonists (EC).</br>Lack of treatment with an aldosterone antagonist should not delay initiating or switching a patient to an ARNI.<br/><br/><table><thead><tr><th>Aldosterone Antagonist</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>Spironolactone</td><td>12.5-25 mg daily</td></tr><tr><td>Eplerenone</td><td>25 mg daily</td></tr></tbody></table>",
+		"cp_aldosterone_drug_tit":"Consider increasing dose of aldosterone antagonist at least every 2 weeks until maximum tolerated or target dose is achieved (EC): <br/><br/><table><thead><tr><th>Aldosterone Antagonist</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>Spironolactone</td><td>25 mg daily or twice daily</td></tr><tr><td>Eplerenone</td><td>50 mg daily</td></tr></tbody></table>",
+		"cp_aldosterone_drug_mon":"<ul><li>In patients with preserved renal function or mild to moderate renal impairment, renal function and potassium after initiation and titration should be assessed within 2 to 3 days and again at 7 days (EC).</li><li>Then, check monthly for 3 months and every 3 months afterwards (EC).</li><li>Clinical status may warrant closer monitoring (EC).</li></ul>",
+		"cp_aldosterone_drug_gui":"<ul><li>Aldosterone receptor antagonists (or mineralocorticoid receptor antagonists) are recommended in patients with NYHA class II–IV HF and who have LVEF of 35% or less, unless contraindicated, to reduce morbidity and mortality. Patients with NYHA class II HF should have a history of prior cardiovascular hospitalization or elevated plasma natriuretic peptide levels to be considered for aldosterone receptor antagonists. Creatinine should be 2.5 mg/dL or less in men or 2.0 mg/dL or less in women (or estimated glomerular filtration rate >30 mL/min/1.73 m<sup>2</sup>), and potassium should be less than 5.0 mEq/L. Careful monitoring of potassium, renal function, and diuretic dosing should be performed at initiation and closely followed thereafter to minimize risk of hyperkalemia and renal insufficiency (I,A).</li><li>Aldosterone receptor antagonists are recommended to reduce morbidity and mortality following an acute MI in patients who have LVEF of 40% or less who develop symptoms of HF or who have a history of diabetes mellitus, unless contraindicated (III,B).</li><li>Inappropriate use of aldosterone receptor antagonists is potentially harmful because of life-threatening hyperkalemia or renal insufficiency when serum creatinine is greater than 2.5 mg/dL in men or greater than 2.0 mg/dL in women (or estimated glomerular filtration rate <30 mL/min/1.73m<sup>2</sup>), and/or potassium greater than 5.0 mEq/L (III, B).</li><li>Routine combined use of an ACE inhibitor, ARB, and aldosterone antagonist is potentially harmful for patients with HFrEF (III,C).</li></ul>",
+		
+		"cp_sglt2_drug_heading":"<div class='column large-12'><h2><span>Sodium-Glucose Cotransporter-2 (SGLT2) Inhibitors</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		"cp_sglt2_drug_init":"Select an initial dose of SGLT2 inhibitor based on patient’s eGFR. It is not necessary to achieve target or maximally tolerated doses of other drugs before adding SGLT2 inhibitor (EC).</br></br><table><thead><tr><th>Patient’s eGFR</th><th>SGLT2 inhibitors</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>≥30 mL/min/<span class='size'>1.73m<sup>2</sup></span></td><td>Dapagliflozin or Empagliflozin</td><td>10 mg daily</td></tr><tr><td>≥20 mL/min/<span class='size'>1.73m<sup>2</sup></span></td><td>Empagliflozin</td><td>10 mg daily</td></tr></tbody></table>",
+		"cp_sglt2_drug_tit":"No dose adjustment is needed.</br></br><table><thead><tr><th>Patient’s eGFR</th><th>SGLT2 inhibitors</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>≥30 mL/min/<span class='size'>1.73m<sup>2</sup></span></td><td>Dapagliflozin or Empagliflozin</td><td>10 mg daily</td></tr><tr><td>≥20 mL/min/<span class='size'>1.73m<sup>2</sup></span></td><td>Empagliflozin</td><td>10 mg daily</td></tr></tbody></table>",
+		"cp_sglt2_drug_mom":"After initiation and during titration, monitor (EC):<ul><li>Renal function</li><li>Blood pressure</li></ul>",
+		"cp_sglt2_ci_cautions":"<u>Contraindications</u><ul><li>Not approved for use in patients with Type I diabetes due to increased risk of diabetic ketoacidosis</li><li>Known hypersensitivity to drug</li><li>Lactation (no data)</li><li>On dialysis</li></ul><u>Cautions</u><ul><li>For HF care, dapagliflozin, eGFR <30 mL/min/1.73m<sup>2</sup></li><li>For HF care, empagliflozin, eGFR <20 mL/min/1.73 m<sup>2</sup></li><li>Pregnancy</li><li>Increased risk of mycotic genital infections</li><li>May contribute to volume depletion. Consider altering diuretic dose if applicable</li><li>Ketoacidosis in patients with diabetes:</li><ul><li>Temporary discontinuation before scheduled surgery is recommended to avoid potential risk for ketoacidosis</li><li>Assess patients who present with signs and symptoms of metabolic acidosis for ketoacidosis, regardless of blood glucose level</li></ul><li>Acute kidney injury and impairment in renal function: Consider temporarily discontinuing in settings of reduced oral intake or fluid losses</li><li>Urosepsis and pyelonephritis: Evaluate patients for signs and symptoms of urinary tract infections and treat promptly, if indicated</li><li>Necrotizing fasciitis of the perineum (Fournier’s gangrene): Rare, serious, life-threatening cases have occurred in both female and male patients; assess patients presenting with pain or tenderness, erythema, or swelling in the genital or perineal area, along with fever or malaise</li></ul>",
+
+		"cp_hydralazine_drug_heading":"<div class='column large-12'><h2><span>Hydralazine + Isosorbide Dinitrate</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		
+		"cp_hydralazine_drug_init":"<ul><li>African American patients should receive these drugs once target or maximally tolerated doses of beta blocker, ARNI/ACEI/ARB, and aldosterone antagonists are achieved. This combination of drugs is especially important for those patients with NYHA Class III—IV symptoms (EC).</li><li>Select initial dose of hydralazine and isosorbide dinitrate (EC).</li></ul><br/><table><thead><tr><th>Isosorbide dinitrate and hydralazine</th><th>Suggested Initial Dose</th></tr></thead><tbody><tr><td>Fixed dose combination</td><td>20 mg isosorbide dinitrate / 37.5 mg hydralazine 3x a day</td></tr><tr><td>Isosorbide dinitrate and hydralazine</td><td>20-30 mg isosorbide dinitrate / 25-50 mg hydralazine 3x daily or once a day</td></tr></tbody></table>",
+		"cp_hydralazine_drug_tit":"Consider increasing dose of hydralazine and/or isosorbide dinitrate every 2 weeks until maximum tolerated or target dose is achieved (EC). <br/><br/><table><thead><tr><th>Isosorbide dinitrate and hydralazine</th><th>Suggested Target Dose</th></tr></thead><tbody><tr><td>Fixed dose combination</td><td>40 mg isosorbide dinitrate / 75 mg hydralazine 3x a day</td></tr><tr><td>Isosorbide dinitrate and hydralazine</td><td>40 mg isosorbide dinitrate 3x daily with  100 mg hydralazine 3x daily </td></tr></tbody></table>",
+		"cp_hydralazine_drug_mon":"After initiation and during titration, monitor (EC):<br/> <ul><li>Blood pressure</li></ul>",
+		"cp_hydralazine_drug_gui":"<ul><li>The combination of hydralazine and isosorbide dinitrate is recommended to reduce morbidity and mortality for patients self-described as African Americans with NYHA class III–IV HFrEF receiving optimal therapy with ACE inhibitors and beta blockers, unless contraindicated (I, A).</li><li>A combination of hydralazine and isosorbide dinitrate can be useful to reduce morbidity or mortality in patients with current or prior symptomatic HFrEF who cannot be given an ACE inhibitor or ARB because of drug intolerance, hypotension, or renal insufficiency, unless contraindicated (IIa, B).</li></ul>",
+		
+		"cp_ivabradine_drug_heading":"<div class='column large-12'><h2><span>Ivabradine</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		
+		"cp_ivabradine_drug_init":"<ul><li>Before initiating ivabradine, the dose of an evidence-based beta-blocker should be optimized and increased to the target dose as long as excessive bradycardia is not an issue (EC).</li><li>Ivabradine is indicated only for patients mainly in sinus rhythm, not in those with persistent or chronic AF, those experiencing 100% atrial pacing, or unstable patients. A history of paroxysmal AF is not a contraindication to ivabradine (EC).</li></ul><br/>Suggested starting dose (EC):<br/><ul><li>For patients with a history of conduction defects, or who are &ge;75 years of age:<br/><b>2.5 mg twice daily with food</b></li><li>For patients without the above-listed:<br/><b>5 mg twice daily with food</b></li></ul>",
+		"cp_ivabradine_drug_tit":"Re-assess heart rate in at least 2-4 weeks after initiation, and consult suggested next steps below. <br/><br/> <table><thead><tr><th>Heart Rate</th><th>Next Step</th></tr></thead><tbody><tr><td><50 bpm or symptoms of bradycardia</td><td>Reduce dose by 2.5 mg twice daily with food or discontinue if already at 2.5 mg twice daily</td></tr><tr><td>50-60 bpm</td><td>Maintain current dose</td></tr><tr><td>>60 bpm</td><td>Increase by 2.5 mg twice daily with food until reaching maximum dose of 7.5 mg twice daily</td></tr></tbody></table>",
+		"cp_ivabradine_drug_mon":"After initiation and during titration, monitor (EC): <br/> <ul><li>Heart rate</li></ul>",
+		"cp_ivabradine_ci_cautions":"<u>Contraindications</u><ul><li>HFpEF</li><li>Presence of angina with normal EF</li><li>Hypersensitivity</li><li>Severe hepatic impairment (Child-Pugh C)</li><li>Acute decompensated HF</li><li>Blood pressure <90/50 mm Hg</li><li>Sick sinus syndrome without a pacemaker</li><li>Sinoatrial node block</li><li>2nd or 3rd degree block without a pacemaker</li><li>Resting heart rate <60 beats/min</li><li>Persistent AF or flutter</li><li>Atrial pacemaker dependence</li></ul><u>Cautions</u><ul><li>Sinus node disease</li><li>Cardiac conduction defects</li><li>Prolonged QT interval</li></ul>",
+		"cp_ivabradine_drug_gui":"Ivabradine can be beneficial to reduce HF hospitalization for patients with symptomatic (NYHA class II-III) stable chronic HFrEF (LVEF ≤35%) who are receiving guideline-directed management and therapy, including a beta blocker at maximum tolerated dose, and who are in sinus rhythm with a heart rate of 70 bpm or greater at rest (IIa, B).",
+		"cp_icd_drug_heading":"<div class='column large-12'><h2><span>ICD</span></div>",
+
+		"cp_icd_drug_gui":"<ul><li>ICD therapy is recommended for primary prevention of SCD in selected patients with HFrEF at least 40 d post-MI with LVEF 35% and NYHA class II or III symptoms on chronic GDMT, who are expected to live >1 y (I,A).</li><li>ICD therapy is recommended for primary prevention of SCD in selected patients with HFrEF at least 40 d post-MI with LVEF 30% and NYHA class I symptoms while receiving GDMT, who are expected to live >1 y (I,B).</li></ul>",
+		"cp_crt_drug_heading":"<div class='column large-12'><h2><span>CRT or CRT-D</span></div>",
+
+		"cp_crt_drug_gui":"<ul><li>CRT is indicated for patients who have LVEF 35%, sinus rhythm, LBBB with a QRS &ge;150 ms, and NYHA class II (IA), III, or ambulatory IV symptoms on GDMT (I,B).</li><li>CRT can be useful for patients who have LVEF &le;35%, sinus rhythm, a non-LBBB pattern with QRS &ge;150 ms, and NYHA class III/ambulatory class IV symptoms on GDMT (IIa, A).</li><li>CRT can be useful for patients who have LVEF 35%, sinus rhythm, LBBB with a QRS 120 to 149 ms, and NYHA class II, III, or ambulatory IV symptoms on GDMT (IIa,B). </li><li>CRT can be useful in patients with AF and LVEF 35% on GDMT if a) the patient requires ventricular pacing or otherwise meets CRT criteria and b) AV nodal ablation or rate control allows near 100% ventricular pacing with CRT (IIa,B).</li><li>CRT can be useful for patients on GDMT who have LVEF 35% and are undergoing new or replacement device implantation with anticipated ventricular pacing (>40%) (IIa,C).</li><li>CRT may be considered for patients who have LVEF 35%, sinus rhythm, a non-LBBB pattern with a QRS duration of 120 to 149 ms, and NYHA class III/ambulatory class IV on GDMT (IIb,B).</li><li>CRT may be considered for patients who have LVEF &le;35%, sinus rhythm, a non-LBBB pattern with QRS &ge;150 ms, and NYHA class II symptoms on GDMT (IIb,B).</li><li>CRT may be considered for patients who have LVEF 30%, ischemic etiology of HF, sinus rhythm, LBBB with QRS &ge;150 ms, and NYHA class I symptoms on GDMT (IIb,C).</li></ul>",
+		
+		"cp_arni_drug_heading":"<div class='column large-12'><h2><span>Angiotensin Receptor-Neprilysin Inhibitor (ARNI)</span></h2><p>For complete individual drug prescribing information (PI) and updates, please refer to the drug manufacturer or FDA websites.</p></div>",
+		
+		"cp_arni_drug_init":"<b>De Novo</b><ul><li>Initiation of an ARNI de novo without prior exposure to ACEI or ARB is now supported by recent data from clinical studies.</li></ul><b>On ACEI/ARB</b></ul><ul><li>Ensure 36 hours off ACEI before initiating sacubitril/valsartan (ARNI) (GL). This delay is not required when switching from ARB to ARNI (EC).</li><li>Use of an aldosterone antagonist is not considered mandatory prior to changing a patient to ARNI (EC).</li></ul>Select starting dose:<br/><table><thead><tr><th style='width:55%'>Indications</th><th>Suggested initial ARNI dose</th></tr></thead><tbody><tr><td> <ul><li>De novo initiation of ARNI</li><li> Patient on low or medium dose of ACEI (enalapril &le; 10 mg total daily dose or therapeutically equivalent dose of another ACEI)</li> <li> Patient on low or medium dose of ARB (valsartan &le; 160 mg total daily dose or therapeutically equivalent dose of another ARB)</li> <li> Severe renal impairment (eGFR < 30 mL/min/1.73m<sup>2</sup>)</li><li>Moderate hepatic impairment (Child-Pugh Class B)</li><li>Elderly (≥ 75 years old)</li></ul></td><td>24/26 mg twice daily</td></tr><tr><td>Patient on high dose of ACEI (enalapril > 10 mg total daily dose or therapeutically equivalent dose of another ACEI) or high dose of ARB (valsartan > 160 mg total daily dose or therapeutically equivalent dose of another ARB) with none of the indications listed above.</td><td>49/51 mg twice daily</td></tr></tbody></table>",
+		"cp_arni_drug_tit":"<ul><li>In at least 2 weeks after initiation, assess tolerability (EC).</li><li>Carefully monitor blood pressure, electrolytes and renal function during titration (EC).</li><li>If possible, increase dose stepwise to target of 97/103 mg twice daily (EC).</li> <li>Assess renal function and potassium within 1-2 weeks of dose increases (EC).</li> <li>For optimal titration of ARNIs, lower loop diuretic doses may be necessary to permit titration. In this circumstance, careful attention to potassium concentrations is needed, as the kaluretic effects of loop diuretics may no longer be present, and restriction of supplemental and/or dietary potassium may be necessary (EC).</li></ul>",
+		"cp_arni_drug_mon":"After initiation and during titration, monitor (EC): <br/> <ul><li>Blood pressure</li><li>Electrolytes</li><li>Renal function</li></ul>",
+		"cp_ci_cautions":"Contraindications and Cautions",
+		"cp_arni_ci_cautions":"<u>Contraindications</u><ul><li>Within 36 hours of ACEI use</li><li>History of angioedema with or without an ACEI or ARB</li><li>Pregnancy</li><li>Lactation (no data)</li><li>Severe hepatic impairment (Child-Pugh C)</li><li>Concomitant aliskiren use in patients with diabetes</li><li>Known hypersensitivity to either ARBs or ARNIs</li></ul><u>Cautions</u><ul><li>Systolic blood pressure <100 mm Hg</br>-Clinicians should be advised that sacubitril/valsartan may exert a more noteworthy effect on blood pressure when compared with ACEIs/ARBs. Therefore, in patients with borderline blood pressure (e.g. systolic blood pressure ≤100 mm Hg), careful administration and follow-up are advised (EC).</li><li>Renal artery stenosis</li><li>Volume depletion</li></ul>",
+		"cp_arni_drug_gui":"<ul><li>ARNI should not be administered concomitantly with ACE inhibitors or within 36 hours of the last dose of an ACE inhibitor (III, B).</li><ul>",
+
+		"cp_gui_drug_guiding":"<div class='column large-12'><h2><span>Guiding Principles for Treatment (EC)</span></div>",
+		"cp_immunization_drug_heading":"<div class='column large-12'><h2><span>Immunization</span></div>",
+		"cp_immunization_gui_heading":"ACC/AHA Guideline Recommendations",
+		"cp_immunization_gui_text":"<div class='indent-list'><ul class='list'><li>In patients with HF, vaccinating against respiratory illnesses is reasonable to reduce mortality (2a, B-NR).<a href='https://www.jacc.org/doi/10.1016/j.jacc.2021.12.012' target='_blank'> 2022 AHA/ACC/HFSA GUIDELINE FOR THE MANAGEMENT OF HEART FAILURE. </a>​</li><li>The pneumococcal vaccine is recommended for patients 65 years of age and older and in high-risk patients with cardiovascular disease. (1, B). <ul class='list'><li>Vaccination with the 23-valent pneumococcal polysaccharide vaccine is recommended for all adults > 65 years of age. Adults of any age who are at increased risk, including smokers and those with asthma, should also be given the vaccine.  Immunocompromised adults should receive the 13-valent conjugate vaccine in addition to the 23-valent vaccine.<a href='https://www.jacc.org/doi/10.1016/j.jacc.2014.09.017' target='_blank'> 2014 AHA/ACC Guideline for the Management of Patients with Non-ST-Elevation Acute Coronary Syndromes</a></li></ul></li></ul></div>",
+		"cp_immunization_HP_heading":"ACC Health Policy Statement​",
+		"cp_immunization_HP_text":"<div class='indent-list'><ul class='list'><li>Patients with HF should be prioritized for COVID-19 vaccination ​<ul class='list'><li>Among patients with heart failure, those with worse functional status (i.e., New York Heart Association class III/IV) and those requiring recent hospitalization or an urgent visit for worsening heart failure should be considered higher risk compared with those patients who are well-compensated on medical therapy and infrequently hospitalized. Patients with heart failure who are being considered for or are already listed for a heart transplant should be considered at especially high risk, given their advanced, decompensated disease. Additionally, patients with a history of a heart transplant should be considered higher risk, given their immunosuppressed status, especially those in the immediate postoperative state and at the highest intensity of immunosuppression.<a href='https://www.jacc.org/doi/pdf/10.1016/j.jacc.2021.02.017' target='_blank'> 2021 ACC HEALTH POLICY STATEMENT ON CARDIOVASCULAR DISEASE CONSIDERATIONS FOR COVID-19 VACCINE PRIORITIZATION.</a> </li></ul></li></ul></div>",
+		"cp_immunization_AIP_heading":"CDC’s Standards for Adult Immunization Practice​",
+		"cp_immunization_AIP_text":"<div class=''><ol class='list'><li><b>ASSESS</b> the immunization status of all your patients at every clinical encounter.<ul class='list'><li>Stay informed about the latest CDC recommendations for immunization of adults.​</li><li>Implement protocols in your office to ensure that patients’ vaccine needs are routinely reviewed and patients get reminders about vaccines they need.​</li></ul>​</li><li>Strongly <b>RECOMMEND</b> vaccines that your patients need. <ul><li>Address patient questions and concerns in clear and understandable language.​</li><li>Highlight your positive experiences with vaccination (personal or in your practice).​</li></ul>​</li><li><b>ADMINISTER</b> needed vaccines or REFER your patients to a vaccination provider. <ul><li>For vaccines that you stock, make vaccination services as convenient as possible for your patients.​</li><li>For vaccines that you don’t stock, refer patients to providers in the area that offer vaccination services.​</li></ul>​</li><li><b>DOCUMENT</b> vaccines received by your patients. <ul><li>Participate in your state’s immunization registry to help your office, your patients, and your patients’ other providers know which vaccines your patients have had.​</li><li>Follow up to confirm that patients received recommended vaccines that you referred them to get from other immunization providers.</li></ul>​</li></ol></div>",
+
+
+		"cp_gui_HF_target":"GDMT is the foundation of HF care",
+		"cp_gui_HF_target_text":"GDMT is the foundation of HF care, and the GDMT with the highest expected benefit should be prioritized. Based on large randomized trials for HFrEF, ARNIs, evidence-based beta-blockers, aldosterone antagonists, and SGLT2 inhibitors are first-line medications for all populations. HYD/ISDN is also a first-line medication for self-identified African Americans. Ivabradine is a second-line medication for select populations.",
+		"cp_gui_drug_target":"Target doses are associated with best outcomes",
+		"cp_gui_drug_target_text":"Attempt to achieve target doses of all recommended therapies in the absence of contraindications and/or intolerance. Titration should occur even if the patient appears stable or their symptoms and/or EF improve.",
+		"cp_gui_start_gdmt":"Start GDMT immediately",
+		"cp_gui_start_gdmt_text":"Delayed initiation of GDMT is associated with never initiating.",	
+		"cp_gui_barriers":"Attention to the clinical, social, and financial barriers to achieving GDMT should be prioritized",
+		"cp_gui_barriers_text":"Multidisciplinary care should be targeted to the individual patient’s barriers. Consider early referral to an HF team for assistance.",
+		"cp_gui_diligent":"Diligent management of volume status will reduce patient symptoms",
+		"cp_gui_diligent_text":"Congestion drives symptoms and hospitalizations. If the volume status is unclear, consider performing right heart catheterization and/or referral to an HF specialist. Chronic ambulatory pulmonary artery pressure monitoring may be considered in patients with hospitalizations in the past year who have persistent symptoms with minimal exertion.",
+		"cp_gui_tolerability":"Tolerability and side effects depend, in part, on how and when GDMT is prescribed",
+		"cp_gui_tolerability_text":"<i><b>Scenario:</b> Worsening renal function or hyperkalemia.</i><p>Use less than target doses of an ARNI/ACEI/ARB and discontinue aldosterone antagonist if estimated creatinine clearance <30 cc/min or serum potassium >5.5 mEq/dL. Available data support a survival benefit even with a low-dose ACEI, which may be the default choice in the setting of renal insufficiency and marginal blood pressure.</p><i><b>Scenario:</b> Symptomatic hypotension.</i><p>Hypotensive symptoms may be due to over-diuresis, use of non-cardiovascular drugs with hemodynamic effects (e.g. anticholinergic agents, treatments for prostate enlargement, others), autonomic dysfunction, or simultaneous administration of multiple HF medications. All of these should be addressed before deciding to lower doses of evidence-based therapies. After excluding other causes of hypotension, use best-tolerated doses of GDMT, accepting that less data exist for the impact of lower doses in HF management. Clinical comorbidities and clinical judgement should be used to guide which GDMTs are reduced. For persistent hypotension, consider referral to an advanced HF specialist.</p>",
+		"cp_gui_drug_only":"Device therapy should be considered after consistent use of optimal GDMT",
+		"cp_gui_drug_only_text":"Primary prevention implantable cardioverter-defibrillator and cardiac resynchronization therapy should be considered after consistent use of optimal doses of all GDMTs for at least 3 to 6 months, followed by reassessment of EF and other indications for device therapy.",
+		"cp_gui_transcatheter":"Transcatheter mitral valve repair may be considered among symptomatic patients",
+		"cp_gui_transcatheter_text":"Transcatheter mitral valve repair may be considered among symptomatic patients with chronic moderate-severe to severe mitral regurgitation despite optimal doses of all GDMTs.",
+		"cp_gui_drug_focus":"Focus on the patient’s symptoms, functional capacity and cardiac function",
+		"cp_gui_drug_focus_text":"Maintain surveillance of the patient’s health status using validated symptom questionnaires (e.g., The Kansas City Cardiomyopathy Questionnaire). This could be achieved during cardiac rehabilitation, which should be used to improve patient-reported outcomes, reduce hospitalizations, and improve aerobic fitness.",
+		"cp_gui_perspective":"Focus on the value of therapy from the patient’s perspective",
+		"cp_gui_perspective_text":"The value of a therapy to a patient is the combination of benefits and burdens as they relate to that patient’s values, goals, and preferences. Shared decision-making will help patients and the health care team reach the best treatment plan for the individual patient.",
+		"cp_gui_drug_optimize":"Optimize team-based care",
+		"cp_gui_drug_optimize_text":"Team-based care is critical to optimizing GDMT and may include frequent follow-up visits, telehealth visits, and remote monitoring. Employ multidisciplinary teams that include advanced practice professionals, clinical nurses, and pharmacists to help titrate GDMT. Team management also facilitates serial assessments and longitudinal care, including management of comorbidities.",
+		
+		"cp_gui_drug_symptom":"<div class='column large-12'><h2><span>Symptom Progression (EC)</span><span class='sub-line' >If symptoms have not improved after reassessment, and patient has progressed to stage D heart failure (refractory NYHA class III-IV) consider the following:</span></h2></div>",
+
+		
+		"cp_gui_drug_palliative":"Palliative Care",
+		"cp_gui_drug_palliative_text":"Comprehensive palliative care that helps patients and their families explore treatment options and prognosis and addresses symptom control, psychosocial distress, HRQOL, preferences about end-of-life care, caregiver support, and assurance of access to evidence-based disease-modifying interventions. For a resource on developing advance directives, see the <a href='https://cvquality.acc.org/clinical-toolkits/advance-care-planning-toolkit' target='_blank'>Advance Care Planning Toolkit.</a></br></br>The following are important points to consider regarding palliative care and transition to hospice.<table><tr><td><b>Principle 1:</b> Palliative care strives to reduce suffering through the relief of pain and other distressing symptoms while integrating psychological and spiritual aspects of care.</td></tr><tr><td><b>Action:</b> Soliciting goals of care and focusing on quality of life are appropriate throughout the clinical course of HF and become increasingly important as the disease progresses.</td></tr></table><table><tr><td><b>Principle 2:</b> Good HF management is the cornerstone of symptom palliation.</td></tr><tr><td><b>Action:</b> Meticulous management of HF therapies—particularly diuretic agents—is a critical component of symptom management and should continue through the end of life.</td></tr></table><table><tr><td><b>Principle 3:</b> Palliative care consultation and complementary approaches to care may further ameliorate refractory HF symptoms of dyspnea, fatigue, and pain, although study results have been mixed. These approaches also improve patient satisfaction and quality-of-life metrics.</td></tr><tr><td><b>Action:</b> Targeted specialty palliative care consultation can be helpful for especially complex decisions, refractory symptoms, and end of life. Palliative care teams should have expertise in management of both HF- and non-HF-related symptoms.</td></tr></table><table><tr><td><b>Principle 4:</b> Patients with HF often face major treatment decisions over time and should be provided with support when thinking through the benefits and burdens of each treatment option.</td></tr><tr><td><b>Action:</b> Decision support tools (patient decision aids) help frame options, which should then be followed by dynamic and personalized conversations.</td></tr></table><table><tr><td><b>Principle 5:</b> Proactive shared decision-making discussions simplify difficult decisions in the future.</td></tr><tr><td><b>Action:</b> Preparedness planning discussions should occur at least annually between patients and clinicians, leading to review of clinical status and current therapies, estimates of prognosis, clarification of patient values and beliefs, anticipation of treatment decisions, and advanced care directives that identify surrogate decision-makers and healthcare proxies (3). Resources to assist patients in these difficult discussions may be useful (e.g., the Advanced Care Training module from HFSA: hfsa.org). Similar preparedness-planning discussions should occur at the time of major procedural interventions (e.g., LV assist device implantation, heart transplantation).</td></tr></table><table><tr><td><b>Principle 6:</b> Attention to the clinical trajectory is required to calibrate expectations and guide timely decisions, but prognostic uncertainty is inevitable and should be included in discussions with patients and caregivers.</td></tr><tr><td><b>Action:</b> Worsening disease and “milestone events” (e.g., recurrent hospitalization or progressive intolerance of medications due to hypotension and kidney dysfunction) should trigger heightened preparation with patients and families, but without specific estimates of how much time remains due to high levels of unpredictability in the clinical course of HF.</td></tr></table><table><tr><td><b>Principle 7:</b> The transition from “do everything” to “comfort only/hospice” is often bridged through a phase of “quality survival,” during which time patients increasingly weigh the benefits, risks, and burdens of initiating or continuing life-sustaining treatments.</td></tr><tr><td><b>Action:</b> Revising the medical regimen for symptom relief and quality of life may involve discontinuation of some recommended therapies (e.g., reducing neurohormonal antagonists in the setting of symptomatic hypotension, deactivation of defibrillator therapy) and the addition of therapies not usually recommended (e.g., opioids for refractory dyspnea). These decisions should be individualized and made in partnership with the patient, their caregivers, and their care team.</td></tr></table>",
+		"cp_gui_drug_transplant":"Transplant",
+		"cp_gui_drug_transplant_text":"Evaluation for cardiac transplantation. Indicated for carefully selected patients with stage D HF despite GDMT, device, and surgical management (I, C).",
+		"cp_gui_drug_left":"Left Ventricular Assistance Device",
+		"cp_gui_drug_left_text":"<ul><li>Mechanical circulatory support (MCS) is beneficial in carefully selected patients with stage D HFrEF in whom definitive management (e.g., cardiac transplantation) or cardiac recovery is anticipated or planned (IIa, B).</li><li>Nondurable MCS, including the use of percutaneous and extracorporeal ventricular assist devices (VADs), is reasonable as a “bridge to recovery” or “bridge to decision” for carefully selected patients with HFrEF with acute, profound hemodynamic compromise (IIa, B).</li><li>Although optimal patient selection for MCS remains an active area of investigation, general indications for referral for MCS therapy include patients with LVEF <25% and NYHA class III–IV functional status despite GDMT, including, when indicated, CRT, with either high predicted 1- to 2-year mortality (e.g., as suggested by markedly reduced peak oxygen consumption and clinical prognostic scores) or dependence on continuous parenteral inotropic support. Patient selection requires a multidisciplinary team of experienced advanced HF and transplantation cardiologists, cardiothoracic surgeons, nurses, and ideally, social workers and palliative care clinicians.</li></ul>",
+		"cp_gui_drug_investigational":"Investigational Studies",
+		"cp_gui_drug_investigational_text":"Participation in investigational studies is also appropriate for stage C, NYHA class II and III HF.",
+		"cp_gui_drug_considerations":"<div class='column large-12'><h2><span>Considerations for Improving Adherence (EC)</span></div>",
+
+		"cp_gui_drug_capitalize":"Capitalize on opportunities",
+		"cp_gui_drug_capitalize_text":"<ul><li>Capitalize on opportunities when patients are most disposed to adherence.</li><li>In-hospital / pre-discharge initiation following decompensation.</li></ul>",
+		"cp_gui_drug_consider":"Consider patient’s perspective",
+		"cp_gui_drug_consider_text":"<ul><li>Start with the goals of therapy (feeling better and living longer) and then discuss how specific actions (medication initiation, intensification, monitoring, and adherence) support those goals (example: <a href='https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools and Practice Support/Quality Programs/Succeed in Managing Heart Failure/B19181 HF Clinician HowTo ToolFINAL 090619.pdf?la=en' target='_blank'>ACC's My Heart Failure Action Plan</a>).</li><li>Use decision aids when available (example: <a href='https://www.cardiosmart.org/topics/heart-failure/assets/decision-aid/drug-options-for-patients-with-heart-failure' target='_blank'>CardioSmart Heart Failure Resources</a>).</li><li>Ask patient how they learn best and provide education accordingly.</li><li>Use culturally relevant patient education materials.</li></ul>",
+		"cp_gui_drug_simplify":"Simplify medication regimens ",
+		"cp_gui_drug_simplify_text":"<ul><li>Simplify patient medication regimens whenever possible.</li></ul>",
+		"cp_gui_drug_cost":"Consider cost and access",
+		"cp_gui_drug_cost_text":"<ul><li>Become familiar with and advocate for systems that help make cost sharing automatic, immediate, and transparent.</li><li>Prescribe lower-cost medications of similar efficacy.</li><li>Facilitate access to copay assistance.</li><li>Discuss out-of-pocket co-pays proactively.</li><li>Prescribe 90-day quantities for refills.</li></ul>",
+		"cp_gui_drug_improve":"Communicate with other clinicians",
+		"cp_gui_drug_improve_text":"Communicate with other clinicians involved in care, ideally facilitated by electronic health records",
+		"cp_gui_drug_educate":"Educate using practical, patient-friendly information",
+		"cp_gui_drug_educate_text":"<ul><li>Provide a written explanation of the purpose of each medication prescribed.</li><li>Plan pharmacist visits for complex medication regimens.</li><li>Use the “teach back” principle to reinforce education.</li></ul>",
+		"cp_gui_drug_recommend":"Recommend tools that support adherence in real-time",
+		"cp_gui_drug_recommend_text":"<ul><li>Pill boxes to be filled by patient or care partner a week at a time.</li><li>Alarms for each time of the day medications are due.</li><li>Smartphone or other mobile health applications that provide an interactive platform for education, reminders, warnings, and adherence tracking.</li></ul>",
+		"cp_gui_drug_behavioral":"Consider behavioral supports",
+		"cp_gui_drug_behavioral_text":"<ul><li>Motivational interviewing.</li><li>Participate in engaged benefit designs.</li></ul>",
+		"cp_gui_drug_anticipate":"Anticipate problems",
+		"cp_gui_drug_anticipate_text":"<ul><li>Communicate common side effects.</li><li>Provide instructions on when to call for refills or report problems.</li><li>Remind patients who are using pharmacy assistance programs that refills/reorders are not automatic.</li></ul>",
+		"cp_gui_drug_monitor":"Monitor Adherence",
+		"cp_gui_drug_monitor_text":"<ul><li>Monitor adherence and target patients at risk.</li><li>Ask patients directly (e.g., “How many times in a week do you miss taking your medications? Have you run out of your medications recently?”). </li><li>Carry out medicine reconciliation at visits, with focus on discrepancies.</li><li>Assess remaining dosage units (i.e., count excess remaining tablets).</li><li>Monitor pharmacy fills, using available clinical databases or automated alerts for failed fills and refills.</li><li>Review available drug levels (e.g., digoxin, INR) or concentrations of BNP/NT-proBNP.</li><li>Plan home-based nursing visits for appropriate patients.</li></ul>",
+		"cp_gui_drug_references":"<div class='column large-12'><h2><span>Reference Quick Links</span></div>",
+
+		"cp_gui_drug_references_text":"<a href='https://www.jacc.org/doi/10.1016/j.jacc.2020.11.022' target='_blank'><u>2021 Update to the 2017 ACC Expert Consensus Decision Pathway for Optimization of Heart Failure Treatment</u></a><br/><br/><a href='https://www.jacc.org/doi/10.1016/j.jacc.2017.04.025' target='_blank'><u>2017 ACC/ AHA/HFSA Focused Update of the 2013 ACCF/AHA Guideline for the Management of Heart Failure</u></a> <br/> <br/><a href='https://www.jacc.org/doi/10.1016/j.jacc.2013.05.019' target='_blank'><u>2013 ACCF/AHA Guideline for the Management of Heart Failure</u></a><br/> <br/><a href='https://www.jacc.org/doi/10.1016/j.jacc.2021.12.012' target='_blank'><u>2022 AHA/ACC/HFSA GUIDELINE FOR THE MANAGEMENT OF HEART FAILURE. ​</u></a><br/> <br/><a href='https://www.jacc.org/doi/10.1016/j.jacc.2014.09.017' target='_blank'><u>2014 AHA/ACC Guideline for the Management of Patients with Non-ST-Elevation Acute Coronary Syndromes​</u></a><br/> <br/><a href='https://www.jacc.org/doi/pdf/10.1016/j.jacc.2021.02.017' target='_blank'><u>2021 ACC HEALTH POLICY STATEMENT ON CARDIOVASCULAR DISEASE CONSIDERATIONS FOR COVID-19 VACCINE PRIORITIZATION.​</u></a>",
+		"cp_gui_drug_referral":"<div class='column large-12'><h2><span>Triggers for HF Patient Referral to a Specialist/Program (EC)</span></div>",
+
+		"cp_gui_drug_referral_text":"<h3>Clinical Scenarios</h3><table><tr><td>1. New-onset HF (regardless of EF): Refer for evaluation of etiology, guideline-directed evaluation and management of recommended therapies, and assistance in disease management, including consideration of advanced imaging, endomyocardial biopsy, or genetic testing for primary evaluation of new-onset HF</td></tr><tr><td>2. Chronic HF with high-risk features, such as development or persistence of one or more of the following risk factors: <br><ul><li>Need for chronic IV inotropes</li><li>Persistent NYHA functional class III-IV symptoms of congestion or profound fatigue</li><li>Systolic blood pressure ≤90 mm Hg or symptomatic hypotension</li><li>Creatinine ≥1.8 mg/dL or BUN ≥43 mg/dL</li><li>Onset of atrial fibrillation, ventricular arrhythmias, or repetitive ICD shocks</li><li>Two or more emergency department visits or hospitalizations for worsening HF in the prior 12 months</li><li>Inability to tolerate optimally dosed beta-blockers and/or ACEI/ARB/ARNI and/or aldosterone antagonists</li><li>Clinical deterioration, as indicated by worsening edema, rising biomarkers (BNP, NT-proBNP, others), worsened exercise testing, decompensated hemodynamics, or evidence of progressive remodeling on imaging</li><li>High mortality risk using a validated risk model for further assessment and consideration of advanced therapies, such as the Seattle Heart Failure Model</li></ul></td></tr><tr><td>3. Persistently reduced LVEF ≤35% despite GDMT for ≥3 months: Refer for consideration of device therapy in those patients without prior placement of ICD or CRT, unless device therapy is contraindicated or inconsistent with overall goals of care</td></tr><tr><td>4. Second opinion needed regarding etiology of HF; for example:<ul><li>Coronary ischemia and the possible value of revascularization</li><li>Valvular heart disease and the possible value of valve repair</li><li>Suspected myocarditis</li><li>Established or suspected specific cardiomyopathies (e.g., hypertrophic cardiomyopathy, arrhythmogenic right ventricular dysplasia, Chagas disease, restrictive cardiomyopathy, cardiac sarcoidosis, amyloid, aortic stenosis)</li></ul></td></tr><tr><td>5. Annual review needed for patients with established advanced HF in which patients/caregivers and clinicians discuss current and potential therapies for both anticipated and unanticipated events, possible HF disease trajectory and prognosis, patient preferences, and advanced care planning</td></tr><tr><td>6. Assessment of patient for possible participation in a clinical trial.</td></tr></table><small>ACEI = angiotensin converting enzyme inhibitors; ARB = angiotensin receptor blockers; ARNI = angiotensin receptor-neprilysin inhibitor; BNP = B-type natriuretic peptide; BUN = blood, urea, nitrogen; CRT = cardiac resynchronization therapy; EF = ejection fraction; GDMT = guideline-directed medical therapy; HF = heart failure; ICD = implantable cardioverter-defibrillator; LVEF = left ventricular ejection fraction; NT-proBNP = N-terminal pro-B-type natriuretic peptide; NYHA = New York Heart Association; SGLT2 = sodium-glucose cotransporter-2.</small>",
+
+		"cp_gui_tmvr":"<div class='column large-12'><h2><span>Transcatheter Mitral Valve Repair</span></div>",
+		"cp_gui_tmvr_text":"<table><tr><td><ul><li>Surgical treatment is recommended in cases of severe primary chronic mitral regurgitation (MR) resulting in HFrEF.</li></ul></td></tr><tr><td><ul><li>The treatment for severe chronic functional MR is somewhat controversial; initial steps should incorporate optimization of GDMT and participation in team management decisions before the use of percutaneous transcatheter repair.</li></ul></td></tr></table>",
+
+		"cp_gui_AA_Patients":"<div class='column large-12'><h2><span>Clinical Guidance for Treating HF in African American Patients</span></div>",
+		"cp_gui_AA_Patients_text":"Clinical guidance for treating HF in African American patients includes:<ul><li>Establish GDMT with an ARNI/ACEI/ARB (ARNI preferred, if possible), a beta-blocker, and an aldosterone antagonist; if stable, follow with titration of HYD/ISDN (starting at a low dose, but aim for doses used in the pivotal randomized trials. For those with persistent class III to IV symptoms, titration should proceed with careful blood pressure monitoring and close monitoring of other side effects (e.g., headache, dizziness).</br> (Note: HYD/ISDN are available as a fixed-dose combination or as individual medications. The ACC/AHA/HFSA guideline considers either form acceptable in this context)</li><li>Avoid ARNIs in settings of known or hereditary angioedema with ACEIs or ARBs.</li><li>If the heart rate remains above goal in sinus rhythm, ivabradine may be considered; however, given the paucity of data in African Americans, optimize beta-blocker dosing preferentially.</li><li>Use of an SGLT2 inhibitor should also be considered as concomitant treatment for HFrEF in African Americans. Importantly, given the risk of HF in African Americans, use of an SGLT2 inhibitor is especially important in the pre-HF stage to reduce the onset of the disease in those with known diabetes.</li><li>Social barriers to GDMT and optimal HFrEF management should be assessed and, where present, addressed to avoid health inequities in HFrEF outcomes.<li>All treatment decisions should be determined in the context of an informed, culturally competent, shared decision-making discussion with the patient that considers the risks and benefits of treatment.</li></ul>",
+
+		"cp_gui_pathophysiologic":"<div class='column large-12'><h2><span>Important Pathophysiologic Targets in HFrEF and Treatments</span></div>",
+		"cp_gui_pathophysiologic_text":"The modulation of 12 pathophysiological targets has now been shown to improve symptoms and/or outcomes for patients with HFrEF.</br></br><b>Important Pathophysiological Targets in Chronic, Hemodynamically Stable HFrEF and Treatments</br></br></b><table><thead><tr><th>Target</th><th>Therapy</th></tr></thead><tbody><tr><td>Renin-angiotensin-aldosterone system</td><td>ARNIs/ACEIs/ARBs, aldosterone antagonists</td></tr><tr><td>Sympathetic nervous system</td><td>Beta-blockers</td></tr><tr><td>Natriuretic and other vasodilator peptides</td><td>Neprilysin inhibitor (ARNI)</td></tr><tr><td>Sodium-glucose cotransporter-2</td><td>SGLT2 inhibitors</td></tr><tr><td>Balanced vasodilation and oxidative stress modulation</td><td>HYD/ISDN</td></tr><tr><td>Elevated heart rate</td><td>Beta-blocker, ivabradine</td></tr><tr><td>Guanylyl cyclase</td><td>Soluble guanylyl cyclase stimulators</td></tr><tr><td>Relief of congestion</td><td>Diuretic agents</td></tr><tr><td>Ventricular arrhythmias</td><td>Implantable cardioverter-defibrillators</td></tr><tr><td>Ventricular dyssynchrony due to conduction abnormalities</td><td>Cardiac resynchronization therapy</td></tr><tr><td>Mitral regurgitation</td><td>Surgical or percutaneous mitral valve repair</td></tr><tr><td>Reduced aerobic capacity</td><td>Aerobic exercise training</td></tr></tbody></table><small>ACEI = angiotensin-converting enzyme inhibitor; ARB = angiotensin receptor blocker; ARNI = angiotensin receptor-neprilysin inhibitor; HFrEF = heart failure with reduced ejection fraction; HYD/ISDN = hydralazine/isosorbide dinitrate; SGLT2 = sodium-glucose cotransporter-2.</small>",
+
+		"cp_gui_auth_form":"<div class='column large-12'><h2><span>Helpful Information for Completion of Prior Authorization Forms</span></div>",
+		"cp_gui_auth_form_text":"Helpful Information for Completion of Prior Authorization Forms*<table style='margin-bottom:0;'><thead><tr><th>Patient Criteria</th></tr></thead><tbody><tr><td><ul><li>Include HF phenotype: HFrEF; HFpEF</li><li>Identify NYHA functional class</li><li>Include recent measurement of LVEF with source documentation if requested</li><li>Identify the treatment requested or the additional testing required, with indications supported by evidence and/or guideline statements where applicable; clinical judgment, especially for testing requests, is an appropriate rationale</li><li>Address previous therapies used and the rationale for switching to or adding the requested treatment</li><li>Address known contraindications to use, adverse effects, and steps intended to minimize the risks of drugs or procedures</li><li>Document, when appropriate, that delays or interruptions in therapy may cause harm to the patient</li><li>Work with local pharmacy resources and pharmacy professionals to jointly address prior authorization requirements; do not hesitate to appeal decisions that are contrary to the best patient care. Document all steps taken in the patient’s health record.</li></ul></td></tr></tbody></table><small>*Required information may vary depending on payer and state.</small></br><small>HF = heart failure; HFpEF = HF with preserved ejection fraction; HFrEF = HF with reduced ejection fraction, LVEF= left ventricular ejection fraction; NYHA = New York Heart Association.</small>",
+
+		"cp_drug_gui_heading":"ACC/AHA Guideline Recommendations",
+		"cp_drug_gui_heading_arni":"ACC/AHA/HFSA Guideline Recommendations",
+		"cp_drug_gui_heading_ivabridine":"ACC/AHA/HFSA Guideline Recommendations",
+		"cp_initiation":"Initiation",
+		"cp_titration":"Titration",
+		"cp_monitoring":"Monitoring",
+
+		"cp_RAAS_contraindication_que1":"Do any of the following contraindications or precautions apply to your patient? (Select all that apply)",
+		"cp_RAAS_contraindication_que1_op1":"None",
+		"cp_RAAS_contraindication_que2":"Applies for ACEI/ARB/ARNI",
+		"cp_RAAS_contraindication_que2_op1":"Concomitant with aliskiren in diabetes patient",
+		"cp_RAAS_contraindication_que2_op2":"Pregnancy",
+		"cp_RAAS_contraindication_que3":"ACEI-specific",
+		"cp_RAAS_contraindication_que3_op1":"History of hypersensitivity to ACEI",
+		"cp_RAAS_contraindication_que3_op2":"History of Angioedema",
+		"cp_RAAS_contraindication_que3_op3":"Cough (common side effect of ACEI)",
+		"cp_RAAS_contraindication_que4":"ARB-specific",
+		"cp_RAAS_contraindication_que4_op1":"History of hypersensitivity to ARB",
+
+		"cp_RAAS_contraindication_que5":"ARNI (Sacubitril/Valsartan)-specific",
+		"cp_RAAS_contraindication_que5_op1":"History of Angioedema",
+		"cp_RAAS_contraindication_que5_op2":"Lactation (no data)",
+		"cp_RAAS_contraindication_que5_op3":"Known hypersensitivity to ARNI",
+		"cp_RAAS_contraindication_que5_op4":"Severe hepatic impairment (Child-Pugh C)",
+		
+		"cp_RAAS_contraindication_que2_op1_email_text":"Concomitant with aliskiren in diabetes patient",
+		"cp_RAAS_contraindication_que2_op2_email_text":"Pregnancy",
+		"cp_RAAS_contraindication_que3_op1_email_text":"Hx of hypersensitivity to ACEI",
+		"cp_RAAS_contraindication_que3_op2_email_text":"Hx of angioedema",
+		"cp_RAAS_contraindication_que3_op3_email_text":"Cough (common side effect of ACEI)",
+		"cp_RAAS_contraindication_que4_op1_email_text":"Hx of hypersensitivity to ARB",
+		"cp_RAAS_contraindication_que5_op1_email_text":"Hx of angioedema",
+		"cp_RAAS_contraindication_que5_op2_email_text":"Lactation",
+		"cp_RAAS_contraindication_que5_op3_email_text":"Hx of hypersensitivity to ARNI",
+		"cp_RAAS_contraindication_que5_op4_email_text":"Severe hepatic impairment",
+
+		"cp_BB_contraindication_que":"Do any of the following contraindications apply to your patient? (Select all that apply)",
+		"cp_BB_contraindication_que_op1":"None",
+		"cp_BB_contraindication_que_op2":"Hypersensitivity to any component",
+		"cp_BB_contraindication_que_op3":"Cardiogenic shock",
+		"cp_BB_contraindication_que_op4":"Second or third degree AV block",
+		"cp_BB_contraindication_que_op5":"Severe bradycardia (unless permanent pacemaker in place)",
+		"cp_BB_contraindication_que_op6":"Sick sinus syndrome",
+		"cp_BB_contraindication_que_op7":"Decompensated cardiac failure",
+		"cp_BB_contraindication_que_op8":"Severe hepatic impairment",
+		"cp_BB_contraindication_que_op9":"Symptomatic hypotension",
+		"cp_BB_contraindication_que_op10":"Severe forms of peripheral arterial occlusive disease or Raynaud syndrome",
+		"cp_BB_contraindication_que_op11":"Untreated adrenal gland tumors (phaeochromocytoma)",
+		"cp_diuretic_contraindication_que":"Do any of the following contraindications to loop diuretics apply to your patient? (Select all that apply)",
+		"cp_diuretic_contraindication_que_op1":"None",
+		"cp_diuretic_contraindication_que_op2":"Hypersensitivity",
+		"cp_diuretic_contraindication_que_op3":"Anuria",
+		"cp_diuretic_contraindication_que_op4":"Development of increasing electrolyte imbalance, azotemia, and/or oliguria during treatment of severe, progressive renal disease (Bumetanide, Ethacrynic acid, Torsemide, Sodium Edecrin)",
+		"cp_diuretic_contraindication_que_op5":"Hepatic coma",
+		"cp_diuretic_contraindication_que_op6":"Marked increase in blood urea nitrogen or creatinine",
+		"cp_diuretic_contraindication_que_op7":"Severe, watery diarrhea",
+
+		"cp_RASNone_sp":"<h5>ARNI/ACEI/ARB:</h5><br/>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_RASNone_sp_email_text":"ARNI/ACEI/ARB: RAS inhibitor not indicated.",
+
+		"cp_RASNone_1":"<h5>ARNI/ACEI/ARB:</h5><br/>RAS inhibitors are indicated in patients with NYHA II-IV. There is no initiation advice for patients with NYHA I or unknown NYHA class. Use clinical judgement.",
+		"cp_RASNone_1_email_text":"ARNI/ACEI/ARB: RAS inhibitor not indicated.",
+		"cp_RASNone_2":"<h5>ARNI:</h5><br/>Initiation of sacubitril/valsartan (ARNI) is suggested to reduce morbidity and mortality.<br/>Suggested starting dose: 24/26 mg twice daily<br/><br/>When de novo initiation of ARNI is performed, close follow-up and serial assessments (blood pressure, electrolytes, and renal function) should be considered and any such usage should consider concerns regarding risk of angioedema or hypotension.",
+		"cp_RASNone_2_email_text":"ARNI: Initiation suggested",
+
+		"cp_RAS3None_Alt_Med":"<h5>ACEI/ARB:</h5><br/>While ARNI is recommended over ACEI/ARB in this scenario, ACEI/ARB may be considered when cost of ARNI is a factor. Initiation of ARBs is suggested for patients intolerant to inhibitors because of cough or angioedema, or as an alternative for ACEIs in patients already taking ARBs for other indications.",
+		"cp_RAS15None_Alt_Med":"<h5>ACEI:</h5><br/>While ARNI is recommended over ACEI in this scenario, ACEI may be considered when cost of ARNI is a factor.",
+		"cp_RAS16None_Alt_Med":"<h5>ARB:</h5><br/>While ARNI is recommended over ARB in this scenario, ARB may be considered when cost of ARNI is a factor. Initiation of ARBs is suggested for patients intolerant to inhibitors because of cough or angioedema, or as an alternative for ACEIs in patients already taking ARBs for other indications.",
+		"cp_RAS3None_Alt_Med_email_text": "ACEI/ARB: May be considered instead of ARNI if cost is a factor",
+		"cp_RASNone_3":"<h5>ACEI/ARB</h5><br/>Initiation of ACEI is suggested to reduce morbidity and mortality. Initiation of ARBs is suggested for patients intolerant to inhibitors because of cough or angioedema, or as an alternative for ACEIs in patients already taking ARBs for other indications. ARNI is not recommended for patients with contraindications to ARNI (Sacubitril/Valsartan).",
+		"cp_RASNone_3_email_text":"ACEI: Initiation suggested.%0d%0aARB: Initiation suggested if ACEI-intolerant.",
+		"cp_RAS15None_Alt_Med_email_text":"ACEI: May be considered instead of ARNI if cost is a factor.",
+		"cp_RAS16None_Alt_Med_email_text":"ARB: May be considered instead of ARNI if cost is a factor.",
+
+		"cp_RASNone_4":"<h5>ARB:</h5><br/><h5>Contraindications</h5><br/>Contraindications may preclude the initiation of some agents among some patients. A well-informed patient may make a personal judgment, in terms of benefits and risks, after being presented with all evidence for and against these therapies, and decide against initiation.<br/><br/>In cases where patient is intolerant to ACE inhibitors because of cough or angioedema, but no additional contraindications to ARBs are present, initiation of ARB is suggested.",
+		"cp_RASNone_4_email_text":"ARB: Initiation suggested.%0d%0aARNI/ACEI:",	
+
+		"cp_RASNone_5":"<h5>ACEI:</h5><br/>If patient has contraindications to ARB/sacubitril, consider ACEI as an alternative to reduce morbidity and mortality if patient has no additional contraindications to ACEI.<br/><br/><h5>Contraindications</h5><br/>Contraindications may preclude the initiation of some agents among some patients. A well-informed patient may make a personal judgment, in terms of benefits and risks, after being presented with all evidence for and against these therapies, and decide against initiation.",
+		"cp_RASNone_5_email_text":"ACEI: Initiation suggested.%0d%0aARNI/ARB:",	
+
+		"cp_RASNone_6":"<h5>ARNI/ACEI/ARB:</h5><br/><h5>Contraindications</h5><br/>Contraindications may preclude the initiation of some agents among some patients. A well-informed patient may make a personal judgment, in terms of benefits and risks, after being presented with all evidence for and against these therapies, and decide against initiation.",
+		"cp_RASNone_6_email_text":"ARNI/ACEI/ARB:",	
+
+		"cp_sglt2i_1_2":"<h5>SGLT2i:</h5><br/>Initiate/titrate dapagliflozin or empagliflozin as indicated below. SGLT2 inhibitors are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Dapagliflozin: 10 mg daily</li><li>Empagliflozin: 10 mg daily</li></ul></li><li>Target Dose<ul><li>Dapagliflozin: 10 mg daily</li><li>Empagliflozin: 10 mg daily</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_3":"<h5>SGLT2i:</h5><br/>Initiate/titrate empagliflozin as indicated below. SGLT2 inhibitors are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Empagliflozin: 10 mg daily</li></ul></li><li>Target Dose<ul><li>Empagliflozin: 10 mg daily</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_1_2_email_text":"SGLT2i: Initiation of dapagliflozin or empagliflozin suggested",
+		"cp_sglt2i_3_email_text":"SGLT2i: Initiation of empagliflozin suggested",
+		
+		"cp_sglt2i_4":"<h5>SGLT2i:</h5><br/>Patient is on SGLT2 inhibitor. SGLT2 inhibitors are indicated in patients with NYHA II-IV and are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes. Note SGLT2 inhibitors are contraindicated in patients on dialysis, lactating, or with type 1 diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Dapagliflozin: 10 mg daily (for eGFR ≥ 30 mL/min/1.73m<sup>2</sup>)</li><li>Empagliflozin: 10 mg daily (for eGFR ≥ 20 mL/min/1.73m<sup>2</sup>)</li></ul></li><li>Target Dose<ul><li>Dapagliflozin: 10 mg daily (for eGFR ≥ 30 mL/min/1.73m<sup>2</sup>)</li><li>Empagliflozin: 10 mg daily (for eGFR ≥ 20 mL/min/1.73m<sup>2</sup>)</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_4_email_text":"SGLT2i: Patient currently taking",
+
+		"cp_sglt2i_5":"<h5>SGLT2i:</h5><br/>Patient is on SGLT2 inhibitor. SGLT2 inhibitors are indicated in patients with NYHA II-IV and are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Dapagliflozin: 10 mg daily (for eGFR ≥ 30 mL/min/1.73m<sup>2</sup>)</li><li>Empagliflozin: 10 mg daily (for eGFR ≥ 20 mL/min/1.73m<sup>2</sup>)</li></ul></li><li>Target Dose<ul><li>Dapagliflozin: 10 mg daily (for eGFR ≥ 30 mL/min/1.73m<sup>2</sup>)</li><li>Empagliflozin: 10 mg daily (for eGFR ≥ 20 mL/min/1.73m<sup>2</sup>)</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_5_email_text":"SGLT2i: Patient currently taking",
+
+		"cp_sglt2i_6":"<h5>SGLT2i:</h5><br/>Patient is on SGLT2 inhibitor. SGLT2 inhibitors are indicated in patients with NYHA II-IV and are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Dapagliflozin: 10 mg daily</li><li>Empagliflozin: 10 mg daily</li></ul></li><li>Target Dose<ul><li>Dapagliflozin: 10 mg daily</li><li>Empagliflozin: 10 mg daily</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_6_email_text":"SGLT2i: Patient currently taking",
+
+		"cp_sglt2i_8":"<h5>SGLT2i:</h5><br/>Patient is on SGLT2 inhibitor. SGLT2 inhibitors are indicated in patients with NYHA II-IV and are added in as part of the therapy for patients with chronic HFrEF who are already receiving beta blockers, ARNI/ACEI/ARB, and aldosterone antagonists, if not contraindicated. Administer in conjunction with a background of GDMT for HF with or without type II diabetes.<div class='indent-list'><u>Suggested Dosing</u><ul><ul class='list'><li>Initiation<ul><li>Empagliflozin: 10 mg daily</li></ul></li><li>Target Dose<ul><li>Empagliflozin: 10 mg daily</li></ul></li></ul></ul></div>",
+		"cp_sglt2i_8_email_text":"SGLT2i: Patient currently taking",
+
+		"cp_sglt2i_9":"<h5>SGLT2i:</h5><br/>SGLT2 inhibitors are contraindicated in patients on dialysis, lactating, or with type 1 diabetes.",
+		"cp_sglt2i_9_email_text":"SGLT2i: Contraindicated",
+
+
+		
+		"cp_gdprBannerText": "<h1>This site uses cookies to improve your experience.</h1> By continuing to use our site, you agree to our <a href='https://www.acc.org/footer-pages/cookie-policy' target='_blank'> Cookie Policy</a>, <a href='https://www.acc.org/footer-pages/privacy-policy' target='_blank'> Privacy Policy</a> and <a href='https://www.acc.org/footer-pages/terms-and-conditions' target='_blank'> Terms of Service</a>.",
+		"cp_gdprBannerBtnText": "OK",
+
+		"cp_email_footer_info":"This email contains advice from the ACC TreatHF app. It does not contain Protected Health Information. Users should not share identifiable patient information via unsecured email.",
+		
+		"cp_email_header_info":"Use this summary email as part of a care plan%0d%0aView full app advice ",
+		"cp_email_generate_text":"Generated: ",
+		"cp_email_patient_profile_text":"---PATIENT PROFILE---",
+		"cp_email_patient_advice_text":"---ADVICE FOR THIS PATIENT---",
+		"cp_email_contraindication_text":"Selected Contraindications:",
+		"cp_email_BB_text":"EVIDENCE-BASED BETA BLOCKER(S):",
+		"cp_email_diuretics_text":"DIURETIC(S):",
+		"cp_email_multiple_text":"-Multiple",
+
+		"cp_RAS18":"<h5>ARNI:</h5> <br/>Patient is currently taking ARNI.<div class='indent-list'><u>Suggested Dosing (Sacubitril/Valsartan)</u><ul class='list'><li>Initiation: 24/26 mg 2x daily</li><li>If patient tolerating after 2 weeks of initiation, increase stepwise to 97/103 mg 2x daily if possible.</li></ul></div>",
+		"cp_RAS18_email_text":"ARNI: Patient currently taking"
+	}
+}
+
