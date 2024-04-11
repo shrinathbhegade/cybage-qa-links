@@ -17,43 +17,43 @@ function formObject() {
     * It contains the logic for applying warning css class and accordingly display warning message.
     */
     self.Age = ko.observable()
-    .extend(
-        {
-            validation: {
-                validator: function (val) {
-			if (val !== undefined && val !== '') {
-				var $age = parseFloat(val);
-				if (!isNaN($age)) {
-					$age = Math.round($age);
-					if ($age < 18) {
-					    self.AgeStatus('question warning');
-					    self.AgeErrorMsg('Please enter an age 18 or over.');
-					    $('.validationMessage').hide();
-					    return false;
-					}
-					else{
-						if ($age > 140) {
-							self.AgeStatus('question warning');
-							self.AgeErrorMsg('Please enter an age of 140 or under.');
-							$('.validationMessage').hide();
-							return false;
-						}
-					}
-					self.AgeStatus('question');
-					return true;
-				}
-				else{
-					return false;
-				}
-			}
-		        return true;
+        .extend(
+            {
+                validation: {
+                    validator: function (val) {
+                        if (val !== undefined && val !== '') {
+                            var $age = parseFloat(val);
+                            if (!isNaN($age)) {
+                                $age = Math.round($age);
+                                if ($age < 18) {
+                                    self.AgeStatus('question warning');
+                                    self.AgeErrorMsg('Please enter an age 18 or over.');
+                                    $('.validationMessage').hide();
+                                    return false;
+                                }
+                                else {
+                                    if ($age > 140) {
+                                        self.AgeStatus('question warning');
+                                        self.AgeErrorMsg('Please enter an age of 140 or under.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
+                                }
+                                self.AgeStatus('question');
+                                return true;
+                            }
+                            else {
+                                return false;
+                            }
+                        }
+                        return true;
                     },
-                message: function () {
-                    self.Age('');
-                    $('.validationMessage').hide();
+                    message: function () {
+                        self.Age('');
+                        $('.validationMessage').hide();
+                    }
                 }
-            }
-        });
+            });
     self.CrClSexStatus = ko.observable('question');
     self.Gender = ko.observable();
     self.Cha2ds2_selected = ko.observableArray([]).extend({
@@ -70,56 +70,56 @@ function formObject() {
     * It contains the logic for applying warning css class and accordingly display warning message.
     */
     self.Weight = ko.observable()
-    .extend(
-        {
-            validation: {
-                validator: function (val) {
-                    if (val !== undefined && val !== '') {
-			if (typeof val.replace !== "undefined") {
-				val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
-				self.Weight(val);
-			}
-                        var pattrn = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
-                        if (!(pattrn.test(val))) {
-                            self.WeightStatus('question warning');
-                            if (self.CrClUnits()) {
-                                self.WeightErrorMsg('Please enter a weight value between 4.5-453 kgs.');
+        .extend(
+            {
+                validation: {
+                    validator: function (val) {
+                        if (val !== undefined && val !== '') {
+                            if (typeof val.replace !== "undefined") {
+                                val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
+                                self.Weight(val);
                             }
-                            else {
-                                self.WeightErrorMsg('Please enter a weight value between 10-999 lbs.');
-                            }
-                            $('.validationMessage').hide();
-                            return false;
-                        }
-                        else {
-                            if (self.CrClUnits()) {
-                                if (val < 4.5 || val > 453) {
-                                    self.WeightStatus('question warning');
+                            var pattrn = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
+                            if (!(pattrn.test(val))) {
+                                self.WeightStatus('question warning');
+                                if (self.CrClUnits()) {
                                     self.WeightErrorMsg('Please enter a weight value between 4.5-453 kgs.');
-                                    $('.validationMessage').hide();
-                                    return false;
                                 }
+                                else {
+                                    self.WeightErrorMsg('Please enter a weight value between 10-999 lbs.');
+                                }
+                                $('.validationMessage').hide();
+                                return false;
                             }
                             else {
-                                if (val < 10 || val > 999) {
-                                    self.WeightStatus('question warning');
-                                    self.WeightErrorMsg('Please enter a weight value between 10-999 lbs.');
-                                    $('.validationMessage').hide();
-                                    return false;
+                                if (self.CrClUnits()) {
+                                    if (val < 4.5 || val > 453) {
+                                        self.WeightStatus('question warning');
+                                        self.WeightErrorMsg('Please enter a weight value between 4.5-453 kgs.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
                                 }
+                                else {
+                                    if (val < 10 || val > 999) {
+                                        self.WeightStatus('question warning');
+                                        self.WeightErrorMsg('Please enter a weight value between 10-999 lbs.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
+                                }
+                                self.WeightStatus('question');
+                                return true;
                             }
-                            self.WeightStatus('question');
-                            return true;
                         }
+                        return true;
+                    },
+                    message: function () {
+                        self.Weight('');
+                        $('.validationMessage').hide();
                     }
-                    return true;
-                },
-                message: function () {
-                    self.Weight('');
-                    $('.validationMessage').hide();
                 }
-            }
-        });
+            });
     self.SerumCrStatus = ko.observable('question');
     self.SerumCrErrorMsg = ko.observable('');
     /**
@@ -127,67 +127,67 @@ function formObject() {
     * It contains the logic for applying warning css class and accordingly display warning message.
     */
     self.SerumCreatinine = ko
-    .observable()
-    .extend(
-    {
-        validation: {
-            validator: function (val, someOtherVal) {
-                self.SerumCrStatus('question');
-                if (val !== undefined && val !== '') {
-			        if (typeof val.replace !== "undefined") {
-				        val = +parseFloat(val.replace(/\,/g, '.')).toFixed(2);
-				        self.SerumCreatinine(val);
-			        }
-                    var pattrn = /^((\d+|[0])([,.]{1}[0-9]{0,2})?|([,.]{1}[0-9]{0,2}))$/g;
-                    if (!(pattrn.test(val))) {
-                        self.SerumCrStatus('question warning');
-			            self.SerumCrErrorMsg('Please enter a clinically valid value.');
-                        $('.validationMessage').hide();
-                        return false;
-                    } else {
-                        if (self.CrClUnits()) {
-                            val = parseFloat(val);
-                            if (val > 9989.2 || val < 8.8) {
-                                self.SerumCrStatus('question warning');
-				                self.SerumCrErrorMsg('Please enter a clinically valid value (8.8 - 9989.2) µmol/L.');
-                                $('.validationMessage').hide();
-                                return false;
-                            }
-                        }
-                        else if (!self.CrClUnits()) {
-                            val = parseFloat(val);
-                            if (val > 113 || val < 0.1) {
-                                self.SerumCrStatus('question warning');
-				                self.SerumCrErrorMsg('Please enter a clinically valid value (0.1 - 113) mg/dL.');
-                                $('.validationMessage').hide();
-                                return false;
-                            }
-                        }
-                        else {
-                            val = parseFloat(val);
-                            if (val > someOtherVal || val < 0.1) {
-                                self.SerumCrStatus('question warning');
-				                self.SerumCrErrorMsg('Please enter a clinically valid value.');
-                                $('.validationMessage').hide();
-                                return false;
-                            }
-                        }
+        .observable()
+        .extend(
+            {
+                validation: {
+                    validator: function (val, someOtherVal) {
                         self.SerumCrStatus('question');
+                        if (val !== undefined && val !== '') {
+                            if (typeof val.replace !== "undefined") {
+                                val = +parseFloat(val.replace(/\,/g, '.')).toFixed(2);
+                                self.SerumCreatinine(val);
+                            }
+                            var pattrn = /^((\d+|[0])([,.]{1}[0-9]{0,2})?|([,.]{1}[0-9]{0,2}))$/g;
+                            if (!(pattrn.test(val))) {
+                                self.SerumCrStatus('question warning');
+                                self.SerumCrErrorMsg('Please enter a clinically valid value.');
+                                $('.validationMessage').hide();
+                                return false;
+                            } else {
+                                if (self.CrClUnits()) {
+                                    val = parseFloat(val);
+                                    if (val > 9989.2 || val < 8.8) {
+                                        self.SerumCrStatus('question warning');
+                                        self.SerumCrErrorMsg('Please enter a clinically valid value (8.8 - 9989.2) µmol/L.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
+                                }
+                                else if (!self.CrClUnits()) {
+                                    val = parseFloat(val);
+                                    if (val > 113 || val < 0.1) {
+                                        self.SerumCrStatus('question warning');
+                                        self.SerumCrErrorMsg('Please enter a clinically valid value (0.1 - 113) mg/dL.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
+                                }
+                                else {
+                                    val = parseFloat(val);
+                                    if (val > someOtherVal || val < 0.1) {
+                                        self.SerumCrStatus('question warning');
+                                        self.SerumCrErrorMsg('Please enter a clinically valid value.');
+                                        $('.validationMessage').hide();
+                                        return false;
+                                    }
+                                }
+                                self.SerumCrStatus('question');
+                                return true;
+                            }
+                        }
                         return true;
-                    }
+                    },
+                    message: function () {
+                        self.SerumCreatinine('');
+                        $('.validationMessage').hide();
+                    },
+                    params: 113
                 }
-                return true;
-            },
-            message: function () {
-                self.SerumCreatinine('');
-                $('.validationMessage').hide();
-            },
-            params: 113
-        }
-    });
-    self.annualRiskOfStrokeCHADS2VascValues = [0.7, 1.5, 2.9, 4.3, 6.5, 10, 12.5, 14, 14.1, 15.9, 15.9];
-    self.annualRiskOfHASBLEDValues = [1.2, 2.2, 3.1, 5.6, 9.4, 8.6, 10, 10, 10, 10];
-    self.annualRiskOfStrokeNoTherapyValues = [0, 1.3, 2.2, 3.2, 4.0, 6.7, 9.8, 9.6, 6.7, 15.20, 15.20];
+            });
+    self.annualRiskOfStrokeCHADS2VascValues = [0.2, 0.6, 2.2, 3.2, 4.8, 7.2, 9.7, 11.2, 10.8, 12.2, 12.2];
+    self.annualRiskOfHASBLEDValues = [0.6, 2.4, 4.1, 5.9, 7.6, 9.4, 11.1, 12.9, 14.6, 16.4];
+    self.annualRiskOfStrokeNoTherapyValues = [0.2, 0.6, 2.2, 3.2, 4.8, 7.2, 9.7, 11.2, 10.8, 12.2, 12.2];
     self.Cha2ds2_Score = ko.observable();
     self.PopulationAvgAnnualChance = ko.observable();
     /**
@@ -198,10 +198,10 @@ function formObject() {
         if (self.CalCrCl()) {
             self.IsAgeAlter(true);
         }
-	    else{
-	        self.IsAgeAlter(false);
+        else {
+            self.IsAgeAlter(false);
         }
-        
+
         var $age = parseFloat(self.Age());
         if (!isNaN($age) && $age >= 18 && $age <= 140) {
             $age = Math.round($age);
@@ -233,9 +233,9 @@ function formObject() {
             }
             self.Age('');
         }
-	/*This code is for reevaluate therapy dosing information as change in Age
-	*value may change dosing info for therapy option "Apixaban"
-	*/
+        /*This code is for reevaluate therapy dosing information as change in Age
+        *value may change dosing info for therapy option "Apixaban"
+        */
         if (self.selectedTherapyOption() === appmodel.FormData.therapyOptions.Apixaban) {
             self.EvaluateTherapyOptions(self.selectedTherapyOption());
         }
@@ -327,12 +327,12 @@ function formObject() {
                     return item.htmlID === 'cv2-female';
                 });
             self.Cha2ds2_selected.remove($cv2female);
-            if (self.Cha2ds2_selected().length === 0 && self.Age() < 65 && self.Age()!== '') {
+            if (self.Cha2ds2_selected().length === 0 && self.Age() < 65 && self.Age() !== '') {
                 self.Cha2ds2_Score(0);
             } else {
-		if (self.Gender() === undefined && self.Cha2ds2_selected().length === 0) {
-			self.Cha2ds2_Score('');
-		}
+                if (self.Gender() === undefined && self.Cha2ds2_selected().length === 0) {
+                    self.Cha2ds2_Score('');
+                }
             }
         }
     });
@@ -393,39 +393,39 @@ function formObject() {
         }
         if (self.Cha2ds2_selected().length > 0) {
             for (var i in self.Cha2ds2_selected()) {
-		if (self.Cha2ds2_selected().hasOwnProperty(i)) {
-			Score += parseFloat(self.Cha2ds2_selected()[i].value);
-		}
+                if (self.Cha2ds2_selected().hasOwnProperty(i)) {
+                    Score += parseFloat(self.Cha2ds2_selected()[i].value);
+                }
             }
         }
-	if (hypertension) {
-		self.hypertensionSync('on');
+        if (hypertension) {
+            self.hypertensionSync('on');
 
-	}else{
-		self.hypertensionSync('off');
-	}
+        } else {
+            self.hypertensionSync('off');
+        }
         var tiaStroke = ko.utils.arrayFirst(self.Cha2ds2_selected(),
-                function (item) {
-                    return item.htmlID === 'cv2-tiastroke';
-                });
-	if (tiaStroke) {
-		self.tiaStrokeSync('on');
+            function (item) {
+                return item.htmlID === 'cv2-tiastroke';
+            });
+        if (tiaStroke) {
+            self.tiaStrokeSync('on');
 
-	}else{
-		self.tiaStrokeSync('off');
-	}
+        } else {
+            self.tiaStrokeSync('off');
+        }
         if (Score > 0) {
             self.Cha2ds2_Score(Score);
         } else {
-            if ((self.Age() < 65 && self.Age() !=='') || self.Gender() !== undefined) {
+            if ((self.Age() < 65 && self.Age() !== '') || self.Gender() !== undefined) {
                 self.Cha2ds2_Score(0);
             } else {
                 self.Cha2ds2_Score('');
             }
         }
-	if (!indexOfage75 && !indexOfage65 && (self.Age() !== '' && self.Age() >=65)) {
-		self.Age('');
-	}
+        if (!indexOfage75 && !indexOfage65 && (self.Age() !== '' && self.Age() >= 65)) {
+            self.Age('');
+        }
     });
     self.Hasbled_Score = ko.observable(0);
     /**
@@ -435,9 +435,9 @@ function formObject() {
         var Score = parseFloat(0);
         if (self.Hasbled_selected().length > 0) {
             for (var i in self.Hasbled_selected()) {
-		if (self.Hasbled_selected().hasOwnProperty(i)) {
-			Score += parseFloat(self.Hasbled_selected()[i].value);
-		}
+                if (self.Hasbled_selected().hasOwnProperty(i)) {
+                    Score += parseFloat(self.Hasbled_selected()[i].value);
+                }
             }
         }
         self.Hasbled_Score(Score);
@@ -445,26 +445,26 @@ function formObject() {
             function (item) {
                 return item.htmlID === 'hb-hypertension';
             });
-	if (hypertension) {
-		self.hypertensionSync('on');
+        if (hypertension) {
+            self.hypertensionSync('on');
 
-	}else{
-		self.hypertensionSync('off');
-	}
+        } else {
+            self.hypertensionSync('off');
+        }
         var tiaStroke = ko.utils.arrayFirst(self.Hasbled_selected(),
-                function (item) {
-                    return item.htmlID === 'hb-tiastroke';
-                });
-	if (tiaStroke) {
-		self.tiaStrokeSync('on');
+            function (item) {
+                return item.htmlID === 'hb-tiastroke';
+            });
+        if (tiaStroke) {
+            self.tiaStrokeSync('on');
 
-	}else{
-		self.tiaStrokeSync('off');
-	}
+        } else {
+            self.tiaStrokeSync('off');
+        }
         var $antiplatelet = ko.utils.arrayFirst(self.Hasbled_selected(),
-                function (item) {
-                    return item.htmlID === 'hb-antiplatelet';
-                });
+            function (item) {
+                return item.htmlID === 'hb-antiplatelet';
+            });
         if ($antiplatelet == null) {
             self.OtherFactors([]);
         }
@@ -476,31 +476,31 @@ function formObject() {
     */
 
     self.CrCL = ko
-           .computed(
-                function () {
-                    var R = '';
-                    var genderModifier = 1;
-                    if (self.Gender()) {
-                        genderModifier = parseFloat(self.Gender().value);
+        .computed(
+            function () {
+                var R = '';
+                var genderModifier = 1;
+                if (self.Gender()) {
+                    genderModifier = parseFloat(self.Gender().value);
+                }
+                if (self.Age() !== undefined
+                    && self.Weight() !== undefined
+                    && self.SerumCreatinine() !== undefined
+                    && self.Gender() !== undefined && self.Age() !== '' && self.SerumCreatinine() !== '' && self.Weight() !== '') {
+                    if (self.CrClUnits()) {
+                        R = Math.round((((140 - parseFloat(self.Age())) * (parseFloat(self.Weight())) * genderModifier) / (72 * (parseFloat(parseFloat(self.SerumCreatinine()) / 88.4)))) * 100) / 100;
+                    } else {
+                        R = Math.round(((140 - parseFloat(self.Age())) * (parseFloat(self.Weight()) * 0.453592) * genderModifier) / (72 * parseFloat(self.SerumCreatinine())) * 100) / 100;
                     }
-                    if (self.Age() !== undefined
-                        && self.Weight() !== undefined
-                        && self.SerumCreatinine() !== undefined
-                        && self.Gender() !== undefined && self.Age() !== '' && self.SerumCreatinine() !== '' && self.Weight() !== '') {
-                        if (self.CrClUnits()) {
-                            R = Math.round((((140 - parseFloat(self.Age())) * (parseFloat(self.Weight())) * genderModifier) / (72 * (parseFloat(parseFloat(self.SerumCreatinine()) / 88.4)))) * 100) / 100;
-                        } else {
-                            R = Math.round(((140 - parseFloat(self.Age())) * (parseFloat(self.Weight()) * 0.453592) * genderModifier) / (72 * parseFloat(self.SerumCreatinine())) * 100) / 100;
-                        }
-			if (isFinite(R)) {
-				return R.toFixed(1);
-			}
-			else{
-				return '';
-			}
+                    if (isFinite(R)) {
+                        return R.toFixed(1);
                     }
-                    return R;
-                }, self);
+                    else {
+                        return '';
+                    }
+                }
+                return R;
+            }, self);
     /**
     * this subscribe function is used for recalculating the Therapy dosing information on change od CRCL score.
     */
@@ -527,13 +527,13 @@ function formObject() {
                 self.Cha2ds2_ScoreMessage('High risk');
             }
         }
-	/*This code is for showing warning message if changing the values of Age or Sex fields affects the
-	  CHA2DS2-VASc score when user is on Therapy Page
-	*/
+        /*This code is for showing warning message if changing the values of Age or Sex fields affects the
+          CHA2DS2-VASc score when user is on Therapy Page
+        */
         if (self.CalCrCl()) {
             if (self.IsAgeAlter()) {
                 self.AgeStatus('question custom_info');
-		self.AgeErrorMsg('Age value differs from that previously entered and has altered CHA<sub>2</sub>DS<sub>2</sub>-VASc score.');
+                self.AgeErrorMsg('Age value differs from that previously entered and has altered CHA<sub>2</sub>DS<sub>2</sub>-VASc score.');
             }
             if (self.IsGenderAlter()) {
                 self.CrClSexStatus('question custom_info');
@@ -597,9 +597,9 @@ function formObject() {
                 self.Hasbled_selected.remove($abnormalRenal);
             }
         }
-	/*This code is for reevaluate therapy dosing information as change in Serum Creatinine
-	*value may change dosing info for therapy option "Apixaban"
-	*/
+        /*This code is for reevaluate therapy dosing information as change in Serum Creatinine
+        *value may change dosing info for therapy option "Apixaban"
+        */
         if (self.selectedTherapyOption() === appmodel.FormData.therapyOptions.Apixaban) {
             self.EvaluateTherapyOptions(self.selectedTherapyOption());
         }
@@ -611,9 +611,9 @@ function formObject() {
     self.OtherFactors.subscribe(function () {
         if (self.OtherFactors().length > 0) {
             var $antiplatelet = ko.utils.arrayFirst(self.Hasbled_selected(),
-            function (item) {
-                return item.htmlID === 'hb-antiplatelet';
-            });
+                function (item) {
+                    return item.htmlID === 'hb-antiplatelet';
+                });
             if ($antiplatelet == null) {
                 self.Hasbled_selected.push(appmodel.FormData.hasbledModifiable[4]);
             }
@@ -657,9 +657,9 @@ function formObject() {
     * by" for selected therapy option
     */
     self.EvaluateTherapyOptions = function (selectedOption) {
-	    self.ShowEvaluateTherapy(true);
+        self.ShowEvaluateTherapy(true);
         self.IsRenalDose(true);
-	    self.IsStandardDose(true);
+        self.IsStandardDose(true);
         self.IsContraindicated(false);
         self.RenalDoseInfoText('');
         self.ShowInfoText(false);
@@ -669,26 +669,26 @@ function formObject() {
         var e = ko.utils.arrayFirst(appmodel.FormData.allTherapyOptions, function (item) {
             return item.text === selectedOption;
         });
-        
+
         if (e == undefined) {
             self.selectedTreatment([]);
-	       self.ShowEvaluateTherapy(false);
+            self.ShowEvaluateTherapy(false);
             return;
         }
         else {
             self.selectedTreatment(e);
         }
         if (e.text === undefined) {
-	    self.ShowEvaluateTherapy(false);
+            self.ShowEvaluateTherapy(false);
             return;
         }
         else if (e.text === appmodel.FormData.therapyOptions.NoTherapy) {
             self.IsRenalDose(false);
-	        self.IsStandardDose(true);
+            self.IsStandardDose(true);
         }
         else if (e.text === appmodel.FormData.therapyOptions.Aspirin) {
             self.IsRenalDose(false);
-	        self.IsStandardDose(true);
+            self.IsStandardDose(true);
             self.PopulationAvgAnnualChance(222);
             $('#creatinineClearance .collapsable-panel').hide();
         }
@@ -744,10 +744,10 @@ function formObject() {
                 self.RenalDoseInfoText('The prescribing information recommends a reduced dose based on the CrCl');
             }
             else {
-		if (parseFloat(self.CrCL()) < 15) {
-			self.selectedTreatment().dose('Not recommended');
-			self.RenalDoseInfoText('Lack of evidence for use in patients with CrCl <15');
-		}
+                if (parseFloat(self.CrCL()) < 15) {
+                    self.selectedTreatment().dose('Not recommended');
+                    self.RenalDoseInfoText('Lack of evidence for use in patients with CrCl <15');
+                }
             }
         }
         else if (e.text === appmodel.FormData.therapyOptions.Rivaroxaban) {
@@ -761,11 +761,11 @@ function formObject() {
             }
         }
         else {
-		if (e.text === appmodel.FormData.therapyOptions.Warfarin) {
-			self.IsStandardDose(true);
-			self.IsRenalDose(false);
-			$('#creatinineClearance .collapsable-panel').hide();
-		}
+            if (e.text === appmodel.FormData.therapyOptions.Warfarin) {
+                self.IsStandardDose(true);
+                self.IsRenalDose(false);
+                $('#creatinineClearance .collapsable-panel').hide();
+            }
         }
         if (self.RenalDoseInfoText() !== '' && (self.CrCL() !== undefined && self.CrCL() !== '')) {
             self.ShowInfoText(true);
@@ -779,13 +779,13 @@ function formObject() {
         if (e.text !== appmodel.FormData.therapyOptions.Aspirin) {
             var R = '';
             R = Math.round((1 / (parseFloat(self.selectedTreatment().populationAvgAnnualMajorBleed) - 0.6)) * 100);
-	    if (isFinite(R)) {
-			self.PopulationAvgAnnualChance(R);
-	    }else{
-			self.PopulationAvgAnnualChance('');
-	     }
+            if (isFinite(R)) {
+                self.PopulationAvgAnnualChance(R);
+            } else {
+                self.PopulationAvgAnnualChance('');
+            }
         }
-	//This code is for dynamically updating dosing information tooltip's content.
+        //This code is for dynamically updating dosing information tooltip's content.
         $('span[data-selector=\'renalInfoTooltip\']').html(self.RenalDoseInfoText() + '<span class=\'nub\'></span>');
     };
 
@@ -794,15 +794,15 @@ function formObject() {
     * This function returns respective static value for No Therapy
     * as per calculated CHA2DS2-VASc score.
     */
-    self.PatientAnnualRiskforNotherapy= ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R =  self.annualRiskOfStrokeNoTherapyValues[self.Cha2ds2_Score()];
-                        R = parseFloat(Math.round(R * 100) / 100).toFixed(1);
-                    }
-                    return R;
-                }, self);
+    self.PatientAnnualRiskforNotherapy = ko.pureComputed(
+        function () {
+            var R = '';
+            if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = self.annualRiskOfStrokeNoTherapyValues[self.Cha2ds2_Score()];
+                R = parseFloat(Math.round(R * 100) / 100).toFixed(1);
+            }
+            return R;
+        }, self);
 
     /**
     * This is PatientAnnualRiskOfStrokeCHADS2Vasc property composed of knockout computed function.
@@ -810,138 +810,138 @@ function formObject() {
     * for calculated CHA2DS2-VASc score.
     */
     self.PatientAnnualRiskOfStrokeCHADS2Vasc = ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R = self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier);
-                        if (isFinite(R)) {
-				return R.toFixed(1);
-			}
-			else{
-				return '';
-			}
-                    }
-                    return R;
-                }, self);
+        function () {
+            var R = '';
+            if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier);
+                if (isFinite(R)) {
+                    return R.toFixed(1);
+                }
+                else {
+                    return '';
+                }
+            }
+            return R;
+        }, self);
     /**
     * This is AbsoluteRiskReduction property composed of knockout computed function.
     * This function calculates the value of Stroke Risk/Benefit Information tab's "Absolute risk reduction"
     * for calculated CHA2DS2-VASc score.
     */
     self.AbsoluteRiskReduction = ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R = self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] - (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier));
-                        if (isFinite(R)) {
-				return R.toFixed(1);
-			}
-			else{
-				return '';
-			}
-                    }
-                    return R;
-                }, self);
+        function () {
+            var R = '';
+            if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] - (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier));
+                if (isFinite(R)) {
+                    return R.toFixed(1);
+                }
+                else {
+                    return '';
+                }
+            }
+            return R;
+        }, self);
     /**
     * This is ChanceOfBenefit property composed of knockout computed function.
     * This function calculates the value of Stroke Risk/Benefit Information tab's "Chance of benefit per year"
     * for calculated CHA2DS2-VASc score.
     */
     self.ChanceOfBenefit = ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R = 1 / (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] - (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier)));
-                        R = Math.round(R * 100);
-                        if (isFinite(R)) {
-				return R;
-			}
-			else{
-				return '';
-			}
-                    }
+        function () {
+            var R = '';
+            if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = 1 / (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] - (self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()] * parseFloat(self.selectedTreatment().modifier)));
+                R = Math.round(R * 100);
+                if (isFinite(R)) {
                     return R;
-                }, self);
+                }
+                else {
+                    return '';
+                }
+            }
+            return R;
+        }, self);
     /**
     * This is PatientAnnualRiskOfMajorBleed property composed of knockout computed function.
     * This function calculates the value of Bleed Risk tab's "Patient's ANNUAL risk of major bleed (HAS-BLED)"
     * for calculated HAS-BLED score.
     */
     self.PatientAnnualRiskOfMajorBleed = ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Hasbled_Score() !== undefined && self.Hasbled_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R = self.annualRiskOfHASBLEDValues[self.Hasbled_Score()] * parseFloat(self.selectedTreatment().hasbledModifier);
-                        if (isFinite(R)) {
-				return R.toFixed(1);
-			}
-			else{
-				return '';
-			}
-                    }
-                    return R;
-                }, self);
+        function () {
+            var R = '';
+            if (self.Hasbled_Score() !== undefined && self.Hasbled_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = self.annualRiskOfHASBLEDValues[self.Hasbled_Score()] * parseFloat(self.selectedTreatment().hasbledModifier);
+                if (isFinite(R)) {
+                    return R.toFixed(1);
+                }
+                else {
+                    return '';
+                }
+            }
+            return R;
+        }, self);
     /**
     * This is PatientAnnualChance property composed of knockout computed function.
     * This function calculates the value of Bleed Risk tab's "Patient's annual chance of being harmed by"
     * for calculated HAS-BLED score.
     */
     self.PatientAnnualChance = ko.pureComputed(
-                function () {
-                    var R = '';
-                    if (self.Hasbled_Score() !== undefined && self.Hasbled_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                        R = 1 / ((self.annualRiskOfHASBLEDValues[self.Hasbled_Score()] * parseFloat(self.selectedTreatment().hasbledModifier)) - 0.6);
-                        R = Math.round(R * 100);
-                        if (isFinite(R)) {
-				return R;
-			}
-			else{
-				return '';
-			}
-                    }
+        function () {
+            var R = '';
+            if (self.Hasbled_Score() !== undefined && self.Hasbled_Score() !== '' && self.selectedTreatment().text !== undefined) {
+                R = 1 / ((self.annualRiskOfHASBLEDValues[self.Hasbled_Score()] * parseFloat(self.selectedTreatment().hasbledModifier)) - 0.6);
+                R = Math.round(R * 100);
+                if (isFinite(R)) {
                     return R;
-                }, self);
+                }
+                else {
+                    return '';
+                }
+            }
+            return R;
+        }, self);
     /**
     * This is ReviewTherapyDisabled property composed of knockout computed function.
     * This function is used for enabling or disabling the Review Therapy tab depeding upon CHA2DS2-VASc score.
     */
     self.ReviewTherapyDisabled = ko.pureComputed(
-	function () {
-		/*if (self.Gender() !== undefined && self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '') {
-			return false
-		}
-		return true;*/
-        if ((self.Age()!=="" && self.Age() != undefined) && self.Gender() != undefined) {
-			return false
-		}
-		return true;
-	}
+        function () {
+            /*if (self.Gender() !== undefined && self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '') {
+                return false
+            }
+            return true;*/
+            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined) {
+                return false
+            }
+            return true;
+        }
     );
     self.TherapyGuidanceAdvice = ko.pureComputed(
-    function () {
-        if(self.Gender() === undefined || self.Gender() === null) {
-            return appmodel.FormData.advices[3];
-        } else if(self.Gender().value === "1") {
-            //Patient is male
-            if(self.Cha2ds2_Score() === 0) {
-                return appmodel.FormData.advices[0];
-            } else if(self.Cha2ds2_Score() === 1) {
-                return appmodel.FormData.advices[1];
+        function () {
+            if (self.Gender() === undefined || self.Gender() === null) {
+                return appmodel.FormData.advices[3];
+            } else if (self.Gender().value === "1") {
+                //Patient is male
+                if (self.Cha2ds2_Score() === 0) {
+                    return appmodel.FormData.advices[0];
+                } else if (self.Cha2ds2_Score() === 1) {
+                    return appmodel.FormData.advices[1];
+                } else {
+                    return appmodel.FormData.advices[2];
+                }
+
             } else {
-                return appmodel.FormData.advices[2];
-            }
-            
-        } else {
-            //Patient is female
-            if(self.Cha2ds2_Score() === 1) {
-                return appmodel.FormData.advices[0];
-            } else if(self.Cha2ds2_Score() === 2) {
-                return appmodel.FormData.advices[1];
-            } else {
-                return appmodel.FormData.advices[2];
+                //Patient is female
+                if (self.Cha2ds2_Score() === 1) {
+                    return appmodel.FormData.advices[0];
+                } else if (self.Cha2ds2_Score() === 2) {
+                    return appmodel.FormData.advices[1];
+                } else {
+                    return appmodel.FormData.advices[2];
+                }
             }
         }
-    }
     );
     self.CalCrCl = ko.observable(false);
     /*This function is for toggling the CRCL calculator popup on Review Therapy page.
@@ -1003,11 +1003,11 @@ function viewModel() {
     self.FormData = formdata;
     self.Form = ko.observable(new formObject());
     self.Reset = function () {
-	self.Form(new formObject());
-	self.Form().selectedTherapyOption('Please select');
-	$('.tip-top').removeClass('open');
-	$('span.tip-top').css('display', 'none');
-	$('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
+        self.Form(new formObject());
+        self.Form().selectedTherapyOption('Please select');
+        $('.tip-top').removeClass('open');
+        $('span.tip-top').css('display', 'none');
+        $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
     };
 }
 var appmodel = new viewModel();
