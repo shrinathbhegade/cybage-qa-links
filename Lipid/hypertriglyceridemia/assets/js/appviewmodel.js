@@ -592,7 +592,6 @@ function formObject(parent) {
         }
     });
     self.showDoneBtn.subscribe(function (data) {
-
         if (data == true) {
             sessionStorage.setItem('showDoneBtn', true);
         } else {
@@ -602,7 +601,7 @@ function formObject(parent) {
 
     self.HDLCholesterolValue(undefined);
 
-    self.TenYearRiskAction = function (data) {
+    self.TenYearRiskAction = function (data, caller=null) {
         if (data === 'save') {
             var TenYearRiskValue = parseFloat(self.TenYearRisk());
             if (TenYearRiskValue < 5) {
@@ -634,7 +633,9 @@ function formObject(parent) {
             if (self.triglyceridesRange() == 'group3' || (self.triglyceridesRange() == 'group2' && self.Age() < 40)) {
                 self.showAdviceBtn(true);
             } else {
-                self.showAdviceBtn(false);
+                if(caller === null)
+                    self.showAdviceBtn(false);
+                
             }
         }
     };

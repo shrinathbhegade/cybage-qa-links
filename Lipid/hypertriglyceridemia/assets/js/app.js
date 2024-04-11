@@ -967,13 +967,12 @@ function getCookie(cname) {
   return '';
 }
 
-//Unnecessary change event, removing...
-// $('input[type=radio][name=primary-switch-a]').change(function (evt) {
-//   appmodel.Form().TenYearRiskAction('cancel');
-//   if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
-//     appmodel.Form().asvd10yrrisk(evt.target.value);
-//   }
-// });
+$('input[type=radio][name=primary-switch-a]').change(function (evt) {
+  appmodel.Form().TenYearRiskAction('cancel', evt);
+  if (appmodel.Form().asvd10yrrisk() !== evt.target.value) {
+    appmodel.Form().asvd10yrrisk(evt.target.value);
+  }
+});
 
 $('input[type=radio][name=primary-switch]').change(function () {
   sessionStorage.removeItem('v4ascvd');

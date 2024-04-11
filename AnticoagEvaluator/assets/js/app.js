@@ -14,8 +14,8 @@ var isCommonCode = !(navigator.userAgent.match(/iPad/i) || navigator.userAgent.m
 var linkClicked = {};
 
 //Tooltip intialistion
-var resetTooltip = function(){
-    if($('.tip-top').hasClass('open') || $('.tip-left').hasClass('open')){
+var resetTooltip = function () {
+    if ($('.tip-top').hasClass('open') || $('.tip-left').hasClass('open')) {
         $('.tip-top, .tip-left').removeClass('open');
         $('.tooltip').css('display', 'none');
     }
@@ -35,15 +35,16 @@ var tabchange = function (data) {
         $('#scorebar').addClass('therapyreview');
         $('#creatinineClearance').hide();
         $('#creatinineClearance .collapsable-panel').hide();
-    }else{
-	if (string.indexOf('calculator-Tab') > -1) {
-		$('#scorebar').removeClass('therapyreview');
-		$('#creatinineClearance').hide();
-		$('#crclWeight').removeClass('error warning info');
-		$('#crclSerum').removeClass('error warning info');
-		$('#crclAge').removeClass('error warning info custom_info');
-		$('#patientAge').removeClass('error warning info custom_info');
-		appmodel.Form().CalCrCl(false);}
+    } else {
+        if (string.indexOf('calculator-Tab') > -1) {
+            $('#scorebar').removeClass('therapyreview');
+            $('#creatinineClearance').hide();
+            $('#crclWeight').removeClass('error warning info');
+            $('#crclSerum').removeClass('error warning info');
+            $('#crclAge').removeClass('error warning info custom_info');
+            $('#patientAge').removeClass('error warning info custom_info');
+            appmodel.Form().CalCrCl(false);
+        }
     }
     $('.data').show();
     $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight + 25);
@@ -59,12 +60,12 @@ var listchange = function () {
     $('#recomendTabs li').removeClass('selected');
     $('#recomendTabs li').each(function () {
         var that = $(this);
-	if($('a', this).attr('href') === hash){
-		that.addClass('selected');
-	}
-	else{
-		that.removeClass('selected');
-	}
+        if ($('a', this).attr('href') === hash) {
+            that.addClass('selected');
+        }
+        else {
+            that.removeClass('selected');
+        }
     }
     );
     $('.tip-top').removeClass('open');
@@ -79,15 +80,15 @@ var footerChange = function () {
     $('.header .tabs li').removeClass('selected');
     $('.footer .tabs li').removeClass('selected');
     $('#footerLinks li').each(function () {
-			var that = $(this);
-			if($('a', this).attr('href') === hash){
-				that.addClass('selected');
-			}
-			else{
-				that.removeClass('selected');
-			}
-		}
-	);
+        var that = $(this);
+        if ($('a', this).attr('href') === hash) {
+            that.addClass('selected');
+        }
+        else {
+            that.removeClass('selected');
+        }
+    }
+    );
     $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
     $('.tip-top').removeClass('open');
     $('span.tip-top').css('display', 'none');
@@ -119,7 +120,7 @@ var advicePanelHide = function () {
 /*This function is for setting the focus to Age field on page load.
 */
 $(function () {
-    $('[autofocus]:not(:focus)').eq(0).focus();
+    $('[autofocus]:not(:focus)').eq(0).trigger("focus");
 });
 /*This function is for dismissing the Therapy tab disabled warning message modal popup.
 */
@@ -130,12 +131,12 @@ var closeModal = function () {
 /*This function is for showing the Therapy tab disabled warning message modal popup.
 */
 var showReviewTherapyPopup = function () {
-	if (appmodel.Form().ReviewTherapyDisabled()) {
-		$('#reviewTherapyError').show();
-		$('.reveal-modal-bg').show();
-	}else{
-		window.location.href = '#!/content/recommendation/strokeriskbenefit/';
-	}
+    if (appmodel.Form().ReviewTherapyDisabled()) {
+        $('#reviewTherapyError').show();
+        $('.reveal-modal-bg').show();
+    } else {
+        window.location.href = '#!/content/recommendation/strokeriskbenefit/';
+    }
 
 };
 /*This function is used for capturing which page is opened (google analytics).
@@ -170,7 +171,7 @@ function viewHeight() {
 */
 function resizeView() {
     $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
-    setTimeout(function() {
+    setTimeout(function () {
         var view = viewHeight();
         var mh;
         mh = (view - ($('header').outerHeight() + $('.sticky-wrapper').outerHeight()) + 35);
@@ -210,8 +211,8 @@ function createSticky() {
 */
 function loadCommonCode() {
     if (!isNativeApplication) {
-	/*This code is for opening the resource tab's outbound link in different tab.
-	*/
+        /*This code is for opening the resource tab's outbound link in different tab.
+        */
         $('a.link').on('click', function (e) {
             /*if ($(this)[0].id !== 'crclPopup' && $(this)[0].id !== 'resMailto' && $(this)[0].hasClass('viewless') === false && $(this)[0].hasClass('viewopen') === false) {
                 e.preventDefault();
@@ -223,30 +224,30 @@ function loadCommonCode() {
         if (!isCommonCode) {
             $('head').append('<script type=\'text/javascript\' src=\'cordova.js\'></script>');
             document.addEventListener('deviceready', function () {
-                
+
                 $('#spinnerAge').blur();
-		setTimeout(function() {
-                navigator.splashscreen.hide();
-		}, 2000);
+                setTimeout(function () {
+                    navigator.splashscreen.hide();
+                }, 2000);
             }, false);
-	    /*This code is for handling behaviour of the resource tab's outbound link on Mobile device.
-	    */
+            /*This code is for handling behaviour of the resource tab's outbound link on Mobile device.
+            */
             $('a.link').on('click', function (e) {
                 if ($(this)[0].id !== 'crclPopup' && $(this)[0].id !== 'resMailto') {
                     e.preventDefault();
                     var ref = window.open($(this)[0].href, '_system', 'location=yes');
                     ref.addEventListener('loadstart', function (event) {
-				//console.log('start: ' + event.url);
-			});
+                        //console.log('start: ' + event.url);
+                    });
                     ref.addEventListener('loadstop', function (event) {
-				//console.log('stop: ' + event.url);
-			});
+                        //console.log('stop: ' + event.url);
+                    });
                     ref.addEventListener('loaderror', function (event) {
-				//console.log('error: ' + event.message);
-			});
+                        //console.log('error: ' + event.message);
+                    });
                     ref.addEventListener('exit', function (event) {
-				//console.log(event.type);
-			});
+                        //console.log(event.type);
+                    });
                 }
                 if ($(this)[0].id === 'resMailto') {
                     cordova.plugins.email.open({
@@ -258,8 +259,8 @@ function loadCommonCode() {
                     });
                 }
             });
-	    /*This code is for handling behaviour of the score bar on Mobile device.
-	    */
+            /*This code is for handling behaviour of the score bar on Mobile device.
+            */
             $('input[type=\'text\']').focus(function () {
                 if (!isCommonCode) {
                     focusMode = true;
@@ -270,21 +271,21 @@ function loadCommonCode() {
             $('input[type=\'text\']').blur(function () {
                 if (!isCommonCode) {
                     focusMode = false;
-		    $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
+                    $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
                     $('#scorebar').addClass('stuck');
                 } else { return; }
             });
-	    /*This code is for handling behaviour of keyboard on Mobile device.
-	    */
+            /*This code is for handling behaviour of keyboard on Mobile device.
+            */
             $('input[type=\'text\']').keypress(function (e) {
                 if (!isCommonCode) {
                     var code;
-		    if (e.keyCode) {
-			code = e.keyCode;
-		    }
-		    else{
-			code = e.which;
-		    }
+                    if (e.keyCode) {
+                        code = e.keyCode;
+                    }
+                    else {
+                        code = e.which;
+                    }
                     if ((code === 13) || (code === 10)) {
                         $(this).blur();
                         return false;
@@ -305,7 +306,7 @@ $(function () {
     /*This code is for handling behaviour of tooltip on Mobile device.
     */
     $('.tip-top').on('touchend', function (event) {
-	event.preventDefault();
+        event.preventDefault();
         var dataAttr = $(this).attr('data-selector');
         if (dataAttr === undefined) {
             dataAttr = $(this).attr('id');
@@ -326,9 +327,9 @@ $(function () {
     /*This code is for handling application notification on close behaviour on Mobile device.
     */
     $('#appNotificationClose').on('touchend', function () {
-		$('.tip-top').removeClass('open');
-		$('span.tip-top').css('display', 'none');
-	});
+        $('.tip-top').removeClass('open');
+        $('span.tip-top').css('display', 'none');
+    });
     $('.data-display').removeClass('shrink');
     $('.sticky-wrapper').css('height', $('.data-display')[0].clientHeight);
     /*This function is for handling score bar UI on window resize.
@@ -340,12 +341,12 @@ $(function () {
     });
     /*This function is for hiding the dropdowns of select menus when orientation changes
     */
-    window.addEventListener('orientationchange', function() {
+    window.addEventListener('orientationchange', function () {
         $('select').blur();
     })
     /*This function is used to hide score bar on scrolling
     */
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         resetTooltip();
     })
     /*This function is to open default email client along with prepopulated email content.
@@ -493,9 +494,9 @@ $(function () {
                         renalDose = '30 mg QD';
                     }
                     else {
-			if (parseFloat(appmodel.Form().CrCL()) < 15) {
-				renalDose = 'Not recommended';
-			}
+                        if (parseFloat(appmodel.Form().CrCL()) < 15) {
+                            renalDose = 'Not recommended';
+                        }
                     }
                 }
                 if ((renalDose !== item.emailTemplate) && renalDose !== '') {
@@ -515,9 +516,9 @@ $(function () {
                         renalDose = '15 mg QD w/evening meal';
                     }
                     else {
-			if (parseFloat(appmodel.Form().CrCL()) < 15) {
-				renalDose = 'Contraindicated';
-			}
+                        if (parseFloat(appmodel.Form().CrCL()) < 15) {
+                            renalDose = 'Contraindicated';
+                        }
                     }
                 }
                 if ((renalDose !== item.emailTemplate) && renalDose !== '') {
@@ -527,11 +528,11 @@ $(function () {
                 listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
             }
             else {
-		if (item.text === appmodel.FormData.therapyOptions.Warfarin) {
-			listItems += '-' + item.text + e;
-			listItems += item.emailTemplate + e;
-			listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
-		}
+                if (item.text === appmodel.FormData.therapyOptions.Warfarin) {
+                    listItems += '-' + item.text + e;
+                    listItems += item.emailTemplate + e;
+                    listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
+                }
             }
         });
         a = a + listItems + e;
@@ -549,7 +550,7 @@ $(function () {
                 isHtml: true
             });
         }
-	//This code is for google analytics to capture that Email button on Review Therapy page is clicked
+        //This code is for google analytics to capture that Email button on Review Therapy page is clicked
     });
 });
 /**document.ready ends here */
@@ -557,19 +558,19 @@ $(function () {
 function getCookieBanner() {
     var cookieValue = getCookie("anticoag-eval-cookie");
     if (cookieValue) {
-      $.ajax({
-        method: "GET",
-        url: arguments[0] + "/wapi/CookieBannerHelper/GetGDPRPolicyUpdatedDate",
-      }).done(function (data) {
-        var publishDate = data ? new Date(data) : "";
-        if (publishDate && new Date(cookieValue) > publishDate) removeBanner();
-        else loadBanner(arguments[0]);
-      });
+        $.ajax({
+            method: "GET",
+            url: arguments[0] + "/wapi/CookieBannerHelper/GetGDPRPolicyUpdatedDate",
+        }).done(function (data) {
+            var publishDate = data ? new Date(data) : "";
+            if (publishDate && new Date(cookieValue) > publishDate) removeBanner();
+            else loadBanner(arguments[0]);
+        });
     } else {
-      loadBanner(arguments[0]);
+        loadBanner(arguments[0]);
     }
 }
-  
+
 function makeAck() {
     //set cookie
     var cname = "anticoag-eval-cookie";
@@ -583,37 +584,37 @@ function makeAck() {
     //remove banner
     removeBanner();
 }
-  
+
 function removeBanner() {
     var elem = document.getElementById("cookie-banner");
     if (elem) elem.parentNode.removeChild(elem);
 }
-  
+
 function loadBanner() {
     var template = document.createElement("div");
     template.id = "cookie-banner";
     $.ajax({
-      method: "GET",
-      url: arguments[0] + "/external/vexternalcookiebanner",
+        method: "GET",
+        url: arguments[0] + "/external/vexternalcookiebanner",
     }).done(function (data) {
-      template.innerHTML = data;
-      document.body.appendChild(template);
+        template.innerHTML = data;
+        document.body.appendChild(template);
     });
 }
-  
+
 //name of the cookie (cname)
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) === " ") {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-      }
+        var c = ca[i];
+        while (c.charAt(0) === " ") {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
     }
     return "";
 }
