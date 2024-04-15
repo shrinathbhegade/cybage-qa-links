@@ -577,6 +577,7 @@ function formObject() {
     * if Serum Creatinine value is >= 200 �mol/L (2.3mg/dL).
     */
     self.SerumCreatinine.subscribe(function () {
+        debugger;
         if (self.SerumCreatinine() !== '') {
             var $serumCreatValSI = 1;
             if (self.CrClUnits()) {
@@ -590,7 +591,7 @@ function formObject() {
                 });
             if ($serumCreatValSI >= 200) {
                 if (!$abnormalRenal) {
-                    self.Hasbled_selected.push(appmodel.FormData.hasbledModifiable[3]);
+                    self.Hasbled_selected.push(appmodel.FormData.hasbledModifiable[2]);
                 }
             }
             else {
