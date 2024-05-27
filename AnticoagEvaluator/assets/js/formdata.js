@@ -20,15 +20,22 @@ var formdata = {
 		{ text: 'Male', value: '1' },
 		{ text: 'Female', value: '0.85' }
 	],
+	ethnicity: ["African American", "Asian", "Caucasian", "Hispanic/Latino", "Other"],
 	cha2ds2: [
-		{ id: '0', htmlID: 'cv2-chflv', text: 'CHF/LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction. (+1)', emailText: 'CHF/LV dysfunction' },
-		{ id: '1', htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment (+1)', emailText: 'Hypertension' },
-		{ id: '2', htmlID: 'cv2-age75', text: 'Age ≥ 75 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
-		{ id: '3', htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin (+1)', emailText: 'Diabetes' },
-		{ id: '4', htmlID: 'cv2-tiastroke', text: 'Stroke/TIA/TE', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism.  Includes any history of cerebral ischemia. (+2)', emailText: 'Stroke/TIA/TE' },
-		{ id: '5', htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque (+1)', emailText: 'Vascular disease' },
-		{ id: '6', htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
-		{ id: '7', htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female gender confers higher risk (+1)', emailText: 'Female' }
+		{ garfieldMultplr: 0.233182644, id: '0', hasTooltip: true, isDisabled: false, htmlID: 'cv2-chflv', text: 'Congestive heart failure / LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction.', emailText: 'CHF/LV dysfunction' },
+		{ garfieldMultplr: 0, id: '1', hasTooltip: true, isDisabled: false, htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment', emailText: 'Hypertension' },
+		{ garfieldMultplr: 0, id: '2', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age75', text: 'Age 75-84 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
+		{ garfieldMultplr: 0.211995445, id: '3', hasTooltip: true, isDisabled: false, htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin', emailText: 'Diabetes' },
+		{ garfieldMultplr: 0.800863063, id: '4', hasTooltip: true, isDisabled: false, htmlID: 'cv2-tiastroke', text: 'Previous stroke or TIA', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism. Includes any history of cerebral ischemia', emailText: 'Stroke/TIA/TE' },
+		{ garfieldMultplr: 0.197919709, id: '5', hasTooltip: true, isDisabled: false, htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque', emailText: 'Vascular disease' },
+		{ garfieldMultplr: 0, id: '6', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
+		{ garfieldMultplr: 0, id: '7', hasTooltip: true, isDisabled: true, htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female sex confers higher risk in some risk models', emailText: 'Female' },
+		{ garfieldMultplr: 0, id: '8', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age85', text: 'Age ≥ 85 yrs', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ garfieldMultplr: 0.349516938, id: '9', hasTooltip: true, isDisabled: false, htmlID: 'cv2-renal', text: 'Renal disease', value: '1', showInfo: true, tooltipTitle: 'Moderate to severe chronic kidney disease (CKD class III-V)', emailText: '' },
+		{ garfieldMultplr: 0.478831506, id: '10', hasTooltip: true, isDisabled: false, htmlID: 'cv2-current_smoker', text: 'Current smoker', value: '1', showInfo: true, tooltipTitle: 'Defined as cigarette smoker based on patient population studied in relevant clinical trials. use clinical discretion in regards to patients who use e-cigarettes and other tobacco products', emailText: '' },
+		{ garfieldMultplr: 0.513221391, id: '11', hasTooltip: false, isDisabled: false, htmlID: 'cv2-dementia', text: 'Dementia', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ garfieldMultplr: 0.29883967, id: '12', hasTooltip: false, isDisabled: false, htmlID: 'cv2-prev_bleed', text: 'Previous bleeding', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ garfieldMultplr: 0, id: '13', hasTooltip: true, isDisabled: false, htmlID: 'cv2-proteinuria', text: 'Proteinuria', value: '1', showInfo: true, tooltipTitle: 'Elevated protein in the urine', emailText: '' }
 	],
 	hasbledModifiable: [
 		{ id: '0', htmlID: 'hb-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Uncontrolled, >160 mmHg systolic (+1)', emailText: 'Hypertension' },
@@ -38,10 +45,10 @@ var formdata = {
 		{ id: '4', htmlID: 'hb-antiplatelet', text: 'Currently taking antiplatelet drugs or NSAIDs', value: '1', showInfo: true, tooltipTitle: 'Medication usage predisposing to bleeding (antiplatelet agents, NSAIDs) (+1)', emailText: 'Currently taking antiplatelet drugs or NSAIDs' }
 	],
 	hasbledNonModifiable: [
-		{ id: '0', htmlID: 'hb-tiastroke', text: 'History of Stroke/TIA/TE', value: '1', showInfo: true, tooltipTitle: 'Prior history of stroke, transient ischemic attack, or thromboembolism (+1)', emailText: 'Stroke/TIA/TE' },
-		{ id: '1', htmlID: 'hb-majorbleed', text: 'History of Major Bleeding', value: '1', showInfo: true, tooltipTitle: 'Prior major bleeding or predisposition to bleeding.  Major bleeding refers to intracranial bleeding, bleeding requiring hospitalization, a hemoglobin decrease of more than 2 g/dL, or the need for transfusion secondary to bleeding.  (+1)', emailText: 'H/o Major Bleeding' },
-		{ id: '2', htmlID: 'hb-liabile', text: 'History of Labile INR', value: '1', showInfo: true, tooltipTitle: 'Unstable/high INRs, time in therapeutic range <60%.  Applies to warfarin patients only. (+1)', emailText: 'H/o Labile INR' },
-		{ id: '3', htmlID: 'hb-age65', text: 'Age > 65 yrs', value: '1', showInfo: true, tooltipTitle: 'Age >65 years old (+1)', emailText: '> 65 yrs' }
+		{ id: '0', isDisabled: false, htmlID: 'hb-tiastroke', text: 'History of Stroke/TIA/TE', value: '1', showInfo: true, tooltipTitle: 'Prior history of stroke, transient ischemic attack, or thromboembolism (+1)', emailText: 'Stroke/TIA/TE' },
+		{ id: '1', isDisabled: false, htmlID: 'hb-majorbleed', text: 'History of Major Bleeding', value: '1', showInfo: true, tooltipTitle: 'Prior major bleeding or predisposition to bleeding.  Major bleeding refers to intracranial bleeding, bleeding requiring hospitalization, a hemoglobin decrease of more than 2 g/dL, or the need for transfusion secondary to bleeding.  (+1)', emailText: 'H/o Major Bleeding' },
+		{ id: '2', isDisabled: false, htmlID: 'hb-liabile', text: 'History of Labile INR', value: '1', showInfo: true, tooltipTitle: 'Unstable/high INRs, time in therapeutic range <60%.  Applies to warfarin patients only. (+1)', emailText: 'H/o Labile INR' },
+		{ id: '3', isDisabled: true, htmlID: 'hb-age65', text: 'Age > 65 yrs', value: '1', showInfo: true, tooltipTitle: 'Age >65 years old (+1)', emailText: '> 65 yrs' }
 	],
 	antiplatelet: [
 		{ id: '0', htmlID: 'a-aspirin', text: 'Aspirin (any dose)', value: '1', showInfo: false, tooltipTitle: '', displayText: 'Aspirin (any dose)' },
@@ -202,32 +209,91 @@ var formdata = {
 		Rivaroxaban: 'Rivaroxaban',
 		Warfarin: 'Warfarin'
 	},
+	therapyGuidanceFooter: `<br>In patients with AF at risk for stroke, reevaluation of the need for and choice of stroke risk reduction therapy at periodic intervals is recommended to reassess stroke and bleeding risk, net clinical benefit, and proper dosing. (1, B-NR)
+							This app and the recommendations above are meant for atrial fibrillation patients who do not have moderate-to-severe mitral stenosis or a mechanical heart valve.`,
 	advices: [
 		{
 			id: 0,
+			emailText: 'Oral anticoagulation may be omitted due to low stroke risk',
 			conditional: '(Gender === "Male" && ChadVascScore === 0) || (Gender === Female && ChadVascScore === 1)',
-			guidanceBoxHeading: 'It is reasonable to omit anticoagulant therapy for this patient. (IIa, B)',
-			guidanceBoxDescription: '',
-			emailText: 'Oral anticoagulation may be omitted due to low stroke risk'
+			guidanceBoxHeading: 'Low Risk: Absolute Risk of Stroke < 1% per year',
+			guidanceBoxDescription: `<b>If prescribing an oral anticoagulant:</b>
+										<ul>
+											<li>DOACs are recommended over warfarin to reduce the risk of mortality, stroke, systemic embolism, and ICH. (1, A)</li>
+											<li>Without an indication for antiplatelet therapy, aspirin either alone or in combination with clopidogrel as an alternative to anticoagulation is not recommended to reduce stroke risk. (3-Harm, B-R)</li>
+										</ul>`,
+			guidePreBleed: `<br><b>If History of Bleeding is indicated:</b><ul><li>Patients should be evaluated for factors that specifically indicate a higher risk of bleeding, such as previous bleeding and use of drugs that increase bleeding risk, in order to identify possible interventions to prevent bleeding on anticoagulation. (1, B-NR)</li></ul>`,
+			guideRenal: '',
+			guideLiver: ''
+
 		},
 		{
 			id: 1,
+			emailText: 'Oral anticoagulation may be considered due to intermediate stroke risk',
 			conditional: '(Gender === "Male" && ChadVascScore === 1) || (Gender === "Female" && ChadVascScore === 2)',
-			guidanceBoxHeading: 'Prescribing an oral anticoagulant to reduce thromboembolic stroke risk may be considered. (IIb, C)',
-			guidanceBoxDescription: '<p>If prescribing an oral anticoagulant: <ul><li><b>In NOAC-eligible patients<sup>*</sup>:</b><ul class="circle-bullet-list"><li>NOACs are recommended over warfarin (I, A).</li><li>Renal and hepatic function should be evaluated before NOAC initiation and reevaluated at least annually (I,B). NOACs are not recommended for patients with severe hepatic dysfunction, and all NOACs have dosing defined by renal function.</li><li>Coverage of NOACs by patient’s insurance carrier should also be considered.</li></ul></li><li><b>In patients initiating/taking warfarin<sup>*</sup>:</b><ul class="circle-bullet-type"><li>INR should be determined at least weekly during initiation and monthly when anticoag (INR in range) is stable (I,A). </li><li>For patients unable to maintain a therapeutic INR level, NOACs are recommended (I,C). </li></ul></li><li><b>If on dialysis and/or with end-stage CKD (CrCl <15 mL/min):</b><ul class="circle-bullet-type"><li>Dabigatran, rivaroxaban and edoxaban are NOT recommended (III,C)</li></ul></li></ul><br><p class="italic"><sup>*</sup>Selection of anticoagulation should be individualized based on shared decision making (I,C) and thromboembolism risk irrespective of whether AF is paroxysmal, persistent, or permanent (I,B).<br/> This app and the recommendations above are meant for atrial fibrillation patients who do not have moderate-to-severe mitral stenosis or a mechanical heart valve. If your patient does have a mechanical heart valve, warfarin is recommended (I,B) and dabigatran SHOULD NOT be used. (III, B)<br>See “Resource” tab at the bottom of this app for full text recommendations from the 2018 ACC/AHA Atrial Fibrillation Guideline Focused Update. </p></p>',
-			emailText: 'Oral anticoagulation may be considered due to intermediate stroke risk'
+			guidanceBoxHeading: `Intermediate Risk: Absolute Risk of Stroke 1-2% per year<br>
+								Anticoagulation is reasonable to prevent stroke and systemic thromboembolism. (2a, A)`,
+			guidanceBoxDescription: `<b>If prescribing an oral anticoagulant:</b>
+										<ul>
+											<li>DOACs are recommended over warfarin to reduce the risk of mortality, stroke, systemic embolism, and ICH. (1, A)</li>
+											<li>If receiving warfarin: a target INR between 2 and 3 is recommended, as well as optimal management of drug-drug interactions, consistency in vitamin K dietary intake, and routine INR monitoring to improve time in therapeutic range and to minimize risks of preventable thromboembolism or major bleeding. (1, B-R)</li>
+											<li>Without an indication for antiplatelet therapy, aspirin either alone or in combination with clopidogrel as an alternative to anticoagulation is NOT recommended to reduce stroke risk. (3-Harm, B-R)</li>
+										</ul>`,
+			guidePreBleed: `<br>
+										<b>If History of Bleeding is indicated:</b>
+											<ul>
+												<li>Patients should be evaluated for factors that specifically indicate a higher risk of bleeding, such as previous bleeding and use of drugs that increase bleeding risk, to identify possible interventions to prevent bleeding on anticoagulation. (1, B-NR)</li>
+											</ul>`,
+			guideRenal: `<br>
+										<b>If Abnormal Renal Function is indicated:</b>
+											<ul>
+												<li>For patients with AF who have end-stage CKD or are on dialysis, it might be reasonable to prescribe warfarin (INR 2.0-3.0) or an evidence-based dose of apixaban for oral anticoagulation. (2b, B-NR)</li>
+											</ul>`,
+			guideLiver: `<br>
+										<b>If Abnormal Liver Function is indicated:</b>
+											<ul>
+												<li>For patients with AF who have mild or moderate liver disease (Child-Pugh class A or B), it is reasonable to prescribe DOACs over warfarin. (2a, B-NR)</li>
+												<li>For patients with AF who have moderate liver disease (Child-Pugh class B), Rivaroxaban is CONTRAINDICATED due to the potentially increased risk of bleeding. (3-Harm, C-LD)</li>
+											</ul>`
+
 		},
 		{
 			id: 2,
+			emailText: 'Oral anticoagulation is recommended due to high stroke risk',
 			conditional: '(Gender === "Male" && ChadVascScore >= 2) || (Gender === "Female" && ChadVascScore >= 3)',
-			guidanceBoxHeading: 'Oral anticoagulant is recommended. (I,A)',
-			guidanceBoxDescription: '<p>If prescribing an oral anticoagulant: <ul><li><b>In NOAC-eligible patients <sup>*</sup>:</b><ul class="circle-bullet-list"><li>NOACs are recommended over warfarin (I, A).</li><li>Renal and hepatic function should be evaluated before NOAC initiation and reevaluated at least annually (I,B). NOACs are not recommended for patients with severe hepatic dysfunction, and all NOACs have dosing defined by renal function.</li><li>Coverage of NOACs by patient’s insurance carrier should also be considered.</li></ul></li><li><b>In patients initiating/taking warfarin<sup>*</sup>:</b><ul class="circle-bullet-type"><li>INR should be determined at least weekly during initiation and monthly when anticoag (INR in range) is stable (I,A). </li><li>For patients unable to maintain a therapeutic INR level, NOACs are recommended (I,C). </li></ul></li><li><b>If on dialysis and/or with end-stage CKD (CrCl <15 mL/min):</b><ul class="circle-bullet-type"><li>It is reasonable to prescribe apixaban or warfarin (IIa,B)</li><li>Dabigatran, rivaroxaban and edoxaban are NOT recommended (III,C)</li></ul></li><li><b>If moderate-to-severe CKD:</b><ul class="circle-bullet-list"><li>Reduced doses of NOACs may be considered (IIb,B)</li><li>CKD criteria for reduced dosing is defined by prescribing info: (apixaban, SCr ≥1.5 mg/dL ); (dabigatran or rivaroxaban, CrCl 15-30 mL/min); (edoxaban, 15-50 mL/min)</li></ul></li></ul><br><p class="italic"><sup>*</sup>Selection of anticoagulation should be individualized based on shared decision making (I,C) and thromboembolism risk irrespective of whether AF is paroxysmal, persistent, or permanent (I,B).<br/> This app and the recommendations above are meant for atrial fibrillation patients who do not have moderate-to-severe mitral stenosis or a mechanical heart valve. If your patient does have a mechanical heart valve, warfarin is recommended (I,B) and dabigatran SHOULD NOT be used. (III, B)<br>See “Resource” tab at the bottom of this app for full text recommendations from the 2018 ACC/AHA Atrial Fibrillation Guideline Focused Update.</p></p>',
-			emailText: 'Oral anticoagulation is recommended due to high stroke risk'
+			guidanceBoxHeading: `High Risk: Absolute Risk of Stroke > 2% per year<br>
+								Anticoagulation is recommended to prevent stroke and systemic thromboembolism. (1, A)`,
+			guidanceBoxDescription: `<b>If prescribing an oral anticoagulant:</b>
+										<ul>
+											<li>DOACs are recommended over warfarin to reduce the risk of mortality, stroke, systemic embolism, and ICH. (1, A)</li>
+											<li>If receiving warfarin: a target INR between 2 and 3 is recommended, as well as optimal management of drug-drug interactions, consistency in vitamin K dietary intake, and routine INR monitoring to improve time in therapeutic range and to minimize risks of preventable thromboembolism or major bleeding. (1, B-R)</li>
+											<li>Without an indication for antiplatelet therapy, aspirin either alone or in combination with clopidogrel as an alternative to anticoagulation is NOT recommended to reduce stroke risk. (3-Harm, B-R)</li>
+											<li>Bleeding risk scores should not be used in isolation to determine eligibility for oral anticoagulation but instead to identify and modify bleeding risk factors and to inform medical decision-making. (3-No Benefit, B-NR)</li>
+										</ul>`,
+			guidePreBleed: `<br>
+										<b>If History of Bleeding is indicated:</b>
+											<ul>
+												<li>Patients should be evaluated for factors that specifically indicate a higher risk of bleeding, such as previous bleeding and use of drugs that increase bleeding risk, to identify possible interventions to prevent bleeding on anticoagulation. (1, B-NR)</li>
+											</ul>`,
+			guideRenal: `<br>
+										<b>If Abnormal Renal Function is indicated:</b>
+											<ul>
+												<li>For patients with AF who have end-stage CKD or are on dialysis, it might be reasonable to prescribe warfarin (INR 2.0-3.0) or an evidence-based dose of apixaban for oral anticoagulation. (2b, B-NR)</li>
+											</ul>`,
+			guideLiver: `<br>
+										<b>If Abnormal Liver Function is indicated:</b>
+											<ul>
+												<li>For patients with AF who have mild or moderate liver disease (Child-Pugh class A or B), it is reasonable to prescribe DOACs over warfarin. (2a, B-NR)</li>
+												<li>For patients with AF who have moderate liver disease (Child-Pugh class B), Rivaroxaban is CONTRAINDICATED due to the potentially increased risk of bleeding. (3-Harm, C-LD)</li>
+											</ul>`
 		},
 		{
 			id: 3,
 			guidanceBoxHeading: '',
-			guidanceBoxDescription: ''
+			guidanceBoxDescription: '',
+			guidePreBleed: '',
+			guideRenal: '',
+			guideLiver: ''
 		}
 	]
 };

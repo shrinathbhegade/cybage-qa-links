@@ -195,11 +195,29 @@ select {
   padding: 10px;
 }
 
-/*** css for reviewTherapyErro ****/
-.reviewTherapyError .reveal-modal-bg {
+/* Popup to display when disabled fields are clicked*/
+.bleedrisk-popup,
+.risk-factors-popup {
+  position: relative;
+  z-index: 1005;
+  top: -1rem;
+}
+
+.risk-factors-popup {
+  position: absolute;
+}
+
+.reviewTherapyError .reveal-modal-bg,
+.btnReviewTherapyError .reveal-modal-bg,
+.bleedrisk-popup .reveal-modal-bg,
+.risk-factors-popup .reveal-modal-bg {
   z-index: -1;
 }
-.reviewTherapyError .alert-box:after {
+
+.reviewTherapyError .alert-box:after,
+.btnReviewTherapyError .alert-box:after,
+.bleedrisk-popup .alert-box:after,
+.risk-factors-popup .alert-box:after {
   content: "";
   position: absolute;
   top: -10px;
@@ -209,6 +227,35 @@ select {
   border-color: transparent;
   border-width: 0 8px;
   border-bottom: 10px solid #d07600;
+}
+
+.bleedrisk-popup .alert-box:after,
+.risk-factors-popup .alert-box:after {
+  right: 50%;
+}
+
+.cv2-age75 {
+  top: 10%;
+  right: 3.8%;
+}
+
+.cv2-age65 {
+  top: 47%;
+  right: 35.5%;
+}
+
+.cv2-female {
+  top: 48%;
+  right: 5%;
+}
+
+.cv2-age85 {
+  top: 66%;
+  left: 4% !important;
+}
+
+.cv2-age85 .alert-box:after {
+  right: 80%;
 }
 
 .alert-box .fa-info-circle {
@@ -613,10 +660,42 @@ option {
 
 .reviewTherapyError {
   position: absolute;
-  top: 90px;
+  top: 6.5em;
   right: 15px;
   z-index: 9999;
 }
+
+@media (min-width: 320px) {
+  .reviewTherapyError {
+    top: 3.2em;
+  }
+  /* .uom-pi {
+    top: 2.2em !important;
+    margin-bottom: 2.5em !important;
+    right: 12em !important;
+  } */
+}
+
+@media (min-width: 481px) {
+  .reviewTherapyError {
+    top: 5.5em;
+  }
+}
+
+.btnReviewTherapyError {
+  position: absolute;
+  z-index: 9999;
+  max-width: fit-content;
+  margin-top: 3.1rem;
+}
+
+.btnRTContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 @media only screen and (min-width: 480px) {
   .scorebar-count {
     font-size: 32px;
@@ -751,7 +830,7 @@ option {
   }
 
   .scorebar-count {
-    font-size: 65px;
+    font-size: 40px;
     line-height: 55px;
   }
 
@@ -844,7 +923,7 @@ option {
 span.nub {
   display: none !important;
 }
-.button.disabled,
+.button.disabled:not(#rtbtn),
 .button[disabled] {
   pointer-events: none;
 }
@@ -1050,4 +1129,51 @@ span.nub {
 }
 .hidden-overflow {
   overflow: hidden;
+}
+
+.hint {
+  font-size: 0.78571em;
+  line-height: 1.78182em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
+    sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.question .hint {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question .hint::after,
+.question .hint::before {
+  content: " ";
+  display: table;
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.space-betwn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.uom-pi {
+  position: relative;
+  float: right;
+  right: 12.5rem;
+  top: -3.8rem;
+}
+
+/* Style for the read-only div */
+.readonly {
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #f9f9f9;
+  cursor: default; /* Prevent cursor change on hover */
 }
