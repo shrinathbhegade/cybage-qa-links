@@ -647,7 +647,7 @@ function formObject() {
             _score += self.Gender().text === 'Female' ? 1 : 0;
         }
 
-        if ($age >= 75 && $age < 85) {
+        if ($age >= 75) {
             _score += 2;
         }
 
