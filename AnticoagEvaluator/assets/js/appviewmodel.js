@@ -403,6 +403,20 @@ function formObject() {
             if ($age < 85 && $age85) {
                 self.Cha2ds2_selected.remove($age85);
             }
+
+            var hasbled_age65 = ko.utils.arrayFirst(self.Hasbled_selected(),
+                function (item) {
+                    return item.htmlID === 'hb-age65';
+                });
+
+            if ($age > 65) {
+                if (!hasbled_age65)
+                    self.Hasbled_selected.push(appmodel.FormData.hasbledNonModifiable[3])
+            }
+            else {
+                if (hasbled_age65)
+                    self.Hasbled_selected.remove(hasbled_age65);
+            }
         } else {
             if (self.Gender() === undefined && self.Cha2ds2_selected().length === 0) {
                 self.Cha2ds2_Score('');
@@ -1508,7 +1522,7 @@ function formObject() {
                 return false
             }
             return true;*/
-            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined && self.dbp() && self.pulse() && self.Ethnicity() && self.piWeight()) {
+            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined && self.dbp() && self.pulse() && (self.Ethnicity() >= 0) && self.piWeight()) {
                 return false
             }
             return true;
