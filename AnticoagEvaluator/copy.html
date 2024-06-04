@@ -16,16 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AnticoagEvaluator</title>
-    <!-- <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/normalize.min.css">
+    <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/normalize.min.css">
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/foundation.min.css">
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/style-AntiCoag.css">
-    <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/custom_style.css"> -->
-    <link rel="stylesheet" href="assets/css/normalize.min.css">
-    <link rel="stylesheet" href="assets/css/foundation.min.css">
-    <link rel="stylesheet" href="assets/css/style-AntiCoag.css">
-    <link rel="stylesheet" href="assets/css/custom_style.css">
+    <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/custom_style.css">
     <link rel="icon" href="assets/img/favicon.ico">
     <script type="text/javascript" src="assets/js/modernizr.js"></script>
+    <!-- [if lte IE 9] >
+    <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/tabs-primary_Fallback-IE9.css">
+    <! [endif] -->
 </head>
 
 <body>
@@ -40,7 +39,6 @@
                 <span class="logo">
                     <a href="#!/content/calculator">
                         <img alt="AntiCoag Logo" src="assets/img/AntiCoag_Logo.png" width="377px;" height="58px;">
-                        <!-- <img alt="AntiCoag Logo" src="assets/img/accanticoaglogo.png" width="377px;" height="58px;"> -->
                     </a>
                 </span>
                 <ul class="nav tabs primary condensable small">
@@ -60,8 +58,8 @@
                     <div class="row">
                         <div class="medium-12">
                             <div class="alert-box alert round">
-                                <i class="fa fa-info-circle"></i> Enter required Patient Information and applicable Risk
-                                Factors to review therapy.
+                                <i class="fa fa-info-circle"></i> Calculate a CHA<sub>2</sub>DS<sub>2</sub>-VASc score
+                                to review therapy.
                                 <a data-bind="click:closeModal" class="close">x</a>
                             </div>
                         </div>
@@ -71,30 +69,27 @@
             <!-- End for header section -->
             <!-- Start for scorebar section -->
             <div class="data">
-                <div style="margin: 0 !important;"
+                <div
                     class="large-9 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
-                    <div class="row" style="display: inline-flex;">
-                        <div class="large-8 medium-12 small-10 columns scorebar-panel-left">
+                    <div class="row">
+                        <div class="large-4 medium-3 small-5 columns scorebar-panel-left">
                             <div class="scorebar-panel-left-inner">
-                                <div class="top scorebarlabel">Annual Stroke Risk Magnitude</div>
+                                <div class="top scorebarlabel">Stroke Risk</div>
                                 <div class="scorebar-score-container">
                                     <div class="scorebar-panel">
-                                        <div class="scorebar-count"
-                                            data-bind="text:$root.Form().HighestRiskProfile().riskChance"></div>
-                                        <div style="margin-left: 1.5em;"
-                                            class="scorebar-count-suffix suffix-blocked-width">
-                                            <span class="scorebar_label"
-                                                data-bind="text: $root.Form().HighestRiskProfile().riskName"></span>
+                                        <div class="scorebar-count" data-bind="text:$root.Form().Cha2ds2_Score"></div>
+                                        <div class="scorebar-count-suffix suffix-blocked-width">
+                                            <span class="scorebar_label">CHA<sub>2</sub>DS<sub>2</sub>-VASc</span>
                                             <span class="scorebar_txt"
-                                                data-bind="text:$root.Form().HighestRiskProfile().riskProfile"></span>
+                                                data-bind="text:$root.Form().Cha2ds2_ScoreMessage"></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="large-7 medium-9 small-7 columns scorebar-panel-right end"
+                        <div class="large-8 medium-9 small-7 columns scorebar-panel-right end"
                             data-bind="css:($root.Form().SerumCreatinine() == undefined
-                                    || $root.Form().SerumCreatinine() === '')  || ($root.Form().CrCL() == undefined || $root.Form().CrCL() === '') ? 'custom-width' : ''">
+                        || $root.Form().SerumCreatinine() === '')  || ($root.Form().CrCL() == undefined || $root.Form().CrCL() === '') ? 'custom-width' : ''">
                             <div class="top scorebarlabel">Renal Function</div>
                             <div class="scorebar-score-container adjust-width-auto">
                                 <div class="scorebar-panel">
@@ -139,208 +134,80 @@
                             This app applies only to patients who HAVE atrial fibrillation and DO NOT HAVE moderate to
                             severe mitral stenosis and/or a mechanical heart valve. See full Guideline Recommendations
                             in the Resources section for those patients with a mechanical valve.
+                            <br><br>
+                            This app is not yet updated with the 2023 Guideline for the Diagnosis and Management of
+                            Atrial Fibrillation. It continues to be based on the 2019 Focused Update of the 2014
+                            Guideline for the Management of Patients With Atrial Fibrillation.
                             <a class="close" id="appNotificationClose">x</a>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class=" medium-12 row collapse">
-                        <div class="medium-5 small-5 columns">
+                        <div class="medium-10 small-7 columns">
                             <h1>Calculate Risk</h1>
                         </div>
-                        <!-- <div class="medium-4 small-4 units-outer columns">
-                            <span class="switch-value" for="">Select Units</span>
-                            <div class="switch round select">
-                                <input id="cv2-select" type="checkbox" data-bind="checked: $root.Form().CrClUnits">
-                                <label class="units" for="cv2-select">
-                                    <span class="switch-on btn-ga4">&nbsp;US</span>
-                                    <span class="switch-off btn-ga4">&nbsp;SI</span>
-                                </label>
-                            </div>
-                        </div> -->
-                        <div class="medium-6 small-4 columns">
-
-                            <div style="margin-top: 6%;" class="medium-7 small-7 units-outer columns">
-                                <span class="switch-value" for="">Select Units</span>
-                                <div class="switch round select">
-                                    <input id="cv2-select" type="checkbox" data-bind="checked: $root.Form().CrClUnits">
-                                    <label class="units" for="cv2-select">
-                                        <span class="switch-on btn-ga4">&nbsp;US</span>
-                                        <span class="switch-off btn-ga4">&nbsp;SI</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <a class="right reset bold" data-bind="click:Reset"><i class="fa fa-repeat"></i>&nbsp;Reset
-                                All</a>
-                        </div>
+                        <div class="medium-2 small-4 columns"><a class="right reset bold" data-bind="click:Reset"><i
+                                    class="fa fa-repeat"></i>
+                                &nbsp;Reset All</a></div>
                     </div>
                 </div>
                 <div class="row group-section">
                     <div class="medium-12 columns">
                         <h2 id="waypoint-1-shrink" class="with-underline highlighted">Patient Information</h2>
-                        <!-- <div class="units-outer uom-pi">
-                            <span class="switch-value" for="">Select Units</span>
-                            <div class="switch round select">
-                                <input id="units_select" type="checkbox" data-bind="checked: $root.Form().PIUnits">
-                                <label class="units" for="units_select">
-                                    <span class="switch-on btn-ga4">&nbsp;US</span>
-                                    <span class="switch-off btn-ga4">&nbsp;SI</span>
-                                </label>
-                            </div>
-                        </div> -->
                         <p class="quiet">Required to derive therapy options</p>
                     </div>
                     <div class="medium-12 small-12 columns">
                         <div class="row ">
-                            <div class="space-betwn">
-                                <div id="patientAge" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().AgeStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Age</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
+                            <div id="patientAge" class="question small-12 medium-6 large-4 columns"
+                                data-bind="css:$root.Form().AgeStatus">
+                                <div class="label-holder">
+                                    <span class="text bold">Age</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space column small-10 medium-10">
+                                        <input min="18" max="100" type="text" id="spinnerAge" placeholder=""
+                                            data-bind="value: $root.Form().Age">
                                     </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="18" max="100" type="text" id="spinnerAge" placeholder=""
-                                                data-bind="value: $root.Form().Age">
-                                        </div>
-                                        <div class="column small-2 medium-2">
-                                            <small class="value">Yrs</small>
-                                        </div>
-                                    </div>
-                                    <div class="message-holder">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().AgeErrorMsg"></span>
-                                        </small>
+                                    <div class="column small-2 medium-2">
+                                        <small class="value">Yrs</small>
                                     </div>
                                 </div>
-                                <div class="question small-10 medium-6 large-4 columns end">
-                                    <div class="label-holder">
-                                        <span class="text bold">Sex</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space">
-                                            <select name="" id="genderSelect" data-bind="
+                                <div class="message-holder">
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i><span
+                                            data-bind="html:$root.Form().AgeErrorMsg"></span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="question small-10 medium-6 large-4 columns end">
+                                <div class="label-holder">
+                                    <span class="text bold">Sex</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space">
+                                        <select name="" id="genderSelect" data-bind="
                                                                           options: $root.FormData.sex,
                                                                           optionsText: 'text',
                                                                           optionsValue: $data,
                                                                           selectedOption: $root.Form().Gender,
                                                                           optionsCaption: 'Please select',
                                                                           value:$root.Form().Gender"></select>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-betwn">
-                                <div id="diastolicBloodPressure" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().dbpStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Diastolic Blood Pressure (mm Hg)</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="60" max="130" type="text" id="spinnerDBP" placeholder=""
-                                                data-bind="value: $root.Form().dbp">
-                                        </div>
-                                    </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().dbpErrorMsg"></span>
-                                        </small>
-                                    </div>
-                                    <div class="hint">Value must be between 60-130</div>
-                                </div>
-                                <div class="question small-10 medium-6 large-4 columns end">
-                                    <div class="label-holder">
-                                        <span class="text bold">Ethnicity</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space">
-                                            <select id="ethnicitySelect" data-bind="options: $root.FormData.ethnicity,
-                                                                                        optionsText: 'name',
-                                                                                        optionsValue: 'value',
-                                                                                        selectedOption: $root.Form().Ethnicity,
-                                                                                        optionsCaption: 'Please select',
-                                                                                        value: $root.Form().Ethnicity">
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="space-betwn">
-                                <div id="pulse" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().pulseStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Pulse (bpm)</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="30" max="160" type="text" placeholder=""
-                                                data-bind="value: $root.Form().pulse">
-                                        </div>
-                                    </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().pulseErrorMsg"></span>
-                                        </small>
-                                    </div>
-                                    <div class="hint">Value must be between 30-160</div>
-                                </div>
-                                <div id="pi_weight" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().piWeightStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Weight</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="70" max="350" type="text" placeholder=""
-                                                data-bind="value: $root.Form().piWeight">
-                                        </div>
-                                        <div class="column small-2 medium-2">
-                                            <small class="value"
-                                                data-bind="text: $root.Form().CrClUnits() ? 'kgs':'lbs'"></small>
-                                        </div>
-                                    </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().piWeightErrorMsg"></span>
-                                        </small>
-                                    </div>
-                                    <div class="hint">Value must be between <span
-                                            data-bind="text: $root.Form().CrClUnits() ? '4.5-453':'10-999'"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
                 <div class="row group-section">
                     <div class="medium-12 columns">
-                        <h2 class="with-underline highlighted">Risk Factors</h2>
+                        <h2 class="with-underline highlighted">CHA<sub>2</sub>DS<sub>2</sub>-VASc</h2>
                         <p class="quiet">Select all that apply</p>
                     </div>
                     <div class="medium-12 columns">
@@ -348,37 +215,17 @@
                             <div class="input-holder" data-bind="foreach:$root.FormData.cha2ds2">
                                 <div class="switch-input-space small-12 medium-6 large-4 columns round end">
                                     <div class="switch check-visible round">
-                                        <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
+                                        <input type="checkbox" data-bind="attr: {'id': htmlID},checkedValue: $data,
                                             checked: $root.Form().Cha2ds2_selected" id="hb-check2">
-                                        <label for="hb-check2"
-                                            data-bind="attr: {'for': htmlID}, click: htmlID === 'cv2-age65' ? setPopups: htmlID === 'cv2-age75' ? setPopups: htmlID === 'cv2-female' ? setPopups: htmlID === 'cv2-age85' ? setPopups : null"></label>
+                                        <label for="hb-check2" data-bind="attr: {'for': htmlID}"></label>
                                     </div>
                                     <label class="switch-value round">
                                         <span data-bind="text:text"></span>&nbsp;
-                                        <!-- ko if: hasTooltip -->
                                         <i class="fa fa-info-circle tip-top"
                                             data-bind="visible: showInfo, attr: { title: tooltipTitle }"
                                             data-tooltip></i>
-                                        <!-- /ko -->
                                     </label>
                                 </div>
-                                <!-- ko if: (htmlID === 'cv2-age75' || htmlID === 'cv2-age65' || htmlID === 'cv2-female' || htmlID === 'cv2-age85')-->
-                                <div data-bind="attr:{'id':`${htmlID}-popup`}, class:htmlID"
-                                    class="page-wrapper risk-factors-popup" style="display: none;">
-                                    <div class="reveal-modal-bg" style="display: block;" data-bind="click:closeModal">
-                                    </div>
-                                    <div class="row">
-                                        <div class="medium-12">
-                                            <div class="alert-box alert round">
-                                                <i class="fa fa-info-circle"></i> This field is determined from the
-                                                Patient Information above.
-                                                <a data-bind="click:closeModal.bind(`${htmlID}-popup`)"
-                                                    class="close">x</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /ko -->
                             </div>
                         </div>
                     </div>
@@ -392,16 +239,16 @@
                         </h2>
                         <p class="quiet">All four values are required to calculate Creatinine Clearance</p>
                     </div>
-                    <!-- <div class="units-outer columns">
+                    <div class="units-outer columns">
                         <span class="switch-value" for="">Select Units</span>
                         <div class="switch round select">
                             <input id="cv2-select" type="checkbox" data-bind="checked: $root.Form().CrClUnits">
                             <label class="units" for="cv2-select">
-                                <span class="switch-on btn-ga4">&nbsp;US</span>
-                                <span class="switch-off btn-ga4">&nbsp;SI</span>
+                                <span class="switch-on btn-ga4"><i class="fa fa-check on"></i>&nbsp;SI</span>
+                                <span class="switch-off btn-ga4"><i class="fa fa-check"></i>&nbsp;US</span>
                             </label>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="medium-12 small-12 columns">
                         <div class="row">
                             <div id="crclAge" class="question small-12 medium-6 large-4 columns"
@@ -559,38 +406,18 @@
                             <h4>Non Modifiable</h4>
                             <div class="input-holder" data-bind="foreach:$root.FormData.hasbledNonModifiable">
                                 <div class="switch-input-space">
-
                                     <div class="switch check-visible round">
-                                        <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
+                                        <input type="checkbox" data-bind="attr: {'id': htmlID},checkedValue: $data,
                                         checked: $root.Form().Hasbled_selected">
-                                        <label for="hb-check2"
-                                            data-bind="attr: {'for': htmlID}, click: htmlID === 'hb-age65' ? setPopups:null"></label>
+                                        <label for="hb-check2" data-bind="attr: {'for': htmlID}"></label>
                                     </div>
-                                    <label data-bind="attr:{'id': `${htmlID}pop`}" class="switch-value round">
+                                    <label class="switch-value round">
                                         <span data-bind="text:text"></span>&nbsp;
                                         <i class="fa fa-info-circle tip-top"
                                             data-bind="visible: showInfo, attr: { title: tooltipTitle }"
                                             data-tooltip></i>
                                     </label>
-
                                 </div>
-                                <!-- ko if: htmlID === 'hb-age65' -->
-                                <div data-bind="attr:{'id':`${htmlID}-popup`}" class="page-wrapper bleedrisk-popup"
-                                    style="display: none;">
-                                    <div class="reveal-modal-bg" style="display: block;" data-bind="click:closeModal">
-                                    </div>
-                                    <div class="row">
-                                        <div class="medium-12">
-                                            <div class="alert-box alert round">
-                                                <i class="fa fa-info-circle"></i> This field is determined from the
-                                                Patient Information above.
-                                                <a data-bind="click:closeModal.bind(`${htmlID}-popup`)"
-                                                    class="close">x</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /ko -->
                             </div>
                         </div>
                         <div class=" column small-12 medium-6 large-4 end">
@@ -632,11 +459,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row btnRTContainer">
+                <div class="row">
                     <div class="medium-12">
                         <!-- ko if: $root.Form().ReviewTherapyDisabled -->
-                        <a id="rtbtn" data-bind="click: btnShowReviewTherapyPopup"
-                            class="button right disabled ce-rev-therapy">Review
+                        <a data-bind="click:showReviewTherapyPopup" class="button right disabled ce-rev-therapy">Review
                             Therapy &nbsp;&nbsp;
                             <i class="fa fa-arrow-circle-right fa-6"></i></a>
                         <!-- /ko -->
@@ -645,26 +471,9 @@
                             class="button right ce-rev-therapy" onclick="tabButton($(this));">
                             Review Therapy &nbsp;&nbsp;<i class="fa fa-arrow-circle-right fa-6"></i></a>
                         <!-- /ko -->
-
-                    </div>
-                    <div id="rtBtnError" class="page-wrapper btnReviewTherapyError" style="display: none;">
-                        <div class="reveal-modal-bg rtbg" style="display: block;" data-bind="click:closeModal">
-                        </div>
-                        <div class="row">
-                            <div class="medium-12">
-                                <div class="alert-box alert round">
-                                    <i class="fa fa-info-circle"></i> Enter required Patient Information and
-                                    applicable Risk
-                                    Factors to review therapy.
-                                    <a data-bind="click:closeModal" class="close">x</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-
-
 
             <!-- End for Calculate risk section -->
             <!-- Start for Review therapy section -->
@@ -674,7 +483,7 @@
                     <h2 id="waypoint-2-shrink" class="highlighted"><small class="number">1</small>
                         Consider Therapy Guidance&nbsp;<i
                             class="fa fa-info-circle tip-bottom tip-top therapy-custom-size"
-                            title="Recommendations for anticoagulation are based on the 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation."
+                            title="Recommendations for anticoagulation are based on the 2018 ACA/AHA/HRS Focused Update to the 2014 Atrial Fibrillation Guideline."
                             data-tooltip></i></h2>
                 </div>
                 <div class="row group-section no-padding advice-card panelAdviceContainer">
@@ -683,20 +492,10 @@
                     </div>
                     <div class="advice-card-body"
                         data-bind="visible: $root.Form().TherapyGuidanceAdvice().guidanceBoxDescription.length > 0">
-                        <div class="panelAdvice" style="display: none">
-                            <div data-bind="html: $root.Form().TherapyGuidanceAdvice().guidanceBoxDescription"></div>
-                            <!-- ko if: $root.Form().checkPrevBleed() && $root.Form().TherapyGuidanceAdvice().guidePreBleed !== '' -->
-                            <div data-bind="html: $root.Form().TherapyGuidanceAdvice().guidePreBleed"></div>
-                            <!-- /ko -->
-                            <!-- ko if: $root.Form().checkAbnormalRenal() && $root.Form().TherapyGuidanceAdvice().guideRenal !== '' -->
-                            <div data-bind="html: $root.Form().TherapyGuidanceAdvice().guideRenal"></div>
-                            <!-- /ko -->
-                            <!-- ko if: $root.Form().checkAbnormalLiver() && $root.Form().TherapyGuidanceAdvice().guideLiver !== '' -->
-                            <div data-bind="html: $root.Form().TherapyGuidanceAdvice().guideLiver"></div>
-                            <!-- /ko -->
-                            <span style="font-style: italic;"
-                                data-bind="html: $root.FormData.therapyGuidanceFooter"></span>
-                            <!-- <ul>
+                        <div class="panelAdvice"
+                            data-bind="html: $root.Form().TherapyGuidanceAdvice().guidanceBoxDescription"
+                            style="display: none">
+                            <ul>
                                 <li>Selection of anticoagulant therapy should be based on risk of thromboembolism
                                     regardless of AF pattern (paroxysmal, persistent, or permanent). (I, B)</li>
                                 <li>Anticoagulant therapy should be individualized based on shared decision making after
@@ -704,7 +503,7 @@
                                     preferences. (I, C)</li>
                                 <li>Whenever making treatment decisions, balance stroke prevention benefits with
                                     minimizing the risk of serious bleeding wherever possible.</li>
-                            </ul> -->
+                            </ul>
                         </div>
                         <div class="row">
                             <span class="viewLess" style="display: none;">
@@ -730,10 +529,10 @@
                                     data-bind="value: $root.Form().selectedTherapyOption">
                                     <option value="Please select">Please select</option>
                                     <option value="No Therapy">No Therapy</option>
-                                    <!-- <optgroup label="Antiplatelets (by alpha order)">
+                                    <optgroup label="Antiplatelets (by alpha order)">
                                         <option value="Aspirin">Aspirin</option>
                                         <option value="Aspirin + Clopidogrel">Aspirin + Clopidogrel</option>
-                                    </optgroup> -->
+                                    </optgroup>
                                     <optgroup label="Anticoagulants (by alpha order)">
                                         <option value="Apixaban">Apixaban</option>
                                         <option value="Dabigatran">Dabigatran</option>
@@ -798,10 +597,10 @@
                                                                         <input id="cv2-select" type="checkbox"
                                                                             data-bind="checked: $root.Form().CrClUnits">
                                                                         <label class="units" for="cv2-select">
-                                                                            <span
-                                                                                class="switch-off btn-ga4">&nbsp;SI</span>
-                                                                            <span
-                                                                                class="switch-on btn-ga4">&nbsp;US</span>
+                                                                            <span class="switch-on btn-ga4"><i
+                                                                                    class="fa fa-check on"></i>&nbsp;SI</span>
+                                                                            <span class="switch-off btn-ga4"><i
+                                                                                    class="fa fa-check"></i>&nbsp;US</span>
                                                                         </label>
                                                                     </div>
                                                                 </div>
@@ -1023,12 +822,6 @@
                                                 class="long-text btn-ga4">Safety Info</span>
                                         </a>
                                     </li>
-                                    <li class="tab-title">
-                                        <a href="#!/content/recommendation/mortality">
-                                            <span class="short-text btn-ga4">Mortality</span>
-                                            <span class="long-text btn-ga4">Mortality</span>
-                                        </a>
-                                    </li>
                                 </ul>
                                 <br>
                                 <div class="tabs-content">
@@ -1039,7 +832,6 @@
                                                 <h3>Risk/Benefit Information*</h3>
                                             </div>
                                         </div>
-                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName !== "GARFIELD-AF" -->
                                         <table class="table banded">
                                             <tbody>
                                                 <tr>
@@ -1084,187 +876,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <!-- /ko -->
-                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName === "GARFIELD-AF" -->
-                                        <table class="table banded">
-                                            <tbody>
-                                                <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text == 'No Therapy')">
-                                                    <td class="small-9 medium-9 large-6 bold">Patient's ADJUSTED ANNUAL
-                                                        risk of stroke with <span
-                                                            data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span>
-                                                        <sup
-                                                            data-bind="visible: $root.Form().selectedTreatment().id==='0'">**</sup>
-                                                        (GARFIELD-AF)
-                                                    </td>
-                                                    <td class="left bold"
-                                                        data-bind="visible:($root.Form().selectedTreatment().text == 'No Therapy')">
-                                                        <span
-                                                            data-bind="text:$root.Form().HighestRiskProfile().riskChance"></span>
-                                                    </td>
-                                                </tr>
-                                                <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
-                                                    <td class="small-9 medium-9 large-6 bold">Patient's ADJUSTED ANNUAL
-                                                        risk of stroke with <span
-                                                            data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span>
-                                                        <sup
-                                                            data-bind="visible: $root.Form().selectedTreatment().id==='0'">**</sup>
-                                                        (GARFIELD-AF)
-                                                    </td>
-                                                    <!-- ko if: $root.Form().onDOAC() -->
-                                                    <td class="left bold">
-                                                        <span
-                                                            data-bind="text:$root.Form().GFAdjDOAC() != undefined ? $root.Form().GFAdjDOAC() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                    <!-- ko if: $root.Form().onVKA() -->
-                                                    <td class="left bold">
-                                                        <span
-                                                            data-bind="text:$root.Form().GFAdjVKA() != undefined ? $root.Form().GFAdjVKA() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                </tr>
-                                                <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
-                                                    <td class="bold">Relative risk reduction</td>
-                                                    <!-- ko if: $root.Form().onDOAC() -->
-                                                    <td class="bold"><span
-                                                            data-bind="text:$root.Form().GFRelDOAC() != undefined ? $root.Form().GFRelDOAC() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                    <!-- ko if: $root.Form().onVKA() -->
-                                                    <td class="bold"><span
-                                                            data-bind="text:$root.Form().GFRelVKA() != undefined ? $root.Form().GFRelVKA() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                </tr>
-                                                <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
-                                                    <td class="bold">Absolute risk reduction</td>
-                                                    <!-- ko if: $root.Form().onDOAC() -->
-                                                    <td class="bold"><span
-                                                            data-bind="text:$root.Form().GFAbsDOAC() != undefined ? $root.Form().GFAbsDOAC() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                    <!-- ko if: $root.Form().onVKA() -->
-                                                    <td class="bold"><span
-                                                            data-bind="text:$root.Form().GFAbsVKA() != undefined ? $root.Form().GFAbsVKA() : ''"></span>%
-                                                    </td>
-                                                    <!-- /ko -->
-                                                </tr>
-                                                <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
-                                                    <td class="bold">Chance of benefit per year</td>
-                                                    <td class="bold">1 in <span
-                                                            data-bind="text:$root.Form().ChanceOfBenefit"></span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- /ko-->
-                                        <div class="row group-section no-padding advice-card panelAdviceContainer">
-                                            <div class="advice-card-body">
-                                                <div class="panelAdvice" style="display: none">
-                                                    <table class="table banded">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Additional Risk Model Details</th>
-                                                                <th>No Therapy</th>
-                                                                <th>Selected Therapy: <span
-                                                                        data-bind="text: $root.Form().selectedTreatment().text"></span>
-                                                                </th>
-                                                                <th>Relative Risk Reduction</th>
-                                                                <th>Absolute Risk Reduction</th>
-                                                                <th>Chance of Benefit per Year</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">
-                                                                    Patient's ANNUAL risk of stroke + thromboembolism
-                                                                    (ATRIA)
-                                                                </td>
-                                                                <td>
-                                                                    <span
-                                                                        data-bind="text:$root.Form().ATRIAMagnitude()"></span>
-                                                                </td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">
-                                                                    Patient's ANNUAL risk of stroke + thromboembolism
-                                                                    (GARFIELD)</td>
-                                                                <td><span
-                                                                        data-bind="text:$root.Form().GARFIELDMagnitude()"></span>
-                                                                </td>
-                                                                <!-- ko if: $root.Form().onDOAC() -->
-                                                                <td data-bind="text: `${$root.Form().GFAdjDOAC()}%`">
-                                                                </td>
-                                                                <td data-bind="text: `${$root.Form().GFRelDOAC()}%`">
-                                                                </td>
-                                                                <td data-bind="text: `${$root.Form().GFAbsDOAC()}%`">
-                                                                </td>
-                                                                <td
-                                                                    data-bind="text: $root.Form().getBenefit($root.Form().GFAbsDOAC())">
-                                                                </td>
-                                                                <!-- /ko -->
-                                                                <!-- ko if: $root.Form().onVKA() -->
-                                                                <td data-bind="text: `${$root.Form().GFAdjVKA()}%`">
-                                                                </td>
-                                                                <td data-bind="text: `${$root.Form().GFRelVKA()}%`">
-                                                                </td>
-                                                                <td data-bind="text: `${$root.Form().GFAbsVKA()}%`">
-                                                                </td>
-                                                                <td
-                                                                    data-bind="text: $root.Form().getBenefit($root.Form().GFAbsVKA())">
-                                                                </td>
-                                                                <!-- /ko -->
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">Patient's
-                                                                    ANNUAL risk of stroke +
-                                                                    thromboembolism (CHA₂-DS₂-VASc)</td>
-                                                                <td><span
-                                                                        data-bind="text:$root.Form().CHDSMagnitude()"></span>
-                                                                </td>
-
-                                                                <td><span
-                                                                        data-bind="text:$root.Form().PatientAnnualRiskOfStrokeCHADS2Vasc"></span>%
-                                                                </td>
-                                                                <td><span
-                                                                        data-bind="text:$root.Form().selectedTreatment().relativeRisk != undefined ? $root.Form().selectedTreatment().relativeRisk : ''"></span>%
-                                                                </td>
-                                                                <td><span
-                                                                        data-bind="text:$root.Form().AbsoluteRiskReduction"></span>%
-                                                                </td>
-                                                                <td>1 in <span
-                                                                        data-bind="text:$root.Form().ChanceOfBenefit"></span>%
-                                                                </td>
-                                                            </tr>
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                                <div class="row">
-                                                    <span class="viewLess" style="margin-top: 1rem; display: none;">
-                                                        <a class="link left viewless"
-                                                            onclick="advicePanelHide.bind(this)()">Hide
-                                                            Details&nbsp;<i class="fa fa-arrow-up fa-6"></i></a>
-                                                    </span>
-                                                    <span class="viewMore" style="display: inline;">
-                                                        <a onclick="advicePanelHide.bind(this)()"
-                                                            class="link left viewopen">View Additional Risk Model
-                                                            Details&nbsp;<i class="fa fa-arrow-down fa-6"></i></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <hr>
-
                                         <p>
                                             <i data-bind="visible: $root.Form().selectedTreatment().id==='0'">Based on
                                                 Table 7 from the 2014 AHA/ACC/HRS Atrial Fibrillation Guideline
@@ -1336,8 +948,7 @@
                                                         <span
                                                             data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span>&nbsp;<span
                                                             data-bind="text:$root.Form().selectedTreatment().standardDose!=undefined ? '('+$root.Form().selectedTreatment().standardDose()+ ')' : ''"></span>
-                                                        (major bleed)
-                                                    </td>
+                                                        (major bleed)</td>
                                                     <td class="bold">1 in <span
                                                             data-bind="text:$root.Form().PopulationAvgAnnualChance"></span>
                                                     </td>
@@ -1429,36 +1040,6 @@
                                                         <!-- ko if: $root.Form().selectedTreatment().text == 'No Therapy' -->
                                                         (N/A)
                                                         <!-- /ko -->
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div data-bind="page: {id: 'mortality', name: 'mortality',beforeShow:listchange }"
-                                        class="">
-                                        <table class="table banded">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="small-5 medium-5 large-5 bold">Patient’s ANNUAL risk of
-                                                        mortality with No OAC Therapy (GARFIELD-AF)</td>
-                                                    <td class="bold"
-                                                        data-bind="text: $root.Form().selectedTreatment() != undefined ? `${$root.Form().MortalityRisk()}%` : ''">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="bold">Patient’s ANNUAL risk of mortality with DOAC
-                                                        (GARFIELD-AF)</td>
-                                                    <td class="bold"
-                                                        data-bind="text: $root.Form().selectedTreatment() != undefined ? `${$root.Form().MortalityDOAC()}%` : ''">
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="bold">
-                                                        Patient’s ANNUAL risk of mortality with Warfarin/VKA
-                                                        (GARFIELD-AF)
-                                                    </td>
-                                                    <td class="bold"
-                                                        data-bind="text: $root.Form().selectedTreatment() != undefined ? `${$root.Form().MortalityVKA()}%` : ''">
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -1754,6 +1335,9 @@
                         <div class="medium-12 small-12 columns">
                             <ul>
                                 <li><a target="_blank" rel="noopener noreferrer"
+                                        href="http://www.acc.org/anticoagulation" class="link">ACC Anticogaulation
+                                        Initative</a></li>
+                                <li><a target="_blank" rel="noopener noreferrer"
                                         href="https://www.acc.org/clinical-topics/anticoagulation-management?w_nav=MN#sort=%40foriginalz32xpostedz32xdate86069%20descending"
                                         class="link">ACC Anticoag Management Topic Collection</a></li>
                                 <li><a target="_blank" rel="noopener noreferrer"
@@ -1783,22 +1367,6 @@
                         </div>
                         <div class="medium-12 small-12 columns">
                             <ol>
-                                <li>
-                                    <p>
-                                        <a target="_blank" rel="noopener noreferrer"
-                                            href="https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017?_ga=2.86385176.1266779900.1709517227-1012074194.1649680324"
-                                            class="link">2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and
-                                            Management of Atrial Fibrillation
-                                        </a>:
-                                        Joglar, J, Chung, M. et al.
-                                        2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial
-                                        Fibrillation: A Report of the American
-                                        College of Cardiology/American Heart Association Joint Committee on Clinical
-                                        Practice Guidelines.
-                                        <br>
-                                        J Am Coll Cardiol. 2024 Jan, 83 (1) 109–279.
-                                    </p>
-                                </li>
                                 <li>
                                     <p><a target="_blank" rel="noopener noreferrer"
                                             href="https://www.jacc.org/doi/10.1016/j.jacc.2019.01.011" class="link">2019
@@ -2073,7 +1641,7 @@
                             <h3 class="highlighted">When was this App last updated?</h3>
                         </div>
                         <div class="medium-12 small-12 columns">
-                            <p>May 2024</p>
+                            <p>December 2023</p>
                         </div>
                     </div>
                     <div class="row">
@@ -2216,8 +1784,7 @@
         }
     </script>
     <!-- End -->
-    <!-- <div class="reveal-modal-bg" style="display: none;" onclick="closeModal()">
-    </div> -->
+
 </body>
 
 </html>

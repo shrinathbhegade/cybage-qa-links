@@ -229,8 +229,8 @@ select {
   border-bottom: 10px solid #d07600;
 }
 
-.bleedrisk-popup .alert-box:after,
-.risk-factors-popup .alert-box:after {
+.risk-factors-popup .alert-box:after,
+.cv2-age85 .alert-box:after {
   right: 50%;
 }
 
@@ -240,22 +240,22 @@ select {
 }
 
 .cv2-age65 {
-  top: 47%;
-  right: 35.5%;
+  top: 48%;
 }
 
 .cv2-female {
   top: 48%;
-  right: 5%;
+  right: 38%;
 }
 
 .cv2-age85 {
-  top: 66%;
-  left: 4% !important;
+  top: 48%;
+  right: 3.8% !important;
 }
 
-.cv2-age85 .alert-box:after {
-  right: 80%;
+.bleedrisk-popup .alert-box:after,
+.cv2-age65 .alert-box:after {
+  right: 72%;
 }
 
 .alert-box .fa-info-circle {
@@ -1160,7 +1160,7 @@ span.nub {
 
 .space-betwn {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .uom-pi {

@@ -81,7 +81,7 @@ function formObject() {
                                 else {
                                     if ($dbp > 130) {
                                         self.dbpStatus('question warning');
-                                        self.AgeErrorMsg('Please enter a value between 60-130 mm Hg');
+                                        self.dbpErrorMsg('Please enter a value between 60-130 mm Hg');
                                         $('.validationMessage').hide();
                                         return false;
                                     }
@@ -103,48 +103,66 @@ function formObject() {
             });
 
     self.dbp.subscribe((value) => {
-        if (!isNaN(value) && parseFloat(value) >= 90)
-            self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[1]);
-    })
+
+        if (value && !isNaN(value) && (value % 1) != 0) {
+            self.dbp(Math.round(value));
+            return;
+        }
+
+        if (!isNaN(value) && value >= 90) {
+            var hypertension = ko.utils.arrayFirst(self.Cha2ds2_selected(),
+                function (item) {
+                    return item.htmlID === 'cv2-hypertension';
+                });
+            if (!hypertension)
+                self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[1]);
+        }
+    });
 
     self.pulse = ko.observable()
-        .extend(
-            {
-                validation: {
-                    validator: function (val) {
-                        if (val !== undefined && val !== '') {
-                            var $pulse = parseFloat(val);
-                            if (!isNaN($pulse)) {
-                                $pulse = Math.round($pulse);
-                                if ($pulse < 30) {
+        .extend({
+            validation: {
+                validator: function (val) {
+                    if (val !== undefined && val !== '') {
+                        var $pulse = parseFloat(val);
+                        if (!isNaN($pulse)) {
+                            $pulse = Math.round($pulse);
+                            if ($pulse < 30) {
+                                self.pulseStatus('question warning');
+                                self.pulseErrorMsg('Please enter pulse 30 or above');
+                                $('.validationMessage').hide();
+                                return false;
+                            }
+                            else {
+                                if ($pulse > 160) {
                                     self.pulseStatus('question warning');
-                                    self.pulseErrorMsg('Please enter pulse 30 or above');
+                                    self.pulseErrorMsg('Please enter pulse 160 or below');
                                     $('.validationMessage').hide();
                                     return false;
                                 }
-                                else {
-                                    if ($pulse > 160) {
-                                        self.pulseStatus('question warning');
-                                        self.pulseErrorMsg('Please enter pulse 160 or below');
-                                        $('.validationMessage').hide();
-                                        return false;
-                                    }
-                                }
-                                self.pulseStatus('question');
-                                return true;
                             }
-                            else {
-                                return false;
-                            }
+                            self.pulseStatus('question');
+                            return true;
                         }
-                        return true;
-                    },
-                    message: function () {
-                        self.pulse('');
-                        $('.validationMessage').hide();
+                        else {
+                            return false;
+                        }
                     }
+                    return true;
+                },
+                message: function () {
+                    self.pulse('');
+                    $('.validationMessage').hide();
                 }
-            });
+            }
+        });
+
+    self.pulse.subscribe((value) => {
+        if (value && !isNaN(value) && (value % 1) != 0) {
+            self.pulse(Math.round(value));
+            return;
+        }
+    });
     self.CrClSexStatus = ko.observable('question');
     self.Gender = ko.observable();
     self.Ethnicity = ko.observable();
@@ -172,7 +190,7 @@ function formObject() {
                     var pattrn = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
                     if (!(pattrn.test(val))) {
                         self.piWeightStatus('question warning');
-                        if (self.PIUnits()) {
+                        if (self.CrClUnits()) {
                             self.piWeightErrorMsg('Please enter a weight value between 4.5-453 kgs.');
                         }
                         else {
@@ -182,7 +200,7 @@ function formObject() {
                         return false;
                     }
                     else {
-                        if (self.PIUnits()) {
+                        if (self.CrClUnits()) {
                             if (val < 4.5 || val > 453) {
                                 self.piWeightStatus('question warning');
                                 self.piWeightErrorMsg('Please enter a weight value between 4.5-453 kgs.');
@@ -328,7 +346,6 @@ function formObject() {
             });
     self.annualRiskOfStrokeCHADS2VascValues = [0.2, 0.6, 2.2, 3.2, 4.8, 7.2, 9.7, 11.2, 10.8, 12.2, 12.2];
     self.annualRiskOfHASBLEDValues = [0.6, 2.4, 4.1, 5.9, 7.6, 9.4, 11.1, 12.9, 14.6, 16.4];
-    self.annualRiskOfStrokeNoTherapyValues = [0.2, 0.6, 2.2, 3.2, 4.8, 7.2, 9.7, 11.2, 10.8, 12.2, 12.2];
     self.Cha2ds2_Score = ko.observable();
     self.PopulationAvgAnnualChance = ko.observable();
     /**
@@ -336,6 +353,12 @@ function formObject() {
     * range selection on Patient Age or CRCL Age change.
     */
     self.Age.subscribe(function (newvalue) {
+        //if decimal entered, round it off and return without executing rest of the script
+        // if (newvalue && !isNaN(newvalue) && (newvalue % 1) != 0) {
+        //     self.Age(Math.round(newvalue));
+        //     return;
+        // }
+
         if (self.CalCrCl()) {
             self.IsAgeAlter(true);
         }
@@ -350,23 +373,35 @@ function formObject() {
             if ($age < 65 && self.Cha2ds2_selected().length === 0) {
                 self.Cha2ds2_Score(0);
             }
+
             var $age65 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
                 return item.htmlID === 'cv2-age65';
             });
             var $age75 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
                 return item.htmlID === 'cv2-age75';
             });
+            var $age85 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+                return item.htmlID === 'cv2-age85';
+            });
+
             if ($age >= 65 && $age <= 74 && $age65 == null) {
                 self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[6]);
             }
-            if ($age >= 75 && $age75 == null) {
+            if ($age >= 75 && $age < 85 && $age75 == null) {
                 self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[2]);
             }
+            if ($age >= 85 && $age85 === undefined) {
+                self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[8]);
+            }
+
             if ($age < 65 && $age65) {
                 self.Cha2ds2_selected.remove($age65);
             }
             if ($age < 65 && $age75) {
                 self.Cha2ds2_selected.remove($age75);
+            }
+            if ($age < 85 && $age85) {
+                self.Cha2ds2_selected.remove($age85);
             }
         } else {
             if (self.Gender() === undefined && self.Cha2ds2_selected().length === 0) {
@@ -519,6 +554,10 @@ function formObject() {
             function (item) {
                 return item.htmlID === 'cv2-age75';
             });
+        var indexOfage85 = ko.utils.arrayFirst(self.Cha2ds2_selected(),
+            function (item) {
+                return item.htmlID === 'cv2-age85';
+            });
         var hypertension = ko.utils.arrayFirst(self.Cha2ds2_selected(),
             function (item) {
                 return item.htmlID === 'cv2-hypertension';
@@ -533,7 +572,7 @@ function formObject() {
         let $renal = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
             return item.htmlID === 'cv2-renal';
         });
-        console.log(value);
+
         if ($renal) {
             let $abnormalRenal = ko.utils.arrayFirst(self.Hasbled_selected(),
                 function (item) {
@@ -558,6 +597,7 @@ function formObject() {
             }
         }
 
+
         //sync selected age range toggles
         if (indexOfage65 && indexOfage75) {
             if (self.Cha2ds2_selected().indexOf(indexOfage75) > self.Cha2ds2_selected().indexOf(indexOfage65)) {
@@ -567,22 +607,43 @@ function formObject() {
             }
         }
 
+        if (indexOfage75 && indexOfage85) {
+            if (self.Cha2ds2_selected().indexOf(indexOfage85) > self.Cha2ds2_selected().indexOf(indexOfage75)) {
+                self.Cha2ds2_selected.remove(indexOfage75);
+            } else {
+                self.Cha2ds2_selected.remove(indexOfage85);
+            }
+        }
+        if (indexOfage65 && indexOfage85) {
+            if (self.Cha2ds2_selected().indexOf(indexOfage85) > self.Cha2ds2_selected().indexOf(indexOfage65)) {
+                self.Cha2ds2_selected.remove(indexOfage65);
+            } else {
+                self.Cha2ds2_selected.remove(indexOfage85);
+            }
+        }
+
+        let $age = self.Age();
+
         indexOfage65 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
             return item.htmlID === 'cv2-age65';
         });
-        if (indexOfage65 != null && parseFloat(self.Age()) < 65) {
-            self.Age('');
-        }
-        if (indexOfage65 != null && parseFloat(self.Age()) > 74) {
-            self.Age('');
-        }
-        indexOfage75 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
-            return item.htmlID === 'cv2-age75';
-        });
-        if (indexOfage75 != null && parseFloat(self.Age()) < 75) {
+        if (indexOfage65 != null && (parseFloat($age) < 65 || parseFloat($age) > 74)) {
             self.Age('');
         }
 
+        indexOfage75 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+            return item.htmlID === 'cv2-age75';
+        });
+        if (indexOfage75 != null && (parseFloat($age) < 75 || parseFloat($age) > 84)) {
+            self.Age('');
+        }
+
+        indexOfage85 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+            return item.htmlID === 'cv2-age85';
+        });
+        if (indexOfage85 != null && parseFloat($age) < 85) {
+            self.Age('');
+        }
         //calcualte score
         if (self.Cha2ds2_selected().length > 0) {
             for (var i in self.Cha2ds2_selected()) {
@@ -623,13 +684,13 @@ function formObject() {
         if (Score > 0) {
             self.Cha2ds2_Score(Score);
         } else {
-            if ((self.Age() < 65 && self.Age() !== '') || self.Gender() !== undefined) {
+            if (($age < 65 && $age !== '') || self.Gender() !== undefined) {
                 self.Cha2ds2_Score(0);
             } else {
                 self.Cha2ds2_Score('');
             }
         }
-        if (!indexOfage75 && !indexOfage65 && (self.Age() !== '' && self.Age() >= 65)) {
+        if (!indexOfage75 && !indexOfage65 && !indexOfage85 && ($age !== '' && $age >= 65)) {
             self.Age('');
         }
     });
@@ -639,6 +700,10 @@ function formObject() {
      * new CHA2DS2-VASc score logic! please refer stroke risk model comparison excel
      */
     self.garfieldAFStrokeCoeff = { 'VKA': -0.352373263, 'DOAC': -0.572199357, 'BASE': 0.9925445321 };
+    self.mortalityCoefficients = { 'VKA': -0.18593561, 'DOAC': -0.414591263, 'BASE': 0.9790643336 };
+    self.onDOAC = ko.observable(false);
+    self.onVKA = ko.observable(false);
+
     self.CHDSScore = ko.computed(() => {
         let _score = null;
         let $age = self.Age();
@@ -681,7 +746,7 @@ function formObject() {
     self.CHDSMagnitude = ko.pureComputed(() => {
         if (self.CHDSScore() !== null) {
             // console.log(`CHDS : ${self.annualRiskOfStrokeCHADS2VascValues[self.CHDSScore()]} %`);
-            return `${self.annualRiskOfStrokeCHADS2VascValues[self.CHDSScore()]} %`;
+            return `${self.annualRiskOfStrokeCHADS2VascValues[self.CHDSScore()]}%`;
         }
         return '';
     }, self);
@@ -780,12 +845,58 @@ function formObject() {
 
     self.GARFIELDMagnitude = ko.pureComputed(() => {
         if (self.GARFIELDScore())
-            return `${((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1)} %`;
+            return `${((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1)}%`;
         return '';
     });
 
-    self.onDOAC = ko.observable(false);
-    self.onVKA = ko.observable(false);
+    self.MortalityScore = ko.pureComputed(() => {
+        let score = null;
+        let $age = self.Age();
+        let $dbp = self.dbp();
+        let $gender = self.Gender();
+        let $pulse = self.pulse();
+        let $units = self.CrClUnits();
+
+        if ($age)
+            score += $age <= 65 ? (1 * ($age - 65) * 0.031050027) : $age > 65 ? 1 * ($age - 65) * 0.064594824 : 0;
+
+        if ($gender && $gender.text === 'Female')
+            score += -0.306202287;
+
+        if ($dbp)
+            score += $dbp <= 80 ? ($dbp - 80) * -0.019304333 : 0;
+
+        if ($pulse && $pulse <= 120)
+            score += ($pulse - 120) * 0.007678035;
+
+        score += self.Ethnicity() ? self.Ethnicity() : 0;
+
+        if ($units && self.Weight())
+            score += self.Weight() <= 75 ? (self.Weight() - 75) * -0.021535182 : 0;
+        else
+            score += !self.Weight() ? 0 : self.Weight() <= 165.3465 ? (self.Weight() - 165.3465) * -0.009768206 : 0;
+
+        let $riskFactorIDs = ['0', '3', '4', '9', '10', '5', '11', '12']; // check formdata.js
+
+        ko.utils.arrayForEach(self.Cha2ds2_selected(), function (item) {
+            if ($riskFactorIDs.includes(item.id)) {
+                score += item.mortalValue;
+            }
+        });
+        return score;
+    }, self);
+
+    self.MortalityRisk = ko.pureComputed(() => {
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore()))) * 100).toFixed(2) : '';
+    });
+
+    self.MortalityVKA = ko.pureComputed(() => {
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.VKA))) * 100).toFixed(2) : '';
+    });
+
+    self.MortalityDOAC = ko.pureComputed(() => {
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.DOAC))) * 100).toFixed(2) : '';
+    });
 
     self.HighestRiskProfile = ko.computed(() => {
         let _chds = self.CHDSMagnitude() ? parseFloat(self.CHDSMagnitude()) : 0;
@@ -794,11 +905,7 @@ function formObject() {
         let _gf = self.GARFIELDMagnitude() ? parseFloat(self.GARFIELDMagnitude()) : 0;
         // debugger;
         if ((_chds + _atria + _gf) === 0)
-            return {
-                riskName: '',
-                riskChance: '',
-                riskProfile: ''
-            };
+            return { riskName: '', riskChance: '', riskProfile: '' };
 
         if (_chds > _atria && _chds > _gf) {
             return {
@@ -819,11 +926,7 @@ function formObject() {
                 riskProfile: `${self.GARFIELDProfile()} Risk`
             };
         }
-        return {
-            riskName: '',
-            riskChance: '',
-            riskProfile: ``
-        };
+        return { riskName: '', riskChance: '', riskProfile: '' };;
     });
 
     self.GFAdjVKA = ko.computed(() => {
@@ -845,7 +948,7 @@ function formObject() {
 
     self.GFAbsVKA = ko.pureComputed(() => {
         let _gfm = self.GARFIELDMagnitude();
-        if (!_gfm || !self.AdjVKA())
+        if (!_gfm || !self.GFAdjVKA())
             return '';
         return (parseFloat(_gfm) - self.GFAdjVKA()).toFixed(1);
     }, self);
@@ -873,13 +976,6 @@ function formObject() {
             return '';
         return (parseFloat(_gfm) - self.GFAdjDOAC()).toFixed(1);
     }, self);
-
-
-    self.garfieldDOACAdjRisk = ko.observable({
-        rel: 0,
-        abs: 0,
-        adj: 0
-    });
 
     self.Hasbled_Score = ko.observable(0);
     /**
@@ -1026,6 +1122,16 @@ function formObject() {
         self.SerumCrStatus('question');
         self.WeightStatus('question');
         $('#creatinineClearance .collapsable-panel').show();
+        if (self.CrClUnits()) {
+            if (self.piWeight() !== undefined && self.piWeight() !== '') {
+                self.piWeight((parseFloat(self.piWeight()) * 0.453592).toFixed(1));
+            }
+        } else {
+            if (self.piWeight() !== undefined && self.piWeight() !== '') {
+                self.piWeight((parseFloat(self.piWeight()) * 2.20462).toFixed(1));
+            }
+        }
+        self.piWeightStatus('question');
     });
     self.PIUnits.subscribe(function () {
         if (self.PIUnits()) {
@@ -1185,9 +1291,9 @@ function formObject() {
             }
             else {
                 if (parseFloat(self.CrCL()) < 15) {
-                    self.selectedTreatment().dose('Contraindicated');
-                    self.IsContraindicated(true);
-                    self.RenalDoseInfoText('Lack of evidence for use in patients with CrCl <15');
+                    self.selectedTreatment().dose('2.5 mg twice daily');
+                    //self.IsContraindicated(true);
+                    //self.RenalDoseInfoText('Consider weight, age and hepatic function when prescribing apixaban. Adjustment may be based on age and weight only.');
                 }
                 else {
                     self.selectedTreatment().dose('5 mg twice daily');
@@ -1205,7 +1311,7 @@ function formObject() {
             else if (parseFloat(self.CrCL()) < 15) {
                 self.selectedTreatment().dose('Contraindicated');
                 self.IsContraindicated(true);
-                self.RenalDoseInfoText('Lack of evidence for use in patients with CrCl <15');
+                self.RenalDoseInfoText('Not recommended for use in patients with <15 mL/min CrCl');
             }
             else {
                 self.selectedTreatment().dose('150 mg twice daily');
@@ -1230,8 +1336,9 @@ function formObject() {
             }
             else {
                 if (parseFloat(self.CrCL()) < 15) {
-                    self.selectedTreatment().dose('Not recommended');
-                    self.RenalDoseInfoText('Lack of evidence for use in patients with CrCl <15');
+                    self.selectedTreatment().dose('Contraindicated');
+                    self.IsContraindicated(true);
+                    self.RenalDoseInfoText('Not recommended for use in patients with <15 mL/min CrCl');
                 }
             }
         }
@@ -1288,7 +1395,7 @@ function formObject() {
         function () {
             var R = '';
             if (self.Cha2ds2_Score() !== undefined && self.Cha2ds2_Score() !== '' && self.selectedTreatment().text !== undefined) {
-                R = self.annualRiskOfStrokeNoTherapyValues[self.Cha2ds2_Score()];
+                R = self.annualRiskOfStrokeCHADS2VascValues[self.Cha2ds2_Score()];
                 R = parseFloat(Math.round(R * 100) / 100).toFixed(1);
             }
             return R;
@@ -1401,7 +1508,7 @@ function formObject() {
                 return false
             }
             return true;*/
-            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined) {
+            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined && self.dbp() && self.pulse() && self.Ethnicity() && self.piWeight()) {
                 return false
             }
             return true;
@@ -1418,28 +1525,6 @@ function formObject() {
                     return appmodel.FormData.advices[0];
             }
             return appmodel.FormData.advices[3];
-            // if (self.Gender() === undefined || self.Gender() === null) {
-            //     return appmodel.FormData.advices[3];
-            // } else if (self.Gender().value === "1") {
-            //     //Patient is male
-            //     if (self.Cha2ds2_Score() === 0) {
-            //         return appmodel.FormData.advices[0];
-            //     } else if (self.Cha2ds2_Score() === 1) {
-            //         return appmodel.FormData.advices[1];
-            //     } else {
-            //         return appmodel.FormData.advices[2];
-            //     }
-
-            // } else {
-            //     //Patient is female
-            //     if (self.Cha2ds2_Score() === 1) {
-            //         return appmodel.FormData.advices[0];
-            //     } else if (self.Cha2ds2_Score() === 2) {
-            //         return appmodel.FormData.advices[1];
-            //     } else {
-            //         return appmodel.FormData.advices[2];
-            //     }
-            // }
         }
     );
     self.CalCrCl = ko.observable(false);
@@ -1515,6 +1600,15 @@ function formObject() {
             return item.htmlID === 'hb-liverfunction';
         });
         return liver ? true : false;
+    }
+
+    self.getBenefit = (magnitude) => {
+        let _ = !magnitude ? 0 : !isNaN(parseFloat(magnitude)) ? parseFloat(magnitude) : 0;
+        if (_ === 0)
+            return 'Unavailable';
+        _ = _ / 100;
+        _ = 1 / _;
+        return `1 in ${Math.round(_)}`;
     }
 }
 

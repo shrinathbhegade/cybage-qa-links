@@ -20,22 +20,28 @@ var formdata = {
 		{ text: 'Male', value: '1' },
 		{ text: 'Female', value: '0.85' }
 	],
-	ethnicity: ["African American", "Asian", "Caucasian", "Hispanic/Latino", "Other"],
+	ethnicity: [
+		{ id: 0, name: "African American", value: 0.375675102 },
+		{ id: 1, name: "Asian", value: -0.609609055 },
+		{ id: 2, name: "Caucasian", value: 0 },
+		{ id: 3, name: "Hispanic/Latino", value: 0.157023564 },
+		{ id: 4, name: "Other", value: 0.375675102 }
+	],
 	cha2ds2: [
-		{ garfieldMultplr: 0.233182644, id: '0', hasTooltip: true, isDisabled: false, htmlID: 'cv2-chflv', text: 'Congestive heart failure / LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction.', emailText: 'CHF/LV dysfunction' },
-		{ garfieldMultplr: 0, id: '1', hasTooltip: true, isDisabled: false, htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment', emailText: 'Hypertension' },
-		{ garfieldMultplr: 0, id: '2', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age75', text: 'Age 75-84 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
-		{ garfieldMultplr: 0.211995445, id: '3', hasTooltip: true, isDisabled: false, htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin', emailText: 'Diabetes' },
-		{ garfieldMultplr: 0.800863063, id: '4', hasTooltip: true, isDisabled: false, htmlID: 'cv2-tiastroke', text: 'Previous stroke or TIA', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism. Includes any history of cerebral ischemia', emailText: 'Stroke/TIA/TE' },
-		{ garfieldMultplr: 0.197919709, id: '5', hasTooltip: true, isDisabled: false, htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque', emailText: 'Vascular disease' },
-		{ garfieldMultplr: 0, id: '6', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
-		{ garfieldMultplr: 0, id: '7', hasTooltip: true, isDisabled: true, htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female sex confers higher risk in some risk models', emailText: 'Female' },
-		{ garfieldMultplr: 0, id: '8', hasTooltip: false, isDisabled: true, htmlID: 'cv2-age85', text: 'Age ≥ 85 yrs', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ garfieldMultplr: 0.349516938, id: '9', hasTooltip: true, isDisabled: false, htmlID: 'cv2-renal', text: 'Renal disease', value: '1', showInfo: true, tooltipTitle: 'Moderate to severe chronic kidney disease (CKD class III-V)', emailText: '' },
-		{ garfieldMultplr: 0.478831506, id: '10', hasTooltip: true, isDisabled: false, htmlID: 'cv2-current_smoker', text: 'Current smoker', value: '1', showInfo: true, tooltipTitle: 'Defined as cigarette smoker based on patient population studied in relevant clinical trials. use clinical discretion in regards to patients who use e-cigarettes and other tobacco products', emailText: '' },
-		{ garfieldMultplr: 0.513221391, id: '11', hasTooltip: false, isDisabled: false, htmlID: 'cv2-dementia', text: 'Dementia', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ garfieldMultplr: 0.29883967, id: '12', hasTooltip: false, isDisabled: false, htmlID: 'cv2-prev_bleed', text: 'Previous bleeding', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ garfieldMultplr: 0, id: '13', hasTooltip: true, isDisabled: false, htmlID: 'cv2-proteinuria', text: 'Proteinuria', value: '1', showInfo: true, tooltipTitle: 'Elevated protein in the urine', emailText: '' }
+		{ id: '0', garfieldMultplr: 0.233182644, mortalValue: 0.693789082, hasTooltip: true, isDisabled: false, htmlID: 'cv2-chflv', text: 'CHF/LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction.', emailText: 'CHF/LV dysfunction' },
+		{ id: '1', garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment', emailText: 'Hypertension' },
+		{ id: '2', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age75', text: 'Age 75-84 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
+		{ id: '3', garfieldMultplr: 0.211995445, mortalValue: 0.280133213, hasTooltip: true, isDisabled: false, htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin', emailText: 'Diabetes' },
+		{ id: '4', garfieldMultplr: 0.800863063, mortalValue: 0.26585298, hasTooltip: true, isDisabled: false, htmlID: 'cv2-tiastroke', text: 'Previous stroke or TIA', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism. Includes any history of cerebral ischemia', emailText: 'Stroke/TIA/TE' },
+		{ id: '5', garfieldMultplr: 0.197919709, mortalValue: 0.306120964, hasTooltip: true, isDisabled: false, htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque', emailText: 'Vascular disease' },
+		{ id: '6', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
+		{ id: '7', garfieldMultplr: 0, mortalValue: -0.306202287, hasTooltip: true, isDisabled: true, htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female sex confers higher risk in some risk models', emailText: 'Female' },
+		{ id: '8', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age85', text: 'Age ≥ 85 yrs', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ id: '9', garfieldMultplr: 0.349516938, mortalValue: 0.377903886, hasTooltip: true, isDisabled: false, htmlID: 'cv2-renal', text: 'Renal disease', value: '1', showInfo: true, tooltipTitle: 'Moderate to severe chronic kidney disease (CKD class III-V)', emailText: '' },
+		{ id: '10', garfieldMultplr: 0.478831506, mortalValue: 0.345481149, hasTooltip: true, isDisabled: false, htmlID: 'cv2-current_smoker', text: 'Current smoker', value: '1', showInfo: true, tooltipTitle: 'Defined as cigarette smoker based on patient population studied in relevant clinical trials. use clinical discretion in regards to patients who use e-cigarettes and other tobacco products', emailText: '' },
+		{ id: '11', garfieldMultplr: 0.513221391, mortalValue: 0.489453313, hasTooltip: false, isDisabled: false, htmlID: 'cv2-dementia', text: 'Dementia', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ id: '12', garfieldMultplr: 0.29883967, mortalValue: 0.385407386, hasTooltip: false, isDisabled: false, htmlID: 'cv2-prev_bleed', text: 'Previous bleeding', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
+		{ id: '13', garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-proteinuria', text: 'Proteinuria', value: '1', showInfo: true, tooltipTitle: 'Elevated protein in the urine', emailText: '' }
 	],
 	hasbledModifiable: [
 		{ id: '0', htmlID: 'hb-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Uncontrolled, >160 mmHg systolic (+1)', emailText: 'Hypertension' },
