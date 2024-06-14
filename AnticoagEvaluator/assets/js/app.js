@@ -385,6 +385,10 @@ $(function () {
         } else {
             e = '<br>';
         }
+        const weightUnit = appmodel.Form().CrClUnits() ? 'kg' : 'lbs';
+        const profile = appmodel.Form().HighestRiskProfile();
+        const serum = appmodel.Form().SerumCreatinine();
+        const crcl = appmodel.Form().CrCL();
         var currentdate = new Date();
         var listItems = '';
         var renalDose = '';
@@ -393,6 +397,7 @@ $(function () {
         var bodyArr = [];
         var a = 'mailto:?subject=' + appmodel.FormData.emailTemplate.subjectLine.replace('#genratedon#', datetime) + '&body=';
         listItems = appmodel.FormData.emailTemplate.patientInfo;
+
         if (appmodel.Form().Age() !== '' && appmodel.Form().Age() !== undefined) {
             if (parseFloat(appmodel.Form().Age()) >= 89) {
                 listItems = listItems.replace('#age#', 'Age: ≥ 89y');
@@ -401,31 +406,51 @@ $(function () {
                 listItems = listItems.replace('#age#', 'Age: ' + appmodel.Form().Age() + 'y');
             }
         }
+
         if (appmodel.Form().Gender() !== undefined) {
             listItems = listItems.replace('#gender#', 'Sex: ' + appmodel.Form().Gender().text);
         }
+
+        if (appmodel.Form().Ethnicity() !== undefined) {
+            let eth = appmodel.FormData.ethnicity.find(i => i.value == appmodel.Form().Ethnicity())
+            listItems = listItems.replace('#ethnicity#', 'Ethnicity: ' + eth.name);
+        }
+
+        listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().Weight()} ${weightUnit}`);
+        listItems = listItems.replace('#dbp#', `DBP: ${appmodel.Form().dbp()} mmHg`);
+        listItems = listItems.replace('#pulse#', `Weight: ${appmodel.Form().pulse()} bpm`);
+
         if ((appmodel.Form().Age() === '' || appmodel.Form().Age() === undefined) && appmodel.Form().Gender() === undefined) {
             listItems = '';
         }
         a = a + listItems.replace('#gender#', '').replace('#age#', '') + e;
+
         if (appmodel.Form().Cha2ds2_selected().length > 0) {
             listItems = '';
             ko.utils.arrayForEach(appmodel.Form().Cha2ds2_selected(), function (item) {
-                listItems += item.emailText + e;
+                if (item.canToggle)
+                    listItems += item.emailText + e;
             });
-            a = a + appmodel.FormData.emailTemplate.cha2ds2.replace('#cha2ds2score#', appmodel.Form().Cha2ds2_Score()).replace('#riskstatus#', appmodel.Form().Cha2ds2_ScoreMessage()).replace('#cha2ds2selected#', listItems) + e;
+            a = a + appmodel.FormData.emailTemplate.cha2ds2
+                .replace('#riskclass#', profile.riskProfile)
+                .replace('#riskmodel#', profile.riskName)
+                .replace('#riskmag#', profile.riskChance)
+                .replace('#cha2ds2selected#', listItems) + e;
         }
-        listItems = appmodel.FormData.emailTemplate.renalFunction;
-        if (appmodel.Form().CrCL() !== '' && appmodel.Form().CrCL() !== undefined) {
-            listItems = listItems.replace('#crclscore#', 'CrCl: ' + appmodel.Form().CrCL() + ' mL/min');
-        }
-        if (appmodel.Form().SerumCreatinine() !== '' && appmodel.Form().SerumCreatinine() !== undefined) {
-            listItems = listItems.replace('#serum#', 'SCr: ' + parseFloat(appmodel.Form().SerumCreatinine()) + ' ' + appmodel.Form().SrCrUnit());
-        }
-        if ((appmodel.Form().SerumCreatinine() === '' || appmodel.Form().SerumCreatinine() === undefined) && (appmodel.Form().CrCL() === '' || appmodel.Form().CrCL() === undefined)) {
-            listItems = '';
-        }
-        a = a + listItems.replace('#crclscore#', '').replace('#serum#', '') + e;
+
+        /** Append renal function data */
+        // listItems = appmodel.FormData.emailTemplate.renalFunction;
+        // if (crcl !== '' && crcl !== undefined) {
+        //     listItems = listItems.replace('#crclscore#', 'CrCl: ' + crcl + ' mL/min');
+        // }
+        // if (serum !== '' && serum !== undefined) {
+        //     listItems = listItems.replace('#serum#', 'SCr: ' + parseFloat(serum) + ' ' + appmodel.Form().SrCrUnit());
+        // }
+        // if ((serum === '' || serum === undefined) && (crcl === '' || crcl === undefined)) {
+        //     listItems = '';
+        // }
+        // a = a + listItems.replace('#crclscore#', '').replace('#serum#', '') + e;
+
         a = a + 'BLEED RISK' + e;
         if (appmodel.Form().Hasbled_selected().length > 0) {
             listItems = '';
@@ -434,6 +459,7 @@ $(function () {
             });
             a = a + appmodel.FormData.emailTemplate.hasbled.replace('#hasbledscore#', appmodel.Form().Hasbled_Score()).replace('#hasbledselected#', listItems) + e;
         }
+
         if (appmodel.Form().OtherFactors().length > 0) {
             listItems = '';
             ko.utils.arrayForEach(appmodel.Form().OtherFactors(), function (item) {
@@ -441,20 +467,22 @@ $(function () {
             });
             a = a + appmodel.FormData.emailTemplate.concomitant.replace('#concomitantselected#', listItems) + e;
         }
-        listItems = appmodel.FormData.emailTemplate.therapyGuidance;
-        if (appmodel.Form().Cha2ds2_Score() !== undefined) {
-            listItems = listItems.replace('#riskinfo#', appmodel.Form().TherapyGuidanceAdvice().emailText);
-            /*if (appmodel.Form().Cha2ds2_Score() === 0) {
-                listItems = listItems.replace('#riskinfo#', 'Oral anticoagulation may be omitted due to low stroke risk');
-            }
-            if (appmodel.Form().Cha2ds2_Score() === 1) {
-                listItems = listItems.replace('#riskinfo#', 'Due to intermediate risk, consider no antithrombotic therapy or aspirin or oral anticoagulant');
-            }
-            if (appmodel.Form().Cha2ds2_Score() >= 2) {
-                listItems = listItems.replace('#riskinfo#', 'Oral anticoagulation therapy recommended due to high stroke risk');
-            }*/
+
+        listItems = appmodel.FormData.emailTemplate.mortality
+            .replace('#nooac', `${appmodel.Form().MortalityRisk()}%`)
+            .replace('#wdoac', `${appmodel.Form().MortalityDOAC()}%`)
+            .replace('#wwv', `${appmodel.Form().MortalityVKA()}%`);
+
+        a = a + listItems + e;
+
+        /** append THERAPY GUIDANCE info only if risk is not low */
+        if (profile.riskProfile !== 'Low Risk') {
+            listItems = appmodel.FormData.emailTemplate.therapyGuidance;
+            let guidance = profile.riskProfile === 'Intermediate Risk' ? 'Anticoagulation is reasonable due to intermediate stroke risk. (2a, A)' : 'Anticoagulation is recommended due to high stroke risk. (1, A)';
+            a = a + listItems.replace('#riskinfo#', guidance) + e;
         }
-        a = a + listItems.replace('#riskinfo#', '') + e;
+
+        /** append THERAPY DOSING info only if risk is not low */
         listItems = 'THERAPY DOSING';
         ko.utils.arrayForEach(appmodel.FormData.allTherapyOptions, function (item) {
             if (item.text === appmodel.FormData.therapyOptions.NoTherapy) {
@@ -462,39 +490,29 @@ $(function () {
             }
             listItems += e;
             renalDose = '';
-            if (item.text === appmodel.FormData.therapyOptions.Aspirin || item.text === appmodel.FormData.therapyOptions.AspirinClopidogrel) {
-                listItems += '-' + item.text + e;
-                listItems += 'StdDose:' + item.emailTemplate + e;
-            }
-            else if (item.text === appmodel.FormData.therapyOptions.Apixaban) {
+
+            if (item.text === appmodel.FormData.therapyOptions.Apixaban) {
                 listItems += '-' + item.text + e;
 
                 if (appmodel.Form().IsRenalCharacteristics()) {
                     renalDose = '2.5 mg BID';
                 }
                 else {
-                    if (appmodel.Form().CrCL() !== undefined && appmodel.Form().CrCL() !== '') {
-                        if (parseFloat(appmodel.Form().CrCL()) < 15) {
-                            renalDose = 'Contraindicated';
-                        }
-                        else {
-                            renalDose = '5 mg BID';
-                        }
-                    }
+                    renalDose = '5 mg BID';
                 }
                 if ((renalDose !== item.emailTemplate) && renalDose !== '') {
-                    listItems += 'Renal/Adj Dose (may also be based on age+weight only):' + renalDose + e;
+                    listItems += 'Renal/Adj Dose (may also be based on age+weight only): ' + renalDose + e;
                 }
-                listItems += 'StdDose:' + item.emailTemplate + e;
+                listItems += 'StdDose: ' + item.emailTemplate + e;
                 listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
             }
             else if (item.text === appmodel.FormData.therapyOptions.Dabigatran) {
                 listItems += '-' + item.text + e;
-                if (appmodel.Form().CrCL() !== undefined && appmodel.Form().CrCL() !== '') {
-                    if (parseFloat(appmodel.Form().CrCL()) >= 15 && parseFloat(appmodel.Form().CrCL()) <= 30) {
+                if (crcl !== undefined && crcl !== '') {
+                    if (parseFloat(crcl) >= 15 && parseFloat(crcl) <= 30) {
                         renalDose = '75 mg BID';
                     }
-                    else if (parseFloat(appmodel.Form().CrCL()) < 15) {
+                    else if (parseFloat(crcl) < 15) {
                         renalDose = 'Contraindicated';
                     }
                     else {
@@ -502,56 +520,51 @@ $(function () {
                     }
                 }
                 if ((renalDose !== item.emailTemplate) && renalDose !== '') {
-                    listItems += 'Renal/Adj Dose:' + renalDose + e;
+                    listItems += 'Renal/Adj Dose: ' + renalDose + e;
                 }
-                listItems += 'StdDose:' + item.emailTemplate + e;
+                listItems += 'StdDose: ' + item.emailTemplate + e;
                 listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
             }
             else if (item.text === appmodel.FormData.therapyOptions.Edoxaban) {
                 listItems += '-' + item.text + e;
-                if (appmodel.Form().CrCL() !== undefined && appmodel.Form().CrCL() !== '') {
-                    if (parseFloat(appmodel.Form().CrCL()) > 95) {
+                if (crcl !== undefined && crcl !== '') {
+                    if (parseFloat(crcl) > 95) {
                         renalDose = 'Contraindicated';
                     }
-                    else if (parseFloat(appmodel.Form().CrCL()) > 50 && parseFloat(appmodel.Form().CrCL()) <= 95) {
+                    else if (parseFloat(crcl) > 50 && parseFloat(crcl) <= 95) {
                         item.emailTemplate = '60 mg QD';
                         renalDose = '60 mg QD';
                     }
-                    else if (parseFloat(appmodel.Form().CrCL()) >= 15 && parseFloat(appmodel.Form().CrCL()) <= 50) {
+                    else if (parseFloat(crcl) >= 15 && parseFloat(crcl) <= 50) {
                         renalDose = '30 mg QD';
                     }
                     else {
-                        if (parseFloat(appmodel.Form().CrCL()) < 15) {
-                            renalDose = 'Not recommended';
-                        }
-                    }
-                }
-                if ((renalDose !== item.emailTemplate) && renalDose !== '') {
-                    listItems += 'Renal/Adj Dose:' + renalDose + e;
-                }
-                listItems += 'StdDose:' + item.emailTemplate + e;
-                listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
-            }
-            else if (item.text === appmodel.FormData.therapyOptions.Rivaroxaban) {
-                listItems += '-' + item.text + e;
-                if (appmodel.Form().CrCL() !== undefined && appmodel.Form().CrCL() !== '') {
-                    if (parseFloat(appmodel.Form().CrCL()) > 50) {
-                        item.emailTemplate = '20 mg QD w/evening meal';
-                        renalDose = '20 mg QD w/evening meal';
-                    }
-                    else if (parseFloat(appmodel.Form().CrCL()) >= 15 && parseFloat(appmodel.Form().CrCL()) <= 50) {
-                        renalDose = '15 mg QD w/evening meal';
-                    }
-                    else {
-                        if (parseFloat(appmodel.Form().CrCL()) < 15) {
+                        if (parseFloat(crcl) < 15) {
                             renalDose = 'Contraindicated';
                         }
                     }
                 }
                 if ((renalDose !== item.emailTemplate) && renalDose !== '') {
-                    listItems += 'Renal/Adj Dose:' + renalDose + e;
+                    listItems += 'Renal/Adj Dose: ' + renalDose + e;
                 }
-                listItems += 'StdDose:' + item.emailTemplate + e;
+                listItems += 'StdDose: ' + item.emailTemplate + e;
+                listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
+            }
+            else if (item.text === appmodel.FormData.therapyOptions.Rivaroxaban) {
+                listItems += '-' + item.text + e;
+                if (crcl !== undefined && crcl !== '') {
+                    if (parseFloat(crcl) > 50) {
+                        item.emailTemplate = '20 mg QD w/evening meal';
+                        renalDose = '20 mg QD w/evening meal';
+                    }
+                    else {
+                        renalDose = '15 mg QD w/evening meal';
+                    }
+                }
+                if ((renalDose !== item.emailTemplate) && renalDose !== '') {
+                    listItems += 'Renal/Adj Dose: ' + renalDose + e;
+                }
+                listItems += 'StdDose: ' + item.emailTemplate + e;
                 listItems += 'Full Prescribing Info ' + item.drugInfoLink + e;
             }
             else {
@@ -563,7 +576,7 @@ $(function () {
             }
         });
         a = a + listItems + e;
-        a = a + 'Therapy risk/benefit data: http://www.sparctool.com';
+
         if (!isNativeApplication) {
             this.href = a;
         } else {
@@ -644,4 +657,41 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+const openTable8 = () => {
+    Swal.fire({
+        title: "",
+        // icon: "info",
+        width: 600,
+        html: table8.contents,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: `Close`,
+        confirmButtonAriaLabel: "",
+        cancelButtonText: "",
+        cancelButtonAriaLabel: ""
+    });
+}
+
+const openTable19 = () => {
+    Swal.fire({
+        title: "",
+        // icon: "info",
+        width: 1000,
+        html:
+            `${table19.header}
+           ${table19.contents}
+            ${table19.footer}
+            `
+        ,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: `Close`,
+        confirmButtonAriaLabel: "",
+        cancelButtonText: "",
+        cancelButtonAriaLabel: ""
+    });
 }

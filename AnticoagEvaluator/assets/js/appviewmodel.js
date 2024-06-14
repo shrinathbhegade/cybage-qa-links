@@ -919,25 +919,25 @@ function formObject() {
         let _gf = self.GARFIELDMagnitude() ? parseFloat(self.GARFIELDMagnitude()) : 0;
         // debugger;
         if ((_chds + _atria + _gf) === 0)
-            return { riskName: '', riskChance: '', riskProfile: '' };
+            return { riskName: '', riskChance: '', riskProfile: 'Low Risk' };
 
-        if (_chds > _atria && _chds > _gf) {
+        if ((_chds > _atria && _chds > _gf) || (_chds == _gf || _chds == _atria)) {
             return {
                 riskName: 'CHA₂-DS₂-VASc',
                 riskChance: self.CHDSMagnitude(),
                 riskProfile: `${self.CHDSProfile()} Risk`
+            };
+        } else if ((_gf > _chds && _gf > _atria) || (_gf == _atria)) {
+            return {
+                riskName: 'GARFIELD-AF',
+                riskChance: self.GARFIELDMagnitude(),
+                riskProfile: `${self.GARFIELDProfile()} Risk`
             };
         } else if (_atria > _chds && _atria > _gf) {
             return {
                 riskName: 'ATRIA',
                 riskChance: self.ATRIAMagnitude(),
                 riskProfile: `${self.ATRIAProfile()} Risk`
-            };
-        } else if (_gf > _chds && _gf > _atria) {
-            return {
-                riskName: 'GARFIELD-AF',
-                riskChance: self.GARFIELDMagnitude(),
-                riskProfile: `${self.GARFIELDProfile()} Risk`
             };
         }
         return { riskName: '', riskChance: '', riskProfile: '' };;
@@ -1097,7 +1097,7 @@ function formObject() {
         if (self.CalCrCl()) {
             if (self.IsAgeAlter()) {
                 self.AgeStatus('question custom_info');
-                self.AgeErrorMsg('Age value differs from that previously entered and has altered CHA<sub>2</sub>DS<sub>2</sub>-VASc score.');
+                self.AgeErrorMsg('Age value differs from that previously entered and has altered CHA₂DS₂-VASc score.');
             }
             if (self.IsGenderAlter()) {
                 self.CrClSexStatus('question custom_info');
@@ -1522,7 +1522,7 @@ function formObject() {
                 return false
             }
             return true;*/
-            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined && self.dbp() && self.pulse() && (self.Ethnicity() >= 0) && self.piWeight()) {
+            if ((self.Age() !== "" && self.Age() != undefined) && self.Gender() != undefined && self.dbp() && self.pulse() && (self.Ethnicity() !== undefined) && self.piWeight()) {
                 return false
             }
             return true;

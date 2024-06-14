@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/custom_style.css"> -->
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <link rel="stylesheet" href="assets/sweetalert2.css">
     <link rel="stylesheet" href="assets/css/style-AntiCoag.css">
     <link rel="stylesheet" href="assets/css/custom_style.css">
     <link rel="icon" href="assets/img/favicon.ico">
@@ -39,8 +40,8 @@
             <header class="header page">
                 <span class="logo">
                     <a href="#!/content/calculator">
-                        <img alt="AntiCoag Logo" src="assets/img/AntiCoag_Logo.png" width="377px;" height="58px;">
-                        <!-- <img alt="AntiCoag Logo" src="assets/img/accanticoaglogo.png" width="377px;" height="58px;"> -->
+                        <!-- <img alt="AntiCoag Logo" src="assets/img/AntiCoag_Logo.png" width="377px;" height="58px;"> -->
+                        <img alt="AntiCoag Logo" src="assets/img/accanticoaglogo.png" width="377px;" height="73px;">
                     </a>
                 </span>
                 <ul class="nav tabs primary condensable small">
@@ -74,14 +75,14 @@
                 <div style="margin: 0 !important;"
                     class="large-9 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
                     <div class="row" style="display: inline-flex;">
-                        <div class="large-8 medium-12 small-10 columns scorebar-panel-left">
+                        <div style="margin-left: 5em;" class="large-8 medium-12 small-10 columns scorebar-panel-left">
                             <div class="scorebar-panel-left-inner">
                                 <div class="top scorebarlabel">Annual Stroke Risk Magnitude</div>
                                 <div class="scorebar-score-container">
                                     <div class="scorebar-panel">
                                         <div class="scorebar-count"
                                             data-bind="text:$root.Form().HighestRiskProfile().riskChance"></div>
-                                        <div style="margin-left: 1.5em;"
+                                        <div data-bind="css:{'m-l-scorbar': $root.Form().HighestRiskProfile().riskChance != '' }"
                                             class="scorebar-count-suffix suffix-blocked-width">
                                             <span class="scorebar_label"
                                                 data-bind="text: $root.Form().HighestRiskProfile().riskName"></span>
@@ -146,8 +147,8 @@
 
                 <div class="row">
                     <div class=" medium-12 row collapse">
-                        <div class="medium-5 small-5 columns">
-                            <h1>Calculate Risk</h1>
+                        <div class="medium-5 small-6 columns">
+                            <h1 class="nomargin-t-b">Calculate Risk</h1>
                         </div>
                         <!-- <div class="medium-4 small-4 units-outer columns">
                             <span class="switch-value" for="">Select Units</span>
@@ -159,7 +160,7 @@
                                 </label>
                             </div>
                         </div> -->
-                        <div class="medium-6 small-4 columns">
+                        <div class="medium-6 small-12 columns">
 
                             <div style="margin-top: 6%;" class="medium-7 small-7 units-outer columns">
                                 <span class="switch-value" for="">Select Units</span>
@@ -347,20 +348,23 @@
                         <div class="question">
                             <div class="input-holder" data-bind="foreach:$root.FormData.cha2ds2">
                                 <div class="switch-input-space small-12 medium-6 large-4 columns round end">
-                                    <div class="switch check-visible round">
-                                        <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
+                                    <div class="toggle-padding" data-bind="css:{'no-toggle': !canToggle}">
+                                        <div class="switch check-visible round">
+                                            <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
                                             checked: $root.Form().Cha2ds2_selected" id="hb-check2">
-                                        <label for="hb-check2"
-                                            data-bind="attr: {'for': htmlID}, click: htmlID === 'cv2-age65' ? setPopups: htmlID === 'cv2-age75' ? setPopups: htmlID === 'cv2-female' ? setPopups: htmlID === 'cv2-age85' ? setPopups : null"></label>
+                                            <label for="hb-check2"
+                                                data-bind="attr: { 'for': htmlID }, click: htmlID === 'cv2-age65' ? setPopups: htmlID === 'cv2-age75' ? setPopups: htmlID === 'cv2-female' ? setPopups: htmlID === 'cv2-age85' ? setPopups : null"></label>
+                                        </div>
+
+                                        <label class="switch-value round">
+                                            <span data-bind="text:text"></span>&nbsp;
+                                            <!-- ko if: hasTooltip -->
+                                            <i class="fa fa-info-circle tip-top"
+                                                data-bind="visible: showInfo, attr: { title: tooltipTitle }"
+                                                data-tooltip></i>
+                                            <!-- /ko -->
+                                        </label>
                                     </div>
-                                    <label class="switch-value round">
-                                        <span data-bind="text:text"></span>&nbsp;
-                                        <!-- ko if: hasTooltip -->
-                                        <i class="fa fa-info-circle tip-top"
-                                            data-bind="visible: showInfo, attr: { title: tooltipTitle }"
-                                            data-tooltip></i>
-                                        <!-- /ko -->
-                                    </label>
                                 </div>
                                 <!-- ko if: (htmlID === 'cv2-age75' || htmlID === 'cv2-age65' || htmlID === 'cv2-female' || htmlID === 'cv2-age85')-->
                                 <div data-bind="attr:{'id':`${htmlID}-popup`}, class:htmlID"
@@ -559,20 +563,20 @@
                             <h4>Non Modifiable</h4>
                             <div class="input-holder" data-bind="foreach:$root.FormData.hasbledNonModifiable">
                                 <div class="switch-input-space">
-
-                                    <div class="switch check-visible round">
-                                        <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
+                                    <div data-bind="css:{'toggle-padding no-toggle': htmlID === 'hb-age65'}">
+                                        <div class="switch check-visible round">
+                                            <input type="checkbox" data-bind="attr: {'id': htmlID, 'disabled':isDisabled},checkedValue: $data,
                                         checked: $root.Form().Hasbled_selected">
-                                        <label for="hb-check2"
-                                            data-bind="attr: {'for': htmlID}, click: htmlID === 'hb-age65' ? setPopups:null"></label>
+                                            <label for="hb-check2"
+                                                data-bind="attr: {'for': htmlID}, click: htmlID === 'hb-age65' ? setPopups:null"></label>
+                                        </div>
+                                        <label data-bind="attr:{'id': `${htmlID}pop`}" class="switch-value round">
+                                            <span data-bind="text:text"></span>&nbsp;
+                                            <i class="fa fa-info-circle tip-top"
+                                                data-bind="visible: showInfo, attr: { title: tooltipTitle }"
+                                                data-tooltip></i>
+                                        </label>
                                     </div>
-                                    <label data-bind="attr:{'id': `${htmlID}pop`}" class="switch-value round">
-                                        <span data-bind="text:text"></span>&nbsp;
-                                        <i class="fa fa-info-circle tip-top"
-                                            data-bind="visible: showInfo, attr: { title: tooltipTitle }"
-                                            data-tooltip></i>
-                                    </label>
-
                                 </div>
                                 <!-- ko if: htmlID === 'hb-age65' -->
                                 <div data-bind="attr:{'id':`${htmlID}-popup`}" class="page-wrapper bleedrisk-popup"
@@ -874,7 +878,7 @@
                                                                                         value differs from that
                                                                                         previously entered and has
                                                                                         altered
-                                                                                        CHA<sub>2</sub>DS<sub>2</sub>-VASc
+                                                                                        CHA₂DS₂-VASc
                                                                                         score.</span>
                                                                                 </small>
                                                                             </div>
@@ -1268,7 +1272,7 @@
                                         <p>
                                             <i data-bind="visible: $root.Form().selectedTreatment().id==='0'">Based on
                                                 Table 7 from the 2014 AHA/ACC/HRS Atrial Fibrillation Guideline
-                                                comparing CHA<sub>2</sub>DS<sub>2</sub>-VASc stroke risk
+                                                comparing CHA₂DS₂-VASc stroke risk
                                                 stratification.</i>
                                             <i data-bind="visible: $root.Form().selectedTreatment().id!=='0'">Based on
                                                 SPARC Tool developed by Peter Loewen, ACPR, Pharm.D., FCSHP</i> <br><br>
@@ -1496,255 +1500,69 @@
                 <div class="row group-section">
                     <div class="row">
                         <div class="medium-12 small-12 columns">
-                            <div class="group-section advice-card panelAdviceContainer">
-                                <span class="viewLess" style="display: none;">
-                                    <a class="link viewless" onclick="advicePanelHide.bind(this)()">
-                                        <h3 class="highlighted">Hide Details&nbsp;<i class="fa fa-arrow-up fa-6"></i>
-                                        </h3>
-                                    </a>
-                                </span>
-                                <span class="viewMore" style="display: inline;">
-                                    <a onclick="advicePanelHide.bind(this)()" class="link left viewopen">
-                                        <h3 class="highlighted">View Select Full-Text Guideline Recommendations &nbsp;<i
-                                                class="fa fa-arrow-down fa-6"></i></h3>
-                                    </a>
-                                </span>
-                                <div class="panelAdvice" style="display: none;">
-                                    <b>2018 AFib Focused Update Recommendations. “New” and “Modified” indicate changes
-                                        between the 2013 Guideline and 2018 Focused Update. </b>
-                                    <table class="recommendationTable table">
-                                        <thead>
-                                            <tr class="recommendationLevel1">
-                                                <th colspan="3">Recommendations for Selecting an Anticoagulant
-                                                    Regimen–Balancing Risks and Benefits</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td> <b>COR</b> </td>
-                                                <td> <b>&nbsp;&nbsp;&nbsp;LOE&nbsp;&nbsp;&nbsp;</b> </td>
-                                                <td class="text-center"> <b>Recommendations</b> </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-A">
-                                                    A <br> B <br> B-R
-                                                </td>
-                                                <td>
-                                                    1. For patients with AF with an elevated CHA2DS2-VASc score of 2 or
-                                                    greater in men or 3 or greater in women, oral anticoagulants are
-                                                    recommended. <br>
-                                                    Options include: <br>
-                                                    <div style="margin-left: 25px">
-                                                        <ul style="list-style: disc;">
-                                                            <li>
-                                                                Warfarin (Level of Evidence: A)
-                                                            </li>
-                                                            <li>Dabigatran (Level of Evidence: B) </li>
-                                                            <li>Rivaroxaban (Level of Evidence: B) </li>
-                                                            <li>Apixaban (Level of Evidence: B), or</li>
-                                                            <li>Edoxaban (Level of Evidence: B-R) </li>
-                                                        </ul>
-                                                    </div>
-                                                    <p><b>MODIFIED:</b> This recommendation has been updated due to the
-                                                        approval of edoxaban, a new factor Xa inhibitor. More precision
-                                                        in the use of CHA2DS2-VASc scores is specified in subsequent
-                                                        recommendations. The LOE for warfarin, dabigatran, rivaroxaban,
-                                                        and apixaban have not been updated for greater granularity per
-                                                        the new LOE system. (Section 4.1 in the 2014 AF guideline).
-                                                        Additional information about the comparative effectiveness and
-                                                        bleeding risk of NOACs can be found in Section 4.2.2.2.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-A"> A </td>
-                                                <td>2. NOACs (dabigatran, rivaroxaban, apixaban, and edoxaban) are
-                                                    recommended over warfarin in NOAC eligible patients with AF (except
-                                                    with moderate to severe mitral stenosis or a mechanical heart
-                                                    valve).<br><br>
-                                                    <p><b>NEW:</b> Exclusion criteria are now defined as moderate to
-                                                        severe mitral stenosis or a mechanical heart valve. Considering
-                                                        all of the NOAC trials, the direct thrombin inhibitor and Factor
-                                                        Xa inhibitors were at least noninferior, and in some trials
-                                                        superior, to warfarin for preventing stroke and systemic
-                                                        embolism and had lower risks of serious bleeding. </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-A"> A </td>
-                                                <td>3. Among patients treated with warfarin, the INR should be
-                                                    determined at least weekly during initiation of anticoagulant
-                                                    therapy and at least monthly when anticoagulation (INR in range) is
-                                                    stable.<br><br>
-                                                    <p> <b>MODIFIED:</b> Antithrombotic changed to anticoagulant.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-B"> B </td>
-                                                <td>4. In patients with AF (except with moderate to severe mitral
-                                                    stenosis or a mechanical heart valve), the CHA2DS2-VASc score is
-                                                    recommended for assessment of stroke risk.<br><br>
-                                                    <p> <b>MODIFIED:</b> Exclusion criteria are now defined as moderate
-                                                        to severe mitral stenosis or a mechanical heart valve. Patients
-                                                        with AF with bioprosthetic heart valves are addressed in the
-                                                        supportive text. (Section 4.1 in the 2014 AF guideline).</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-B"> B </td>
-                                                <td>5. For patients with AF who have mechanical heart valves, warfarin
-                                                    is recommended.<br><br>
-                                                    <p><b>MODIFIED:</b> New information is included in the supportive
-                                                        text. </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-B"> B </td>
-                                                <td>6. Selection of anticoagulant therapy should be based on the risk of
-                                                    thromboembolism irrespective of whether the AF pattern is
-                                                    paroxysmal, persistent, or permanent.<br><br>
-                                                    <p><b>MODIFIED:</b> Antithrombotic changed to anticoagulant. </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-B"> B-NR </td>
-                                                <td>7. Renal function and hepatic function should be evaluated before
-                                                    initiation of a NOAC and should be reevaluated at least
-                                                    annually.<br><br>
-                                                    <p><b>MODIFIED:</b> Addition of evaluation for hepatic function, LOE
-                                                        updated from B to B-NR, and new evidence added. (Section 4.1 in
-                                                        the 2014 AF guideline) </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-C"> C </td>
-                                                <td>8. In patients with AF, anticoagulant therapy should be
-                                                    individualized based on shared decision making after discussion of
-                                                    the absolute risks and relative risks of stroke and bleeding, and
-                                                    the patient’s values and preferences.<br><br>
-                                                    <p><b>MODIFIED:</b> Antithrombotic changed to anticoagulant. </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-C"> C </td>
-                                                <td>9. For patients with atrial flutter, anticoagulant therapy is
-                                                    recommended according to the same risk profile used for AF.<br><br>
-                                                    <p><b>MODIFIED:</b> Antithrombotic changed to anticoagulant.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-C"> C </td>
-                                                <td>10. Reevaluation of the need for and choice of anticoagulant therapy
-                                                    at periodic intervals is recommended to reassess stroke and bleeding
-                                                    risks.<br><br>
-                                                    <p><b>MODIFIED:</b> Antithrombotic changed to anticoagulant.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORI"> I </td>
-                                                <td class="LOE-C"> C-EO </td>
-                                                <td>11. For patients with AF (except with moderate to severe mitral
-                                                    stenosis or a mechanical heart valve) who are unable to maintain a
-                                                    therapeutic INR level with warfarin, use of a NOAC is
-                                                    recommended.<br><br>
-                                                    <p><b>MODIFIED:</b> Exclusion criteria are now defined as moderate
-                                                        to severe mitral stenosis or a mechanical heart valve and this
-                                                        recommendation has been changed due to the approval of edoxaban.
-                                                        (Section 4.1 in the 2014 AF guideline) </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORIIa"> IIa </td>
-                                                <td class="LOE-B"> B </td>
-                                                <td>12. For patients with AF (except with moderate to severe mitral
-                                                    stenosis or a mechanical heart valve) and a CHA2DS2-VASc score of 0
-                                                    in men or 1 in women, it is reasonable to omit anticoagulant
-                                                    therapy.<br><br>
-                                                    <p> <b>MODIFIED:</b> Exclusion criteria are now defined as moderate
-                                                        to severe mitral stenosis or a mechanical heart valve. (Section
-                                                        4.1 in the 2014 AF guideline)</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORIIa"> IIa </td>
-                                                <td class="LOE-B"> B-NR </td>
-                                                <td>13. For patients with AF who have a CHA2DS2-VASc score of 2 or
-                                                    greater in men or 3 or greater in women, and who have end-stage
-                                                    chronic kidney disease (creatinine clearance [CrCl] &lt;15 mL/min)
-                                                    or are on dialysis, it is reasonable to prescribe warfarin (INR 2.0
-                                                    to 3.0) or apixaban for oral anticoagulation.<br><br>
-                                                    <p><b>MODIFIED:</b> New evidence has been added. LOE updated from B
-                                                        to B-NR. (Section 4.1 in the 2014 AF guideline) </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORIIb"> IIb </td>
-                                                <td class="LOE-B"> B-R </td>
-                                                <td>14. For patients with AF (except with moderate to severe mitral
-                                                    stenosis or a mechanical heart valve) and moderate to severe CKD
-                                                    [serum creatinine ≥1.5 mg/dl (apixaban), creatinine clearance 15 to
-                                                    30 mL/min (dabigatran, rivaroxaban), or creatinine clearance 15 to
-                                                    50 mL/min (edoxaban)] with an elevated CHA2DS2-VASc score, treatment
-                                                    with reduced doses of direct thrombin or factor Xa inhibitors may be
-                                                    considered (e.g., dabigatran, rivaroxaban, apixaban, or
-                                                    edoxaban).<br><br>
-                                                    <p><b>MODIFIED:</b> Exclusion criteria are now defined as moderate
-                                                        to severe mitral stenosis or a mechanical heart valve and this
-                                                        recommendation has been changed due to the approval of edoxaban.
-                                                        LOE updated from C to B-R. (Section 4.1 in the 2014 AF
-                                                        guideline) </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="CORIIb"> IIb </td>
-                                                <td class="LOE-C"> C-LD </td>
-                                                <td>15. For patients with AF (except with moderate to severe mitral
-                                                    stenosis or a mechanical heart valve) and a CHA2DS2-VASc score of 1
-                                                    in men and 2 in women, prescribing an oral anticoagulant to reduce
-                                                    thromboembolic stroke risk may be considered.<br><br>
-                                                    <p><b>MODIFIED:</b> Exclusion criteria are now defined as moderate
-                                                        to severe mitral stenosis or a mechanical heart valve and
-                                                        evidence was added to support separate risk scores by sex. LOE
-                                                        updated from C to C-LD. (Section 4.1 in the 2014 AF guideline)
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="No-Benifit"> III: <br> No Benefit </td>
-                                                <td class="LOE-C"> C-EO </td>
-                                                <td>16. In patients with AF and end-stage CKD or on dialysis, the direct
-                                                    thrombin inhibitor dabigatran, or the factor Xa inhibitors
-                                                    rivaroxaban or edoxaban are not recommended because of the lack of
-                                                    evidence from clinical trials that benefit exceeds risk.<br><br>
-                                                    <p><b>MODIFIED:</b> New data have been included. Edoxaban received
-                                                        FDA approval and has been added to the recommendation. LOE
-                                                        updated from C to C-EO. (Section 4.1 in the 2014 AF guideline)
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="Harm"> III: <br>Harm</td>
-                                                <td class="LOE-B"> B-R </td>
-                                                <td>17. The direct thrombin inhibitor dabigatran should not be used in
-                                                    patients with AF and a mechanical heart valve. <br><br>
-                                                    <p><b>MODIFIED:</b> Addition of evidence. LOE updated from B to B-R.
-                                                        Other NOACs are addressed in the supportive text. (Section 4.1
-                                                        in the 2014 AF guideline) </p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                            <h3 class="highlighted">Selected Guideline Resources</h3>
+                            <ul>
+                                <li>
+                                    <a onclick="openTable8()" target="_blank" rel="noopener noreferrer"
+                                        class="link">2023
+                                        Atrial Fibrillation
+                                        Guideline - Table 8: Three Validated Risk
+                                        Models for Stroke</a>
+                                </li>
+
+                                <li>
+                                    <a onclick="openTable19()" target="_blank" rel="noopener noreferrer"
+                                        class="link">2023 Atrial Fibrillation
+                                        Guideline - Table 19: Recommended Doses of Currently
+                                        Approved DOACs According to Renal Function</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 small-12 columns">
+                            <h3 class="highlighted">Patient Resources</h3>
+                            <ul>
+                                <li><a class="link" target="_blank" rel="noopener noreferrer"
+                                        href="https://www.cardiosmart.org/topics/atrial-fibrillation">Atrial
+                                        Fibrillation Patient Hub and Topic Center</a></li>
+                                <li><a class="link" target="_blank" rel="noopener noreferrer"
+                                        href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/infographic/atrial-fibrillation">What
+                                        is AFib? (infographic)</a></li>
+                                <li><a class="link" target="_blank" rel="noopener noreferrer"
+                                        href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/infographic/atrial-fibrillation-stroke-and-blood-thinners">Atrial
+                                        Fibrillation and Lowering Stroke Risk (infographic)</a></li>
+                                <li><a class="link" target="_blank" rel="noopener noreferrer"
+                                        href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/action-plan/your-action-plan-for-managing-atrial-fibrillation">Your
+                                        Action Plan for Managing Atrial Fibrillation</a></li>
+                                <li>CardioSmart Decision Aid Booklets and Videos:
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                                href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/decision-aid/afib-and-very-high-risk-for-stroke">Very
+                                                high risk for stroke decision aid booklet and video</a>
+                                        </li>
+                                        <li>
+                                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                                href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/decision-aid/afib-and-high-risk-for-stroke">High
+                                                risk for stroke decision aid booklet and video</a>
+                                        </li>
+                                        <li>
+                                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                                href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/decision-aid/afib-and-moderate-risk-for-stroke">Moderate
+                                                risk for stroke decision aid booklet and video</a>
+                                        </li>
+                                        <li>
+                                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                                href="https://www.cardiosmart.org/topics/atrial-fibrillation/assets/decision-aid/afib-and-low-risk-for-stroke">Low
+                                                risk for stroke decision aid booklet and video</a>
+                                        </li>
+
+                                </li>
+                            </ul>
+                            </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="row">
@@ -1819,7 +1637,7 @@
                                 <li>
                                     <p><a target="_blank" rel="noopener noreferrer"
                                             href="https://journal.chestnet.org/article/S0012-3692(10)60067-0/fulltext"
-                                            class="link">CHA<sub>2</sub>DS<sub>2</sub>-VASc</a>: Lip GY, Nieuwlaat R,
+                                            class="link">CHA₂DS₂-VASc</a>: Lip GY, Nieuwlaat R,
                                         Pisters R, Lane DA, Crijns HJ. Refining clinical risk stratification for
                                         predicting stroke and thromboembolism in atrial fibrillation using a novel risk
                                         factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010
@@ -1841,6 +1659,35 @@
                                         Prediction of creatinine clearance from serum creatinine. Nephron.
                                         1976;16(1):31-41. PubMed PMID: 1244564</p>
                                 </li>
+                                <li>
+                                    <p><a target="_blank" rel="noopener noreferrer"
+                                            href="https://www.ahajournals.org/doi/10.1161/JAHA.113.000250"
+                                            class="link">A New Risk Scheme to Predict Ischemic Stroke and Other
+                                            Thromboembolism in Atrial Fibrillation: The ATRIA Study Stroke
+                                            Risk Score</a>: Daniel E. Singer, Yuchiao Chang, Leila H. Borowsky, Margaret
+                                        C. Fang, Niela K. Pomernacki, Natalia Udaltsova, Kristi
+                                        Reynolds and Alan S. Go.
+                                        Journal of the American Heart Association. 19 Jun 2013;2:e000250</p>
+                                </li>
+                                <li>
+                                    <p><a target="_blank" rel="noopener noreferrer"
+                                            href="https://bmjopen.bmj.com/content/7/12/e017157" class="link">Improved
+                                            risk stratification of patients with atrial fibrillation: an integrated
+                                            GARFIELD-AF tool for the prediction of
+                                            mortality, stroke and bleed in patients with and without
+                                            anticoagulation</a>: Fox KAA, Lucas JE, Pieper KS, et al. BMJ Open
+                                        2017;7:e017157. doi:10.1136/bmjopen-2017-017157</p>
+                                </li>
+                                <li>
+                                    <p><a target="_blank" rel="noopener noreferrer"
+                                            href="https://doi.org/10.1093/eurheartj/ehr488" class="link">Evaluation of
+                                            risk stratification schemes for ischaemic stroke and bleeding in 182 678
+                                            patients with atrial
+                                            fibrillation: the Swedish Atrial Fibrillation cohort study</a>: Friberg L,
+                                        Rosenqvist M, Lip GY. Eur Heart J. 2012 Jun;33(12):1500-10. doi:
+                                        10.1093/eurheartj/ehr488. Epub 2012 Jan 13.
+                                        PMID: 22246443.</p>
+                                </li>
                             </ol>
                         </div>
                     </div>
@@ -1852,10 +1699,11 @@
                             <ul>
                                 <li>The absolute risk reduction (ARR) and relative risk reduction (RRR) are calculated
                                     using stroke rates with no therapy and placebo, and stroke +SEE for the DOACs. The
-                                    risk of stroke with no therapy is based upon the CHA2DS2-VASc absolute event rates
+                                    risk of stroke with no therapy is based upon the CHA₂DS₂-VASc absolute event rates
                                     as reported by <a target="_blank" rel="noopener noreferrer"
                                         href="http://www.bmj.com/content/342/bmj.d124" class="link">BMJ
-                                        2011;342:d124</a>.</li>
+                                        2011;342:d124</a>.
+                                </li>
                                 <li>The aspirin and warfarin RRRs are from <a target="_blank" rel="noopener noreferrer"
                                         href="https://www.ncbi.nlm.nih.gov/pubmed/16034869" class="link">Cochrane
                                         Database of Systematic Reviews 2005, Issue 3. Art. No.: CD001927. DOI:
@@ -1863,13 +1711,37 @@
                                         href="http://www.ncbi.nlm.nih.gov/pubmed/17577005" class="link">Ann Intern Med.
                                         2007;146:857–867</a> , and <a target="_blank" rel="noopener noreferrer"
                                         href="https://www.ncbi.nlm.nih.gov/pubmed/16235290" class="link">Cochrane
-                                        Database Syst Rev 2005; CD001925</a>.</li>
+                                        Database Syst Rev 2005; CD001925</a>.
+                                </li>
                                 <li>The apixaban RRR is imputed from placebo using the above (warfarin RRR 66% / RR
                                     0.33) plus the <a target="_blank" rel="noopener noreferrer"
                                         href="http://www.nejm.org/doi/full/10.1056/NEJMoa1107039"
                                         class="link">ARISTOTLE</a> HR of 0.79. Imputed apixaban effect vs. Placebo/no
                                     therapy is RR 0.26 / RRR 74%. The ARR varies by the patient’s individual stroke
-                                    risk. </li>
+                                    risk.
+                                </li>
+                                <li>GARFIELD-AF stroke and mortality risk formulas were sourced from the GARFIELD-AF
+                                    registry of the Thrombosis Research
+                                    Institute (with permission). These source formulas can be found
+                                    <a target="_blank" rel="noopener noreferrer"
+                                        href="https://af.garfieldregistry.org/wp-content/uploads/2021/06/GARFIELD-AF-Risk-Tool-Equations.pdf"
+                                        class="link">here</a>.
+                                </li>
+                                <li>As part of the 2023 Atrial Fibrillation Guideline update for this app, CHA₂DS₂-VASc
+                                    risk magnitudes for “No Therapy”
+                                    were updated to reflect ischemic stroke risk magnitudes from the
+                                    <a target="_blank" rel="noopener noreferrer"
+                                        href="https://doi.org/10.1093/eurheartj/ehr488" class="link">Friberg 2012</a>
+                                    study.
+                                </li>
+                                <li>ATRIA risk model’s stroke risk magnitude calculation was based on Table 8: Three
+                                    Validated Risk Models for Stroke from
+                                    the <a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017" class="link">2023
+                                        ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial
+                                        Fibrillation</a>. This table is able to be found in the Resources section of
+                                    this app.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -2094,17 +1966,18 @@
                                 Use the updated AnticoagEvaluator to make informed decisions on initiation of
                                 antithrombotic therapy for patients with atrial fibrillation, in the absence of moderate
                                 to severe mitral stenosis or a mechanical heart valve. App updates include expanded
-                                advice from the 2018 Focused Update to the 2014 Guideline for the Management of Patients
-                                with Atrial Fibrillation.
+                                advice from the 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of
+                                Atrial Fibrillation.
                             </p>
                             Use the App to:
                             <ul>
-                                <li>Calculate a patient's stroke risk (CHA<sub>2</sub>DS<sub>2</sub>-VASc) and renal
+                                <li>Calculate a patient's stroke risk (CHA₂DS₂-VASc, ATRIA, and GARFIELD-AF) and renal
                                     function (Cockcroft-Gault Equation), and review factors that may contribute to bleed
                                     risk (HAS-BLED criteria and concomitant meds).</li>
-                                <li>Consider updated stroke prevention therapy guidance based on the 2018 ACC/AHA/HRS
-                                    Focused Update of the 2014 Guideline for the Management of Patients with Atrial
-                                    Fibrillation.</li>
+                                <li>Calculate a patient’s mortality risk (GARFIELD-AF).</li>
+                                <li>Consider updated stroke prevention therapy guidance based on the 2023
+                                    ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation.
+                                </li>
                                 <li>Improve accurate use of DOACs with adjusted dosage based on prescribing information,
                                     fine-tuned for renal and other patient characteristics.</li>
                                 <li>
@@ -2118,9 +1991,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <p>This app is not yet updated with the 2023 Guideline for the Diagnosis and Management of
-                                Atrial Fibrillation. It continues to be based on the 2019 Focused Update of the 2014
-                                Guideline for the Management of Patients With Atrial Fibrillation. The information and
+                            <p>The information and
                                 recommendations in this app are intended to support clinical decision making. They are
                                 not intended to represent the only or best course of care, or to replace clinical
                                 judgment for diagnosis, cure, mitigation, treatment, or prevention of disease. Use of
@@ -2136,15 +2007,28 @@
                                 anticoagulation therapy. Financial support for the development of the app was provided
                                 by Daiichi Sankyo, Inc. All content was independently developed with no sponsor
                                 involvement. </p>
-                            <p>Its content was adapted from a web tool created by Peter Loewen, B.Sc.(Pharm), ACPR,
+                            <p>The GARFIELD-AF and ATRIA risk models were incorporated into this app by expanding the
+                                Patient Information parameters
+                                and applicable Risk Factors beyond CHA₂DS₂-VASc to satisfy all three models. The
+                                calculator dynamically assesses which
+                                risk model is most impacted by the entered patient parameters and displays that risk
+                                model and its associated magnitude
+                                of annual stroke risk. All risk models’ annual stroke risk magnitudes are available on
+                                the Review Therapy tab in the
+                                Evaluate Therapy section for further review, however. A detailed table of which risk
+                                factors affect which risk model is
+                                available in the Resources section of this app.
+                                The adjusted annual risk of stroke calculations for therapy selection in the
+                                CHA₂DS₂-VASc risk model were adapted from a web tool created by Peter Loewen,
+                                B.Sc.(Pharm), ACPR,
                                 Pharm.D., FCSHP, which can be viewed at <a target="_blank" rel="noopener noreferrer"
                                     href="http://www.sparctool.com/" class="link">http://www.sparctool.com/</a>. The App
                                 was further refined and vetted through review and user testing by physicians, nurse
                                 practitioners, pharmacists, and other relevant specialists.</p>
-                            <p>Sections of this App combine risk estimates from clinical prediction rules (e.g.,
-                                CHA<sub>2</sub>DS<sub>2</sub>-VASc, HAS-BLED) with relative risk data from clinical
+                            <p>It combines risk estimates from clinical prediction rules (i.e.,
+                                CHA₂DS₂-VASc) with relative risk data from clinical
                                 trials (e.g., ACTIVE-A, RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE-AF) to produce
-                                individualized efficacy and bleeding risk estimates for patients. A detailed description
+                                individualized efficacy estimates for patients. A detailed description
                                 of this methodology can be found at <a target="_blank" rel="noopener noreferrer"
                                     href="http://www.sparctool.com/sparcnotes.htm"
                                     class="link">http://www.sparctool.com/sparcnotes.htm</a>. Because relative risk
@@ -2156,10 +2040,9 @@
                                 references. </p>
                             <p>
                                 <b>For Support </b> <br />
-                                <b>Call:</b> (202) 375-6000, ext. 5603 or (800) 253-4636 <br />
-                                <b>Fax:</b> (202) 375-7000 <br />
-                                <b>Email:</b> <a id="resMailto" href="mailto:resource@acc.org"
-                                    class="link">resource@acc.org</a> <br />
+                                <b>Call:</b> (800) 253-4636 <br />
+                                <b>Email:</b> <a id="resMailto" href="mailto:membercare@acc.org"
+                                    class="link">membercare@acc.org</a> <br />
                             </p>
                         </div>
                     </div>
@@ -2189,11 +2072,14 @@
     <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate-3.4.1.min.js"></script>
     <script src="assets/js/foundation.min.js"></script>
+    <!-- <script src="scripts/foundation.min.js"></script> -->
     <script type="text/javascript" src="assets/js/knockout-3.5.1.js"></script>
     <script type="text/javascript" src="assets/js/knockout.validation.min.js"></script>
+    <script type="text/javascript" src="assets/sweetalert2.js"></script>
     <script type="text/javascript" src="assets/js/waypoints.js"></script>
     <script type="text/javascript" src="assets/js/waypoints.sticky.js"></script>
     <script type="text/javascript" src="assets/js/pager.min.js"></script>
+    <script type="text/javascript" src="assets/js/staticdata.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/formdata.js"></script>
     <script type="text/javascript" src="assets/js/appviewmodel.js"></script>

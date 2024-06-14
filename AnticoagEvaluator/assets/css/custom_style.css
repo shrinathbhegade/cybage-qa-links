@@ -1,7 +1,7 @@
 /*** css for logo ***/
 .header.page .logo img {
-  height: 58px;
-  margin-top: 10px;
+  height: 73px;
+  margin-top: 14px;
 }
 /*** css for select units ***/
 .switch-on {
@@ -103,7 +103,7 @@ table .units-outer input {
 .switch.select label {
   background-color: #008080;
   position: absolute;
-  left: 50px;
+  left: 30px;
 }
 
 .sunits {
@@ -906,8 +906,8 @@ option {
   }
 
   .header.page .logo img {
-    height: 58px;
-    margin-top: 20px;
+    height: 73px;
+    margin-top: 14px;
   }
 }
 
@@ -1177,3 +1177,64 @@ span.nub {
   background-color: #f9f9f9;
   cursor: default; /* Prevent cursor change on hover */
 }
+
+.table8 tbody > tr > td:not(:nth-child(1)),
+.table8 tbody > tr > th:not(:nth-child(1)) {
+  text-align: center;
+}
+
+.m-l-scorbar {
+  margin-left: 1.5em !important;
+}
+
+.toggle-padding {
+  max-width: fit-content;
+  padding-top: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border-radius: 16px;
+}
+
+.no-toggle {
+  background-color: #4e8e98a6;
+}
+
+/* @media only screen and (max-width: 767px) {
+  .reset {
+    margin-top: 25px;
+    margin-bottom: 5%;
+  }
+
+  .nomargin-t-b {
+    margin: 0;
+  }
+
+  .risk-factors-popup .alert-box:after,
+  .cv2-age85 .alert-box:after {
+    right: 75%;
+  }
+  .cv2-age75 {
+    top: 18%;
+  }
+  .cv2-age65 {
+    top: 46%;
+  }
+  .cv2-female {
+    top: 52%;
+    right: 5%;
+  }
+  .cv2-age85 {
+    top: 60%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .risk-factors-popup .alert-box:after,
+  .cv2-age85 .alert-box:after {
+    right: 82%;
+  }
+  .cv2-age75 {
+    top: 21%;
+    left: 2%;
+  }
+} */

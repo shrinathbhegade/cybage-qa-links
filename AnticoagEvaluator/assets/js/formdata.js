@@ -28,20 +28,20 @@ var formdata = {
 		{ id: 4, name: "Other", value: 0.375675102 }
 	],
 	cha2ds2: [
-		{ id: '0', garfieldMultplr: 0.233182644, mortalValue: 0.693789082, hasTooltip: true, isDisabled: false, htmlID: 'cv2-chflv', text: 'CHF/LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction.', emailText: 'CHF/LV dysfunction' },
-		{ id: '1', garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment', emailText: 'Hypertension' },
-		{ id: '2', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age75', text: 'Age 75-84 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
-		{ id: '3', garfieldMultplr: 0.211995445, mortalValue: 0.280133213, hasTooltip: true, isDisabled: false, htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin', emailText: 'Diabetes' },
-		{ id: '4', garfieldMultplr: 0.800863063, mortalValue: 0.26585298, hasTooltip: true, isDisabled: false, htmlID: 'cv2-tiastroke', text: 'Previous stroke or TIA', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism. Includes any history of cerebral ischemia', emailText: 'Stroke/TIA/TE' },
-		{ id: '5', garfieldMultplr: 0.197919709, mortalValue: 0.306120964, hasTooltip: true, isDisabled: false, htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque', emailText: 'Vascular disease' },
-		{ id: '6', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
-		{ id: '7', garfieldMultplr: 0, mortalValue: -0.306202287, hasTooltip: true, isDisabled: true, htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female sex confers higher risk in some risk models', emailText: 'Female' },
-		{ id: '8', garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age85', text: 'Age ≥ 85 yrs', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ id: '9', garfieldMultplr: 0.349516938, mortalValue: 0.377903886, hasTooltip: true, isDisabled: false, htmlID: 'cv2-renal', text: 'Renal disease', value: '1', showInfo: true, tooltipTitle: 'Moderate to severe chronic kidney disease (CKD class III-V)', emailText: '' },
-		{ id: '10', garfieldMultplr: 0.478831506, mortalValue: 0.345481149, hasTooltip: true, isDisabled: false, htmlID: 'cv2-current_smoker', text: 'Current smoker', value: '1', showInfo: true, tooltipTitle: 'Defined as cigarette smoker based on patient population studied in relevant clinical trials. use clinical discretion in regards to patients who use e-cigarettes and other tobacco products', emailText: '' },
-		{ id: '11', garfieldMultplr: 0.513221391, mortalValue: 0.489453313, hasTooltip: false, isDisabled: false, htmlID: 'cv2-dementia', text: 'Dementia', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ id: '12', garfieldMultplr: 0.29883967, mortalValue: 0.385407386, hasTooltip: false, isDisabled: false, htmlID: 'cv2-prev_bleed', text: 'Previous bleeding', value: '1', showInfo: true, tooltipTitle: '', emailText: '' },
-		{ id: '13', garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-proteinuria', text: 'Proteinuria', value: '1', showInfo: true, tooltipTitle: 'Elevated protein in the urine', emailText: '' }
+		{ id: '0', canToggle: true, garfieldMultplr: 0.233182644, mortalValue: 0.693789082, hasTooltip: true, isDisabled: false, htmlID: 'cv2-chflv', text: 'CHF/LV dysfunction', value: '1', showInfo: true, tooltipTitle: 'Congestive Heart Failure/Left Ventricular Dysfunction. Signs/symptoms of heart failure confirmed with objective evidence of cardiac dysfunction.', emailText: 'CHF/LV dysfunction' },
+		{ id: '1', canToggle: true, garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment', emailText: 'Hypertension' },
+		{ id: '2', canToggle: false, garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age75', text: 'Age 75-84 yrs', value: '2', showInfo: true, tooltipTitle: 'Patient is 75 years or older (+2)', emailText: '≥ 75 yrs' },
+		{ id: '3', canToggle: true, garfieldMultplr: 0.211995445, mortalValue: 0.280133213, hasTooltip: true, isDisabled: false, htmlID: 'cv2-diabetes', text: 'Diabetes mellitus', value: '1', showInfo: true, tooltipTitle: 'Fasting glucose > 125 mg/dL or treatment with oral hypoglycemic agent and/or insulin', emailText: 'Diabetes' },
+		{ id: '4', canToggle: true, garfieldMultplr: 0.800863063, mortalValue: 0.26585298, hasTooltip: true, isDisabled: false, htmlID: 'cv2-tiastroke', text: 'Previous stroke or TIA', value: '2', showInfo: true, tooltipTitle: 'Prior stroke, transient ischemic attack, or thromboembolism. Includes any history of cerebral ischemia', emailText: 'Stroke/TIA/TE' },
+		{ id: '5', canToggle: true, garfieldMultplr: 0.197919709, mortalValue: 0.306120964, hasTooltip: true, isDisabled: false, htmlID: 'cv2-vasculardisease', text: 'Vascular disease', value: '1', showInfo: true, tooltipTitle: 'Prior myocardial infarction, peripheral arterial disease, or aortic plaque', emailText: 'Vascular disease' },
+		{ id: '6', canToggle: false, garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age65', text: 'Age 65-74 yrs', value: '1', showInfo: true, tooltipTitle: 'Patient is 65 to 74 years old (+1)', emailText: '65-74 yrs' },
+		{ id: '7', canToggle: false, garfieldMultplr: 0, mortalValue: -0.306202287, hasTooltip: true, isDisabled: true, htmlID: 'cv2-female', text: 'Sex: Female', value: '1', showInfo: true, tooltipTitle: 'Female sex confers higher risk in some risk models', emailText: 'Female' },
+		{ id: '8', canToggle: false, garfieldMultplr: 0, mortalValue: 0, hasTooltip: false, isDisabled: true, htmlID: 'cv2-age85', text: 'Age ≥ 85 yrs', value: '1', showInfo: true, tooltipTitle: '', emailText: '≥ 85 yrs' },
+		{ id: '9', canToggle: true, garfieldMultplr: 0.349516938, mortalValue: 0.377903886, hasTooltip: true, isDisabled: false, htmlID: 'cv2-renal', text: 'Renal disease', value: '1', showInfo: true, tooltipTitle: 'Moderate to severe chronic kidney disease (CKD class III-V)', emailText: 'Renal disease' },
+		{ id: '10', canToggle: true, garfieldMultplr: 0.478831506, mortalValue: 0.345481149, hasTooltip: true, isDisabled: false, htmlID: 'cv2-current_smoker', text: 'Current smoker', value: '1', showInfo: true, tooltipTitle: 'Defined as cigarette smoker based on patient population studied in relevant clinical trials. use clinical discretion in regards to patients who use e-cigarettes and other tobacco products', emailText: 'Current smoker' },
+		{ id: '11', canToggle: true, garfieldMultplr: 0.513221391, mortalValue: 0.489453313, hasTooltip: false, isDisabled: false, htmlID: 'cv2-dementia', text: 'Dementia', value: '1', showInfo: true, tooltipTitle: '', emailText: 'Dementia' },
+		{ id: '12', canToggle: true, garfieldMultplr: 0.29883967, mortalValue: 0.385407386, hasTooltip: false, isDisabled: false, htmlID: 'cv2-prev_bleed', text: 'Previous bleeding', value: '1', showInfo: true, tooltipTitle: '', emailText: 'Previous bleeding' },
+		{ id: '13', canToggle: true, garfieldMultplr: 0, mortalValue: 0, hasTooltip: true, isDisabled: false, htmlID: 'cv2-proteinuria', text: 'Proteinuria', value: '1', showInfo: true, tooltipTitle: 'Elevated protein in the urine', emailText: 'Proteinuria' }
 	],
 	hasbledModifiable: [
 		{ id: '0', htmlID: 'hb-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Uncontrolled, >160 mmHg systolic (+1)', emailText: 'Hypertension' },
@@ -124,7 +124,7 @@ var formdata = {
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
 			emailTemplate: '5 mg BID',
-			drugInfoLink: 'http://goo.gl/HsbKYm'
+			drugInfoLink: 'https://bit.ly/44zdlW6'
 		},
 		{
 			id: '4',
@@ -141,7 +141,7 @@ var formdata = {
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
 			emailTemplate: '150 mg BID',
-			drugInfoLink: 'http://goo.gl/0TtgO6'
+			drugInfoLink: 'https://bit.ly/3y8lO6o'
 		},
 		{
 			id: '5',
@@ -158,7 +158,7 @@ var formdata = {
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
 			emailTemplate: '60 mg QD',
-			drugInfoLink: 'http://goo.gl/SJQBt5'
+			drugInfoLink: 'https://bit.ly/4bnicM7'
 		},
 		{
 			id: '6',
@@ -175,7 +175,7 @@ var formdata = {
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
 			emailTemplate: '20 mg QD w/evening meal',
-			drugInfoLink: 'http://goo.gl/VZ1Vg2'
+			drugInfoLink: 'https://bit.ly/4b7y99o'
 		},
 		{
 			id: '7',
@@ -191,19 +191,20 @@ var formdata = {
 			populationAvgAnnualMajorBleed: '3.8',
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
-			emailTemplate: 'Initial dose 0.5 -7mg daily %0AIndividualize dose based on INR and %0Apatient factors. Target INR = 2.5, 2.0 to 3.0',
-			drugInfoLink: 'http://goo.gl/6qGxH4'
+			emailTemplate: 'Initial dose 0.5 - 7mg daily %0AIndividualize dose based on INR and patient factors. Target INR = 2.5, 2.0 to 3.0',
+			drugInfoLink: 'https://bit.ly/4btob1N'
 		}
 	],
 	emailTemplate: {
 		subjectLine: 'ACC AnticoagEvaluator Results (#genratedon#)',
-		patientInfo: 'PATIENT%0A#age#%0A#gender#%0A',
-		cha2ds2: 'CHA2DS2-VASc%0ASCORE:#cha2ds2score#,#riskstatus#%0A#cha2ds2selected#',
+		patientInfo: 'PATIENT%0A#age#%0A#gender#%0A#ethnicity#%0A#weight#%0A#dbp#%0A#pulse#%0A',
+		cha2ds2: 'STROKE RISK%0A#riskclass#%0A#riskmodel# Risk Magnitude: #riskmag# annual risk of stroke%0A#cha2ds2selected#',
 		renalFunction: 'RENAL FUNCTION%0A#crclscore#%0A#serum#%0A',
 		hasbled: 'HAS-BLED Score: #hasbledscore#%0A#hasbledselected#',
 		concomitant: 'Concomitant Medications:%0A#concomitantselected#',
 		therapyGuidance: 'THERAPY GUIDANCE%0A#riskinfo#%0A',
-		therapyDosing: 'THERAPY DOSING%0A'
+		therapyDosing: 'THERAPY DOSING%0A',
+		mortality: 'ANNUAL MORTALITY RISK%0AWith no OAC Therapy: #nooac#%0AWith DOAC: #wdoac#%0AWith Warfarin/VKA: #wwv#'
 	},
 	therapyOptions: {
 		NoTherapy: 'No Therapy',
