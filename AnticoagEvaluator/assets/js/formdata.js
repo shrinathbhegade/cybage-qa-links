@@ -203,8 +203,8 @@ var formdata = {
 		hasbled: 'HAS-BLED Score: #hasbledscore#%0A#hasbledselected#',
 		concomitant: 'Concomitant Medications:%0A#concomitantselected#',
 		therapyGuidance: 'THERAPY GUIDANCE%0A#riskinfo#%0A',
-		therapyDosing: 'THERAPY DOSING%0A',
-		mortality: 'ANNUAL MORTALITY RISK%0AWith no OAC Therapy: #nooac#%0AWith DOAC: #wdoac#%0AWith Warfarin/VKA: #wwv#'
+		therapyDosing: 'THERAPY DOSING',
+		mortality: 'ANNUAL MORTALITY RISK%0AWith no OAC Therapy: #nooac#%0AWith DOAC: #wdoac#%0AWith Warfarin/VKA: #wwv#%0A'
 	},
 	therapyOptions: {
 		NoTherapy: 'No Therapy',

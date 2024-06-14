@@ -416,7 +416,7 @@ $(function () {
             listItems = listItems.replace('#ethnicity#', 'Ethnicity: ' + eth.name);
         }
 
-        listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().Weight()} ${weightUnit}`);
+        listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().piWeight()} ${weightUnit}`);
         listItems = listItems.replace('#dbp#', `DBP: ${appmodel.Form().dbp()} mmHg`);
         listItems = listItems.replace('#pulse#', `Weight: ${appmodel.Form().pulse()} bpm`);
 
@@ -469,21 +469,23 @@ $(function () {
         }
 
         listItems = appmodel.FormData.emailTemplate.mortality
-            .replace('#nooac', `${appmodel.Form().MortalityRisk()}%`)
-            .replace('#wdoac', `${appmodel.Form().MortalityDOAC()}%`)
-            .replace('#wwv', `${appmodel.Form().MortalityVKA()}%`);
+            .replace('#nooac#', `${appmodel.Form().MortalityRisk()}%`)
+            .replace('#wdoac#', `${appmodel.Form().MortalityDOAC()}%`)
+            .replace('#wwv#', `${appmodel.Form().MortalityVKA()}%`);
 
         a = a + listItems + e;
 
         /** append THERAPY GUIDANCE info only if risk is not low */
         if (profile.riskProfile !== 'Low Risk') {
+            listItems = '';
             listItems = appmodel.FormData.emailTemplate.therapyGuidance;
             let guidance = profile.riskProfile === 'Intermediate Risk' ? 'Anticoagulation is reasonable due to intermediate stroke risk. (2a, A)' : 'Anticoagulation is recommended due to high stroke risk. (1, A)';
             a = a + listItems.replace('#riskinfo#', guidance) + e;
         }
 
         /** append THERAPY DOSING info only if risk is not low */
-        listItems = 'THERAPY DOSING';
+        listItems = '';
+        listItems = appmodel.FormData.emailTemplate.therapyDosing;//'THERAPY DOSING';
         ko.utils.arrayForEach(appmodel.FormData.allTherapyOptions, function (item) {
             if (item.text === appmodel.FormData.therapyOptions.NoTherapy) {
                 return;
