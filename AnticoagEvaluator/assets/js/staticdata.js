@@ -1,9 +1,13 @@
 var table19 = {
-    footer: `<div style="text-align:justify !important;font-style: italic;">Note that other, nonrenal considerations such as drug interactions may also apply. The gray area indicates doses not studied in the pivotal clinical trials of these agents.
+  footer: `<div style="text-align:justify !important;font-style: italic;">Note that other, nonrenal considerations such as drug interactions may also apply. The gray area indicates doses not studied in the pivotal clinical trials of these agents.
 *If at least 2 of the following are present: serum creatinine ≥1.5 mg/dL, age ≥80 y, or body weight ≤60 kg, the recommended dose is 2.5 mg twice daily. The ARISTOTLE trial excluded patients
-with either a creatinine of >2.5 mg/dL or a calculated CrCl <25 mL/min.</div>`,
-    header: `<b>Recommended Doses of Currently Approved DOACs According to Renal Function<br>CrCl (mL/min)</b>`,
-    contents: `<hr> <table class="table banded">
+with either a creatinine of >2.5 mg/dL or a calculated CrCl <25 mL/min.
+<br>†Rivaroxaban is not recommended for other indications in patients with a CrCl <15 mL/min, but such
+a recommendation is not made for the AF indication. However, pharmacokinetic data are limited.
+AF indicates atrial fibrillation; ARISTOTLE, Apixaban for Reduction in Stroke and Other Thromboembolic
+Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral anticoagulant.</div>`,
+  header: `<b>Recommended Doses of Currently Approved DOACs According to Renal Function<br>CrCl (mL/min)</b>`,
+  contents: `<hr> <table class="table banded">
             <tr>
                 <th>DOAC</th>
                 <th>>95</th>
@@ -49,7 +53,7 @@ with either a creatinine of >2.5 mg/dL or a calculated CrCl <25 mL/min.</div>`,
 }
 
 var table8 = {
-    contents: `<div><b>Three Validated Risk Models for Stroke</b></div>
+  contents: `<div><b>Three Validated Risk Models for Stroke</b></div>
         <hr>
     <table class="table banded table8">
   <tr>

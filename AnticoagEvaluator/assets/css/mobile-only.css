@@ -1,0 +1,67 @@
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .m-l-5 {
+    margin-left: 0em;
+  }
+  .cv2-female {
+    right: 2% !important;
+    top: 49% !important;
+  }
+  .cv2-age85 {
+    top: 62% !important;
+    right: 50% !important;
+  }
+  .cv2-age75 {
+    top: 21% !important;
+    left: 0% !important;
+    right: 24em;
+  }
+  .cv2-age65 {
+    top: 49% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .m-l-5 {
+    margin-left: 0em;
+  }
+  .reset {
+    margin-top: 25px;
+    margin-bottom: 5%;
+  }
+
+  .nomargin-t-b {
+    margin: 0;
+  }
+
+  .risk-factors-popup .alert-box:after,
+  .cv2-age85 .alert-box:after {
+    right: 75%;
+  }
+  .cv2-age75 {
+    top: 18%;
+  }
+  .cv2-age65 {
+    top: 46%;
+  }
+  .cv2-female {
+    top: 52%;
+    right: 5%;
+  }
+  .cv2-age85 {
+    top: 60%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .m-l-5 {
+    margin-left: 0em;
+  }
+  .risk-factors-popup .alert-box:after,
+  .cv2-age85 .alert-box:after {
+    right: 82%;
+  }
+  .cv2-age75 {
+    top: 21%;
+    right: 46%;
+  }
+}

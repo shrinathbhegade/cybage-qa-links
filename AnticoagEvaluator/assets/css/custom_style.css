@@ -1196,45 +1196,12 @@ span.nub {
 }
 
 .no-toggle {
-  background-color: #4e8e98a6;
+  /* background-color: #4e8e98a6; */
+  border-color: #b3b3b3;
+  background: url(../img/subtlenet2.png) repeat;
+  /* cursor: not-allowed !important; */
 }
 
-/* @media only screen and (max-width: 767px) {
-  .reset {
-    margin-top: 25px;
-    margin-bottom: 5%;
-  }
-
-  .nomargin-t-b {
-    margin: 0;
-  }
-
-  .risk-factors-popup .alert-box:after,
-  .cv2-age85 .alert-box:after {
-    right: 75%;
-  }
-  .cv2-age75 {
-    top: 18%;
-  }
-  .cv2-age65 {
-    top: 46%;
-  }
-  .cv2-female {
-    top: 52%;
-    right: 5%;
-  }
-  .cv2-age85 {
-    top: 60%;
-  }
+.m-l-5 {
+  margin-left: 5em;
 }
-
-@media only screen and (min-width: 767px) {
-  .risk-factors-popup .alert-box:after,
-  .cv2-age85 .alert-box:after {
-    right: 82%;
-  }
-  .cv2-age75 {
-    top: 21%;
-    left: 2%;
-  }
-} */

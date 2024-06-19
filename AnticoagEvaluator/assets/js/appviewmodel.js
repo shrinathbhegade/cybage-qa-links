@@ -859,7 +859,7 @@ function formObject() {
 
     self.GARFIELDMagnitude = ko.pureComputed(() => {
         if (self.GARFIELDScore())
-            return `${((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1)}%`;
+            return `${parseFloat(((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1))}%`;
         return '';
     });
 
@@ -991,7 +991,7 @@ function formObject() {
         return (parseFloat(_gfm) - self.GFAdjDOAC()).toFixed(1);
     }, self);
 
-    self.Hasbled_Score = ko.observable(0);
+    self.Hasbled_Score = ko.observable();
     /**
     * this subscribe function is used for deriving the Hasbled Score on selection/deselection of any HAS-BLED section fields(checkbox).
     */

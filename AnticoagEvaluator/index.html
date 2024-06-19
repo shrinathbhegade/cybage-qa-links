@@ -18,11 +18,12 @@
     <title>AnticoagEvaluator</title>
     <!-- <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/normalize.min.css">
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/foundation.min.css">
+    <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/sweetalert2.css">
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/style-AntiCoag.css">
     <link rel="stylesheet" href="https://tools.acc.org/anticoag/assets/css/custom_style.css"> -->
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/foundation.min.css">
-    <link rel="stylesheet" href="assets/sweetalert2.css">
+    <link rel="stylesheet" href="assets/css/sweetalert2.css">
     <link rel="stylesheet" href="assets/css/style-AntiCoag.css">
     <link rel="stylesheet" href="assets/css/custom_style.css">
     <link rel="icon" href="assets/img/favicon.ico">
@@ -75,7 +76,7 @@
                 <div style="margin: 0 !important;"
                     class="large-9 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
                     <div class="row" style="display: inline-flex;">
-                        <div style="margin-left: 5em;" class="large-8 medium-12 small-10 columns scorebar-panel-left">
+                        <div class="large-8 medium-12 small-10 columns scorebar-panel-left m-l-5">
                             <div class="scorebar-panel-left-inner">
                                 <div class="top scorebarlabel">Annual Stroke Risk Magnitude</div>
                                 <div class="scorebar-score-container">
@@ -1043,7 +1044,27 @@
                                                 <h3>Risk/Benefit Information*</h3>
                                             </div>
                                         </div>
-                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName !== "GARFIELD-AF" -->
+                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName === "ATRIA" -->
+                                        <table class="table banded">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="small-9 medium-9 large-6 bold">Patient's ANNUAL risk of
+                                                        stroke <span
+                                                            data-bind="visible: $root.Form().selectedTreatment().id!=='0'">
+                                                            + thromboembolism</span> with <span
+                                                            data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span><sup
+                                                            data-bind="visible: $root.Form().selectedTreatment().id==='0'">**</sup>
+                                                    </td>
+                                                    <td class="left bold">
+                                                        <span data-bind="text:$root.Form().ATRIAMagnitude()"></span>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <!-- /ko -->
+                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName === "CHA₂-DS₂-VASc" -->
                                         <table class="table banded">
                                             <tbody>
                                                 <tr>
@@ -1189,40 +1210,46 @@
                                                                     (ATRIA)
                                                                 </td>
                                                                 <td>
-                                                                    <span
+                                                                    <span class="bold"
                                                                         data-bind="text:$root.Form().ATRIAMagnitude()"></span>
                                                                 </td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
-                                                                <td>Unavailable</td>
+                                                                <td class="bold">Unavailable</td>
+                                                                <td class="bold">Unavailable</td>
+                                                                <td class="bold">Unavailable</td>
+                                                                <td class="bold">Unavailable</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="small-9 medium-9 large-8 left bold">
                                                                     Patient's ANNUAL risk of stroke + thromboembolism
                                                                     (GARFIELD)</td>
-                                                                <td><span
+                                                                <td class="bold"><span
                                                                         data-bind="text:$root.Form().GARFIELDMagnitude()"></span>
                                                                 </td>
                                                                 <!-- ko if: $root.Form().onDOAC() -->
-                                                                <td data-bind="text: `${$root.Form().GFAdjDOAC()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFAdjDOAC()}%`">
                                                                 </td>
-                                                                <td data-bind="text: `${$root.Form().GFRelDOAC()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFRelDOAC()}%`">
                                                                 </td>
-                                                                <td data-bind="text: `${$root.Form().GFAbsDOAC()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFAbsDOAC()}%`">
                                                                 </td>
-                                                                <td
+                                                                <td class="bold"
                                                                     data-bind="text: $root.Form().getBenefit($root.Form().GFAbsDOAC())">
                                                                 </td>
                                                                 <!-- /ko -->
                                                                 <!-- ko if: $root.Form().onVKA() -->
-                                                                <td data-bind="text: `${$root.Form().GFAdjVKA()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFAdjVKA()}%`">
                                                                 </td>
-                                                                <td data-bind="text: `${$root.Form().GFRelVKA()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFRelVKA()}%`">
                                                                 </td>
-                                                                <td data-bind="text: `${$root.Form().GFAbsVKA()}%`">
+                                                                <td class="bold"
+                                                                    data-bind="text: `${$root.Form().GFAbsVKA()}%`">
                                                                 </td>
-                                                                <td
+                                                                <td class="bold"
                                                                     data-bind="text: $root.Form().getBenefit($root.Form().GFAbsVKA())">
                                                                 </td>
                                                                 <!-- /ko -->
@@ -1231,21 +1258,21 @@
                                                                 <td class="small-9 medium-9 large-8 left bold">Patient's
                                                                     ANNUAL risk of stroke +
                                                                     thromboembolism (CHA₂-DS₂-VASc)</td>
-                                                                <td><span
+                                                                <td class="bold"><span
                                                                         data-bind="text:$root.Form().CHDSMagnitude()"></span>
                                                                 </td>
 
-                                                                <td><span
+                                                                <td class="bold"><span
                                                                         data-bind="text:$root.Form().PatientAnnualRiskOfStrokeCHADS2Vasc"></span>%
                                                                 </td>
-                                                                <td><span
+                                                                <td class="bold"><span
                                                                         data-bind="text:$root.Form().selectedTreatment().relativeRisk != undefined ? $root.Form().selectedTreatment().relativeRisk : ''"></span>%
                                                                 </td>
-                                                                <td><span
+                                                                <td class="bold"><span
                                                                         data-bind="text:$root.Form().AbsoluteRiskReduction"></span>%
                                                                 </td>
-                                                                <td>1 in <span
-                                                                        data-bind="text:$root.Form().ChanceOfBenefit"></span>%
+                                                                <td class="bold">1 in <span
+                                                                        data-bind="text:$root.Form().ChanceOfBenefit"></span>
                                                                 </td>
                                                             </tr>
 
@@ -1604,8 +1631,8 @@
                                 <li>
                                     <p>
                                         <a target="_blank" rel="noopener noreferrer"
-                                            href="https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017?_ga=2.86385176.1266779900.1709517227-1012074194.1649680324"
-                                            class="link">2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and
+                                            href="https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017" class="link">2023
+                                            ACC/AHA/ACCP/HRS Guideline for the Diagnosis and
                                             Management of Atrial Fibrillation
                                         </a>:
                                         Joglar, J, Chung, M. et al.
@@ -2017,15 +2044,15 @@
                                 the Review Therapy tab in the
                                 Evaluate Therapy section for further review, however. A detailed table of which risk
                                 factors affect which risk model is
-                                available in the Resources section of this app.
-                                The adjusted annual risk of stroke calculations for therapy selection in the
+                                available in the Resources section of this app.</p>
+                            <p>The adjusted annual risk of stroke calculations for therapy selection in the
                                 CHA₂DS₂-VASc risk model were adapted from a web tool created by Peter Loewen,
                                 B.Sc.(Pharm), ACPR,
                                 Pharm.D., FCSHP, which can be viewed at <a target="_blank" rel="noopener noreferrer"
                                     href="http://www.sparctool.com/" class="link">http://www.sparctool.com/</a>. The App
                                 was further refined and vetted through review and user testing by physicians, nurse
-                                practitioners, pharmacists, and other relevant specialists.</p>
-                            <p>It combines risk estimates from clinical prediction rules (i.e.,
+                                practitioners, pharmacists, and other relevant specialists.
+                                It combines risk estimates from clinical prediction rules (i.e.,
                                 CHA₂DS₂-VASc) with relative risk data from clinical
                                 trials (e.g., ACTIVE-A, RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE-AF) to produce
                                 individualized efficacy estimates for patients. A detailed description
@@ -2075,7 +2102,8 @@
     <!-- <script src="scripts/foundation.min.js"></script> -->
     <script type="text/javascript" src="assets/js/knockout-3.5.1.js"></script>
     <script type="text/javascript" src="assets/js/knockout.validation.min.js"></script>
-    <script type="text/javascript" src="assets/sweetalert2.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/sweetalert2.all.min.js"></script> -->
+    <script type="text/javascript" src="assets/js/sweetalert2.js"></script>
     <script type="text/javascript" src="assets/js/waypoints.js"></script>
     <script type="text/javascript" src="assets/js/waypoints.sticky.js"></script>
     <script type="text/javascript" src="assets/js/pager.min.js"></script>
