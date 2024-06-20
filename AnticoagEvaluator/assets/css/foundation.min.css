@@ -1767,14 +1767,14 @@ dialog[open] {
   border-radius: 2rem;
 }
 .has-tip {
-  /* border-bottom: dotted 1px #ccc; */
+  border-bottom: dotted 1px #ccc;
   cursor: help;
   font-weight: 700;
   color: #333;
 }
 .has-tip:focus,
 .has-tip:hover {
-  /* border-bottom: dotted 1px #0b3f4e; */
+  border-bottom: dotted 1px #0b3f4e;
   color: #198dae;
 }
 .has-tip.tip-left,
