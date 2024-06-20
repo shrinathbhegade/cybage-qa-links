@@ -438,11 +438,11 @@ div:where(.swal2-container) button:where(.swal2-close) {
   margin-bottom: -1.2em;
   padding: 0;
   overflow: hidden;
-  /* transition: color 0.1s, box-shadow 0.1s; */
+  transition: color 0.1s, box-shadow 0.1s;
   border: none;
   border-radius: 5px;
-  background: transparent;
-  color: #ccc;
+  background: transparent !important;
+  color: #f27474 !important;
   font-family: monospace;
   font-size: 2.5em;
   cursor: pointer;

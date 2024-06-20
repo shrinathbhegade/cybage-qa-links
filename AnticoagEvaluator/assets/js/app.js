@@ -594,13 +594,6 @@ $(function () {
         }
         //This code is for google analytics to capture that Email button on Review Therapy page is clicked
     });
-
-    appmodel.Form().Age(82);
-    appmodel.Form().Gender('Female');
-    appmodel.Form().pulse(45);
-    appmodel.Form().dbp(91);
-    appmodel.Form().piWeight(90);
-    appmodel.Form().Ethnicity(-0.609609055);
 });
 /**document.ready ends here */
 

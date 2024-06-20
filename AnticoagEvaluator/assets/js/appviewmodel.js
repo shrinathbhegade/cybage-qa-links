@@ -491,25 +491,25 @@ function formObject() {
     * this function is used for Autopopulating(selecting/deselecting) Stroke/TIA/TE checkbox of CHA2DS2-VASc or HAS-BLED Section
     */
     self.tiaStrokeSync = function ($action) {
-        var cv2TiaStroke = ko.utils.arrayFirst(self.Cha2ds2_selected(),
-            function (item) {
-                return item.htmlID === 'cv2-tiastroke';
-            });
+        // var cv2TiaStroke = ko.utils.arrayFirst(self.Cha2ds2_selected(),
+        //     function (item) {
+        //         return item.htmlID === 'cv2-tiastroke';
+        //     });
         var hbTiaStroke = ko.utils.arrayFirst(self.Hasbled_selected(),
             function (item) {
                 return item.htmlID === 'hb-tiastroke';
             });
         if ($action === 'on') {
-            if (cv2TiaStroke == null) {
-                self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[4]);
-            }
+            // if (cv2TiaStroke == null) {
+            //     self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[4]);
+            // }
             if (hbTiaStroke == null) {
                 self.Hasbled_selected.push(appmodel.FormData.hasbledNonModifiable[0]);
             }
         } else {
-            if (cv2TiaStroke) {
-                self.Cha2ds2_selected.remove(cv2TiaStroke);
-            }
+            // if (cv2TiaStroke) {
+            //     self.Cha2ds2_selected.remove(cv2TiaStroke);
+            // }
             if (hbTiaStroke) {
                 self.Hasbled_selected.remove(hbTiaStroke);
             }
@@ -885,10 +885,10 @@ function formObject() {
 
         score += self.Ethnicity() ? self.Ethnicity() : 0;
 
-        if ($units && self.Weight())
-            score += self.Weight() <= 75 ? (self.Weight() - 75) * -0.021535182 : 0;
+        if ($units && self.piWeight())
+            score += self.piWeight() <= 75 ? (self.piWeight() - 75) * -0.021535182 : 0;
         else
-            score += !self.Weight() ? 0 : self.Weight() <= 165.3465 ? (self.Weight() - 165.3465) * -0.009768206 : 0;
+            score += !self.piWeight() ? 0 : self.piWeight() <= 165.3465 ? (self.piWeight() - 165.3465) * -0.009768206 : 0;
 
         let $riskFactorIDs = ['0', '3', '4', '9', '10', '5', '11', '12']; // check formdata.js
 
@@ -901,15 +901,15 @@ function formObject() {
     }, self);
 
     self.MortalityRisk = ko.pureComputed(() => {
-        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore()))) * 100).toFixed(2) : '';
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore()))) * 100).toFixed(1) : '';
     });
 
     self.MortalityVKA = ko.pureComputed(() => {
-        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.VKA))) * 100).toFixed(2) : '';
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.VKA))) * 100).toFixed(1) : '';
     });
 
     self.MortalityDOAC = ko.pureComputed(() => {
-        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.DOAC))) * 100).toFixed(2) : '';
+        return self.MortalityScore() ? ((1 - Math.pow(self.mortalityCoefficients.BASE, Math.exp(self.MortalityScore() + self.mortalityCoefficients.DOAC))) * 100).toFixed(1) : '';
     });
 
     self.HighestRiskProfile = ko.computed(() => {
@@ -991,7 +991,7 @@ function formObject() {
         return (parseFloat(_gfm) - self.GFAdjDOAC()).toFixed(1);
     }, self);
 
-    self.Hasbled_Score = ko.observable();
+    self.Hasbled_Score = ko.observable(0);
     /**
     * this subscribe function is used for deriving the Hasbled Score on selection/deselection of any HAS-BLED section fields(checkbox).
     */
