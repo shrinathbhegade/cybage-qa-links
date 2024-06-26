@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/foundation.min.css">
     <!-- https://tools.stage.acc.org/anticoag/ -->
     <link rel="stylesheet" href="assets/css/sweetalert2.css">
-    <link rel="stylesheet" href="assets/css/styleanticoag.css">
+    <link rel="stylesheet" href="assets/css/style-anticoag.css">
     <link rel="stylesheet" href="assets/css/custom_style.css">
     <script type="text/javascript" src="assets/js/modernizr.js"></script>
 </head>
@@ -721,10 +721,6 @@
                                     data-bind="value: $root.Form().selectedTherapyOption">
                                     <option value="Please select">Please select</option>
                                     <option value="No Therapy">No Therapy</option>
-                                    <!-- <optgroup label="Antiplatelets (by alpha order)">
-                                        <option value="Aspirin">Aspirin</option>
-                                        <option value="Aspirin + Clopidogrel">Aspirin + Clopidogrel</option>
-                                    </optgroup> -->
                                     <optgroup label="Anticoagulants (by alpha order)">
                                         <option value="Apixaban">Apixaban</option>
                                         <option value="Dabigatran">Dabigatran</option>
@@ -1375,7 +1371,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy' && $root.Form().selectedTreatment().text !== 'Aspirin' && $root.Form().selectedTreatment().text !== 'Aspirin + Clopidogrel')">
+                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
                                                     <td class="bold">
                                                         Patient's ANNUAL risk of major bleed (HAS-BLED)
                                                     </td>
@@ -1394,7 +1390,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr
-                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy' && $root.Form().selectedTreatment().text !== 'Aspirin' && $root.Form().selectedTreatment().text !== 'Aspirin + Clopidogrel')">
+                                                    data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
                                                     <td class="bold">Patient's annual chance of being harmed by <span
                                                             data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span>&nbsp;<span
                                                             data-bind="text:$root.Form().selectedTreatment().standardDose!=undefined ? '(' + $root.Form().selectedTreatment().standardDose() + ')' : ''"></span>
@@ -1412,9 +1408,9 @@
                                             <i>Based on SPARC Tool developed by Peter Loewen, ACPR, Pharm.D., FCSHP</i>
                                             <br><br>
                                             *This table refers to <span
-                                                data-bind="text: $root.Form().selectedTreatment()!= undefined && $root.Form().selectedTreatment().text !== 'Aspirin + Clopidogrel' ? $root.Form().selectedTreatment().text : ''"></span>
+                                                data-bind="text: $root.Form().selectedTreatment() != undefined ? $root.Form().selectedTreatment().text : ''"></span>
                                             <span
-                                                data-bind="text:$root.Form().selectedTreatment().standardDose!=undefined && $root.Form().selectedTreatment().text !== 'No Therapy' ? '(' + $root.Form().selectedTreatment().standardDose() + ')' : ''"></span>
+                                                data-bind="text:$root.Form().selectedTreatment().standardDose != undefined && $root.Form().selectedTreatment().text !== 'No Therapy' ? '(' + $root.Form().selectedTreatment().standardDose() + ')' : ''"></span>
                                             and calculates individualized annual risk of major bleed using relative risk
                                             reduction from the clinical trials in combination with individual risk
                                             factors. This data is not the result of head-to-head trials.

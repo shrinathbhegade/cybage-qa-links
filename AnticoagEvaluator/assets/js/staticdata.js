@@ -7,7 +7,7 @@ a recommendation is not made for the AF indication. However, pharmacokinetic dat
 AF indicates atrial fibrillation; ARISTOTLE, Apixaban for Reduction in Stroke and Other Thromboembolic
 Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral anticoagulant.</div>`,
   header: `<b>Recommended Doses of Currently Approved DOACs According to Renal Function<br>CrCl (mL/min)</b>`,
-  contents: `<hr> <table class="table banded">
+  contents: `<hr> <table class="table">
             <tr>
                 <th>DOAC</th>
                 <th>>95</th>
@@ -21,32 +21,32 @@ Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral
               <td>5 or 2.5 mg twice daily*</td>
               <td>5 or 2.5 mg twice daily*</td>
               <td>5 or 2.5 mg twice daily*</td>
-              <td>5 or 2.5 mg twice daily*</td>
-              <td>5 or 2.5 mg twice daily*</td>
+              <td class="bg-gray">5 or 2.5 mg twice daily*</td>
+              <td class="bg-gray">5 or 2.5 mg twice daily*</td>
             </tr>
             <tr>
               <td class="bold">Dabigatran</td>
               <td>150 mg twice daily</td>
               <td>150 mg twice daily</td>
               <td>150 mg twice daily</td>
-              <td>75 mg twice daily</td>
-              <td>Contraindicated</td>
+              <td class="bg-gray">75 mg twice daily</td>
+              <td class="bg-gray">Contraindicated</td>
             </tr>
             <tr>
               <td class="bold">Edoxaban</td>
               <td>Contraindicated</td>
               <td>60 mg once daily</td>
               <td>30 mg once daily</td>
-              <td>30 mg once daily</td>
-              <td>Contraindicated</td>
+              <td class="bg-gray">30 mg once daily</td>
+              <td class="bg-gray">Contraindicated</td>
             </tr>
             <tr>
               <td class="bold">Rivaroxaban</td>
               <td>20 mg once daily</td>
               <td>20 mg once daily</td>
               <td>15 mg once daily</td>
-              <td>15 mg once daily</td>
-              <td>15 mg once daily†</td>
+              <td class="bg-gray">15 mg once daily</td>
+              <td class="bg-gray">15 mg once daily†</td>
             </tr>
             </table>
             <hr>`

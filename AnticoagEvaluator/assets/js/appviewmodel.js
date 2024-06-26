@@ -790,8 +790,12 @@ function formObject() {
     });
 
     self.GARFIELDProfile = ko.pureComputed(() => {
-        let _gm = self.GARFIELDMagnitude() == null ? -1 : parseFloat(self.GARFIELDMagnitude());
-        return (_gm >= 0 && _gm < 0.01) ? "Low" : _gm < 0.02 ? "Intermediate" : _gm >= 0.02 ? "High" : "";
+        let gfMagnitudeNumber = -1;
+        if (self.GARFIELDScore()) {
+            gfMagnitudeNumber = (1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore())));
+            return (gfMagnitudeNumber >= 0 && gfMagnitudeNumber < 0.01) ? "Low" : gfMagnitudeNumber < 0.02 ? "Intermediate" : gfMagnitudeNumber >= 0.02 ? "High" : "";
+        }
+        return "";
     }, self);
 
     self.MortalityScore = ko.pureComputed(() => {
@@ -1162,20 +1166,6 @@ function formObject() {
         else if (e.text === appmodel.FormData.therapyOptions.NoTherapy) {
             self.IsRenalDose(false);
             self.IsStandardDose(true);
-            self.onDOAC(false);
-            self.onVKA(false);
-        }
-        else if (e.text === appmodel.FormData.therapyOptions.Aspirin) {
-            self.IsRenalDose(false);
-            self.IsStandardDose(true);
-            self.PopulationAvgAnnualChance(222);
-            $('#creatinineClearance .collapsable-panel').hide();
-            self.onDOAC(false);
-            self.onVKA(false);
-        }
-        else if (e.text === appmodel.FormData.therapyOptions.AspirinClopidogrel) {
-            self.IsRenalDose(false);
-            $('#creatinineClearance .collapsable-panel').hide();
             self.onDOAC(false);
             self.onVKA(false);
         }

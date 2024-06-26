@@ -709,7 +709,7 @@ option {
 
 @media only screen and (min-width: 768px) {
   .data .top {
-    font-size: 27px;
+    font-size: 21px;
   }
 
   .scorebar_label {
@@ -1204,4 +1204,8 @@ span.nub {
 
 .m-l-5 {
   margin-left: 5em;
+}
+
+.bg-gray {
+  background-color: #a9a9a994;
 }

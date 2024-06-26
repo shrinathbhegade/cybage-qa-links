@@ -217,7 +217,7 @@ var formdata = {
 		Warfarin: 'Warfarin'
 	},
 	therapyGuidanceFooter: `<br>In patients with AF at risk for stroke, reevaluation of the need for and choice of stroke risk reduction therapy at periodic intervals is recommended to reassess stroke and bleeding risk, net clinical benefit, and proper dosing. (1, B-NR)
-							This app and the recommendations above are meant for atrial fibrillation patients who do not have moderate-to-severe mitral stenosis or a mechanical heart valve.`,
+							<br>This app and the recommendations above are meant for atrial fibrillation patients who do not have moderate-to-severe mitral stenosis or a mechanical heart valve.`,
 	advices: [
 		{
 			id: 0,
@@ -238,7 +238,7 @@ var formdata = {
 			id: 1,
 			emailText: 'Oral anticoagulation may be considered due to intermediate stroke risk',
 			conditional: '(Gender === "Male" && ChadVascScore === 1) || (Gender === "Female" && ChadVascScore === 2)',
-			guidanceBoxHeading: `Intermediate Risk: Absolute Risk of Stroke 1-2% per year<br>
+			guidanceBoxHeading: `Intermediate Risk<br>
 								Anticoagulation is reasonable to prevent stroke and systemic thromboembolism. (2a, A)`,
 			guidanceBoxDescription: `<b>If prescribing an oral anticoagulant:</b>
 										<ul>
@@ -268,7 +268,7 @@ var formdata = {
 			id: 2,
 			emailText: 'Oral anticoagulation is recommended due to high stroke risk',
 			conditional: '(Gender === "Male" && ChadVascScore >= 2) || (Gender === "Female" && ChadVascScore >= 3)',
-			guidanceBoxHeading: `High Risk: Absolute Risk of Stroke > 2% per year<br>
+			guidanceBoxHeading: `High Risk<br>
 								Anticoagulation is recommended to prevent stroke and systemic thromboembolism. (1, A)`,
 			guidanceBoxDescription: `<b>If prescribing an oral anticoagulant:</b>
 										<ul>
