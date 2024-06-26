@@ -416,7 +416,7 @@ $(function () {
             listItems = listItems.replace('#ethnicity#', 'Ethnicity: ' + eth.name);
         }
 
-        listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().piWeight()} ${weightUnit}`);
+        listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().Weight()} ${weightUnit}`);
         listItems = listItems.replace('#dbp#', `DBP: ${appmodel.Form().dbp()} mmHg`);
         listItems = listItems.replace('#pulse#', `Pulse: ${appmodel.Form().pulse()} bpm`);
 
@@ -594,6 +594,12 @@ $(function () {
         }
         //This code is for google analytics to capture that Email button on Review Therapy page is clicked
     });
+
+    appmodel.Form().Age(57);
+    appmodel.Form().Ethnicity(-0.609609055);
+    appmodel.Form().pulse(47);
+    appmodel.Form().dbp(68);
+    appmodel.Form().Weight(98);
 });
 /**document.ready ends here */
 

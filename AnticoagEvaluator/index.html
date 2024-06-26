@@ -19,6 +19,7 @@
     <link rel="icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/foundation.min.css">
+    <!-- https://tools.stage.acc.org/anticoag/ -->
     <link rel="stylesheet" href="assets/css/sweetalert2.css">
     <link rel="stylesheet" href="assets/css/style-anticoag.css">
     <link rel="stylesheet" href="assets/css/custom_style.css">
@@ -176,16 +177,6 @@
                 <div class="row group-section">
                     <div class="medium-12 columns">
                         <h2 id="waypoint-1-shrink" class="with-underline highlighted">Patient Information</h2>
-                        <!-- <div class="units-outer uom-pi">
-                            <span class="switch-value" for="">Select Units</span>
-                            <div class="switch round select">
-                                <input id="units_select" type="checkbox" data-bind="checked: $root.Form().PIUnits">
-                                <label class="units" for="units_select">
-                                    <span class="switch-on btn-ga4">&nbsp;US</span>
-                                    <span class="switch-off btn-ga4">&nbsp;SI</span>
-                                </label>
-                            </div>
-                        </div> -->
                         <p class="quiet">Required to derive therapy options</p>
                     </div>
                     <div class="medium-12 small-12 columns">
@@ -302,7 +293,7 @@
                                     <div class="hint">Value must be between 30-160</div>
                                 </div>
                                 <div id="pi_weight" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().piWeightStatus">
+                                    data-bind="css:$root.Form().WeightStatus">
                                     <div class="label-holder">
                                         <span class="text bold">Weight</span>
                                         <span class="required-holder">
@@ -312,7 +303,7 @@
                                     <div class="input-holder row collapse">
                                         <div class="input-space column small-10 medium-10">
                                             <input min="70" max="350" type="text" placeholder=""
-                                                data-bind="value: $root.Form().piWeight">
+                                                data-bind="value: $root.Form().Weight">
                                         </div>
                                         <div class="column small-2 medium-2">
                                             <small class="value"
@@ -322,7 +313,7 @@
                                     <div class="message-holder no-top-margin">
                                         <small class="warning">
                                             <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().piWeightErrorMsg"></span>
+                                                data-bind="html:$root.Form().WeightErrorMsg"></span>
                                         </small>
                                     </div>
                                     <div class="hint">Value must be between <span
@@ -1059,7 +1050,7 @@
                                             </tbody>
                                         </table>
                                         <!-- /ko -->
-                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName === "CHA₂-DS₂-VASc" -->
+                                        <!-- ko if: $root.Form().HighestRiskProfile().riskName === "CHA₂DS₂-VASc" -->
                                         <table class="table banded">
                                             <tbody>
                                                 <tr>
@@ -1176,8 +1167,14 @@
                                                 <tr
                                                     data-bind="visible:($root.Form().selectedTreatment().text !== 'No Therapy')">
                                                     <td class="bold">Chance of benefit per year</td>
-                                                    <td class="bold">1 in <span
-                                                            data-bind="text:$root.Form().ChanceOfBenefit"></span></td>
+
+                                                    <td class="bold" data-bind="visible:$root.Form().onDOAC()">1 in
+                                                        <span
+                                                            data-bind="text: $root.Form().getBenefit($root.Form().GFAbsDOAC())"></span>
+                                                    </td>
+                                                    <td class="bold" data-bind="visible:$root.Form().onVKA()">1 in <span
+                                                            data-bind="text: $root.Form().getBenefit($root.Form().GFAbsVKA())"></span>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1220,6 +1217,12 @@
                                                                 <td class="bold"><span
                                                                         data-bind="text:$root.Form().GARFIELDMagnitude()"></span>
                                                                 </td>
+                                                                <!-- ko if: $root.Form().selectedTreatment().text === 'No Therapy' -->
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <!-- /ko -->
                                                                 <!-- ko if: $root.Form().onDOAC() -->
                                                                 <td class="bold"
                                                                     data-bind="text: `${$root.Form().GFAdjDOAC()}%`">
@@ -1252,11 +1255,17 @@
                                                             <tr>
                                                                 <td class="small-9 medium-9 large-8 left bold">Patient's
                                                                     ANNUAL risk of stroke +
-                                                                    thromboembolism (CHA₂-DS₂-VASc)</td>
+                                                                    thromboembolism (CHA₂DS₂-VASc)</td>
                                                                 <td class="bold"><span
                                                                         data-bind="text:$root.Form().CHDSMagnitude()"></span>
                                                                 </td>
-
+                                                                <!-- ko if: $root.Form().selectedTreatment().text === 'No Therapy' -->
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <td class="bold">N/A</td>
+                                                                <!-- /ko -->
+                                                                <!-- ko if: $root.Form().selectedTreatment().text !== 'No Therapy' -->
                                                                 <td class="bold"><span
                                                                         data-bind="text:$root.Form().PatientAnnualRiskOfStrokeCHADS2Vasc"></span>%
                                                                 </td>
@@ -1269,6 +1278,7 @@
                                                                 <td class="bold">1 in <span
                                                                         data-bind="text:$root.Form().ChanceOfBenefit"></span>
                                                                 </td>
+                                                                <!-- /ko -->
                                                             </tr>
 
                                                         </tbody>
@@ -1292,10 +1302,6 @@
                                         <hr>
 
                                         <p>
-                                            <i data-bind="visible: $root.Form().selectedTreatment().id==='0'">Based on
-                                                Table 7 from the 2014 AHA/ACC/HRS Atrial Fibrillation Guideline
-                                                comparing CHA₂DS₂-VASc stroke risk
-                                                stratification.</i>
                                             <i data-bind="visible: $root.Form().selectedTreatment().id!=='0'">Based on
                                                 SPARC Tool developed by Peter Loewen, ACPR, Pharm.D., FCSHP</i> <br><br>
                                             <sup>*</sup>This table refers to <span
@@ -1373,8 +1379,18 @@
                                                     <td class="bold">
                                                         Patient's ANNUAL risk of major bleed (HAS-BLED)
                                                     </td>
-                                                    <td class="bold"><span
+                                                    <td class="bold">
+                                                        <!-- ko if: $root.Form().Hasbled_Score() < 6 -->
+                                                        <span
                                                             data-bind="text:$root.Form().PatientAnnualRiskOfMajorBleed"></span>%
+                                                        <!--/ko-->
+                                                        <!-- ko if: $root.Form().Hasbled_Score() >= 6 -->
+                                                        HAS-BLED Scores greater than 5 are too rare to determine risk,
+                                                        but are likely over
+                                                        <span
+                                                            data-bind="text:$root.Form().PatientAnnualRiskOfMajorBleed"></span>%
+                                                        <!--/ko-->
+
                                                     </td>
                                                 </tr>
                                                 <tr
@@ -1383,7 +1399,9 @@
                                                             data-bind="text: $root.Form().selectedTreatment()!= undefined ? $root.Form().selectedTreatment().text : ''"></span>&nbsp;<span
                                                             data-bind="text:$root.Form().selectedTreatment().standardDose!=undefined ? '(' + $root.Form().selectedTreatment().standardDose() + ')' : ''"></span>
                                                         (major bleed)</td>
-                                                    <td class="bold">1 in <span
+                                                    <td class="bold"><span
+                                                            data-bind="visible: $root.Form().Hasbled_Score() >= 6">At
+                                                            least </span>1 in <span
                                                             data-bind="text:$root.Form().PatientAnnualChance"></span>
                                                     </td>
                                                 </tr>

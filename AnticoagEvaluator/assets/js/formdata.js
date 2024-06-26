@@ -136,7 +136,7 @@ var formdata = {
 			modifier: '0.2145',
 			drungInteractions: 'https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/022512s035lbl.pdf',
 			relativeRisk: '79',
-			hasbledModifier: '1',
+			hasbledModifier: '1.0',
 			populationAvgAnnualMajorBleed: '3.8',
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
@@ -152,7 +152,7 @@ var formdata = {
 			text: 'Edoxaban',
 			modifier: '0.29',
 			drungInteractions: 'https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/206316s012lbl.pdf',
-			relativeRisk: '66',
+			relativeRisk: '71',
 			hasbledModifier: '0.8',
 			populationAvgAnnualMajorBleed: '3.02',
 			reversalStrategies:
@@ -170,7 +170,7 @@ var formdata = {
 			modifier: '0.34',
 			drungInteractions: 'http://www.janssenlabels.com/package-insert/product-monograph/prescribing-information/XARELTO-pi.pdf',
 			relativeRisk: '66',
-			hasbledModifier: '1',
+			hasbledModifier: '1.0',
 			populationAvgAnnualMajorBleed: '3.8',
 			reversalStrategies:
 				'https://www.acc.org/-/media/Non-Clinical/Images/Tools-and-Practice-Support/Mobile-Resources/ManageAnticoag/B20115-Reversal-Agent-Fact-Sheet.pdf',
