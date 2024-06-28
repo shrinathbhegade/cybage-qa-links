@@ -1033,16 +1033,6 @@ function formObject() {
         self.SerumCrStatus('question');
         self.WeightStatus('question');
         $('#creatinineClearance .collapsable-panel').show();
-        if (self.CrClUnits()) {
-            if (self.Weight() !== undefined && self.Weight() !== '') {
-                self.Weight((parseFloat(self.Weight()) * 0.453592).toFixed(1));
-            }
-        } else {
-            if (self.Weight() !== undefined && self.Weight() !== '') {
-                self.Weight((parseFloat(self.Weight()) * 2.20462).toFixed(1));
-            }
-        }
-        self.WeightStatus('question');
     });
     /**
     * this subscribe function is used for autopopulating(selection/deselection) of the HAS-BLED section's "Abnormal Renal Function" checkbox
