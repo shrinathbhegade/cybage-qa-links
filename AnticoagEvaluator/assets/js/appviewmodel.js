@@ -433,25 +433,25 @@ function formObject() {
     * this function is used for Autopopulating(selecting/deselecting) Stroke/TIA/TE checkbox of CHA2DS2-VASc or HAS-BLED Section
     */
     self.tiaStrokeSync = function ($action) {
-        // var cv2TiaStroke = ko.utils.arrayFirst(self.Cha2ds2_selected(),
-        //     function (item) {
-        //         return item.htmlID === 'cv2-tiastroke';
-        //     });
+        var cv2TiaStroke = ko.utils.arrayFirst(self.Cha2ds2_selected(),
+            function (item) {
+                return item.htmlID === 'cv2-tiastroke';
+            });
         var hbTiaStroke = ko.utils.arrayFirst(self.Hasbled_selected(),
             function (item) {
                 return item.htmlID === 'hb-tiastroke';
             });
         if ($action === 'on') {
-            // if (cv2TiaStroke == null) {
-            //     self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[4]);
-            // }
+            if (cv2TiaStroke == null) {
+                self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[4]);
+            }
             if (hbTiaStroke == null) {
                 self.Hasbled_selected.push(appmodel.FormData.hasbledNonModifiable[0]);
             }
         } else {
-            // if (cv2TiaStroke) {
-            //     self.Cha2ds2_selected.remove(cv2TiaStroke);
-            // }
+            if (cv2TiaStroke) {
+                self.Cha2ds2_selected.remove(cv2TiaStroke);
+            }
             if (hbTiaStroke) {
                 self.Hasbled_selected.remove(hbTiaStroke);
             }
@@ -784,14 +784,12 @@ function formObject() {
     }, self);
 
     self.GARFIELDMagnitude = ko.pureComputed(() => {
-        if (self.GARFIELDScore())
-            return `${parseFloat(((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1))}%`;
-        return '';
+        return `${parseFloat(((1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore()))) * 100).toFixed(1))}%`;
     });
 
     self.GARFIELDProfile = ko.pureComputed(() => {
         let gfMagnitudeNumber = -1;
-        if (self.GARFIELDScore()) {
+        if (self.GARFIELDScore() != null) {
             gfMagnitudeNumber = (1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(self.GARFIELDScore())));
             return (gfMagnitudeNumber >= 0 && gfMagnitudeNumber < 0.01) ? "Low" : gfMagnitudeNumber < 0.02 ? "Intermediate" : gfMagnitudeNumber >= 0.02 ? "High" : "";
         }
@@ -879,52 +877,48 @@ function formObject() {
     });
 
     self.GFAdjVKA = ko.computed(() => {
-        let _gfScore = self.GARFIELDScore();
-        let sum = _gfScore ? (self.garfieldAFStrokeCoeff.VKA + parseFloat(_gfScore)) : 0;
-        if (sum === 0)
-            return '';
-
+        let gfScore = self.GARFIELDScore();
+        let sum = gfScore != null ? (self.garfieldAFStrokeCoeff.VKA + parseFloat(gfScore)) : 0;
         sum = (1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(sum))) * 100;
         return sum.toFixed(1);
-    });
-
-    self.GFRelVKA = ko.pureComputed(() => {
-        let _gfm = self.GARFIELDMagnitude();
-        if (!_gfm || !self.GFAbsVKA())
-            return '';
-        return (self.GFAbsVKA() / parseFloat(_gfm) * 100).toFixed(1);
     });
 
     self.GFAbsVKA = ko.pureComputed(() => {
         let _gfm = self.GARFIELDMagnitude();
         if (!_gfm || !self.GFAdjVKA())
             return '';
-        return (parseFloat(_gfm) - self.GFAdjVKA()).toFixed(1);
+        return (parseFloat(_gfm) - parseFloat(self.GFAdjVKA())).toFixed(1);
     }, self);
+
+    self.GFRelVKA = ko.pureComputed(() => {
+        let _gfm = self.GARFIELDMagnitude();
+
+        if (!_gfm || !self.GFAbsVKA())
+            return '';
+        return (parseFloat(self.GFAbsVKA()) / parseFloat(_gfm) * 100).toFixed(1);
+    });
 
     self.GFAdjDOAC = ko.computed(() => {
         let _gfScore = self.GARFIELDScore();
-        let sum = _gfScore ? (self.garfieldAFStrokeCoeff.DOAC + parseFloat(_gfScore)) : 0;
-        if (sum === 0)
-            return '';
-
+        let sum = _gfScore != null ? (self.garfieldAFStrokeCoeff.DOAC + parseFloat(_gfScore)) : 0;
         sum = (1 - Math.pow(self.garfieldAFStrokeCoeff.BASE, Math.exp(sum))) * 100;
         return sum.toFixed(1);
-    });
-
-    self.GFRelDOAC = ko.pureComputed(() => {
-        let _gfm = self.GARFIELDMagnitude();
-        if (!_gfm || !self.GFAbsDOAC())
-            return '';
-        return (self.GFAbsDOAC() / parseFloat(_gfm) * 100).toFixed(1);
     });
 
     self.GFAbsDOAC = ko.pureComputed(() => {
         let _gfm = self.GARFIELDMagnitude();
         if (!_gfm || !self.GFAdjDOAC())
             return '';
-        return (parseFloat(_gfm) - self.GFAdjDOAC()).toFixed(1);
+        return (parseFloat(_gfm) - parseFloat(self.GFAdjDOAC())).toFixed(1);
     }, self);
+
+    self.GFRelDOAC = ko.pureComputed(() => {
+        let _gfm = self.GARFIELDMagnitude();
+        if (!_gfm || !self.GFAbsDOAC())
+            return '';
+        return (parseFloat(self.GFAbsDOAC()) / parseFloat(_gfm) * 100).toFixed(1);
+    });
+
 
     self.Hasbled_Score = ko.observable(0);
     /**
@@ -944,22 +938,22 @@ function formObject() {
             function (item) {
                 return item.htmlID === 'hb-hypertension';
             });
-        if (hypertension) {
-            self.hypertensionSync('on');
+        // if (hypertension) {
+        //     self.hypertensionSync('on');
 
-        } else {
-            self.hypertensionSync('off');
-        }
+        // } else {
+        //     self.hypertensionSync('off');
+        // }
         var tiaStroke = ko.utils.arrayFirst(self.Hasbled_selected(),
             function (item) {
                 return item.htmlID === 'hb-tiastroke';
             });
-        if (tiaStroke) {
-            self.tiaStrokeSync('on');
+        // if (tiaStroke) {
+        //     self.tiaStrokeSync('on');
 
-        } else {
-            self.tiaStrokeSync('off');
-        }
+        // } else {
+        //     self.tiaStrokeSync('off');
+        // }
         var $antiplatelet = ko.utils.arrayFirst(self.Hasbled_selected(),
             function (item) {
                 return item.htmlID === 'hb-antiplatelet';

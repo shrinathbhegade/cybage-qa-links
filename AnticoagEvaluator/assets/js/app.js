@@ -681,7 +681,29 @@ const openTable8 = () => {
         cancelButtonText: "",
         cancelButtonAriaLabel: ""
     });
-}
+};
+
+const openTable9 = () => {
+    Swal.fire({
+        title: "",
+        // icon: "info",
+        width: 1000,
+        html:
+            `${table9.header}
+           ${table9.contents}
+            ${table9.footer}
+            `
+        ,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: `Close`,
+        confirmButtonAriaLabel: "",
+        cancelButtonText: "",
+        cancelButtonAriaLabel: ""
+    });
+};
+
 
 const openTable19 = () => {
     Swal.fire({
@@ -702,4 +724,4 @@ const openTable19 = () => {
         cancelButtonText: "",
         cancelButtonAriaLabel: ""
     });
-}
+};

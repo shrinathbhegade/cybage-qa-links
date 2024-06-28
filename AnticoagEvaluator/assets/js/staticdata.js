@@ -52,6 +52,53 @@ Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral
             <hr>`
 }
 
+var table9 = {
+  footer: `<div style="text-align:justify !important;font-style: italic;">ATRIA indicates Anticoagulation and Risk Factors in Atrial Fibrillation: anemia, renal disease, elderly (age ≥75 y), any previous bleeding, hypertension; CHADS₂, congestive heart failure, hypertension, age >75 y, diabetes, stroke/transient ischemia attack/thromboembolism; CHA₂DS₂-VASc, indicates congestive heart failure, hypertension, age ≥75 y (doubled), diabetes mellitus, prior stroke or transient ischemic attack or thromboembolism (doubled), vascular disease, age 65 to 74 y, sex category; CHF, congestive heart failure; GARFIELD-AF, Global Anticoagulant Registry in the Field-Atrial Fibrillation; GFR, glomerular filtration rate; SPAF-III, stroke prevention atrial fibrillation, and TIA, transient ischemic attack.
+
+This is an abbreviated version of the table from the 2023 Atrial Fibrillation Guideline.</div>`,
+  header: `<b>Table 9   Some Best Known Published Clinical Scores with Potential Advantages</b>`,
+  contents: `<hr> <table class="table">
+            <tr>
+                <th class="large-2">Year of Publication, Score Name</th>
+                <th>Score Components</th>
+                <th>Potential Advantages</th>
+                <th class="large-2">No. of Validation Studies</th>
+            </tr>
+            <tr>
+              <td>2001 CHADS₂</td>
+              <td>CHF, hypertension, age (≥65 y is 1 point, ≥75 y is 2 points), diabetes, stroke/TIA (2 points)</td>
+              <td>CHADS₂ was superior to existing risk classification schemes
+                <br>
+                  AFI scheme: C-statistic, 0.68 (0.65–0.71)
+                <br>
+                  SPAF-III scheme: C-statistic, 0.74 (0.71–0.76)
+                <br>
+                  CHADS₂ score: C-statistic, 0.82 (0.80–0.84)</td>
+              <td class="table9-text-center">46</td>
+            </tr>
+            <tr>
+              <td>2010 CHA₂DS₂-VASc</td>
+              <td>CHF, hypertension, age ≥75 y, diabetes, stroke or TIA, vascular disease, age 65-74 y, female sex</td>
+              <td>Most commonly used and studied, superior to CHADS₂ score. C-statistic, 0.606 (0.513–0.699) for CHA₂DS₂-VASc score vs 0.561 (0.450–0.672) for CHADS₂ score. Improved compared with original CHADS₂ score.</td>
+              <td class="table9-text-center">82</td>
+            </tr>
+           
+            <tr>
+              <td>2013 ATRIA</td>
+              <td>Age (65–74 y is 3 points, 75–84 y is 5 points, ≥85 y is 6 points), hypertension, diabetes, CHF, proteinuria, GFR <45 mL/min/1.73 m², sex</td>
+              <td>Includes more age categories, renal function, and proteinuria. More patients were classified as low or high risk but not as well tested in general.</td>
+              <td class="table9-text-center">11</td>
+            </tr>
+            <tr>
+              <td>2017 GARFIELD-AF</td>
+              <td>Web-based, uses routinely collected clinical data, and includes a total of 16 questions</td>
+              <td>Web-based tool for predicting stroke and mortality, includes the effect of the different anticoagulants, bleeding risk and mortality to facilitate shared decision-making on the potential benefits/risks of anticoagulation.</td>
+              <td class="table9-text-center">4</td>
+            </tr>
+            </table>
+            <hr>`
+}
+
 var table8 = {
   contents: `<div><b>Three Validated Risk Models for Stroke</b></div>
         <hr>

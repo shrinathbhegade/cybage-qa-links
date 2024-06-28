@@ -1,6 +1,5 @@
 /*** css for logo ***/
 .header.page .logo img {
-  height: 73px;
   margin-top: 14px;
 }
 /*** css for select units ***/
@@ -1208,4 +1207,17 @@ span.nub {
 
 .bg-gray {
   background-color: #a9a9a994;
+}
+
+.scorebar-label-container {
+  display: inline-flex;
+}
+
+.scorebar-label-container i {
+  margin-left: 0.5rem;
+  margin-top: 2px;
+}
+
+.table9-text-center {
+  text-align: center;
 }
