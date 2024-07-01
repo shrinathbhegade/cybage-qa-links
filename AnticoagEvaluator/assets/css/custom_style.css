@@ -905,7 +905,6 @@ option {
   }
 
   .header.page .logo img {
-    height: 73px;
     margin-top: 14px;
   }
 }
@@ -1220,21 +1219,4 @@ span.nub {
 
 .table9-text-center {
   text-align: center;
-}
-
-.image-container {
-  width: 300px; /* Fixed width */
-  height: 200px; /* Fixed height */
-  overflow: hidden; /* Ensures image doesn't overflow container */
-  position: relative; /* Allows absolute positioning inside */
-}
-
-.image-container img {
-  width: 100%; /* Ensures image fills container width */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Removes default inline spacing */
-  position: absolute; /* Allows absolute positioning */
-  top: 50%; /* Moves image down by half its height */
-  left: 50%; /* Moves image right by half its width */
-  transform: translate(-50%, -50%); /* Centers image within container */
 }

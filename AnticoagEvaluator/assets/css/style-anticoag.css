@@ -6183,7 +6183,7 @@ dialog .close-reveal-modal {
 }
 @media only screen and (min-width: 1024px) {
   .page.header .logo img {
-    height: 86px;
+    /* height: 86px; */
   }
 }
 
