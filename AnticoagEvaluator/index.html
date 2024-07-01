@@ -80,7 +80,8 @@
                                             data-bind="text:$root.Form().HighestRiskProfile().riskChance"></div>
                                         <div data-bind="css:{'m-l-scorbar': $root.Form().HighestRiskProfile().riskChance != '' }"
                                             class="scorebar-count-suffix suffix-blocked-width">
-                                            <div class="scorebar-label-container">
+                                            <div class="scorebar-label-container"
+                                                data-bind="visible: $root.Form().HighestRiskProfile().riskChance !== ''">
                                                 <span class="scorebar_label"
                                                     data-bind="text: $root.Form().HighestRiskProfile().riskName"></span>
                                                 <i class="fa fa-info-circle tip-top"
@@ -1745,6 +1746,17 @@
                                         10.1093/eurheartj/ehr488. Epub 2012 Jan 13.
                                         PMID: 22246443.</p>
                                 </li>
+                                <li>
+                                    <p><a target="_blank" rel="noopener noreferrer"
+                                            href="https://doi.org/10.1016/j.jacc.2010.09.024" class="link">Comparative
+                                            Validation of a Novel Risk Score for Predicting Bleeding Risk in
+                                            Anticoagulated Patients With Atrial
+                                            Fibrillation: The HAS-BLED Score</a>: Lip GY, Frison L, Halperin J, Lane D.
+
+                                        <br>J Am Coll Cardiol. 2011 Jan, 57 (1) 173-180.
+                                    </p>
+                                </li>
+
                             </ol>
                         </div>
                     </div>
@@ -2002,7 +2014,7 @@
                             <h3 class="highlighted">When was this App last updated?</h3>
                         </div>
                         <div class="medium-12 small-12 columns">
-                            <p>June 2024</p>
+                            <p>July 2024</p>
                         </div>
                     </div>
                     <div class="row">
