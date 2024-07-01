@@ -6181,11 +6181,6 @@ dialog .close-reveal-modal {
     float: right;
   }
 }
-@media only screen and (min-width: 1024px) {
-  .page.header .logo img {
-    /* height: 86px; */
-  }
-}
 
 /**
 * Mobile Footer:
