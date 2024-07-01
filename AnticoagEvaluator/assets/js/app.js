@@ -13,6 +13,41 @@ var orientationMode = '';
 var isCommonCode = !(navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/Android/i));
 var linkClicked = {};
 
+$(document).ready(function () {
+    $('.no-toggle').click(function (event) {
+        // Get the coordinates of the click event
+        var x = event.pageX;
+        var y = event.pageY;
+
+        $('#backdrop').css({
+            display: 'block'
+        });
+
+        // Position the popup div at the click location
+        $('#ri-popup').css({
+            left: x + 'px',
+            top: y + 'px',
+            display: 'block'
+        });
+    });
+
+    $('.backdrop').click(function () {
+        $('#ri-popup').hide();
+        $('#backdrop').hide();
+    })
+
+    $('#popupclose').click(function () {
+        $('#ri-popup').hide();
+        $('#backdrop').hide();
+    });
+
+    $(window).resize(function () {
+        $('#ri-popup').hide();
+        $('#backdrop').hide();
+    });
+});
+
+
 //Tooltip intialistion
 var resetTooltip = function () {
     if ($('.tip-top').hasClass('open') || $('.tip-left').hasClass('open')) {
@@ -162,8 +197,8 @@ var btnShowReviewTherapyPopup = function () {
 
 const setPopups = (event) => {
     // console.log('data :', `${event.htmlID}-popup`);
-    let sender = `${event.htmlID}-popup`;
-    $('#' + sender).show();
+    // let sender = `${event.htmlID}-popup`;
+    // $('#' + sender).show();
 }
 /*This function is used for capturing which page is opened (google analytics).
 *It also calculates the height of scorebar.
