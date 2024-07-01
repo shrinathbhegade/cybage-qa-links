@@ -424,31 +424,22 @@ $(function () {
         }
         a = a + listItems.replace('#gender#', '').replace('#age#', '') + e;
 
+        a = a + appmodel.FormData.emailTemplate.cha2ds2
+            .replace('#riskclass#', profile.riskProfile)
+            .replace('#riskmodel#', profile.riskName)
+            .replace('#riskmag#', profile.riskChance);
+
         if (appmodel.Form().Cha2ds2_selected().length > 0) {
             listItems = '';
             ko.utils.arrayForEach(appmodel.Form().Cha2ds2_selected(), function (item) {
                 if (item.canToggle)
                     listItems += item.emailText + e;
             });
-            a = a + appmodel.FormData.emailTemplate.cha2ds2
-                .replace('#riskclass#', profile.riskProfile)
-                .replace('#riskmodel#', profile.riskName)
-                .replace('#riskmag#', profile.riskChance)
-                .replace('#cha2ds2selected#', listItems) + e;
-        }
 
-        /** Append renal function data */
-        // listItems = appmodel.FormData.emailTemplate.renalFunction;
-        // if (crcl !== '' && crcl !== undefined) {
-        //     listItems = listItems.replace('#crclscore#', 'CrCl: ' + crcl + ' mL/min');
-        // }
-        // if (serum !== '' && serum !== undefined) {
-        //     listItems = listItems.replace('#serum#', 'SCr: ' + parseFloat(serum) + ' ' + appmodel.Form().SrCrUnit());
-        // }
-        // if ((serum === '' || serum === undefined) && (crcl === '' || crcl === undefined)) {
-        //     listItems = '';
-        // }
-        // a = a + listItems.replace('#crclscore#', '').replace('#serum#', '') + e;
+            a = a + a.replace('#cha2ds2selected#', listItems) + e;
+        } else {
+            a = a.replace('#cha2ds2selected#', '') + e;
+        }
 
         a = a + 'BLEED RISK' + e;
         if (appmodel.Form().Hasbled_selected().length > 0) {
