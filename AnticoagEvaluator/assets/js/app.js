@@ -161,9 +161,8 @@ var btnShowReviewTherapyPopup = function () {
 };
 
 const setPopups = (event) => {
-    console.log('data :', `${event.htmlID}-popup`);
+    // console.log('data :', `${event.htmlID}-popup`);
     let sender = `${event.htmlID}-popup`;
-    // $('.reveal-modal-bg').show();
     $('#' + sender).show();
 }
 /*This function is used for capturing which page is opened (google analytics).
@@ -725,3 +724,4 @@ const openTable19 = () => {
         cancelButtonAriaLabel: ""
     });
 };
+

@@ -54,8 +54,7 @@ Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral
 
 var table9 = {
   footer: `<div style="text-align:justify !important;font-style: italic;">ATRIA indicates Anticoagulation and Risk Factors in Atrial Fibrillation: anemia, renal disease, elderly (age ≥75 y), any previous bleeding, hypertension; CHADS₂, congestive heart failure, hypertension, age >75 y, diabetes, stroke/transient ischemia attack/thromboembolism; CHA₂DS₂-VASc, indicates congestive heart failure, hypertension, age ≥75 y (doubled), diabetes mellitus, prior stroke or transient ischemic attack or thromboembolism (doubled), vascular disease, age 65 to 74 y, sex category; CHF, congestive heart failure; GARFIELD-AF, Global Anticoagulant Registry in the Field-Atrial Fibrillation; GFR, glomerular filtration rate; SPAF-III, stroke prevention atrial fibrillation, and TIA, transient ischemic attack.
-
-This is an abbreviated version of the table from the 2023 Atrial Fibrillation Guideline.</div>`,
+<br>This is an abbreviated version of the table from the 2023 Atrial Fibrillation Guideline.</div>`,
   header: `<b>Table 9   Some Best Known Published Clinical Scores with Potential Advantages</b>`,
   contents: `<hr> <table class="table">
             <tr>

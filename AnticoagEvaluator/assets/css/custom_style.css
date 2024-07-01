@@ -1222,103 +1222,19 @@ span.nub {
   text-align: center;
 }
 
-.risk-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  gap: 10px; /* Adjust as needed for spacing between items */
-  padding: 10px; /* Adjust as needed for container padding */
-  grid-template-areas:
-    "item-1 item-6 item-11"
-    "item-2 item-7 item-12"
-    "item-3 item-8 item-13"
-    "item-4 item-9 item-14"
-    "item-5 item-10 .";
+.image-container {
+  width: 300px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  overflow: hidden; /* Ensures image doesn't overflow container */
+  position: relative; /* Allows absolute positioning inside */
 }
 
-.item-1 {
-  grid-area: item-1;
-}
-.item-2 {
-  grid-area: item-2;
-}
-.item-3 {
-  grid-area: item-3;
-}
-.item-4 {
-  grid-area: item-4;
-}
-.item-5 {
-  grid-area: item-5;
-}
-.item-6 {
-  grid-area: item-6;
-}
-.item-7 {
-  grid-area: item-7;
-}
-.item-8 {
-  grid-area: item-8;
-}
-.item-9 {
-  grid-area: item-9;
-}
-.item-10 {
-  grid-area: item-10;
-}
-.item-11 {
-  grid-area: item-11;
-}
-.item-12 {
-  grid-area: item-12;
-}
-.item-13 {
-  grid-area: item-13;
-}
-.item-14 {
-  grid-area: item-14;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between; /* Distribute space between elements */
-}
-
-.element {
-  flex: 1;
-  margin: 0 2px; /* Adjust as needed for spacing between elements */
-}
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .risk-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    grid-template-areas:
-      "item-1 item-6"
-      "item-2 item-7"
-      "item-3 item-8"
-      "item-4 item-9"
-      "item-5 item-10"
-      "item-11 item-12"
-      "item-13 item-14";
-  }
-}
-
-@media (max-width: 800px) {
-  .risk-container {
-    grid-template-columns: 1fr; /* 1 column for small screens */
-    grid-template-areas:
-      "item-1"
-      "item-2"
-      "item-3"
-      "item-4"
-      "item-5"
-      "item-6"
-      "item-7"
-      "item-8"
-      "item-9"
-      "item-10"
-      "item-11"
-      "item-12"
-      "item-13"
-      "item-14";
-  }
+.image-container img {
+  width: 100%; /* Ensures image fills container width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes default inline spacing */
+  position: absolute; /* Allows absolute positioning */
+  top: 50%; /* Moves image down by half its height */
+  left: 50%; /* Moves image right by half its width */
+  transform: translate(-50%, -50%); /* Centers image within container */
 }
