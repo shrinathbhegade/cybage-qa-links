@@ -160,21 +160,10 @@ $(function () {
 /*This function is for dismissing the Therapy tab disabled warning message modal popup.
 */
 var closeModal = function (event) {
-    //console.log(event);
-    // $('.reveal-modal-bg').hide();
     $('#reviewTherapyError').hide();
     $('#rtBtnError').hide();
-    $('#hb-age65-popup').hide();
-    $('#cv2-age65-popup').hide();
-    $('#cv2-age75-popup').hide();
-    $('#cv2-age85-popup').hide();
-    $('#cv2-female-popup').hide();
 };
 
-const closePopup = () => {
-    $('.popup-bg').hide();
-    $('#hb-age65-popup').hide();
-};
 /*This function is for showing the Therapy tab disabled warning message modal popup.
 */
 var showReviewTherapyPopup = function () {
@@ -195,11 +184,6 @@ var btnShowReviewTherapyPopup = function () {
     }
 };
 
-const setPopups = (event) => {
-    // console.log('data :', `${event.htmlID}-popup`);
-    // let sender = `${event.htmlID}-popup`;
-    // $('#' + sender).show();
-}
 /*This function is used for capturing which page is opened (google analytics).
 *It also calculates the height of scorebar.
 */

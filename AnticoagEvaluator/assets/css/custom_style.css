@@ -194,29 +194,13 @@ select {
   padding: 10px;
 }
 
-/* Popup to display when disabled fields are clicked*/
-.bleedrisk-popup,
-.risk-factors-popup {
-  position: relative;
-  z-index: 1005;
-  top: -1rem;
-}
-
-.risk-factors-popup {
-  position: absolute;
-}
-
 .reviewTherapyError .reveal-modal-bg,
-.btnReviewTherapyError .reveal-modal-bg,
-.bleedrisk-popup .reveal-modal-bg,
-.risk-factors-popup .reveal-modal-bg {
+.btnReviewTherapyError .reveal-modal-bg {
   z-index: -1;
 }
 
 .reviewTherapyError .alert-box:after,
-.btnReviewTherapyError .alert-box:after,
-.bleedrisk-popup .alert-box:after,
-.risk-factors-popup .alert-box:after {
+.btnReviewTherapyError .alert-box:after {
   content: "";
   position: absolute;
   top: -10px;
@@ -226,35 +210,6 @@ select {
   border-color: transparent;
   border-width: 0 8px;
   border-bottom: 10px solid #d07600;
-}
-
-.risk-factors-popup .alert-box:after,
-.cv2-age85 .alert-box:after {
-  right: 50%;
-}
-
-.cv2-age75 {
-  top: 10%;
-  right: 3.8%;
-}
-
-.cv2-age65 {
-  top: 48%;
-}
-
-.cv2-female {
-  top: 48%;
-  right: 38%;
-}
-
-.cv2-age85 {
-  top: 48%;
-  right: 3.8% !important;
-}
-
-.bleedrisk-popup .alert-box:after,
-.cv2-age65 .alert-box:after {
-  right: 72%;
 }
 
 .alert-box .fa-info-circle {
@@ -1161,13 +1116,6 @@ span.nub {
   justify-content: flex-start;
 }
 
-.uom-pi {
-  position: relative;
-  float: right;
-  right: 12.5rem;
-  top: -3.8rem;
-}
-
 /* Style for the read-only div */
 .readonly {
   border: 1px solid #ccc;
@@ -1276,19 +1224,4 @@ span.nub {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-}
-
-.close-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: red;
 }

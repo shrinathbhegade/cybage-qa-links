@@ -16,11 +16,6 @@ function formObject() {
     self.dbpErrorMsg = ko.observable();
     self.pulseStatus = ko.observable('question');
     self.pulseErrorMsg = ko.observable();
-    self.sortedRiskFactors = ko.computed(function () {
-        return formdata.cha2ds2.slice().sort(function (a, b) {
-            return a.sortOrder - b.sortOrder;
-        });
-    }, this);
 
     /**
     * this is Age property with extend function for Age range validation.
