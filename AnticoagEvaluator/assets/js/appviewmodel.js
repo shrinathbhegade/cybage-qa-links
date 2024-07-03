@@ -27,19 +27,34 @@ function formObject() {
                 validation: {
                     validator: function (val) {
                         if (val !== undefined && val !== '') {
+
+                            if (typeof val.replace !== "undefined") {
+                                val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
+                                self.Age(val);
+                            }
+
+                            let pattern = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
+
+                            if (!pattern.test(val)) {
+                                self.AgeStatus('question warning');
+                                self.AgeErrorMsg('Please enter age between 18-140 years');
+                                $('.validationMessage').hide();
+                                return false;
+                            }
+
                             var $age = parseFloat(val);
                             if (!isNaN($age)) {
                                 $age = Math.round($age);
                                 if ($age < 18) {
                                     self.AgeStatus('question warning');
-                                    self.AgeErrorMsg('Please enter an age 18 or over.');
+                                    self.AgeErrorMsg('Please enter an age 18 years or over.');
                                     $('.validationMessage').hide();
                                     return false;
                                 }
                                 else {
                                     if ($age > 140) {
                                         self.AgeStatus('question warning');
-                                        self.AgeErrorMsg('Please enter an age of 140 or under.');
+                                        self.AgeErrorMsg('Please enter an age of 140 years or under.');
                                         $('.validationMessage').hide();
                                         return false;
                                     }
@@ -66,6 +81,20 @@ function formObject() {
                 validation: {
                     validator: function (val) {
                         if (val !== undefined && val !== '') {
+                            if (typeof val.replace !== "undefined") {
+                                val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
+                                self.dbp(val);
+                            }
+
+                            let pattern = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
+
+                            if (!pattern.test(val)) {
+                                self.dbpStatus('question warning');
+                                self.dbpErrorMsg('Please enter a value between 60-130 mm Hg');
+                                $('.validationMessage').hide();
+                                return false;
+                            }
+
                             var $dbp = parseFloat(val);
                             if (!isNaN($dbp)) {
                                 $dbp = Math.round($dbp);
@@ -121,19 +150,32 @@ function formObject() {
             validation: {
                 validator: function (val) {
                     if (val !== undefined && val !== '') {
+                        if (typeof val.replace !== "undefined") {
+                            val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
+                            self.pulse(val);
+                        }
+
+                        let pattrn = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
+                        if (!pattrn.test(val)) {
+                            self.pulseStatus('question warning');
+                            self.pulseErrorMsg('Please enter pulse value between 30-160 bpm');
+                            $('.validationMessage').hide();
+                            return false;
+                        }
+
                         var $pulse = parseFloat(val);
                         if (!isNaN($pulse)) {
                             $pulse = Math.round($pulse);
                             if ($pulse < 30) {
                                 self.pulseStatus('question warning');
-                                self.pulseErrorMsg('Please enter pulse 30 or above');
+                                self.pulseErrorMsg('Please enter pulse 30 bpm or above');
                                 $('.validationMessage').hide();
                                 return false;
                             }
                             else {
                                 if ($pulse > 160) {
                                     self.pulseStatus('question warning');
-                                    self.pulseErrorMsg('Please enter pulse 160 or below');
+                                    self.pulseErrorMsg('Please enter pulse 160 bpm or below');
                                     $('.validationMessage').hide();
                                     return false;
                                 }
@@ -314,10 +356,15 @@ function formObject() {
             self.IsAgeAlter(false);
         }
 
+        if (newvalue && !isNaN(newvalue) && (newvalue % 1) != 0) {
+            self.Age(Math.round(newvalue));
+            return;
+        }
+
         var $age = parseFloat(self.Age());
         if (!isNaN($age) && $age >= 18 && $age <= 140) {
             $age = Math.round($age);
-            self.Age($age);
+            //self.Age($age);
 
             var $age65 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
                 return item.htmlID === 'cv2-age65';

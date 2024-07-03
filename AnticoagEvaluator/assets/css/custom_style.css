@@ -598,6 +598,14 @@ option {
     display: block;
     width: auto;
   }
+  .data .top {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .reset {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -189,155 +189,148 @@
                 <div class="row group-section">
                     <div class="medium-12 columns">
                         <h2 id="waypoint-1-shrink" class="with-underline highlighted">Patient Information</h2>
-                        <p class="quiet">Required to derive therapy options</p>
+                        <p class="quiet" style="margin-bottom: 0.8rem;">Required to derive therapy options</p>
                     </div>
                     <div class="medium-12 small-12 columns">
-                        <div class="row ">
-                            <div class="space-betwn">
-                                <div id="patientAge" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().AgeStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Age</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
+                        <div class="row pinfo-container">
+                            <div id="patientAge" class="question small-12 medium-6 large-4 columns"
+                                data-bind="css:$root.Form().AgeStatus">
+                                <div class="label-holder">
+                                    <span class="text bold">Age</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space column small-10 medium-10">
+                                        <input min="18" max="100" type="text" id="spinnerAge" placeholder=""
+                                            data-bind="value: $root.Form().Age">
                                     </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="18" max="100" type="text" id="spinnerAge" placeholder=""
-                                                data-bind="value: $root.Form().Age">
-                                        </div>
-                                        <div class="column small-2 medium-2">
-                                            <small class="value">Yrs</small>
-                                        </div>
-                                    </div>
-                                    <div class="message-holder">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().AgeErrorMsg"></span>
-                                        </small>
+                                    <div class="column small-2 medium-2">
+                                        <small class="value">Yrs</small>
                                     </div>
                                 </div>
-                                <div class="question small-10 medium-6 large-4 columns end">
-                                    <div class="label-holder">
-                                        <span class="text bold">Sex</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space">
-                                            <select name="" id="genderSelect" data-bind="
-                                                                          options: $root.FormData.sex,
-                                                                          optionsText: 'text',
-                                                                          optionsValue: $data,
-                                                                          selectedOption: $root.Form().Gender,
-                                                                          optionsCaption: 'Please select',
-                                                                          value:$root.Form().Gender"></select>
-                                        </div>
+                                <div class="message-holder">
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i><span
+                                            data-bind="html:$root.Form().AgeErrorMsg"></span>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="question small-10 medium-6 large-4 columns">
+                                <div class="label-holder">
+                                    <span class="text bold">Sex</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space">
+                                        <select name="" id="genderSelect" data-bind="options: $root.FormData.sex,
+                                                optionsText: 'text',
+                                                optionsValue: $data,
+                                                selectedOption: $root.Form().Gender,
+                                                optionsCaption: 'Please select',
+                                                value:$root.Form().Gender">
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-betwn">
-                                <div id="diastolicBloodPressure" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().dbpStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Diastolic Blood Pressure (mm Hg)</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="60" max="130" type="text" id="spinnerDBP" placeholder=""
-                                                data-bind="value: $root.Form().dbp">
-                                        </div>
-                                    </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().dbpErrorMsg"></span>
-                                        </small>
-                                    </div>
-                                    <div class="hint">Value must be between 60-130</div>
+                            <div class="question small-10 medium-6 large-4 columns">
+                                <div class="label-holder">
+                                    <span class="text bold">Ethnicity</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
                                 </div>
-                                <div class="question small-10 medium-6 large-4 columns end">
-                                    <div class="label-holder">
-                                        <span class="text bold">Ethnicity</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space">
-                                            <select id="ethnicitySelect" data-bind="options: $root.FormData.ethnicity,
-                                                                                        optionsText: 'name',
-                                                                                        optionsValue: 'value',
-                                                                                        selectedOption: $root.Form().Ethnicity,
-                                                                                        optionsCaption: 'Please select',
-                                                                                        value: $root.Form().Ethnicity">
-                                            </select>
-                                        </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space">
+                                        <select id="ethnicitySelect" data-bind="options: $root.FormData.ethnicity,
+                                                optionsText: 'name',
+                                                optionsValue: 'value',
+                                                selectedOption: $root.Form().Ethnicity,
+                                                optionsCaption: 'Please select',
+                                                value: $root.Form().Ethnicity">
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="space-betwn">
-                                <div id="pulse" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().pulseStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Pulse (bpm)</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
-                                    </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="30" max="160" type="text" placeholder=""
-                                                data-bind="value: $root.Form().pulse">
-                                        </div>
-                                    </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().pulseErrorMsg"></span>
-                                        </small>
-                                    </div>
-                                    <div class="hint">Value must be between 30-160</div>
+                            <div class="question small-12 medium-6 large-4 columns" id="diastolicBloodPressure"
+                                data-bind="css:$root.Form().dbpStatus">
+                                <div class="label-holder">
+                                    <span class="text bold">Diastolic Blood Pressure (mm Hg)</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
                                 </div>
-                                <div id="pi_weight" class="question small-12 medium-6 large-4 columns"
-                                    data-bind="css:$root.Form().WeightStatus">
-                                    <div class="label-holder">
-                                        <span class="text bold">Weight</span>
-                                        <span class="required-holder">
-                                            <i class="fa fa-holder-dynamic"></i>
-                                        </span>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space column small-10 medium-10">
+                                        <input min="60" max="130" type="text" id="spinnerDBP" placeholder=""
+                                            data-bind="value: $root.Form().dbp">
                                     </div>
-                                    <div class="input-holder row collapse">
-                                        <div class="input-space column small-10 medium-10">
-                                            <input min="70" max="350" type="text" placeholder=""
-                                                data-bind="value: $root.Form().Weight">
-                                        </div>
-                                        <div class="column small-2 medium-2">
-                                            <small class="value"
-                                                data-bind="text: $root.Form().CrClUnits() ? 'kgs':'lbs'"></small>
-                                        </div>
+                                </div>
+                                <div class="message-holder no-top-margin">
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i><span
+                                            data-bind="html:$root.Form().dbpErrorMsg"></span>
+                                    </small>
+                                </div>
+                                <div class="hint">Value must be between 60-130</div>
+                            </div>
+                            <div id="pulse" class="question small-12 medium-6 large-4 columns"
+                                data-bind="css:$root.Form().pulseStatus">
+                                <div class="label-holder">
+                                    <span class="text bold">Pulse (bpm)</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space column small-10 medium-10">
+                                        <input min="30" max="160" type="text" placeholder=""
+                                            data-bind="value: $root.Form().pulse">
                                     </div>
-                                    <div class="message-holder no-top-margin">
-                                        <small class="warning">
-                                            <i class="fa fa-holder"></i><span
-                                                data-bind="html:$root.Form().WeightErrorMsg"></span>
-                                        </small>
+                                </div>
+                                <div class="message-holder no-top-margin">
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i><span
+                                            data-bind="html:$root.Form().pulseErrorMsg"></span>
+                                    </small>
+                                </div>
+                                <div class="hint">Value must be between 30-160</div>
+                            </div>
+                            <div id="pi_weight" class="question small-12 medium-6 large-4 columns"
+                                data-bind="css:$root.Form().WeightStatus">
+                                <div class="label-holder">
+                                    <span class="text bold">Weight</span>
+                                    <span class="required-holder">
+                                        <i class="fa fa-holder-dynamic"></i>
+                                    </span>
+                                </div>
+                                <div class="input-holder row collapse">
+                                    <div class="input-space column small-10 medium-10">
+                                        <input min="70" max="350" type="text" placeholder=""
+                                            data-bind="value: $root.Form().Weight">
                                     </div>
-                                    <div class="hint">Value must be between <span
-                                            data-bind="text: $root.Form().CrClUnits() ? '4.5-453':'10-999'"></span>
+                                    <div class="column small-2 medium-2">
+                                        <small class="value"
+                                            data-bind="text: $root.Form().CrClUnits() ? 'kgs':'lbs'"></small>
                                     </div>
+                                </div>
+                                <div class="message-holder no-top-margin">
+                                    <small class="warning">
+                                        <i class="fa fa-holder"></i><span
+                                            data-bind="html:$root.Form().WeightErrorMsg"></span>
+                                    </small>
+                                </div>
+                                <div class="hint">Value must be between <span
+                                        data-bind="text: $root.Form().CrClUnits() ? '4.5-453':'10-999'"></span>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
+
                 <div class="row group-section">
                     <div class="medium-12 columns">
                         <h2 class="with-underline highlighted">Risk Factors</h2>
