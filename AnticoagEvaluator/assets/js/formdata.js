@@ -46,7 +46,7 @@ var formdata = {
 	hasbledModifiable: [
 		{ id: '0', htmlID: 'hb-hypertension', text: 'Hypertension', value: '1', showInfo: true, tooltipTitle: 'Uncontrolled, >160 mmHg systolic (+1)', emailText: 'Hypertension' },
 		{ id: '1', htmlID: 'hb-alcohol', text: 'Current “excess” of Alcohol', value: '1', showInfo: true, tooltipTitle: 'Frequently defined as 8 alcohol drinks or more per week (+1)', emailText: 'Current \'excess\' of Alcohol' },
-		{ id: '2', htmlID: 'hb-renalfunction', text: 'Abnormal Renal Function', value: '1', showInfo: true, tooltipTitle: 'Dialysis, transplant, creatinine > 2.3 mg/dL or >200 µmol/L (+1)', emailText: 'Abnormal Renal Function' },
+		{ id: '2', htmlID: 'hb-renalfunction', text: 'Abnormal Renal Function', value: '1', showInfo: true, tooltipTitle: 'Dialysis, transplant, or serum creatinine >2.3 mg/dL or >200 µmol/L (+1)', emailText: 'Abnormal Renal Function' },
 		{ id: '3', htmlID: 'hb-liverfunction', text: 'Abnormal Liver Function', value: '1', showInfo: true, tooltipTitle: 'Cirrhosis or bilirubin > 2x normal with AST/ALT/AP > 3x normal (+1)', emailText: 'Abnormal Liver Function' },
 		{ id: '4', htmlID: 'hb-antiplatelet', text: 'Currently taking antiplatelet drugs or NSAIDs', value: '1', showInfo: true, tooltipTitle: 'Medication usage predisposing to bleeding (antiplatelet agents, NSAIDs) (+1)', emailText: 'Currently taking antiplatelet drugs or NSAIDs' }
 	],
@@ -302,5 +302,7 @@ var formdata = {
 			guideRenal: '',
 			guideLiver: ''
 		}
-	]
+	],
+
+	riskFactorsTooltip: `Risk factors are from 3 stroke risk models (CHA2DS2-VASc, GARFIELD-AF, and ATRIA).<br> The risk bar above will display the risk model with the highest resulting stroke risk magnitude once risk factors are selected. Additional risk model results are available in the Evaluate Therapy section of the Review Therapy page.`
 };

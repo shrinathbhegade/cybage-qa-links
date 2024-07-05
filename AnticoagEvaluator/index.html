@@ -70,7 +70,7 @@
             <!-- Start for scorebar section -->
             <div class="data">
                 <div style="margin: 0 !important;"
-                    class="large-9 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
+                    class="large-12 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
                     <div class="row" style="display: inline-flex;">
                         <div class="large-8 medium-12 small-10 columns scorebar-panel-left m-l-5">
                             <div class="scorebar-panel-left-inner">
@@ -86,9 +86,9 @@
                                                 <span class="scorebar_label"
                                                     data-bind="text: $root.Form().HighestRiskProfile().riskName"></span>
                                                 <i class="fa fa-info-circle tip-top"
-                                                    title="Highest estimated score shown" data-tooltip></i>
+                                                    title="Model with highest estimated risk score shown"
+                                                    data-tooltip></i>
                                             </div>
-
                                             <span class="scorebar_txt"
                                                 data-bind="text:$root.Form().HighestRiskProfile().riskProfile"></span>
                                         </div>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="large-7 medium-9 small-7 columns scorebar-panel-right end"
+                        <div class="large-4 medium-9 small-7 columns scorebar-panel-right "
                             data-bind="css:($root.Form().SerumCreatinine() == undefined
                                     || $root.Form().SerumCreatinine() === '')  || ($root.Form().CrCL() == undefined || $root.Form().CrCL() === '') ? 'custom-width' : ''">
                             <div class="top scorebarlabel">Renal Function</div>
@@ -123,6 +123,16 @@
                                     <div class="scorebar-count-suffix suffix-blocked-width">
                                         <span class="scorebar_label">CrCl</span>
                                         <span class="scorebar-score-unit">mL/min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large-5 medium-7 small-7 columns scorebar-panel-right end">
+                            <div>
+                                <div class="top scorebarlabel">HAS-BLED Score</div>
+                                <div class="scorebar-score-container">
+                                    <div class="scorebar-panel">
+                                        <div class="scorebar-count" data-bind="text:$root.Form().Hasbled_Score()"></div>
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +326,10 @@
 
                 <div class="row group-section">
                     <div class="medium-12 columns">
-                        <h2 class="with-underline highlighted">Risk Factors</h2>
+                        <h2 class="with-underline highlighted">Risk Factors <span
+                                style="font-size: medium;vertical-align: text-top;"><i class="fa fa-info-circle tip-top"
+                                    data-bind="attr:{title: $root.FormData.riskFactorsTooltip}" data-tooltip></i></span>
+                        </h2>
                         <p class="quiet">Select all that apply</p>
                     </div>
                     <div class="medium-12 columns">
@@ -2021,11 +2034,10 @@
                                 involvement. </p>
                             <p>The GARFIELD-AF and ATRIA risk models were incorporated into this app by expanding the
                                 Patient Information parameters
-                                and applicable Risk Factors beyond CHA₂DS₂-VASc to satisfy all three models. The
-                                calculator dynamically assesses which
-                                risk model is most impacted by the entered patient parameters and displays that risk
-                                model and its associated magnitude
-                                of annual stroke risk. All risk models’ annual stroke risk magnitudes are available on
+                                and applicable Risk Factors beyond CHA₂DS₂-VASc to satisfy all three models. The risk
+                                bar above will display the risk model with the highest resulting stroke risk magnitude
+                                once risk factors are
+                                selected. All risk models’ annual stroke risk magnitudes are available on
                                 the Review Therapy tab in the
                                 Evaluate Therapy section for further review, however. A detailed table of which risk
                                 factors affect which risk model is

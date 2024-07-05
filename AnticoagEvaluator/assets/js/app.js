@@ -603,11 +603,6 @@ $(function () {
         }
         //This code is for google analytics to capture that Email button on Review Therapy page is clicked
     });
-    appmodel.Form().Age(76);
-    appmodel.Form().pulse(76);
-    appmodel.Form().dbp(76);
-    appmodel.Form().Weight(220);
-    appmodel.Form().Ethnicity(0.375675102);
 });
 /**document.ready ends here */
 
