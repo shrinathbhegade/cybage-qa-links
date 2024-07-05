@@ -776,7 +776,7 @@ option {
   }
 
   .data .top {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .scorebar_label {
@@ -1154,10 +1154,6 @@ span.nub {
   border-color: #b3b3b3;
   background: url(../img/subtlenet2.png) repeat;
   /* cursor: not-allowed !important; */
-}
-
-.m-l-5 {
-  margin-left: 5em;
 }
 
 .bg-gray {
