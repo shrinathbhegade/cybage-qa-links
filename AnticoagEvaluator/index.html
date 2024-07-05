@@ -23,13 +23,7 @@
     <link rel="stylesheet" href="assets/css/style-anticoag.css">
     <link rel="stylesheet" href="assets/css/custom_style.css">
     <link rel="stylesheet" href="assets/css/risk-factors.css">
-
-    <!-- https://tools.stage.acc.org/anticoag/
-    https://tools.stage.acc.org/anticoag/
-    https://tools.stage.acc.org/anticoag/
-    https://tools.stage.acc.org/anticoag/
-    https://tools.stage.acc.org/anticoag/
-    https://tools.stage.acc.org/anticoag/ -->
+    <!-- https://tools.stage.acc.org/anticoag/ -->
     <script type="text/javascript" src="assets/js/modernizr.js"></script>
 </head>
 
@@ -146,31 +140,20 @@
                     <div class="medium-12">
                         <div data-alert="" class="alert-box alert caution-box-style">
                             <i class="fa fa-info-circle"></i>
-                            This app applies only to patients who HAVE atrial fibrillation and DO NOT HAVE moderate to
+                            This app applies only to patients who HAVE clinical atrial fibrillation and DO NOT HAVE
+                            moderate to
                             severe mitral stenosis and/or a mechanical heart valve. See full Guideline Recommendations
                             in the Resources section for those patients with a mechanical valve.
                             <a class="close" id="appNotificationClose">x</a>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class=" medium-12 row collapse">
                         <div class="medium-5 small-6 columns">
                             <h1 class="nomargin-t-b">Calculate Risk</h1>
                         </div>
-                        <!-- <div class="medium-4 small-4 units-outer columns">
-                            <span class="switch-value" for="">Select Units</span>
-                            <div class="switch round select">
-                                <input id="cv2-select" type="checkbox" data-bind="checked: $root.Form().CrClUnits">
-                                <label class="units" for="cv2-select">
-                                    <span class="switch-on btn-ga4">&nbsp;US</span>
-                                    <span class="switch-off btn-ga4">&nbsp;SI</span>
-                                </label>
-                            </div>
-                        </div> -->
                         <div class="medium-6 small-12 columns">
-
                             <div style="margin-top: 6%;" class="medium-7 small-7 units-outer columns">
                                 <span class="switch-value" for="">Select Units</span>
                                 <div class="switch round select">
@@ -371,18 +354,8 @@
                         </h2>
                         <p class="quiet">All four values are required to calculate Creatinine Clearance</p>
                     </div>
-                    <!-- <div class="units-outer columns">
-                        <span class="switch-value" for="">Select Units</span>
-                        <div class="switch round select">
-                            <input id="cv2-select" type="checkbox" data-bind="checked: $root.Form().CrClUnits">
-                            <label class="units" for="cv2-select">
-                                <span class="switch-on btn-ga4">&nbsp;US</span>
-                                <span class="switch-off btn-ga4">&nbsp;SI</span>
-                            </label>
-                        </div>
-                    </div> -->
                     <div class="medium-12 small-12 columns">
-                        <div class="row">
+                        <div class="row crcl-container">
                             <div id="crclAge" class="question small-12 medium-6 large-4 columns"
                                 data-bind="css:$root.Form().AgeStatus">
                                 <div class="label-holder">
@@ -415,7 +388,7 @@
                                     </span>
                                 </div>
                                 <div class="input-holder row collapse">
-                                    <div class="input-space">
+                                    <div class="input-space crclsex">
                                         <select name="gender_Select" id="" data-bind="
                                                                                 options: $root.FormData.sex,
                                                                                 optionsText: 'text',
@@ -681,12 +654,13 @@
                 </div>
                 <div class="row collapse">
                     <h2 id="waypoint-2-shrink" class="highlighted"><small class="number">2</small>
-                        Select Therapy Option</h2>
+                        Therapy and Dosing</h2>
                 </div>
                 <div class="row group-section equal-padding-card">
                     <div class="medium-12 columns">
-                        <div class="row">
-                            <div class="medium-4 small-12 columns">
+                        <div class="row dosing-info">
+                            <div style="margin-top: 0.1rem; margin-bottom: 1rem;margin-right: 1rem;"
+                                class="medium-4 small-12 columns">
                                 <select id="TherapyOptionsSelectInput"
                                     data-bind="value: $root.Form().selectedTherapyOption">
                                     <option value="Please select">Please select</option>
@@ -700,16 +674,7 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row collapse" data-bind="visible: $root.Form().ShowEvaluateTherapy">
-                    <h2 class="highlighted"><small class="number">3</small> Evaluate Therapy</h2>
-                </div>
-                <div class="row group-section" data-bind="visible: $root.Form().ShowEvaluateTherapy">
-                    <div class="medium-12 columns">
-                        <div class="row">
-                            <div class="medium-12 columns">
+                            <div class="medium-12 columns" data-bind="visible: $root.Form().ShowEvaluateTherapy">
                                 <div class="therapy">
                                     <table class="table banded">
                                         <tbody>
@@ -814,12 +779,13 @@
                                                                                 <div class="input-space">
                                                                                     <select name="gender_Select" id=""
                                                                                         data-bind="
-																                                                      options: $root.FormData.sex,
-																                                                      optionsText: 'text',
-																                                                      optionsValue: $data,
-																                                                      selectedOption: $root.Form().Gender,
-																                                                      optionsCaption: 'Please select',
-																                                                      value:$root.Form().Gender"></select>
+                                														    options: $root.FormData.sex,
+                                														    optionsText: 'text',
+                                														    optionsValue: $data,
+                                														    selectedOption: $root.Form().Gender,
+                                														    optionsCaption: 'Please select',
+                                														    value:$root.Form().Gender">
+                                                                                    </select>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="message-holder">
@@ -959,7 +925,19 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row collapse" data-bind="visible: $root.Form().ShowEvaluateTherapy">
+                    <h2 class="highlighted"><small class="number">3</small> Evaluate Therapy</h2>
+                </div>
+                <div class="row group-section" data-bind="visible: $root.Form().ShowEvaluateTherapy">
+                    <div class="medium-12 columns">
                         <div class="row">
+                            <div class="medium-12 columns">
+
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 1rem;">
                             <div class="medium-12 columns">
                                 <ul class="nav tabs overlap swappable" id="recomendTabs">
                                     <li class="tab-title active">
@@ -1148,11 +1126,15 @@
                                         <div class="row group-section no-padding advice-card panelAdviceContainer">
                                             <div class="advice-card-body">
                                                 <div class="panelAdvice" style="display: none">
+                                                    <h3 style="margin-bottom: 1rem;">Additional Risk Model Details</h3>
+
                                                     <table class="table banded">
                                                         <thead>
                                                             <tr>
-                                                                <th>Additional Risk Model Details</th>
-                                                                <th>No Therapy</th>
+                                                                <th class="small-4 medium-5 large-3 bold">Patient's
+                                                                    ANNUAL risk of stroke + thromboembolism:
+                                                                </th>
+                                                                <th class="large-2">No Therapy</th>
                                                                 <th>Selected Therapy: <span
                                                                         data-bind="text: $root.Form().selectedTreatment().text"></span>
                                                                 </th>
@@ -1163,9 +1145,8 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">Patient's
-                                                                    ANNUAL risk of stroke +
-                                                                    thromboembolism (CHA₂DS₂-VASc)</td>
+                                                                <td class="small-9 medium-9 large-8 left bold">
+                                                                    CHA₂DS₂-VASc</td>
                                                                 <td class="bold"><span
                                                                         data-bind="text:$root.Form().CHDSMagnitude()"></span>
                                                                 </td>
@@ -1191,9 +1172,8 @@
                                                                 <!-- /ko -->
                                                             </tr>
                                                             <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">
-                                                                    Patient's ANNUAL risk of stroke + thromboembolism
-                                                                    (GARFIELD)</td>
+                                                                <td class="small-9 medium-9 large-8 left bold">GARFIELD
+                                                                </td>
                                                                 <td class="bold"><span
                                                                         data-bind="text:$root.Form().GARFIELDMagnitude()"></span>
                                                                 </td>
@@ -1233,9 +1213,7 @@
                                                                 <!-- /ko -->
                                                             </tr>
                                                             <tr>
-                                                                <td class="small-9 medium-9 large-8 left bold">
-                                                                    Patient's ANNUAL risk of stroke + thromboembolism
-                                                                    (ATRIA)
+                                                                <td class="small-9 medium-9 large-8 left bold">ATRIA
                                                                 </td>
                                                                 <td>
                                                                     <span class="bold"

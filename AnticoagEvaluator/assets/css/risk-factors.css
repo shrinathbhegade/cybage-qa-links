@@ -64,6 +64,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .pinfo-container select,
+  .crclsex select {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
   .fill-riskelement {
     width: fit-content;
   }
@@ -196,15 +201,18 @@
   flex-wrap: wrap;
 }
 
+.crclsex select,
 .pinfo-container select {
   width: 83%;
 }
 
-.pinfo-container .label-holder {
+.pinfo-container .label-holder,
+.crcl-container .label-holder {
   margin-top: 0em;
 }
 
-.pinfo-container .question {
+.pinfo-container .question,
+.crcl-container .question {
   margin-bottom: 0.5rem;
 }
 /* Mobile Phones (default) */

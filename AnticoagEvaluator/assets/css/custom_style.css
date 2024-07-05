@@ -151,10 +151,10 @@ select {
     top: -4px;
   }
 }
-
+/* 
 .therapyreview .scorebarlabel {
   display: none;
-}
+} */
 
 /*** css for caution box ***/
 .caution-box-modal > ul {
@@ -1232,4 +1232,14 @@ span.nub {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+.dosing-info {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .dosing-info {
+    flex-direction: column;
+  }
 }
