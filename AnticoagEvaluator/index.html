@@ -70,17 +70,16 @@
             <!-- Start for scorebar section -->
             <div class="data">
                 <div style="margin: 0 !important;"
-                    class="large-12 medium-10 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
+                    class="large-12 medium-12 small-12 large-offset-2 medium-offset-2 medium-centered small-centered columns">
                     <div class="row" style="display: inline-flex;">
-                        <div class="large-8 medium-12 small-10 columns scorebar-panel-left m-l-5">
+                        <div class="large-8 medium-12 small-12 columns scorebar-panel-left">
                             <div class="scorebar-panel-left-inner">
                                 <div class="top scorebarlabel">Annual Stroke Risk Magnitude</div>
                                 <div class="scorebar-score-container">
                                     <div class="scorebar-panel">
-                                        <div class="scorebar-count"
+                                        <div style="margin-right: 0.5rem;" class="scorebar-count"
                                             data-bind="text:$root.Form().HighestRiskProfile().riskChance"></div>
-                                        <div data-bind="css:{'m-l-scorbar': $root.Form().HighestRiskProfile().riskChance != '' }"
-                                            class="scorebar-count-suffix suffix-blocked-width">
+                                        <div class="scorebar-count-suffix suffix-blocked-width">
                                             <div class="scorebar-label-container"
                                                 data-bind="visible: $root.Form().HighestRiskProfile().riskChance !== ''">
                                                 <span class="scorebar_label"
@@ -89,14 +88,20 @@
                                                     title="Model with highest estimated risk score shown"
                                                     data-tooltip></i>
                                             </div>
-                                            <span class="scorebar_txt"
+                                            <!--ko if:$root.Form().HighestRiskProfile().riskChance !== ''-->
+                                            <span class="scorebar_label"
                                                 data-bind="text:$root.Form().HighestRiskProfile().riskProfile"></span>
+                                            <!--/ko-->
+                                            <!--ko if:$root.Form().HighestRiskProfile().riskChance == ''-->
+                                            <span class="scorebar-count dummy-risk"
+                                                data-bind="text:$root.Form().HighestRiskProfile().riskProfile"></span>
+                                            <!--/ko-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="large-5 medium-9 small-7 columns scorebar-panel-right "
+                        <div class="large-5 medium-9 small-10 columns scorebar-panel-right"
                             data-bind="css:($root.Form().SerumCreatinine() == undefined
                                     || $root.Form().SerumCreatinine() === '')  || ($root.Form().CrCL() == undefined || $root.Form().CrCL() === '') ? 'custom-width' : ''">
                             <div class="top scorebarlabel">Renal Function</div>
@@ -127,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="large-4 medium-7 small-7 columns scorebar-panel-right end">
+                        <div class="large-5 medium-8 small-6 columns scorebar-panel-right end">
                             <div>
                                 <div class="top scorebarlabel">HAS-BLED Score</div>
                                 <div class="scorebar-score-container">

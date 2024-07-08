@@ -299,7 +299,7 @@ option {
 
 .scorebar-count {
   display: inline-block;
-  font-size: 26px;
+  font-size: 23px;
   color: #ffffff;
   font-weight: bold;
 }
@@ -687,7 +687,7 @@ option {
   }
 
   .scorebar-count {
-    font-size: 42px;
+    font-size: 30px;
   }
 
   .scorebar_txt {
@@ -1238,4 +1238,12 @@ span.nub {
   .dosing-info {
     flex-direction: column;
   }
+}
+
+.dummy-risk {
+  position: relative;
+  font-size: large !important;
+  font-weight: 400;
+  left: -0.3rem;
+  top: 0.5rem;
 }

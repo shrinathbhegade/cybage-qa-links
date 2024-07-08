@@ -1,4 +1,4 @@
-var table19 = {
+const table19 = {
   footer: `<div style="text-align:justify !important;font-style: italic;">Note that other, nonrenal considerations such as drug interactions may also apply. The gray area indicates doses not studied in the pivotal clinical trials of these agents.
 *If at least 2 of the following are present: serum creatinine ≥1.5 mg/dL, age ≥80 y, or body weight ≤60 kg, the recommended dose is 2.5 mg twice daily. The ARISTOTLE trial excluded patients
 with either a creatinine of >2.5 mg/dL or a calculated CrCl <25 mL/min.
@@ -52,7 +52,7 @@ Events in Atrial Fibrillation; CrCl, creatinine clearance; and DOAC, direct oral
             <hr>`
 }
 
-var table9 = {
+const table9 = {
   footer: `<div style="text-align:justify !important;font-style: italic;">ATRIA indicates Anticoagulation and Risk Factors in Atrial Fibrillation: anemia, renal disease, elderly (age ≥75 y), any previous bleeding, hypertension; CHADS₂, congestive heart failure, hypertension, age >75 y, diabetes, stroke/transient ischemia attack/thromboembolism; CHA₂DS₂-VASc, indicates congestive heart failure, hypertension, age ≥75 y (doubled), diabetes mellitus, prior stroke or transient ischemic attack or thromboembolism (doubled), vascular disease, age 65 to 74 y, sex category; CHF, congestive heart failure; GARFIELD-AF, Global Anticoagulant Registry in the Field-Atrial Fibrillation; GFR, glomerular filtration rate; SPAF-III, stroke prevention atrial fibrillation, and TIA, transient ischemic attack.
 <br>This is an abbreviated version of the table from the 2023 Atrial Fibrillation Guideline.</div>`,
   header: `<b>Table 9   Some Best Known Published Clinical Scores with Potential Advantages</b>`,
@@ -98,7 +98,7 @@ var table9 = {
             <hr>`
 }
 
-var table8 = {
+const table8 = {
   contents: `<div><b>Three Validated Risk Models for Stroke</b></div>
         <hr>
     <table class="table banded table8">
