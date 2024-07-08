@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="large-4 medium-9 small-7 columns scorebar-panel-right "
+                        <div class="large-5 medium-9 small-7 columns scorebar-panel-right "
                             data-bind="css:($root.Form().SerumCreatinine() == undefined
                                     || $root.Form().SerumCreatinine() === '')  || ($root.Form().CrCL() == undefined || $root.Form().CrCL() === '') ? 'custom-width' : ''">
                             <div class="top scorebarlabel">Renal Function</div>
@@ -127,7 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="large-5 medium-7 small-7 columns scorebar-panel-right end">
+                        <div class="large-4 medium-7 small-7 columns scorebar-panel-right end">
                             <div>
                                 <div class="top scorebarlabel">HAS-BLED Score</div>
                                 <div class="scorebar-score-container">
@@ -512,11 +512,6 @@
                                 class="fa fa-info-circle tip-top custom-size"
                                 title="Use of the HAS-BLED score is meant to support decision making by identifying factors that contribute to bleed risk.  It aids the clinician in assessing individual bleed risk, addressing modifiable risk factors, and recognizing those patients who may need closer monitoring."
                                 data-tooltip></i>
-                            <span class="box right">
-                                <span
-                                    data-bind="text: $root.Form().Hasbled_Score() != 0 ? 'SCORE: '+$root.Form().Hasbled_Score():'SCORE:' "
-                                    class="text"></span>
-                            </span>
                         </h3>
                     </div>
                     <div class="question columns">
