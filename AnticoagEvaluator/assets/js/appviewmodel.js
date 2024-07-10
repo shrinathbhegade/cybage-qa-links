@@ -30,7 +30,12 @@ function formObject() {
 
                             if (typeof val.replace !== "undefined") {
                                 val = +parseFloat(val.replace(/\,/g, '.')).toFixed(1);
-                                self.Age(val);
+                                if (typeof val === 'number') {
+                                    let __age = Math.round(val);
+                                    self.Age(__age);
+                                } else {
+                                    self.Age(val);
+                                }
                             }
 
                             let pattern = new RegExp('^([0-9]{1,3}|0)([,.]{1}[0-9]{1})?$');
@@ -343,11 +348,6 @@ function formObject() {
     * range selection on Patient Age or CRCL Age change.
     */
     self.Age.subscribe(function (newvalue) {
-        //if decimal entered, round it off and return without executing rest of the script
-        // if (newvalue && !isNaN(newvalue) && (newvalue % 1) != 0) {
-        //     self.Age(Math.round(newvalue));
-        //     return;
-        // }
 
         if (self.CalCrCl()) {
             self.IsAgeAlter(true);
@@ -356,25 +356,22 @@ function formObject() {
             self.IsAgeAlter(false);
         }
 
-        if (newvalue && !isNaN(newvalue) && (newvalue % 1) != 0) {
-            self.Age(Math.round(newvalue));
-            return;
-        }
+        var $age65 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+            return item.htmlID === 'cv2-age65';
+        });
+        var $age75 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+            return item.htmlID === 'cv2-age75';
+        });
+        var $age85 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
+            return item.htmlID === 'cv2-age85';
+        });
+        var hasbled_age65 = ko.utils.arrayFirst(self.Hasbled_selected(), function (item) {
+            return item.htmlID === 'hb-age65';
+        });
 
         var $age = parseFloat(self.Age());
         if (!isNaN($age) && $age >= 18 && $age <= 140) {
             $age = Math.round($age);
-            //self.Age($age);
-
-            var $age65 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
-                return item.htmlID === 'cv2-age65';
-            });
-            var $age75 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
-                return item.htmlID === 'cv2-age75';
-            });
-            var $age85 = ko.utils.arrayFirst(self.Cha2ds2_selected(), function (item) {
-                return item.htmlID === 'cv2-age85';
-            });
 
             if ($age >= 65 && $age <= 74 && $age65 == null) {
                 self.Cha2ds2_selected.push(appmodel.FormData.cha2ds2[6]);
@@ -396,20 +393,26 @@ function formObject() {
                 self.Cha2ds2_selected.remove($age85);
             }
 
-            var hasbled_age65 = ko.utils.arrayFirst(self.Hasbled_selected(),
-                function (item) {
-                    return item.htmlID === 'hb-age65';
-                });
-
             if ($age > 65) {
-                if (!hasbled_age65)
+                if (hasbled_age65 === undefined)
                     self.Hasbled_selected.push(appmodel.FormData.hasbledNonModifiable[3])
             }
             else {
-                if (hasbled_age65)
+                if (hasbled_age65 !== undefined)
                     self.Hasbled_selected.remove(hasbled_age65);
             }
         } else {
+            if ($age65) {
+                self.Cha2ds2_selected.remove($age65);
+            }
+            if ($age75) {
+                self.Cha2ds2_selected.remove($age75);
+            }
+            if ($age85) {
+                self.Cha2ds2_selected.remove($age85);
+            }
+            if (hasbled_age65 !== undefined)
+                self.Hasbled_selected.remove(hasbled_age65);
             self.Age('');
         }
         /*This code is for reevaluate therapy dosing information as change in Age

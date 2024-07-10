@@ -429,9 +429,9 @@ $(function () {
             listItems = listItems.replace('#gender#', 'Sex: ' + appmodel.Form().Gender().text);
         }
 
+        let __ethnicity = $("#ethnicitySelect option:selected").text();
         if (appmodel.Form().Ethnicity() !== undefined) {
-            let eth = appmodel.FormData.ethnicity.find(i => i.value == appmodel.Form().Ethnicity())
-            listItems = listItems.replace('#ethnicity#', 'Ethnicity: ' + eth.name);
+            listItems = listItems.replace('#ethnicity#', `Ethnicity: ${__ethnicity ? __ethnicity : ''}`);
         }
 
         listItems = listItems.replace('#weight#', `Weight: ${appmodel.Form().Weight()} ${weightUnit}`);
@@ -673,7 +673,6 @@ function getCookie(cname) {
 const openTable8 = () => {
     Swal.fire({
         title: "",
-        // icon: "info",
         width: 600,
         html: table8.contents,
         showCloseButton: true,
@@ -689,14 +688,12 @@ const openTable8 = () => {
 const openTable9 = () => {
     Swal.fire({
         title: "",
-        // icon: "info",
         width: 1000,
         html:
             `${table9.header}
            ${table9.contents}
             ${table9.footer}
-            `
-        ,
+            `,
         showCloseButton: true,
         showCancelButton: false,
         focusConfirm: false,
@@ -717,8 +714,7 @@ const openTable19 = () => {
             `${table19.header}
            ${table19.contents}
             ${table19.footer}
-            `
-        ,
+            `,
         showCloseButton: true,
         showCancelButton: false,
         focusConfirm: false,
